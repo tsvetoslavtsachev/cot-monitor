@@ -390,6 +390,89 @@
       height: 240px;
     }
 
+    /* ── Export cards ── */
+    .export-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1rem;
+    }
+    .export-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .export-card h3 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .export-card .desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+    .export-card .includes {
+      list-style: none;
+      margin: 0 0 0.7rem 0;
+      padding: 0;
+    }
+    .export-card .includes li {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      padding: 0.16rem 0 0.16rem 1.1rem;
+      position: relative;
+    }
+    .export-card .includes li::before {
+      content: '✓';
+      color: var(--long);
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+    }
+    .export-card .meta {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+      font-style: italic;
+    }
+    .export-card .controls {
+      margin-top: auto;
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .export-card select {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 0.4rem 0.55rem;
+      font: inherit;
+      font-size: 0.84rem;
+      flex: 1;
+      min-width: 130px;
+      cursor: pointer;
+    }
+    .export-card button.dl {
+      background: var(--accent-soft);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.45rem 0.95rem;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .export-card button.dl:hover { background: var(--accent); }
+    .export-card button.dl:disabled { background: var(--neutral); cursor: not-allowed; opacity: 0.6; }
+
     /* ── Methodology ── */
     .method-grid {
       display: grid;
@@ -566,6 +649,98 @@
           <p>Показваме перцентил спрямо последните 156 седмици (~3 години). Това е <strong>относителен ориентир</strong>,
             не абсолютна оценка. Перцентил 95 в спокоен пазарен режим не е същото като перцентил 95 в режим на висока волатилност.</p>
           <p>Винаги поставяйте перцентилите в контекста на текущия волатилен режим (виж индикатора в горния десен ъгъл).</p>
+        </div>
+
+      </div>
+
+      <h2 style="margin-top:2.5rem">Експорти за Claude / външен анализ
+        <span class="sub">Изтегли структурирани файлове, готови за paste в Claude session или Excel. Всичко се генерира локално в браузъра — нищо не се изпраща навън.</span>
+      </h2>
+      <div class="export-grid">
+
+        <!-- A: Weekly briefing -->
+        <div class="export-card">
+          <h3>A. Седмичен брифинг (.md)</h3>
+          <p class="desc">Кондензиран Markdown файл с тазседмичните движения, екстремуми, streaks, секторна картина и macro теми. Готов за директен paste в Claude.</p>
+          <ul class="includes">
+            <li>Доминираща картина (auto-narrative)</li>
+            <li>Топ 6 движения с context</li>
+            <li>Markets at extremes (≤10 / ≥90 percentile)</li>
+            <li>Multi-week streaks (≥5 седмици)</li>
+            <li>Sector aggregates</li>
+            <li>Methodology reminders</li>
+          </ul>
+          <div class="meta">~10 KB · български · обновява се с данните</div>
+          <div class="controls">
+            <button class="dl" id="export-btn-a">📥 Изтегли</button>
+          </div>
+        </div>
+
+        <!-- B: Snapshot CSV -->
+        <div class="export-card">
+          <h3>B. Snapshot CSV (всички 38 пазара)</h3>
+          <p class="desc">Flat tabular файл с текущото състояние на всички пазара. За cross-market сравнение, корелации, или import в Excel/Sheets.</p>
+          <ul class="includes">
+            <li>38 реда × 15 колони</li>
+            <li>Net позиция, percentile, z-score</li>
+            <li>Δ 4 седмици, streak info</li>
+            <li>Notional USD, regime, takeaway</li>
+            <li>Sector + БГ име</li>
+          </ul>
+          <div class="meta">~25 KB · CSV (UTF-8 с BOM за Excel)</div>
+          <div class="controls">
+            <button class="dl" id="export-btn-b">📥 Изтегли</button>
+          </div>
+        </div>
+
+        <!-- C: Per-market history CSV -->
+        <div class="export-card">
+          <h3>C. История на пазар (.csv)</h3>
+          <p class="desc">Времеви ред с пълна COT история на конкретен пазар — всички cohort positions седмично. За deep-dive в Excel или Claude.</p>
+          <ul class="includes">
+            <li>До 520 седмици (10 години)</li>
+            <li>Всички 3 cohort групи (long/short/net)</li>
+            <li>Open Interest</li>
+            <li>Дата във формат YYYY-MM-DD</li>
+          </ul>
+          <div class="meta">~50 KB · CSV · избери пазар</div>
+          <div class="controls">
+            <select id="export-select-c"></select>
+            <button class="dl" id="export-btn-c">📥 Изтегли</button>
+          </div>
+        </div>
+
+        <!-- D: Single-market BG briefing -->
+        <div class="export-card">
+          <h3>D. Дълбок анализ на пазар (.md)</h3>
+          <p class="desc">Богат Markdown брифинг за конкретен пазар — текущо състояние, разбивка по групи играчи, последните 12 седмици, исторически екстремуми.</p>
+          <ul class="includes">
+            <li>БГ контекст + технически параметри</li>
+            <li>Разбивка по групи (БГ имена + дефиниции)</li>
+            <li>Таблица с последните 12 седмици</li>
+            <li>Исторически max/min позиции за периода</li>
+            <li>Methodology бележки специфични за пазара</li>
+          </ul>
+          <div class="meta">~20 KB · български · избери пазар</div>
+          <div class="controls">
+            <select id="export-select-d"></select>
+            <button class="dl" id="export-btn-d">📥 Изтегли</button>
+          </div>
+        </div>
+
+        <!-- E: Alerts only -->
+        <div class="export-card">
+          <h3>E. Само alerts (.md)</h3>
+          <p class="desc">Минимален брифинг — само пазарите с активен сигнал (streak ≥5w или percentile ≤10/≥90). Идеално за бързи checks или daily digest.</p>
+          <ul class="includes">
+            <li>Многоседмични трендове ≥5 седмици</li>
+            <li>Исторически екстремуми</li>
+            <li>Без фоново съдържание</li>
+          </ul>
+          <div class="meta">~3-5 KB · български · ~5-10 alerts типично</div>
+          <div class="controls">
+            <button class="dl" id="export-btn-e">📥 Изтегли</button>
+          </div>
         </div>
 
       </div>
@@ -1408,9 +1583,400 @@ function setupTabs() {
 }
 
 // ════════════════════════════════════════════════════════════════════════════
+// Exports for Claude / external analysis
+// ════════════════════════════════════════════════════════════════════════════
+
+function downloadFile(filename, content, mime = 'text/plain;charset=utf-8') {
+  // Add UTF-8 BOM for CSV so Excel renders Cyrillic correctly
+  const prefix = (mime.startsWith('text/csv') && !content.startsWith('﻿')) ? '﻿' : '';
+  const blob = new Blob([prefix + content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function stripHtml(s) {
+  return (s || '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').trim();
+}
+
+function csvCell(v) {
+  if (v == null) return '';
+  const s = String(v);
+  if (s.includes(',') || s.includes('"') || s.includes('\n')) return `"${s.replace(/"/g, '""')}"`;
+  return s;
+}
+
+async function ensureMarketLoaded(key) {
+  if (state.markets[key]) return state.markets[key];
+  const meta = state.manifest?.markets?.find(m => m.key === key);
+  if (!meta) return null;
+  try {
+    state.markets[key] = await fetchJson('data/' + meta.file);
+    return state.markets[key];
+  } catch (e) {
+    return null;
+  }
+}
+
+const STREAK_DIR_BG = {
+  building_long:   'нарастващи дълги позиции',
+  building_short:  'нарастващи къси позиции',
+  unwinding_long:  'намаляващи дълги позиции',
+  unwinding_short: 'покриване на къси позиции',
+};
+
+// ── A: Weekly briefing (Markdown, BG) ───────────────────────────────────────
+function generateWeeklyBriefing() {
+  const date = state.watchlist[0]?.date?.slice(0, 10) || '';
+  const updated = state.manifest?.generated_at?.slice(0, 10) || '';
+  let md = `# COT Седмичен Брифинг — ${date}\n\n`;
+  md += `_Генериран от cot-monitor · CFTC отчет към ${date} · обновен ${updated} · ${state.watchlist.length} пазара_\n\n`;
+  md += `> **Не е инвестиционен съвет.** Този брифинг е аналитичен контекст, базиран на CFTC Commitments of Traders отчета.\n\n`;
+  md += `---\n\n`;
+
+  // 1. Dominant picture
+  md += `## 1. Доминираща картина\n\n`;
+  const themes = detectMacroThemes();
+  if (themes.length) themes.forEach(t => md += `- ${stripHtml(t)}\n`);
+  else md += `_Няма доминираща макро тема тази седмица — пазарите са относително неутрални._\n`;
+  md += '\n';
+
+  // 2. Top movements
+  md += `## 2. Топ седмични движения\n\n`;
+  const movements = state.watchlist
+    .filter(r => r.primary_delta_4w != null && r.primary_net != null && r.primary_net !== 0)
+    .map(r => {
+      const deltaPct = 100 * r.primary_delta_4w / Math.max(Math.abs(r.primary_net), 1);
+      const streakScore = Math.min(r.streak_weeks || 0, 10);
+      return { ...r, deltaPct, relevance: streakScore + Math.min(Math.abs(deltaPct), 50) * 0.3 };
+    })
+    .sort((a, b) => b.relevance - a.relevance)
+    .slice(0, 6);
+  movements.forEach(r => {
+    const sectorLabel = SECTOR_BG[r.subtitle] || r.subtitle || '';
+    const pos = r.primary_net >= 0 ? 'нет ДЪЛГО' : 'нет КЪСО';
+    md += `### ${marketLabel(r.market)} _(${sectorLabel})_\n`;
+    md += `- **Сега:** ${pos} ${fmt(Math.abs(r.primary_net))} контракта (${fmtBn(r.notional_usd_bn)})\n`;
+    md += `- **Δ 4 седмици:** ${(r.primary_delta_4w >= 0 ? '+' : '') + fmt(r.primary_delta_4w)} контракта (${(r.deltaPct >= 0 ? '+' : '') + r.deltaPct.toFixed(0)}% спрямо текущата позиция)\n`;
+    if ((r.streak_weeks || 0) >= 3) {
+      md += `- **Streak:** ${r.streak_weeks} поредни седмици ${STREAK_DIR_BG[r.streak_direction] || ''}, кумулативно ${fmt(Math.abs(r.streak_total_change || 0))} контракта\n`;
+    }
+    md += `- **Регим:** ${REGIME_BG[r.regime]?.label || r.regime}\n`;
+    md += `- **Перцентил:** ${(r.primary_percentile || 0).toFixed(0)}-и спрямо ${r.history_weeks || 156} седмици · z=${fmtZ(r.primary_zscore)}\n`;
+    md += `- **Контекст:** ${stripHtml(bgTakeaway(r))}\n\n`;
+  });
+
+  // 3. Extremes
+  const extremes = state.watchlist
+    .filter(r => r.primary_percentile != null && (r.primary_percentile <= 10 || r.primary_percentile >= 90))
+    .sort((a, b) => Math.abs(b.primary_percentile - 50) - Math.abs(a.primary_percentile - 50));
+  md += `## 3. Исторически екстремуми (≤10-и или ≥90-и перцентил)\n\n`;
+  if (extremes.length) {
+    extremes.forEach(r => {
+      const pos = r.primary_net >= 0 ? 'нет дълго' : 'нет късо';
+      const interpretation = r.primary_percentile >= 90
+        ? (r.primary_net >= 0 ? 'екстремно дълго за периода' : 'по-малко късо от обичайното')
+        : (r.primary_net >= 0 ? 'по-малко дълго от обичайното' : 'екстремно късо за периода');
+      md += `- **${marketLabel(r.market)}**: ${r.primary_percentile.toFixed(0)}-и перцентил (${r.history_weeks}w) — ${interpretation}. Сега ${pos} ${fmt(Math.abs(r.primary_net))} контракта (${fmtBn(r.notional_usd_bn)}).\n`;
+    });
+  } else {
+    md += `_Няма пазари в крайник на следения период тази седмица._\n`;
+  }
+  md += '\n';
+
+  // 4. Multi-week streaks
+  const streaks = state.watchlist
+    .filter(r => (r.streak_weeks || 0) >= 5)
+    .sort((a, b) => (b.streak_weeks || 0) - (a.streak_weeks || 0));
+  md += `## 4. Многоседмични трендове (≥5 седмици в една посока)\n\n`;
+  if (streaks.length) {
+    streaks.forEach(r => {
+      const pos = r.primary_net >= 0 ? 'нет дълго' : 'нет късо';
+      md += `- **${marketLabel(r.market)}**: ${r.streak_weeks} поредни седмици ${STREAK_DIR_BG[r.streak_direction] || ''}, кумулативно ${fmt(Math.abs(r.streak_total_change || 0))} контракта. Сега ${pos} ${fmt(Math.abs(r.primary_net))}.\n`;
+    });
+  } else {
+    md += `_Няма активни многоседмични трендове._\n`;
+  }
+  md += '\n';
+
+  // 5. Sector aggregates
+  md += `## 5. Секторна картина\n\n`;
+  const byKey = Object.fromEntries(state.watchlist.map(r => [r.market, r]));
+  for (const [sector, keys] of Object.entries(SECTOR_GROUPS)) {
+    const rows = keys.map(k => byKey[k]).filter(Boolean);
+    if (!rows.length) continue;
+    const total = rows.reduce((s, r) => s + (r.notional_usd_bn || 0), 0);
+    const tilt = total >= 0 ? 'нет ДЪЛГО' : 'нет КЪСО';
+    md += `### ${sector}: ${tilt} ${fmtBn(total)} общо\n`;
+    rows.sort((a, b) => Math.abs(b.primary_zscore || 0) - Math.abs(a.primary_zscore || 0));
+    rows.slice(0, 6).forEach(r => {
+      const dir = r.primary_net >= 0 ? '+' : '−';
+      md += `- ${marketLabel(r.market)}: ${dir}${fmt(Math.abs(r.primary_net))} контракта · z=${fmtZ(r.primary_zscore)} · ${(r.primary_percentile || 0).toFixed(0)}-и перцентил\n`;
+    });
+    md += '\n';
+  }
+
+  // 6. Methodology
+  md += `## 6. Методологически бележки\n\n`;
+  md += `- **Закъснение:** CFTC данните са с 3-4 дневен лаг — позиции към вторник, публикация петък 15:30 ET\n`;
+  md += `- **"Спекулативни фондове"** (Leveraged/Managed Money) включват хедж фондове, family offices, дискреционни макро PM-и — не само CTA. "Бързи пари" е по-точно описание.\n`;
+  md += `- **Notional USD** е номинална стойност, не риск. За rates особено: $50B нет в 2-год. има много по-малък рисков exposure (DV01) от $50B нет в 30-год.\n`;
+  md += `- **Перцентили** са спрямо налична история на пазара (виж ${state.watchlist[0]?.history_weeks || '156'} седмици типично, но варира per market). Това НЕ е спрямо целия исторически период на инструмента.\n`;
+  md += `- **Не виждаме:** ETF flows, single-stock хеджиране, OTC swaps (за rates особено важни — Treasury basis trade ~$1T), options gamma positioning, real-time AUM constraints.\n`;
+  md += `- **Кросови корелации:** Short JPY + Long Gold + Long Equities често е една макро тема (USD-weak/risk-on), не три независими сигнала.\n`;
+
+  return md;
+}
+
+// ── B: Snapshot CSV (all 38 markets) ────────────────────────────────────────
+function generateSnapshotCSV() {
+  const headers = [
+    'market_key', 'market_name_bg', 'sector_bg', 'cot_date',
+    'primary_net', 'primary_percentile', 'primary_zscore', 'primary_delta_4w',
+    'secondary_net', 'notional_usd_bn',
+    'regime_bg', 'streak_weeks', 'streak_direction', 'streak_total_change',
+    'history_weeks', 'history_first_date', 'takeaway'
+  ];
+  const lines = [headers.join(',')];
+  state.watchlist.forEach(r => {
+    const sectorLabel = SECTOR_BG[r.subtitle] || r.subtitle || '';
+    const regimeLabel = REGIME_BG[r.regime]?.label || r.regime || '';
+    lines.push([
+      csvCell(r.market),
+      csvCell(marketLabel(r.market)),
+      csvCell(sectorLabel),
+      csvCell((r.date || '').slice(0, 10)),
+      csvCell(r.primary_net),
+      csvCell(r.primary_percentile),
+      csvCell(r.primary_zscore),
+      csvCell(r.primary_delta_4w),
+      csvCell(r.secondary_net),
+      csvCell(r.notional_usd_bn),
+      csvCell(regimeLabel),
+      csvCell(r.streak_weeks),
+      csvCell(r.streak_direction),
+      csvCell(r.streak_total_change),
+      csvCell(r.history_weeks),
+      csvCell(r.history_first_date),
+      csvCell(stripHtml(r.takeaway)),
+    ].join(','));
+  });
+  return lines.join('\n');
+}
+
+// ── C: Per-market history CSV ───────────────────────────────────────────────
+async function generateMarketHistoryCSV(key) {
+  const mkt = await ensureMarketLoaded(key);
+  if (!mkt) return null;
+  const headers = [
+    'date', 'primary_net', 'primary_long', 'primary_short',
+    'secondary_net', 'secondary_long', 'secondary_short',
+    'tertiary_net', 'tertiary_long', 'tertiary_short',
+    'open_interest'
+  ];
+  const lines = [headers.join(',')];
+  mkt.cot.forEach(r => {
+    lines.push([
+      csvCell((r.date || '').slice(0, 10)),
+      csvCell(r.primary_net),
+      csvCell(r.primary_long),
+      csvCell(r.primary_short),
+      csvCell(r.secondary_net),
+      csvCell(r.secondary_long),
+      csvCell(r.secondary_short),
+      csvCell(r.tertiary_net),
+      csvCell(r.tertiary_long),
+      csvCell(r.tertiary_short),
+      csvCell(r.open_interest),
+    ].join(','));
+  });
+  return lines.join('\n');
+}
+
+// ── D: Single-market BG briefing ────────────────────────────────────────────
+async function generateMarketBriefing(key) {
+  const mkt = await ensureMarketLoaded(key);
+  if (!mkt) return null;
+  const wl = state.watchlist.find(r => r.market === key);
+  if (!wl || !mkt.cot.length) return null;
+
+  const family = mkt.metadata?.report_family || 'tff';
+  const cohorts = COHORT_BG[family];
+  const last = mkt.cot[mkt.cot.length - 1];
+  const sectorLabel = SECTOR_BG[wl.subtitle] || wl.subtitle || '';
+
+  let md = `# COT Дълбок Анализ: ${marketLabel(key)}\n\n`;
+  md += `_${marketSub(key)} · ${sectorLabel} · CFTC отчет към ${(last.date || '').slice(0, 10)} · ${mkt.cot.length} налични седмици история (от ${(mkt.cot[0]?.date || '').slice(0, 10)})_\n\n`;
+  md += `> **Не е инвестиционен съвет.** Аналитичен контекст за разбиране на пазарната структура.\n\n`;
+  md += `---\n\n`;
+
+  // 1. Current state
+  md += `## 1. Текущо състояние\n\n`;
+  const pos = wl.primary_net >= 0 ? 'НЕТ ДЪЛГО' : 'НЕТ КЪСО';
+  md += `**${pos}** ${fmt(Math.abs(wl.primary_net))} контракта · номинална стойност ${fmtBn(wl.notional_usd_bn)}\n\n`;
+  md += `| Метрика | Стойност |\n|---|---|\n`;
+  md += `| Перцентил | ${(wl.primary_percentile || 0).toFixed(0)}-и (спрямо ${wl.history_weeks} седмици) |\n`;
+  md += `| Z-score | ${fmtZ(wl.primary_zscore)} (отклонение от историческата средна за периода) |\n`;
+  md += `| Регим | ${REGIME_BG[wl.regime]?.label || wl.regime} |\n`;
+  md += `| Δ 4 седмици | ${(wl.primary_delta_4w >= 0 ? '+' : '') + fmt(wl.primary_delta_4w)} контракта |\n`;
+  if ((wl.streak_weeks || 0) >= 3) {
+    md += `| Streak | ${wl.streak_weeks} седмици ${STREAK_DIR_BG[wl.streak_direction] || ''}, кумул. ${fmt(Math.abs(wl.streak_total_change || 0))} |\n`;
+  }
+  if (wl.price_change_4w_pct != null) {
+    md += `| Промяна на цената (4w) | ${fmtPct(wl.price_change_4w_pct)} |\n`;
+  }
+  md += '\n';
+
+  // 2. Cohort breakdown
+  md += `## 2. Разбивка по групи играчи\n\n`;
+  ['primary', 'secondary', 'tertiary'].forEach(role => {
+    const c = cohorts[role];
+    const net = last[role + '_net'];
+    const long = last[role + '_long'];
+    const short = last[role + '_short'];
+    const direction = net >= 0 ? 'дълго' : net < 0 ? 'късо' : 'неутрално';
+    md += `### ${c.label} _(${c.sub})_\n\n`;
+    md += `- **Нет позиция:** ${fmt(net)} контракта (${direction})\n`;
+    if (long != null && short != null) {
+      md += `- **Long / Short:** ${fmt(long)} дълги · ${fmt(short)} къси\n`;
+    }
+    md += `- ${c.desc}\n\n`;
+  });
+
+  // 3. Last 12 weeks
+  md += `## 3. Последните 12 седмици\n\n`;
+  md += `| Дата | Спекулат. нет | Δ седм. | Вторич. нет | Open Interest |\n`;
+  md += `|---|---:|---:|---:|---:|\n`;
+  const recent = mkt.cot.slice(-12);
+  recent.forEach((r, i) => {
+    const delta = i > 0 ? r.primary_net - recent[i - 1].primary_net : null;
+    const deltaStr = delta == null ? '—' : ((delta >= 0 ? '+' : '') + fmt(delta));
+    md += `| ${(r.date || '').slice(0, 10)} | ${fmt(r.primary_net)} | ${deltaStr} | ${fmt(r.secondary_net)} | ${fmt(r.open_interest)} |\n`;
+  });
+  md += '\n';
+
+  // 4. Historical extremes
+  const allNets = mkt.cot.map(r => r.primary_net).filter(v => v != null);
+  if (allNets.length) {
+    const maxNet = Math.max(...allNets);
+    const minNet = Math.min(...allNets);
+    const maxIdx = mkt.cot.findIndex(r => r.primary_net === maxNet);
+    const minIdx = mkt.cot.findIndex(r => r.primary_net === minNet);
+    md += `## 4. Исторически екстремуми за следения период\n\n`;
+    md += `- **Максимална нет дълга позиция:** ${fmt(maxNet)} контракта (${(mkt.cot[maxIdx]?.date || '').slice(0, 10)})\n`;
+    md += `- **Максимална нет къса позиция:** ${fmt(minNet)} контракта (${(mkt.cot[minIdx]?.date || '').slice(0, 10)})\n`;
+    md += `- **Текуща позиция:** ${fmt(wl.primary_net)} контракта — ${(wl.primary_percentile || 0).toFixed(0)}-и перцентил\n\n`;
+  }
+
+  // 5. Methodology
+  md += `## 5. Бележки специфични за този пазар\n\n`;
+  md += `- **Тип отчет:** ${family === 'tff' ? 'Traders in Financial Futures (TFF)' : 'Disaggregated (commodities)'}\n`;
+  md += `- **Cohort групи:** ${cohorts.primary.label} (${cohorts.primary.sub}), ${cohorts.secondary.label}, ${cohorts.tertiary.label}\n`;
+  md += `- **Период:** ${wl.history_weeks} седмици от ${wl.history_first_date || '—'}. Постепенно расте със incremental cache.\n`;
+  md += `- **Не виждаме:** ETF flows за този пазар, OTC swap позиции, options positioning, single-name хеджиране (където е приложимо).\n`;
+  md += `- **Notional USD** използва multiplier × цена на датата на отчета. За rates това е номинална face value, не DV01 риск.\n`;
+
+  return md;
+}
+
+// ── E: Alerts-only briefing ─────────────────────────────────────────────────
+function generateAlertsBriefing() {
+  const date = state.watchlist[0]?.date?.slice(0, 10) || '';
+  let md = `# COT Alerts — ${date}\n\n`;
+  md += `_Само пазари с активен сигнал: streak ≥5 седмици или percentile ≤10 / ≥90._\n\n`;
+
+  const streaks = state.watchlist
+    .filter(r => (r.streak_weeks || 0) >= 5)
+    .sort((a, b) => (b.streak_weeks || 0) - (a.streak_weeks || 0));
+  const extremes = state.watchlist
+    .filter(r => r.primary_percentile != null && (r.primary_percentile <= 10 || r.primary_percentile >= 90))
+    .sort((a, b) => Math.abs(b.primary_percentile - 50) - Math.abs(a.primary_percentile - 50));
+
+  if (streaks.length) {
+    md += `## Многоседмични трендове\n\n`;
+    streaks.forEach(r => {
+      const pos = r.primary_net >= 0 ? 'нет дълго' : 'нет късо';
+      md += `- **${marketLabel(r.market)}**: ${r.streak_weeks} поредни седмици ${STREAK_DIR_BG[r.streak_direction] || ''}. Сега ${pos} ${fmt(Math.abs(r.primary_net))} (${fmtBn(r.notional_usd_bn)}).\n`;
+    });
+    md += '\n';
+  }
+
+  if (extremes.length) {
+    md += `## Исторически екстремуми\n\n`;
+    extremes.forEach(r => {
+      const pos = r.primary_net >= 0 ? 'нет дълго' : 'нет късо';
+      const interp = r.primary_percentile >= 90
+        ? (r.primary_net >= 0 ? '— екстремно дълго за периода' : '— по-малко късо от обичайното')
+        : (r.primary_net >= 0 ? '— по-малко дълго от обичайното' : '— екстремно късо за периода');
+      md += `- **${marketLabel(r.market)}**: ${r.primary_percentile.toFixed(0)}-и перцентил (${r.history_weeks}w) ${interp}. Сега ${pos} ${fmt(Math.abs(r.primary_net))}.\n`;
+    });
+    md += '\n';
+  }
+
+  if (!streaks.length && !extremes.length) {
+    md += `_Няма активни alerts тази седмица — пазарите са в нормални диапазони._\n`;
+  }
+
+  return md;
+}
+
+// ── Wire up exports section ─────────────────────────────────────────────────
+function setupExports() {
+  const dateSlug = (state.watchlist[0]?.date || '').slice(0, 10) || 'latest';
+
+  // Populate market dropdowns for C and D (sorted alphabetically by BG name)
+  const markets = state.manifest?.markets || [];
+  const sortedKeys = markets.map(m => m.key).sort((a, b) => marketLabel(a).localeCompare(marketLabel(b), 'bg'));
+  const optHtml = sortedKeys.map(k => `<option value="${k}">${marketLabel(k)}</option>`).join('');
+  const selC = $('export-select-c');
+  const selD = $('export-select-d');
+  if (selC) selC.innerHTML = optHtml;
+  if (selD) selD.innerHTML = optHtml;
+
+  // A
+  const btnA = $('export-btn-a');
+  if (btnA) btnA.onclick = () => downloadFile(`cot-briefing_${dateSlug}.md`, generateWeeklyBriefing(), 'text/markdown;charset=utf-8');
+  // B
+  const btnB = $('export-btn-b');
+  if (btnB) btnB.onclick = () => downloadFile(`cot-snapshot_${dateSlug}.csv`, generateSnapshotCSV(), 'text/csv;charset=utf-8');
+  // C
+  const btnC = $('export-btn-c');
+  if (btnC) btnC.onclick = async () => {
+    const key = selC.value;
+    btnC.disabled = true; btnC.textContent = '⏳ Зареждане…';
+    try {
+      const csv = await generateMarketHistoryCSV(key);
+      if (csv) downloadFile(`cot-history_${key}_${dateSlug}.csv`, csv, 'text/csv;charset=utf-8');
+    } finally {
+      btnC.disabled = false; btnC.textContent = '📥 Изтегли';
+    }
+  };
+  // D
+  const btnD = $('export-btn-d');
+  if (btnD) btnD.onclick = async () => {
+    const key = selD.value;
+    btnD.disabled = true; btnD.textContent = '⏳ Зареждане…';
+    try {
+      const md = await generateMarketBriefing(key);
+      if (md) downloadFile(`cot-deep-dive_${key}_${dateSlug}.md`, md, 'text/markdown;charset=utf-8');
+    } finally {
+      btnD.disabled = false; btnD.textContent = '📥 Изтегли';
+    }
+  };
+  // E
+  const btnE = $('export-btn-e');
+  if (btnE) btnE.onclick = () => downloadFile(`cot-alerts_${dateSlug}.md`, generateAlertsBriefing(), 'text/markdown;charset=utf-8');
+}
+
+// ════════════════════════════════════════════════════════════════════════════
 // Boot
 // ════════════════════════════════════════════════════════════════════════════
-init();
+init().then(() => setupExports());
 </script>
 </body>
 </html>
