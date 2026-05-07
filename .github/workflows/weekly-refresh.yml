@@ -77,6 +77,34 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Defensive cleanup: delete any prior github-pages artifacts in this run.
+      # GitHub occasionally leaves stale artifacts when runs queue up via the
+      # "pages" concurrency group, causing deploy-pages to fail with
+      # "Multiple artifacts named 'github-pages' were unexpectedly found".
+      - name: Cleanup prior github-pages artifacts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const res = await github.rest.actions.listWorkflowRunArtifacts({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                run_id: context.runId,
+              });
+              for (const a of res.data.artifacts) {
+                if (a.name === 'github-pages') {
+                  console.log(`Deleting prior artifact ${a.id} (${a.name})`);
+                  await github.rest.actions.deleteArtifact({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    artifact_id: a.id,
+                  });
+                }
+              }
+            } catch (e) {
+              console.log('Cleanup step non-fatal error: ' + e.message);
+            }
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
