@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Пазарни позиции — седмичен наратив</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0e1117;
+      --surface: #161b27;
+      --surface2: #1f2535;
+      --border: #2a3147;
+      --text: #e6ebf3;
+      --text-muted: #9aa4b8;
+      --accent: #818cf8;
+      --accent-soft: #4338ca;
+      --long: #22c55e;
+      --short: #ef4444;
+      --warn: #f59e0b;
+      --info: #38bdf8;
+      --neutral: #64748b;
+      --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    html { font-size: 15px; background: var(--bg); color: var(--text); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+    body { min-height: 100vh; line-height: 1.55; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Disclaimer banner ── */
+    .disclaimer {
+      background: linear-gradient(90deg, #422006 0%, #4a2a09 100%);
+      border-bottom: 1px solid #78350f;
+      color: #fde68a;
+      font-size: 0.86rem;
+      padding: 0.7rem 1.5rem;
+      text-align: center;
+    }
+    .disclaimer strong { color: #fef3c7; }
+
+    /* ── Header ── */
+    header.site {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 0 1rem;
+    }
+    header h1 {
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      color: var(--text);
+    }
+    header .lede {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0.35rem;
+      max-width: 70ch;
+    }
+    .meta-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 0.9rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .meta-pill {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .meta-pill strong { color: var(--text); font-weight: 600; }
+
+    /* ── Tabs ── */
+    nav.tabs {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    nav.tabs .container { display: flex; gap: 0.25rem; overflow-x: auto; }
+    nav.tabs button {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    nav.tabs button:hover { color: var(--text); }
+    nav.tabs button.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── Sections ── */
+    main { padding: 2rem 0 4rem; }
+    section.tab { display: none; }
+    section.tab.active { display: block; }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    h2 .sub {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin-top: 0.25rem;
+    }
+    h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.6rem; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card-title { font-weight: 600; margin-bottom: 0.3rem; }
+    .card-body { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ── Hero narrative ── */
+    .hero-narrative {
+      background: linear-gradient(135deg, #1e1b4b 0%, #1a1f2e 60%);
+      border: 1px solid #3730a3;
+      padding: 1.5rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-narrative p { font-size: 1.02rem; color: var(--text); }
+    .hero-narrative p + p { margin-top: 0.7rem; }
+    .hero-narrative .kicker {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── Weekly grid ── */
+    .change-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.85rem;
+    }
+    .change-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--neutral);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+    }
+    .change-card.up { border-left-color: var(--long); }
+    .change-card.down { border-left-color: var(--short); }
+    .change-card.warn { border-left-color: var(--warn); }
+    .change-card .market {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+    .change-card .sector {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .change-card .delta {
+      font-size: 0.86rem;
+      color: var(--text);
+    }
+    .change-card .delta .num { font-weight: 600; }
+    .change-card .num.long { color: var(--long); }
+    .change-card .num.short { color: var(--short); }
+    .change-card .takeaway {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* ── Sector grid ── */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1rem;
+    }
+    .sector-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+    }
+    .sector-card h3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+      font-size: 1.02rem;
+    }
+    .sector-card .sector-net {
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: var(--surface2);
+    }
+    .sector-card .sector-net.long { color: var(--long); background: rgba(34,197,94,0.1); }
+    .sector-card .sector-net.short { color: var(--short); background: rgba(239,68,68,0.1); }
+    .sector-card .sector-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .sector-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 0.8rem;
+      align-items: center;
+      padding: 0.45rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.86rem;
+    }
+    .sector-row:hover { background: var(--surface2); }
+    .sector-row .name { color: var(--text); font-weight: 500; }
+    .sector-row .pct {
+      font-variant-numeric: tabular-nums;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      min-width: 54px;
+      text-align: right;
+    }
+    .sector-row .bar {
+      width: 90px;
+      height: 6px;
+      background: var(--surface2);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+    .sector-row .bar::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .sector-row .bar-fill {
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+    .sector-row .bar-fill.long { background: var(--long); left: 50%; }
+    .sector-row .bar-fill.short { background: var(--short); right: 50%; }
+
+    /* ── Full table ── */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    table.full {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    table.full thead th {
+      text-align: left;
+      padding: 0.75rem 0.8rem;
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    table.full thead th:hover { color: var(--text); }
+    table.full thead th.sorted::after { content: ' ↓'; color: var(--accent); }
+    table.full thead th.sorted.asc::after { content: ' ↑'; }
+    table.full tbody tr { border-bottom: 1px solid var(--border); cursor: pointer; }
+    table.full tbody tr:hover { background: var(--surface2); }
+    table.full tbody tr.expanded { background: rgba(99,102,241,0.06); }
+    table.full td {
+      padding: 0.7rem 0.8rem;
+      vertical-align: middle;
+      font-variant-numeric: tabular-nums;
+    }
+    table.full td.market-cell { width: 32%; }
+    table.full td.market-cell .name { font-weight: 600; color: var(--text); }
+    table.full td.market-cell .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }
+    .pct-bar {
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      background: var(--surface2);
+      vertical-align: middle;
+      border-radius: 2px;
+      overflow: hidden;
+      margin-left: 0.4rem;
+    }
+    .pct-bar .pct-bar-fill { height: 100%; background: var(--accent); }
+    .num-pos { color: var(--long); font-weight: 500; }
+    .num-neg { color: var(--short); font-weight: 500; }
+    .regime-pill {
+      display: inline-block;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .regime-pill.crowded-long { background: rgba(34,197,94,0.15); color: var(--long); }
+    .regime-pill.crowded-short { background: rgba(239,68,68,0.15); color: var(--short); }
+    .regime-pill.contrarian-long { background: rgba(20,184,166,0.18); color: #2dd4bf; }
+    .regime-pill.contrarian-short { background: rgba(249,115,22,0.18); color: #fb923c; }
+    .regime-pill.divergence { background: rgba(168,85,247,0.18); color: #c084fc; }
+    .regime-pill.neutral { background: rgba(100,116,139,0.18); color: var(--text-muted); }
+
+    /* ── Detail panel ── */
+    tr.detail-row td {
+      padding: 0;
+      background: var(--bg);
+    }
+    .detail-panel {
+      padding: 1.25rem 1.4rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1.5rem;
+    }
+    .cohort-list { display: flex; flex-direction: column; gap: 0.7rem; }
+    .cohort-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.7rem 0.85rem;
+    }
+    .cohort-item .row1 {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+    }
+    .cohort-item .role { font-weight: 600; font-size: 0.88rem; }
+    .cohort-item .net { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.95rem; }
+    .cohort-item .desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+    .detail-context {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.85rem 1rem;
+      font-size: 0.85rem;
+    }
+    .detail-context .label {
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+    .detail-context p { margin-bottom: 0.6rem; }
+    .detail-context p:last-child { margin-bottom: 0; }
+    .chart-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.7rem;
+      height: 240px;
+    }
+
+    /* ── Methodology ── */
+    .method-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .method-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.3rem;
+    }
+    .method-card h3 {
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+      font-size: 1.02rem;
+    }
+    .method-card p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.7rem; }
+    .method-card p:last-child { margin-bottom: 0; }
+    .method-card ul { margin-left: 1.2rem; color: var(--text-muted); font-size: 0.88rem; }
+    .method-card ul li { margin-bottom: 0.35rem; }
+    .method-card strong { color: var(--text); }
+
+    /* ── Loading / error ── */
+    #loading, #error {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text-muted);
+    }
+    #error { color: var(--short); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      header h1 { font-size: 1.25rem; }
+      .container { padding: 0 1rem; }
+      .detail-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      table.full { font-size: 0.78rem; }
+      table.full td, table.full th { padding: 0.55rem 0.5rem; }
+      table.full td.market-cell { width: 45%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="disclaimer">
+  <strong>Не е инвестиционен съвет.</strong>
+  Това е инструмент за <strong>контекст</strong> върху позиционирането на големите участници —
+  не дава сигнали за покупка/продажба, не предсказва пазара, не е база за вземане на решения.
+</div>
+
+<header class="site">
+  <div class="container">
+    <h1>Пазарни позиции — седмичен наратив</h1>
+    <p class="lede">
+      Какво направиха големите играчи (хедж фондове, институционални управляващи, производители) на 38 фючърсни пазара миналата седмица.
+      Данните идват от <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm" target="_blank">CFTC COT отчета</a> —
+      позициите са към <strong>вторник</strong>, публикуват се в <strong>петък 15:30 ET</strong>.
+    </p>
+    <div class="meta-row" id="meta-row"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="container">
+    <button data-tab="week" class="active">Тази седмица</button>
+    <button data-tab="sectors">Секторна картина</button>
+    <button data-tab="all">Пълен преглед (38 пазара)</button>
+    <button data-tab="method">Какво НЕ виждаме</button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div id="loading">Зареждане на данните…</div>
+    <div id="error" hidden></div>
+
+    <!-- ── Tab 1: Тази седмица ── -->
+    <section class="tab" id="tab-week">
+      <h2>Какво се случи тази седмица
+        <span class="sub">Само значимите движения и екстремуми — не всички 38 пазара</span>
+      </h2>
+      <div id="hero-narrative" class="hero-narrative" hidden></div>
+
+      <h3 style="margin-top:1.6rem">Най-силни седмични движения</h3>
+      <div id="big-moves" class="change-grid"></div>
+
+      <h3 style="margin-top:1.6rem">На исторически екстремуми</h3>
+      <div id="extremes" class="change-grid"></div>
+    </section>
+
+    <!-- ── Tab 2: Секторна картина ── -->
+    <section class="tab" id="tab-sectors">
+      <h2>Секторна картина
+        <span class="sub">Агрегирано спекулативно позициониране по сектори. Сравнете къде "бързите пари" са натрупали експозиция.</span>
+      </h2>
+      <div id="sector-grid" class="sector-grid"></div>
+    </section>
+
+    <!-- ── Tab 3: Пълен преглед ── -->
+    <section class="tab" id="tab-all">
+      <h2>Пълен преглед — 38 пазара
+        <span class="sub">Сортирайте по колоните. Кликнете ред за разбивка по групи играчи и обяснение.</span>
+      </h2>
+      <div class="table-wrap">
+        <table class="full" id="full-table">
+          <thead>
+            <tr>
+              <th data-sort="title">Пазар</th>
+              <th data-sort="primary_percentile">Перцентил <small>(спекулативни)</small></th>
+              <th data-sort="primary_zscore">Z-score</th>
+              <th data-sort="primary_delta_4w">Δ 4 седмици</th>
+              <th data-sort="regime">Режим</th>
+              <th data-sort="notional_usd_bn">Нет позиция (≈$B)</th>
+            </tr>
+          </thead>
+          <tbody id="full-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── Tab 4: Методология / какво не виждаме ── -->
+    <section class="tab" id="tab-method">
+      <h2>Какво НЕ виждаме (важно за абонатите)
+        <span class="sub">Ограниченията на данните и метода. Прочетете преди да правите изводи.</span>
+      </h2>
+      <div class="method-grid">
+
+        <div class="method-card">
+          <h3>Закъснение на данните</h3>
+          <p>CFTC публикува позициите всеки петък в 15:30 ET, но те отразяват <strong>състоянието до вторник</strong>.
+            Това означава 3-4 дневен лаг.</p>
+          <p>За бърза действаща стратегия (intraday / swing) това е значимо. За <strong>контекст и наратив</strong> —
+            важно е да се следи структурата, не моментната цена.</p>
+        </div>
+
+        <div class="method-card">
+          <h3>"Спекулативни фондове" не е същото като CTA</h3>
+          <p>В TFF отчетa <strong>"Leveraged Money"</strong> и в Disagg <strong>"Managed Money"</strong> включват
+            хедж фондове, family offices, дискреционни макро мениджъри, multi-strat — <strong>не само trend-followers (CTA)</strong>.</p>
+          <p>Истинските CTA-та са подмножество (~10-30% от тази група, варира спрямо пазара). "Спекулативно позициониране"
+            е по-точно описание от "CTA позициониране".</p>
+        </div>
+
+        <div class="method-card">
+          <h3>Какво физически липсва</h3>
+          <ul>
+            <li><strong>ETF потоци</strong> — за акции, злато, Bitcoin често по-голям сигнал от фючърсите</li>
+            <li><strong>Хеджиране на единични акции</strong> — извън CFTC обхвата</li>
+            <li><strong>Опции и гама позициониране</strong> — често доминират над делта позиционирането</li>
+            <li><strong>OTC суапове</strong> — за облигациите Treasury basis trade е ~$1T, фючърсите са малка част</li>
+            <li><strong>Контекст на финансирането</strong> — когато AUM свива, позициите се режат независимо от сигнала</li>
+          </ul>
+        </div>
+
+        <div class="method-card">
+          <h3>Кросови корелации между пазари</h3>
+          <p>Short JPY + Long Gold + Long Equities често е <strong>една макро тема</strong> (USD-weak / risk-on),
+            не три независими сигнала.</p>
+          <p>Дашбордът показва пазарите един по един. Когато гледате няколко наведнъж, попитайте: <em>дали това не е
+            една и съща тема, изразена на различни инструменти?</em></p>
+        </div>
+
+        <div class="method-card">
+          <h3>"Нет позиция в $B" е приблизителна</h3>
+          <p>Сметката е: <em>нет контракти × множител на контракта × цена на датата на отчета</em>.
+            Това е <strong>номинална стойност</strong>, не риск. За облигациите особено: $50B нет в 2-год.
+            има много по-малък рисков експозиция (DV01) от $50B нет в 30-год.</p>
+          <p>Не сравнявайте директно номинални стойности между различни инструменти.</p>
+        </div>
+
+        <div class="method-card">
+          <h3>Перцентил vs историческа норма</h3>
+          <p>Показваме перцентил спрямо последните 156 седмици (~3 години). Това е <strong>относителен ориентир</strong>,
+            не абсолютна оценка. Перцентил 95 в спокоен пазарен режим не е същото като перцентил 95 в режим на висока волатилност.</p>
+          <p>Винаги поставяйте перцентилите в контекста на текущия волатилен режим (виж индикатора в горния десен ъгъл).</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script>
+// ════════════════════════════════════════════════════════════════════════════
+// Translation tables (BG)
+// ════════════════════════════════════════════════════════════════════════════
+
+const SECTOR_BG = {
+  'US Equities': 'Американски акции',
+  'Rates': 'US облигации (лихвени пазари)',
+  'Volatility': 'Волатилност',
+  'FX': 'Валути (FX)',
+  'Crypto': 'Криптовалути',
+  'Commodities': 'Суровини',
+};
+
+const SECTOR_GROUPS = {
+  'Американски акции': ['sp500', 'nasdaq', 'russell'],
+  'US облигации': ['us2y', 'us5y', 'us10y', 'usultra10y', 'us30y'],
+  'Валути': ['eurfx', 'gbpfx', 'jpy', 'chf', 'cad', 'aud', 'dxy'],
+  'Енергоносители': ['wti', 'brent', 'natgas', 'rbob', 'heatingoil'],
+  'Метали': ['gold', 'silver', 'copper', 'platinum', 'palladium'],
+  'Агрокултури': ['corn', 'soybeans', 'wheat', 'soyoil', 'soymeal', 'coffee', 'sugar', 'cocoa', 'cotton'],
+  'Животновъдство': ['cattle', 'hogs'],
+  'Други': ['vix', 'bitcoin'],
+};
+
+// Per-market translation: Bulgarian name + descriptive subtitle
+const MARKET_BG = {
+  sp500:      { name: 'S&P 500',                    sub: 'Бенчмарк на американските акции' },
+  nasdaq:     { name: 'Nasdaq 100',                 sub: 'Технологични компании, мега капове' },
+  russell:    { name: 'Russell 2000',               sub: 'Малки американски компании' },
+  us2y:       { name: 'US 2-годишни облигации',     sub: 'Кратък край (Fed expectations)' },
+  us5y:       { name: 'US 5-годишни облигации',     sub: 'Среден край на кривата' },
+  us10y:      { name: 'US 10-годишни облигации',    sub: 'Бенчмарк дюрация' },
+  usultra10y: { name: 'Ultra 10-годишни облигации', sub: 'Дълга дюрация (бенчмарк)' },
+  us30y:      { name: 'US 30-годишни облигации',    sub: 'Дълъг край (long bond)' },
+  vix:        { name: 'VIX',                        sub: 'Имплицитна волатилност на S&P 500' },
+  eurfx:      { name: 'Евро (EUR/USD)',             sub: 'Главна европейска валута' },
+  gbpfx:      { name: 'Британски паунд (GBP/USD)',  sub: 'Британска валута' },
+  jpy:        { name: 'Японска йена (JPY)',         sub: 'Carry-trade финансираща валута' },
+  chf:        { name: 'Швейцарски франк (CHF)',     sub: 'Защитна валута' },
+  cad:        { name: 'Канадски долар (CAD)',       sub: 'Петролно-чувствителна валута' },
+  aud:        { name: 'Австралийски долар (AUD)',   sub: 'Чувствителна към китайско търсене' },
+  dxy:        { name: 'Долар индекс (DXY)',         sub: 'USD срещу 6 валути' },
+  bitcoin:    { name: 'Bitcoin',                    sub: 'Водеща криптовалута' },
+  gold:       { name: 'Злато',                      sub: 'Защитен / реален актив' },
+  silver:     { name: 'Сребро',                     sub: 'Полу-индустриален метал' },
+  copper:     { name: 'Мед',                        sub: 'Индустриален барометър ("Dr. Copper")' },
+  platinum:   { name: 'Платина',                    sub: 'Авто-катализатор метал' },
+  palladium:  { name: 'Паладий',                    sub: 'Авто-катализатор метал' },
+  wti:        { name: 'WTI петрол',                 sub: 'Американски бенчмарк суров нефт' },
+  brent:      { name: 'Brent петрол',               sub: 'Глобален бенчмарк суров нефт' },
+  natgas:     { name: 'Природен газ (Henry Hub)',   sub: 'Американски газов бенчмарк' },
+  rbob:       { name: 'Бензин (RBOB)',              sub: 'Преработен продукт' },
+  heatingoil: { name: 'Дизел (NY Harbor ULSD)',     sub: 'Ultra Low Sulfur Diesel — средни дестилати' },
+  corn:       { name: 'Царевица',                   sub: 'Зърно за фураж и етанол' },
+  soybeans:   { name: 'Соя',                        sub: 'Маслодайно зърно' },
+  wheat:      { name: 'Пшеница (Чикаго SRW)',       sub: 'Мека червена пшеница' },
+  soyoil:     { name: 'Соево олио',                 sub: 'Растителни масла' },
+  soymeal:    { name: 'Соев шрот',                  sub: 'Протеинова храна' },
+  coffee:     { name: 'Кафе (Арабика)',             sub: 'ICE Coffee C' },
+  sugar:      { name: 'Захар (сурова)',             sub: 'ICE No.11' },
+  cocoa:      { name: 'Какао',                      sub: 'ICE NY' },
+  cotton:     { name: 'Памук',                      sub: 'ICE No.2' },
+  cattle:     { name: 'Едър рогат добитък',         sub: 'Живи говеда (CME)' },
+  hogs:       { name: 'Свине',                      sub: 'CME Lean Hogs' },
+};
+
+// Cohort definitions per report family
+const COHORT_BG = {
+  tff: {
+    primary:   { label: 'Спекулативни фондове', sub: 'Leveraged Money',
+      desc: 'Хедж фондове, CTA-та, други активни мениджъри. Тяхното позициониране се движи бързо и е чувствително към ценови сигнали.' },
+    secondary: { label: 'Институционални управляващи', sub: 'Asset Managers',
+      desc: 'Пенсионни фондове, mutual funds, ETF мениджъри. Дългосрочно позициониране със стратегическо разпределение.' },
+    tertiary:  { label: 'Дилъри', sub: 'Dealers',
+      desc: 'Банки и маркет-мейкъри. Често обратната страна на спекулативните позиции — не са насочена позиция, а услуга на пазара.' },
+  },
+  disaggregated: {
+    primary:   { label: 'Спекулативни фондове', sub: 'Managed Money',
+      desc: 'Хедж фондове и CTA-та в суровинните пазари. "Бързи пари" — реагират на тренд и моментум.' },
+    secondary: { label: 'Производители / Хеджъри', sub: 'Producers/Commercials',
+      desc: 'Реални компании (фермери, миньорски компании, рафинерии) които хеджират физическата си експозиция. Тяхната позиция отразява реалното търсене и предлагане.' },
+    tertiary:  { label: 'Суап дилъри', sub: 'Swap Dealers',
+      desc: 'Банки и брокери които правят пазара. Често обратната страна на спекулативните и producers — посредници, не насочена позиция.' },
+  },
+};
+
+// Period selector options for detail chart
+const PERIOD_OPTIONS = [
+  { value: 52,   label: '1 година' },
+  { value: 104,  label: '2 години' },
+  { value: 156,  label: '3 години' },
+  { value: 260,  label: '5 години' },
+  { value: 364,  label: '7 години' },
+  { value: 520,  label: '10 години' },
+  { value: 9999, label: 'цялата налична история' },
+];
+const PERIOD_DEFAULT = 156;  // 3 years
+const MONTHS_BG_SHORT = ['яну', 'фев', 'мар', 'апр', 'май', 'юни', 'юли', 'авг', 'сеп', 'окт', 'ное', 'дек'];
+const MONTHS_BG_FULL  = ['януари', 'февруари', 'март', 'април', 'май', 'юни', 'юли', 'август', 'септември', 'октомври', 'ноември', 'декември'];
+
+const REGIME_BG = {
+  'Crowded Long':      { label: 'Пренаситен дълъг',      cls: 'crowded-long',
+    desc: 'Спекулативните позиции са на исторически висок край. Често предхожда корекция надолу при изненадваща новина.' },
+  'Crowded Short':     { label: 'Пренаситен къс',        cls: 'crowded-short',
+    desc: 'Спекулативните позиции са на исторически нисък край. Често предхожда short squeeze при positive новина.' },
+  'Contrarian Long':   { label: 'Контра-сигнал (дълъг)', cls: 'contrarian-long',
+    desc: 'Спекулативните и институционалните се разделят — едните дълги, другите къси. Сигнал за противоположни мнения.' },
+  'Contrarian Short':  { label: 'Контра-сигнал (къс)',   cls: 'contrarian-short',
+    desc: 'Спекулативните и институционалните се разделят. Ситуацията не е консенсус — наблюдавайте кой се окаже прав.' },
+  'Divergence':        { label: 'Дивергенция',           cls: 'divergence',
+    desc: 'Различните групи играчи действат в противоположни посоки. По-малко информативна от единен консенсус.' },
+  'Neutral':           { label: 'Неутрално',             cls: 'neutral',
+    desc: 'Позициите са близо до историческата средна. Без сигнал за крайност в нито една посока.' },
+};
+
+// ════════════════════════════════════════════════════════════════════════════
+// State
+// ════════════════════════════════════════════════════════════════════════════
+
+const state = {
+  manifest: null,
+  watchlist: null,
+  weekly: null,
+  cta: null,
+  ai: null,
+  vix: null,
+  vixPercentile: null,
+  markets: {},
+  sortBy: 'primary_percentile',
+  sortDir: 'desc',
+  expandedKey: null,
+  charts: {},
+};
+
+// ════════════════════════════════════════════════════════════════════════════
+// Utilities
+// ════════════════════════════════════════════════════════════════════════════
+
+const $  = id => document.getElementById(id);
+const fmt = n => (n == null) ? '—' :
+  Math.abs(n) >= 1000 ? n.toLocaleString('bg-BG', { maximumFractionDigits: 0 })
+                      : n.toLocaleString('bg-BG', { maximumFractionDigits: 1 });
+const fmtBn = n => (n == null) ? '—' :
+  ((n >= 0 ? '+$' : '-$') + Math.abs(n).toLocaleString('bg-BG', { maximumFractionDigits: 1 }) + 'B');
+const fmtPct = n => (n == null) ? '—' :
+  (n >= 0 ? '+' : '') + n.toLocaleString('bg-BG', { maximumFractionDigits: 1 }) + '%';
+const fmtZ = n => (n == null) ? '—' :
+  (n >= 0 ? '+' : '') + n.toFixed(2);
+const fmtDate = s => {
+  if (!s) return '—';
+  const d = new Date(s.length > 10 ? s : (s + 'T00:00:00Z'));
+  if (isNaN(d)) return s;
+  return d.toLocaleDateString('bg-BG', { year: 'numeric', month: 'short', day: 'numeric' });
+};
+const numClass = n => (n == null) ? '' : (n >= 0 ? 'num-pos' : 'num-neg');
+
+function marketLabel(key) {
+  const m = MARKET_BG[key];
+  return m ? m.name : key;
+}
+function marketSub(key) {
+  const m = MARKET_BG[key];
+  return m ? m.sub : '';
+}
+
+async function fetchJson(url) {
+  const r = await fetch(url, { cache: 'no-cache' });
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  return r.json();
+}
+
+function showError(msg) {
+  $('loading').hidden = true;
+  const e = $('error');
+  e.hidden = false;
+  e.textContent = 'Грешка при зареждане: ' + msg;
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Data loading
+// ════════════════════════════════════════════════════════════════════════════
+
+async function init() {
+  try {
+    state.manifest  = await fetchJson('data/manifest.json');
+    [state.watchlist, state.weekly, state.cta, state.ai] = await Promise.all([
+      fetchJson('data/derived/watchlist.json'),
+      fetchJson('data/derived/weekly_changes.json'),
+      fetchJson('data/cta_model/summary.json'),
+      fetchJson('data/ai_context.json').catch(() => null),
+    ]);
+    // Load VIX for vol regime tag
+    try {
+      state.vix = await fetchJson('data/markets/vix.json');
+      computeVixPercentile();
+    } catch (_) {}
+
+    setHeaderMeta();
+    renderHeroNarrative();
+    renderBigMoves();
+    renderExtremes();
+    renderSectors();
+    renderFullTable();
+
+    $('loading').hidden = true;
+    $('tab-week').classList.add('active');
+    setupTabs();
+  } catch (e) {
+    showError(e.message);
+  }
+}
+
+function computeVixPercentile() {
+  if (!state.vix || !state.vix.prices || !state.vix.prices.length) return;
+  const closes = state.vix.prices.map(p => p.close).filter(v => v != null);
+  if (!closes.length) return;
+  const current = closes[closes.length - 1];
+  const below = closes.filter(v => v <= current).length;
+  state.vixPercentile = Math.round(100 * below / closes.length);
+  state.vixCurrent = current;
+}
+
+function setHeaderMeta() {
+  const cotDate = state.watchlist[0]?.date?.slice(0, 10);
+  const updated = state.manifest.generated_at;
+  const meta = $('meta-row');
+  let html = '';
+  if (cotDate) html += `<span class="meta-pill">COT данни към <strong>${fmtDate(cotDate)}</strong></span>`;
+  if (updated) {
+    const u = new Date(updated);
+    html += `<span class="meta-pill">Обновено <strong>${u.toLocaleString('bg-BG', { dateStyle: 'medium', timeStyle: 'short' })}</strong></span>`;
+  }
+  if (state.vixPercentile != null) {
+    const regime = state.vixPercentile >= 75 ? 'висока волатилност'
+                : state.vixPercentile <= 25 ? 'ниска волатилност'
+                : 'нормална волатилност';
+    html += `<span class="meta-pill" title="VIX = ${state.vixCurrent.toFixed(1)}, перцентил спрямо последните 3 години">
+              VIX <strong>${state.vixCurrent.toFixed(1)}</strong> · ${regime} (${state.vixPercentile}-и перцентил)
+            </span>`;
+  }
+  html += `<span class="meta-pill"><strong>${state.watchlist.length}</strong> следени пазара</span>`;
+  meta.innerHTML = html;
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Tab 1 — Тази седмица
+// ════════════════════════════════════════════════════════════════════════════
+
+function renderHeroNarrative() {
+  // Auto-narrative: detect dominant macro themes
+  const themes = detectMacroThemes();
+  if (!themes.length) return;
+  const el = $('hero-narrative');
+  el.hidden = false;
+  let html = `<div class="kicker">Доминираща картина</div>`;
+  themes.forEach(t => html += `<p>${t}</p>`);
+  el.innerHTML = html;
+}
+
+function detectMacroThemes() {
+  const themes = [];
+  const wl = state.watchlist;
+  const byKey = Object.fromEntries(wl.map(r => [r.market, r]));
+
+  // 1. Crowded extremes count
+  const crowdedLong = wl.filter(r => r.regime === 'Crowded Long');
+  const crowdedShort = wl.filter(r => r.regime === 'Crowded Short');
+  if (crowdedLong.length || crowdedShort.length) {
+    const parts = [];
+    if (crowdedLong.length) parts.push(`<strong>${crowdedLong.length}</strong> пазара с пренаситено дълго позициониране (${crowdedLong.slice(0,3).map(r=>marketLabel(r.market)).join(', ')}${crowdedLong.length>3?'…':''})`);
+    if (crowdedShort.length) parts.push(`<strong>${crowdedShort.length}</strong> пазара с пренаситено късо позициониране (${crowdedShort.slice(0,3).map(r=>marketLabel(r.market)).join(', ')}${crowdedShort.length>3?'…':''})`);
+    themes.push('На исторически екстремуми тази седмица: ' + parts.join('; ') + '.');
+  }
+
+  // 2. Sector tilt — equities/rates/fx/commodities net direction
+  const sectorTilt = computeSectorTilt();
+  const tiltDescs = [];
+  if (sectorTilt['Американски акции']) {
+    const t = sectorTilt['Американски акции'];
+    tiltDescs.push(`в <strong>акциите</strong> ${t.dir}`);
+  }
+  if (sectorTilt['US облигации']) {
+    const t = sectorTilt['US облигации'];
+    tiltDescs.push(`в <strong>облигациите</strong> ${t.dir}`);
+  }
+  if (sectorTilt['Валути']) {
+    const t = sectorTilt['Валути'];
+    tiltDescs.push(`във <strong>валутите</strong> ${t.dir}`);
+  }
+  if (sectorTilt['Енергоносители']) {
+    const t = sectorTilt['Енергоносители'];
+    tiltDescs.push(`в <strong>енергията</strong> ${t.dir}`);
+  }
+  if (sectorTilt['Метали']) {
+    const t = sectorTilt['Метали'];
+    tiltDescs.push(`в <strong>металите</strong> ${t.dir}`);
+  }
+  if (tiltDescs.length) {
+    themes.push('Спекулативно позициониране ' + tiltDescs.join(', ') + '.');
+  }
+
+  // 3. Multi-week streaks worth surfacing (5+ consecutive weeks of same direction)
+  const longStreaks = wl
+    .filter(r => (r.streak_weeks || 0) >= 5)
+    .sort((a, b) => (b.streak_weeks || 0) - (a.streak_weeks || 0))
+    .slice(0, 4);
+  if (longStreaks.length) {
+    const dirLabel = {
+      building_long:   'нарастващ дълъг',
+      building_short:  'нарастващ къс',
+      unwinding_long:  'намаляващ дълъг',
+      unwinding_short: 'покриване на къс',
+    };
+    const items = longStreaks.map(r => `<strong>${marketLabel(r.market)}</strong> (${r.streak_weeks} седм. ${dirLabel[r.streak_direction] || ''})`);
+    themes.push(`Многоседмични трендове: ${items.join(', ')}.`);
+  }
+
+  // 4. Macro theme detection — relaxed heuristics; surface possibilities, don't withhold
+  const macroThemes = [];
+  const z = k => byKey[k]?.primary_zscore ?? 0;
+  const has = k => k in byKey;
+
+  // USD direction theme
+  if (has('dxy') && (z('dxy') < -0.4 || z('dxy') > 0.4)) {
+    if (z('dxy') < -0.4 && z('gold') > 0.3) macroThemes.push('USD-слаб → реални активи (злато ↑)');
+    if (z('dxy') > 0.4) macroThemes.push('USD-силен — потенциален натиск върху EM/суровини');
+  }
+  // Risk-on / risk-off via JPY + Equities
+  if (has('jpy') && has('sp500')) {
+    if (z('jpy') < -0.7 && z('sp500') > 0.3) macroThemes.push('"risk-on" — къси в йената, дълги в акциите');
+    if (z('jpy') > 0.7 && z('sp500') < -0.3) macroThemes.push('"risk-off" — дълги в йената (защитна), къси в акциите');
+  }
+  // Rates curve consensus
+  if (has('us2y') && has('us10y')) {
+    if (z('us2y') < -0.7 && z('us10y') < -0.7) macroThemes.push('консенсус за по-високи лихви (или basis trade short)');
+    if (z('us2y') > 0.7 && z('us10y') > 0.7) macroThemes.push('позициониране за rate cuts (дълги по цялата крива)');
+    if (z('us2y') < -0.5 && z('us10y') > 0.5) macroThemes.push('curve steepener (къси в кратки, дълги в дълги)');
+    if (z('us2y') > 0.5 && z('us10y') < -0.5) macroThemes.push('curve flattener (дълги в кратки, къси в дълги)');
+  }
+  // Reflation / disinflation via energy + metals
+  const energyZ = ['wti', 'brent', 'natgas'].filter(has).map(z);
+  const metalsZ = ['gold', 'silver', 'copper'].filter(has).map(z);
+  const avgEnergy = energyZ.length ? energyZ.reduce((a,b)=>a+b,0)/energyZ.length : 0;
+  const avgMetals = metalsZ.length ? metalsZ.reduce((a,b)=>a+b,0)/metalsZ.length : 0;
+  if (avgEnergy > 0.5 && avgMetals > 0.3) macroThemes.push('reflation — дълги в енергията и металите');
+  if (avgEnergy < -0.5 && avgMetals < -0.3) macroThemes.push('disinflation / growth scare — къси в суровините');
+  // Agricultural inflation
+  const agriZ = ['corn', 'soybeans', 'wheat'].filter(has).map(z);
+  const avgAgri = agriZ.length ? agriZ.reduce((a,b)=>a+b,0)/agriZ.length : 0;
+  if (avgAgri > 0.7) macroThemes.push('агрокултурна инфлация — дълги в зърната');
+
+  if (macroThemes.length) {
+    themes.push(`Възможни макро теми от позиционирането: ${macroThemes.join('; ')}. <em>Корелация не е причинност — често това е една и съща тема, изразена на различни инструменти.</em>`);
+  }
+
+  return themes;
+}
+
+function computeSectorTilt() {
+  const result = {};
+  const byKey = Object.fromEntries(state.watchlist.map(r => [r.market, r]));
+  for (const [sector, keys] of Object.entries(SECTOR_GROUPS)) {
+    const rows = keys.map(k => byKey[k]).filter(Boolean);
+    if (!rows.length) continue;
+    const totalNotional = rows.reduce((s, r) => s + (r.notional_usd_bn || 0), 0);
+    const avgZ = rows.reduce((s, r) => s + (r.primary_zscore || 0), 0) / rows.length;
+    let dir;
+    if (Math.abs(avgZ) < 0.3) dir = 'е близо до неутрално';
+    else if (avgZ > 0.7) dir = 'е силно дълго';
+    else if (avgZ > 0) dir = 'е леко дълго';
+    else if (avgZ < -0.7) dir = 'е силно късо';
+    else dir = 'е леко късо';
+    result[sector] = { totalNotional, avgZ, dir };
+  }
+  return result;
+}
+
+function renderBigMoves() {
+  // Combined relevance: prefer markets with active streaks (5+ weeks) AND meaningful 4w delta.
+  // Score = streak_weeks (capped at 10) + |delta_pct| * 0.3
+  const wl = state.watchlist
+    .filter(r => r.primary_delta_4w != null && r.primary_net != null && r.primary_net !== 0)
+    .map(r => {
+      const deltaPct = 100 * r.primary_delta_4w / Math.max(Math.abs(r.primary_net), 1);
+      const streakScore = Math.min(r.streak_weeks || 0, 10);
+      return { ...r, deltaPct, relevance: streakScore + Math.min(Math.abs(deltaPct), 50) * 0.3 };
+    })
+    .sort((a, b) => b.relevance - a.relevance)
+    .slice(0, 6);
+
+  $('big-moves').innerHTML = wl.map(r => {
+    // Card border reflects ABSOLUTE current position; arrow reflects direction of CHANGE
+    const isNetLong = (r.primary_net || 0) >= 0;
+    const cardCls = isNetLong ? 'up' : 'down';
+    const arrow = r.primary_delta_4w >= 0 ? '↑' : '↓';
+    const arrowCls = r.primary_delta_4w >= 0 ? 'long' : 'short';
+    const sectorLabel = r.subtitle ? (SECTOR_BG[r.subtitle] || r.subtitle) : '';
+    const takeaway = bgTakeaway(r);
+    const stateLabel = isNetLong
+      ? `<span class="num long">нет дълго</span> ${fmt(Math.abs(r.primary_net))} контракта (${fmtBn(r.notional_usd_bn)})`
+      : `<span class="num short">нет късо</span> ${fmt(Math.abs(r.primary_net))} контракта (${fmtBn(r.notional_usd_bn)})`;
+    const streakHtml = (r.streak_weeks || 0) >= 3
+      ? `<div style="font-size:0.78rem; color:var(--accent); margin-top:0.3rem; font-weight:500">⏵ ${streakPhrase(r)}</div>`
+      : '';
+    return `<div class="change-card ${cardCls}">
+      <div class="market">${marketLabel(r.market)}</div>
+      <div class="sector">${sectorLabel} · ${marketSub(r.market)}</div>
+      <div class="delta" style="margin-top:0.4rem">📍 Сега: ${stateLabel}</div>
+      <div class="delta" style="margin-top:0.2rem">
+        Δ 4 седм: <span class="num ${arrowCls}">${arrow} ${fmt(Math.abs(r.primary_delta_4w))}</span>
+        <span style="color:var(--text-muted)"> (${(r.deltaPct >= 0 ? '+' : '') + r.deltaPct.toFixed(0)}% спрямо текуща)</span>
+      </div>
+      ${streakHtml}
+      <div class="takeaway">${takeaway}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderExtremes() {
+  // Markets at percentile <= 10 or >= 90
+  const wl = state.watchlist
+    .filter(r => r.primary_percentile != null && (r.primary_percentile <= 10 || r.primary_percentile >= 90))
+    .sort((a, b) => Math.abs(b.primary_percentile - 50) - Math.abs(a.primary_percentile - 50))
+    .slice(0, 9);
+
+  if (!wl.length) {
+    $('extremes').innerHTML = `<div class="card"><div class="card-body">Никой пазар не е в крайник на следения период (всички между 10-и и 90-и перцентил).</div></div>`;
+    return;
+  }
+
+  $('extremes').innerHTML = wl.map(r => {
+    const pctHigh = r.primary_percentile >= 90;
+    // Card border reflects ABSOLUTE current position, NOT percentile rank.
+    // High percentile may still mean "less short than usual" while net stays short.
+    const isNetLong = (r.primary_net || 0) >= 0;
+    const cls = isNetLong ? 'up' : 'down';
+    const sectorLabel = r.subtitle ? (SECTOR_BG[r.subtitle] || r.subtitle) : '';
+    const takeaway = bgTakeaway(r);
+    const histW = r.history_weeks || 156;
+    const periodLabel = histW >= 312 ? `~${(histW/52).toFixed(0)} години` : `${histW} седмици`;
+    const startDate = r.history_first_date ? ` (от ${fmtDate(r.history_first_date)})` : '';
+    const tooltip = `Перцентил спрямо ${histW} наблюдения${startDate}. Това НЕ е спрямо целия исторически период на инструмента.`;
+    // Distinguish: relative position (percentile) vs absolute direction (sign of net)
+    const stateLabel = isNetLong
+      ? `<span class="num long">нет дълго</span> ${fmt(Math.abs(r.primary_net))} (${fmtBn(r.notional_usd_bn)})`
+      : `<span class="num short">нет късо</span> ${fmt(Math.abs(r.primary_net))} (${fmtBn(r.notional_usd_bn)})`;
+    let pctLabel;
+    if (pctHigh) {
+      pctLabel = isNetLong
+        ? `<span class="num long" title="${tooltip}">${r.primary_percentile.toFixed(0)}-и перцентил</span> — позицията е към горния край за ${periodLabel} (екстремно дълго)`
+        : `<span class="num" title="${tooltip}">${r.primary_percentile.toFixed(0)}-и перцентил</span> — по-малко късо от обичайното за ${periodLabel}`;
+    } else {
+      pctLabel = isNetLong
+        ? `<span class="num" title="${tooltip}">${r.primary_percentile.toFixed(0)}-и перцентил</span> — по-малко дълго от обичайното за ${periodLabel}`
+        : `<span class="num short" title="${tooltip}">${r.primary_percentile.toFixed(0)}-и перцентил</span> — позицията е към долния край за ${periodLabel} (екстремно късо)`;
+    }
+    return `<div class="change-card ${cls}">
+      <div class="market">${marketLabel(r.market)}</div>
+      <div class="sector">${sectorLabel} · ${marketSub(r.market)}</div>
+      <div class="delta" style="margin-top:0.3rem">📍 Сега: ${stateLabel}</div>
+      <div class="delta" style="margin-top:0.2rem; font-size:0.84rem">${pctLabel}</div>
+      <div class="takeaway">${takeaway}</div>
+    </div>`;
+  }).join('');
+}
+
+function getFamily(key) {
+  const m = state.manifest?.markets?.find(x => x.key === key);
+  return m?.report_family || 'tff';
+}
+
+function streakPhrase(r) {
+  const w = r.streak_weeks || 0;
+  if (w < 3) return '';
+  const dirMap = {
+    building_long:    `${w} поредни седмици нарастващи дълги позиции`,
+    building_short:   `${w} поредни седмици нарастващи къси позиции`,
+    unwinding_long:   `${w} поредни седмици намаляващи дълги позиции`,
+    unwinding_short:  `${w} поредни седмици покриване на къси позиции`,
+  };
+  return dirMap[r.streak_direction] || '';
+}
+
+function bgTakeaway(r) {
+  // Market-specific takeaway: combine streak + cohort relationship + regime context.
+  // This replaces the generic REGIME_BG.desc which repeats for every Divergence row.
+  const fam = getFamily(r.market);
+  const secondaryName = fam === 'disaggregated' ? 'производителите/хеджърите' : 'институционалните';
+  const pct = r.primary_percentile;
+  const z = r.primary_zscore;
+  const primary = r.primary_net;
+  const secondary = r.secondary_net;
+  const regime = r.regime;
+  const histW = r.history_weeks || 156;
+  const yearsLabel = histW >= 312 ? `за следения период (~${(histW/52).toFixed(0)} години)`
+                                  : `за следения период (${histW} седмици)`;
+
+  // Streak phrase
+  const streak = streakPhrase(r);
+
+  // Cohort relationship — generated from actual numbers, not boilerplate
+  let cohortPhrase = '';
+  if (primary != null && secondary != null && primary !== 0 && secondary !== 0) {
+    const sameDir = (primary >= 0) === (secondary >= 0);
+    if (!sameDir) {
+      // Real divergence — describe the split
+      const primaryDir = primary >= 0 ? 'дълги' : 'къси';
+      const secondaryDir = secondary >= 0 ? 'дълги' : 'къси';
+      cohortPhrase = `Спекулативните са ${primaryDir} (${fmt(Math.abs(primary))}); ${secondaryName} са в обратната посока (${fmt(Math.abs(secondary))} ${secondaryDir}).`;
+    } else if (Math.abs(primary) > Math.abs(secondary) * 0.5) {
+      const dir = primary >= 0 ? 'дълги' : 'къси';
+      cohortPhrase = `Спекулативни и ${secondaryName} единодушно ${dir} — рядък консенсус.`;
+    }
+  }
+
+  // Regime / percentile context
+  let regimePhrase = '';
+  if (regime === 'Crowded Long' && pct != null) {
+    regimePhrase = `Позиционирането е в горния край ${yearsLabel} — ${pct.toFixed(0)}-и перцентил.`;
+  } else if (regime === 'Crowded Short' && pct != null) {
+    regimePhrase = `Позиционирането е в долния край ${yearsLabel} — ${pct.toFixed(0)}-и перцентил.`;
+  } else if (regime === 'Contrarian Long') {
+    regimePhrase = 'Цената вече се движи нагоре въпреки късото позициониране.';
+  } else if (regime === 'Contrarian Short') {
+    regimePhrase = 'Цената вече се движи надолу въпреки дългото позициониране.';
+  }
+
+  const parts = [streak, regimePhrase, cohortPhrase].filter(Boolean);
+  return parts.join(' ') || 'Без ясен сигнал в моментната снимка.';
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Tab 2 — Sectors
+// ════════════════════════════════════════════════════════════════════════════
+
+function renderSectors() {
+  const byKey = Object.fromEntries(state.watchlist.map(r => [r.market, r]));
+  const grid = $('sector-grid');
+  let html = '';
+
+  for (const [sector, keys] of Object.entries(SECTOR_GROUPS)) {
+    const rows = keys.map(k => byKey[k]).filter(Boolean);
+    if (!rows.length) continue;
+    const total = rows.reduce((s, r) => s + (r.notional_usd_bn || 0), 0);
+    const tilt = total >= 0 ? 'long' : 'short';
+    const tiltLabel = total >= 0 ? `нет дълго ${fmtBn(total)}` : `нет късо ${fmtBn(total)}`;
+
+    // Sort markets within sector by absolute z
+    rows.sort((a, b) => Math.abs(b.primary_zscore || 0) - Math.abs(a.primary_zscore || 0));
+
+    html += `<div class="sector-card">
+      <h3>${sector}<span class="sector-net ${tilt}">${tiltLabel}</span></h3>
+      <div class="sector-list">
+        ${rows.map(r => sectorRowHtml(r)).join('')}
+      </div>
+    </div>`;
+  }
+  grid.innerHTML = html;
+}
+
+function sectorRowHtml(r) {
+  const z = r.primary_zscore || 0;
+  const net = r.primary_net || 0;
+  // Bar direction = ABSOLUTE position sign (not z-score). Width = extremeness from |z|.
+  // This avoids the trap where high positive z means "less short than usual" but the
+  // absolute position is still net short.
+  const dir = net >= 0 ? 'long' : 'short';
+  const w = Math.min(Math.abs(z) / 2, 1) * 45;
+  const netLabel = net >= 0 ? 'нет дълго' : 'нет късо';
+  const tooltip = `${netLabel} ${fmt(Math.abs(net))} контракта · z=${fmtZ(z)} (отклонение от историческата средна) · ${(r.primary_percentile||0).toFixed(0)}-и перцентил спрямо ${r.history_weeks||156} наблюдения`;
+  return `<div class="sector-row" data-key="${r.market}" title="${tooltip}">
+    <span class="name">${marketLabel(r.market)}</span>
+    <span class="bar"><span class="bar-fill ${dir}" style="width:${w}px"></span></span>
+    <span class="pct">${fmtZ(z)}σ · ${(r.primary_percentile || 0).toFixed(0)}п</span>
+  </div>`;
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Tab 3 — Full table
+// ════════════════════════════════════════════════════════════════════════════
+
+function renderFullTable() {
+  applyFullTableSort();
+  const tbody = $('full-table-body');
+  tbody.innerHTML = state.watchlist.map(r => fullRowHtml(r)).join('');
+  // Mark sort indicator
+  document.querySelectorAll('#full-table thead th').forEach(th => {
+    th.classList.toggle('sorted', th.dataset.sort === state.sortBy);
+    th.classList.toggle('asc', state.sortDir === 'asc');
+  });
+  // Click handlers
+  document.querySelectorAll('#full-table thead th').forEach(th => {
+    th.onclick = () => {
+      const k = th.dataset.sort;
+      if (state.sortBy === k) state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      else { state.sortBy = k; state.sortDir = 'desc'; }
+      renderFullTable();
+    };
+  });
+  document.querySelectorAll('#full-table tbody tr.market-row').forEach(tr => {
+    tr.onclick = () => toggleDetail(tr.dataset.key);
+  });
+}
+
+function applyFullTableSort() {
+  const k = state.sortBy;
+  const dir = state.sortDir === 'asc' ? 1 : -1;
+  state.watchlist.sort((a, b) => {
+    let va = a[k], vb = b[k];
+    if (k === 'title') { va = marketLabel(a.market); vb = marketLabel(b.market); return va.localeCompare(vb, 'bg') * dir; }
+    if (k === 'regime') { va = a.regime || ''; vb = b.regime || ''; return va.localeCompare(vb, 'bg') * dir; }
+    if (va == null) va = -Infinity;
+    if (vb == null) vb = -Infinity;
+    return (va - vb) * dir;
+  });
+}
+
+function fullRowHtml(r) {
+  const sectorLabel = r.subtitle ? (SECTOR_BG[r.subtitle] || r.subtitle) : '';
+  const regime = REGIME_BG[r.regime];
+  const regimeHtml = regime
+    ? `<span class="regime-pill ${regime.cls}" title="${regime.desc}">${regime.label}</span>`
+    : '';
+  const pct = r.primary_percentile;
+  const pctBar = pct != null
+    ? `<span class="pct-bar"><span class="pct-bar-fill" style="width:${pct}%"></span></span>`
+    : '';
+  return `<tr class="market-row" data-key="${r.market}">
+    <td class="market-cell">
+      <div class="name">${marketLabel(r.market)}</div>
+      <div class="sub">${sectorLabel} · ${marketSub(r.market)}</div>
+    </td>
+    <td>${pct != null ? pct.toFixed(0) + '-и' : '—'}${pctBar}</td>
+    <td class="${numClass(r.primary_zscore)}">${fmtZ(r.primary_zscore)}</td>
+    <td class="${numClass(r.primary_delta_4w)}">${fmt(r.primary_delta_4w)}</td>
+    <td>${regimeHtml}</td>
+    <td class="${numClass(r.notional_usd_bn)}">${fmtBn(r.notional_usd_bn)}</td>
+  </tr>`;
+}
+
+async function toggleDetail(key) {
+  const tbody = $('full-table-body');
+  // Remove existing detail
+  const existing = tbody.querySelector('tr.detail-row');
+  const wasOpen = state.expandedKey === key;
+  if (existing) existing.remove();
+  document.querySelectorAll('#full-table tr.market-row').forEach(tr => tr.classList.remove('expanded'));
+  if (wasOpen) { state.expandedKey = null; return; }
+
+  state.expandedKey = key;
+  const triggerRow = tbody.querySelector(`tr.market-row[data-key="${key}"]`);
+  if (!triggerRow) return;
+  triggerRow.classList.add('expanded');
+
+  // Load market data
+  let mkt = state.markets[key];
+  if (!mkt) {
+    const meta = state.manifest.markets.find(m => m.key === key);
+    if (!meta) return;
+    try {
+      mkt = await fetchJson('data/' + meta.file);
+      state.markets[key] = mkt;
+    } catch (e) { return; }
+  }
+
+  const detailRow = document.createElement('tr');
+  detailRow.className = 'detail-row';
+  detailRow.innerHTML = `<td colspan="6"><div class="detail-panel">${detailPanelHtml(mkt, key)}</div></td>`;
+  triggerRow.after(detailRow);
+
+  // Render history chart
+  renderDetailChart(key, mkt);
+}
+
+function detailPanelHtml(mkt, key) {
+  const family = mkt.metadata?.report_family || 'tff';
+  const cohorts = COHORT_BG[family];
+  const last = mkt.cot[mkt.cot.length - 1];
+  if (!last) return 'Няма данни.';
+  const wlRow = state.watchlist.find(r => r.market === key);
+  const regime = REGIME_BG[wlRow?.regime];
+
+  const cohortHtml = ['primary', 'secondary', 'tertiary'].map(role => {
+    const c = cohorts[role];
+    const net = last[role + '_net'];
+    const long = last[role + '_long'];
+    const short = last[role + '_short'];
+    const cls = numClass(net);
+    return `<div class="cohort-item">
+      <div class="row1">
+        <div>
+          <div class="role">${c.label}</div>
+          <div style="font-size:0.74rem; color:var(--text-muted)">${c.sub}</div>
+        </div>
+        <div class="net ${cls}">${fmt(net)} нет</div>
+      </div>
+      <div style="font-size:0.78rem; color:var(--text-muted); margin: 0.3rem 0 0.4rem">
+        ${fmt(long)} дълги · ${fmt(short)} къси
+      </div>
+      <div class="desc">${c.desc}</div>
+    </div>`;
+  }).join('');
+
+  // Period selector — show only options the available history actually supports
+  const histW = mkt.cot.length;
+  const periodOptions = PERIOD_OPTIONS
+    .filter(o => o.value <= histW || o.value === 9999)
+    .map(o => `<option value="${o.value}" ${o.value === PERIOD_DEFAULT ? 'selected' : ''}>${o.label}</option>`)
+    .join('');
+
+  return `<div class="detail-grid">
+    <div>
+      <div style="font-size:0.78rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem">
+        Разбивка по групи играчи · отчет към ${fmtDate(last.date)}
+      </div>
+      <div class="cohort-list">${cohortHtml}</div>
+    </div>
+    <div>
+      <div class="detail-context" style="margin-bottom: 0.85rem">
+        <div class="label">Текущ режим</div>
+        ${regime ? `<p><strong>${regime.label}.</strong> ${regime.desc}</p>` : '<p>Няма класификация.</p>'}
+        ${wlRow?.takeaway ? `<p style="font-size:0.8rem; color:var(--text-muted); font-style:italic">Auto-takeaway: ${wlRow.takeaway}</p>` : ''}
+      </div>
+      <div class="chart-wrap"><canvas id="detail-chart-${key}"></canvas></div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-top:0.5rem; font-size:0.82rem; color:var(--text-muted); flex-wrap:wrap">
+        <span>Спекулативно нет позициониране, последните</span>
+        <select id="period-select-${key}" data-key="${key}"
+          style="background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:4px; padding:0.2rem 0.4rem; font:inherit; cursor:pointer">
+          ${periodOptions}
+        </select>
+        <span>· ${histW} налични седмици общо</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function formatChartDate(dateStr, yearsSpan) {
+  // Format depends on how many years we're showing — denser for short ranges
+  const d = new Date(dateStr.length > 10 ? dateStr : dateStr + 'T00:00:00Z');
+  if (isNaN(d)) return dateStr;
+  const m = MONTHS_BG_SHORT[d.getUTCMonth()];
+  const y = d.getUTCFullYear();
+  const yy = String(y).slice(2);
+  const day = d.getUTCDate();
+  if (yearsSpan <= 1.2) return `${day} ${m} ’${yy}`;   // "15 яну '25"
+  if (yearsSpan <= 4)   return `${m} ’${yy}`;          // "яну '25"
+  return String(y);                                    // "2025"
+}
+
+function formatTooltipDate(dateStr) {
+  const d = new Date(dateStr.length > 10 ? dateStr : dateStr + 'T00:00:00Z');
+  if (isNaN(d)) return dateStr;
+  return `${d.getUTCDate()} ${MONTHS_BG_FULL[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
+function renderDetailChart(key, mkt, periodWeeks = PERIOD_DEFAULT) {
+  const ctxEl = $('detail-chart-' + key);
+  if (!ctxEl) return;
+  const cot = periodWeeks >= 9999 ? mkt.cot : mkt.cot.slice(-periodWeeks);
+  const yearsSpan = cot.length / 52;
+  const labels = cot.map(r => formatChartDate(r.date, yearsSpan));
+  const fullDates = cot.map(r => r.date);
+  const data = cot.map(r => r.primary_net);
+  if (state.charts['detail-' + key]) state.charts['detail-' + key].destroy();
+  state.charts['detail-' + key] = new Chart(ctxEl.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        borderColor: '#818cf8',
+        backgroundColor: 'rgba(129,140,248,0.12)',
+        fill: true,
+        tension: 0.2,
+        pointRadius: 0,
+        borderWidth: 1.5,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            title: (items) => formatTooltipDate(fullDates[items[0].dataIndex] || ''),
+            label: (item) => `Нет позиция: ${item.parsed.y.toLocaleString('bg-BG')} контракта`,
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#9aa4b8', maxTicksLimit: yearsSpan > 5 ? 8 : 7, font: { size: 10 }, autoSkip: true },
+          grid: { display: false }
+        },
+        y: {
+          ticks: {
+            color: '#9aa4b8', font: { size: 10 },
+            callback: (v) => v.toLocaleString('bg-BG')
+          },
+          grid: { color: 'rgba(42,49,71,0.5)' }
+        }
+      }
+    }
+  });
+
+  // Wire up period selector (re-runs chart on change)
+  const sel = $('period-select-' + key);
+  if (sel && !sel._wired) {
+    sel.onchange = (e) => renderDetailChart(key, mkt, parseInt(e.target.value, 10));
+    sel._wired = true;
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Tabs
+// ════════════════════════════════════════════════════════════════════════════
+
+function setupTabs() {
+  const buttons = document.querySelectorAll('nav.tabs button');
+  buttons.forEach(btn => {
+    btn.onclick = () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('section.tab').forEach(s => s.classList.remove('active'));
+      $('tab-' + btn.dataset.tab).classList.add('active');
+    };
+  });
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Boot
+// ════════════════════════════════════════════════════════════════════════════
+init();
+</script>
+</body>
+</html>

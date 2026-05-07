@@ -1,0 +1,52 @@
+{
+  "market": "platinum",
+  "title": "Platinum",
+  "price_label": "Platinum Futures",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 1942.3,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": -20.2,
+      "vol_annual_pct": 43.17,
+      "raw_signal": -0.8436,
+      "signal": -0.8436,
+      "trigger_price": 2434.0,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": -491.7,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 2434"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": 38.88,
+      "vol_annual_pct": 43.17,
+      "raw_signal": 1.1483,
+      "signal": 1.0,
+      "trigger_price": 1398.5,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": 543.8,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 1398"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": 98.46,
+      "vol_annual_pct": 43.17,
+      "raw_signal": 2.2808,
+      "signal": 1.0,
+      "trigger_price": 978.7,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": 963.6,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 979"
+    }
+  },
+  "ensemble_signal": 0.3855,
+  "ensemble_direction": "net long",
+  "estimated_position_bn": 0.39,
+  "aum_scalar_bn": 1.0,
+  "cftc_primary_net_contracts": 13965.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}

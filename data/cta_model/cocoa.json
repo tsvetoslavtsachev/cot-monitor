@@ -1,0 +1,52 @@
+{
+  "market": "cocoa",
+  "title": "Cocoa",
+  "price_label": "Cocoa Futures",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 3305.0,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": -44.49,
+      "vol_annual_pct": 67.7,
+      "raw_signal": -1.1847,
+      "signal": -1.0,
+      "trigger_price": 5954.0,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": -2649.0,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 5954"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": -55.16,
+      "vol_annual_pct": 67.7,
+      "raw_signal": -1.0386,
+      "signal": -1.0,
+      "trigger_price": 7371.0,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": -4066.0,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 7371"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": -63.86,
+      "vol_annual_pct": 67.7,
+      "raw_signal": -0.9433,
+      "signal": -0.9433,
+      "trigger_price": 9146.0,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": -5841.0,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 9146"
+    }
+  },
+  "ensemble_signal": -0.9811,
+  "ensemble_direction": "net short",
+  "estimated_position_bn": -0.49,
+  "aum_scalar_bn": 0.5,
+  "cftc_primary_net_contracts": -19885.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}

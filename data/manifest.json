@@ -1,0 +1,358 @@
+{
+  "generated_at": "2026-05-07T20:07:42.128595Z",
+  "sources": {
+    "tff": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
+    "disaggregated": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
+    "price": "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=10y&interval=1d"
+  },
+  "markets": [
+    {
+      "key": "sp500",
+      "title": "E-mini S&P 500",
+      "subtitle": "US Equities",
+      "report_family": "tff",
+      "file": "markets/sp500.json",
+      "record_count": 520,
+      "price_label": "S&P 500"
+    },
+    {
+      "key": "nasdaq",
+      "title": "Nasdaq Mini",
+      "subtitle": "US Equities",
+      "report_family": "tff",
+      "file": "markets/nasdaq.json",
+      "record_count": 520,
+      "price_label": "Nasdaq 100"
+    },
+    {
+      "key": "us10y",
+      "title": "UST 10Y Note",
+      "subtitle": "Rates",
+      "report_family": "tff",
+      "file": "markets/us10y.json",
+      "record_count": 221,
+      "price_label": "US 10Y Note"
+    },
+    {
+      "key": "vix",
+      "title": "VIX Futures",
+      "subtitle": "Volatility",
+      "report_family": "tff",
+      "file": "markets/vix.json",
+      "record_count": 520,
+      "price_label": "VIX"
+    },
+    {
+      "key": "eurfx",
+      "title": "Euro FX",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/eurfx.json",
+      "record_count": 520,
+      "price_label": "EUR/USD"
+    },
+    {
+      "key": "gbpfx",
+      "title": "British Pound",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/gbpfx.json",
+      "record_count": 520,
+      "price_label": "GBP/USD"
+    },
+    {
+      "key": "dxy",
+      "title": "USD Index",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/dxy.json",
+      "record_count": 221,
+      "price_label": "DXY"
+    },
+    {
+      "key": "bitcoin",
+      "title": "Bitcoin Futures",
+      "subtitle": "Crypto",
+      "report_family": "tff",
+      "file": "markets/bitcoin.json",
+      "record_count": 421,
+      "price_label": "BTC/USD"
+    },
+    {
+      "key": "gold",
+      "title": "Gold",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/gold.json",
+      "record_count": 520,
+      "price_label": "Gold Futures"
+    },
+    {
+      "key": "wti",
+      "title": "WTI Crude",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/wti.json",
+      "record_count": 520,
+      "price_label": "WTI Futures"
+    },
+    {
+      "key": "corn",
+      "title": "Corn",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/corn.json",
+      "record_count": 520,
+      "price_label": "Corn Futures"
+    },
+    {
+      "key": "us2y",
+      "title": "UST 2Y Note",
+      "subtitle": "Rates",
+      "report_family": "tff",
+      "file": "markets/us2y.json",
+      "record_count": 221,
+      "price_label": "US 2Y Note"
+    },
+    {
+      "key": "us5y",
+      "title": "UST 5Y Note",
+      "subtitle": "Rates",
+      "report_family": "tff",
+      "file": "markets/us5y.json",
+      "record_count": 221,
+      "price_label": "US 5Y Note"
+    },
+    {
+      "key": "us30y",
+      "title": "UST Bond (30Y)",
+      "subtitle": "Rates",
+      "report_family": "tff",
+      "file": "markets/us30y.json",
+      "record_count": 221,
+      "price_label": "US 30Y Bond"
+    },
+    {
+      "key": "usultra10y",
+      "title": "Ultra UST 10Y",
+      "subtitle": "Rates",
+      "report_family": "tff",
+      "file": "markets/usultra10y.json",
+      "record_count": 221,
+      "price_label": "Ultra 10Y Note"
+    },
+    {
+      "key": "jpy",
+      "title": "Japanese Yen",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/jpy.json",
+      "record_count": 520,
+      "price_label": "JPY/USD"
+    },
+    {
+      "key": "chf",
+      "title": "Swiss Franc",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/chf.json",
+      "record_count": 520,
+      "price_label": "CHF/USD"
+    },
+    {
+      "key": "cad",
+      "title": "Canadian Dollar",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/cad.json",
+      "record_count": 520,
+      "price_label": "CAD/USD"
+    },
+    {
+      "key": "aud",
+      "title": "Australian Dollar",
+      "subtitle": "FX",
+      "report_family": "tff",
+      "file": "markets/aud.json",
+      "record_count": 520,
+      "price_label": "AUD/USD"
+    },
+    {
+      "key": "russell",
+      "title": "Russell 2000 Mini",
+      "subtitle": "US Equities",
+      "report_family": "tff",
+      "file": "markets/russell.json",
+      "record_count": 455,
+      "price_label": "Russell 2000"
+    },
+    {
+      "key": "silver",
+      "title": "Silver",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/silver.json",
+      "record_count": 520,
+      "price_label": "Silver Futures"
+    },
+    {
+      "key": "copper",
+      "title": "Copper",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/copper.json",
+      "record_count": 520,
+      "price_label": "Copper Futures"
+    },
+    {
+      "key": "platinum",
+      "title": "Platinum",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/platinum.json",
+      "record_count": 520,
+      "price_label": "Platinum Futures"
+    },
+    {
+      "key": "palladium",
+      "title": "Palladium",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/palladium.json",
+      "record_count": 520,
+      "price_label": "Palladium Futures"
+    },
+    {
+      "key": "natgas",
+      "title": "Natural Gas",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/natgas.json",
+      "record_count": 520,
+      "price_label": "Natural Gas Futures"
+    },
+    {
+      "key": "brent",
+      "title": "Brent Crude",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/brent.json",
+      "record_count": 221,
+      "price_label": "Brent Futures"
+    },
+    {
+      "key": "rbob",
+      "title": "RBOB Gasoline",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/rbob.json",
+      "record_count": 221,
+      "price_label": "RBOB Futures"
+    },
+    {
+      "key": "heatingoil",
+      "title": "Heating Oil",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/heatingoil.json",
+      "record_count": 220,
+      "price_label": "Heating Oil Futures"
+    },
+    {
+      "key": "soybeans",
+      "title": "Soybeans",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/soybeans.json",
+      "record_count": 520,
+      "price_label": "Soybeans Futures"
+    },
+    {
+      "key": "wheat",
+      "title": "Wheat (SRW)",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/wheat.json",
+      "record_count": 520,
+      "price_label": "Chicago Wheat Futures"
+    },
+    {
+      "key": "soyoil",
+      "title": "Soybean Oil",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/soyoil.json",
+      "record_count": 520,
+      "price_label": "Soybean Oil Futures"
+    },
+    {
+      "key": "soymeal",
+      "title": "Soybean Meal",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/soymeal.json",
+      "record_count": 520,
+      "price_label": "Soybean Meal Futures"
+    },
+    {
+      "key": "coffee",
+      "title": "Coffee",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/coffee.json",
+      "record_count": 520,
+      "price_label": "Coffee Futures"
+    },
+    {
+      "key": "sugar",
+      "title": "Sugar",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/sugar.json",
+      "record_count": 520,
+      "price_label": "Sugar Futures"
+    },
+    {
+      "key": "cocoa",
+      "title": "Cocoa",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/cocoa.json",
+      "record_count": 520,
+      "price_label": "Cocoa Futures"
+    },
+    {
+      "key": "cotton",
+      "title": "Cotton",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/cotton.json",
+      "record_count": 520,
+      "price_label": "Cotton Futures"
+    },
+    {
+      "key": "cattle",
+      "title": "Live Cattle",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/cattle.json",
+      "record_count": 520,
+      "price_label": "Live Cattle Futures"
+    },
+    {
+      "key": "hogs",
+      "title": "Lean Hogs",
+      "subtitle": "Commodities",
+      "report_family": "disaggregated",
+      "file": "markets/hogs.json",
+      "record_count": 520,
+      "price_label": "Lean Hogs Futures"
+    }
+  ],
+  "failures": [],
+  "derived_files": {
+    "watchlist": "derived/watchlist.json",
+    "weekly_changes": "derived/weekly_changes.json",
+    "narratives": "derived/narratives.json"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "market": "hogs",
+  "title": "Lean Hogs",
+  "price_label": "Lean Hogs Futures",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 94.15,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": 9.89,
+      "vol_annual_pct": 20.79,
+      "raw_signal": 0.8577,
+      "signal": 0.8577,
+      "trigger_price": 85.68,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": 8.47,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 86"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": -3.31,
+      "vol_annual_pct": 20.79,
+      "raw_signal": -0.2031,
+      "signal": -0.2031,
+      "trigger_price": 97.38,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": -3.22,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 97"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": 1.73,
+      "vol_annual_pct": 20.79,
+      "raw_signal": 0.0831,
+      "signal": 0.0831,
+      "trigger_price": 92.55,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": 1.6,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 93"
+    }
+  },
+  "ensemble_signal": 0.2459,
+  "ensemble_direction": "mixed / transitioning",
+  "estimated_position_bn": 0.12,
+  "aum_scalar_bn": 0.5,
+  "cftc_primary_net_contracts": 57565.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}

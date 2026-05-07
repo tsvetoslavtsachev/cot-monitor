@@ -1,0 +1,52 @@
+{
+  "market": "nasdaq",
+  "title": "Nasdaq Mini",
+  "price_label": "Nasdaq 100",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 27168.75,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": 5.22,
+      "vol_annual_pct": 17.29,
+      "raw_signal": 0.5438,
+      "signal": 0.5438,
+      "trigger_price": 25822.0,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": 1346.75,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 25822"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": 11.88,
+      "vol_annual_pct": 17.29,
+      "raw_signal": 0.8758,
+      "signal": 0.8758,
+      "trigger_price": 24284.0,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": 2884.75,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 24284"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": 38.32,
+      "vol_annual_pct": 17.29,
+      "raw_signal": 2.2162,
+      "signal": 1.0,
+      "trigger_price": 19642.0,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": 7526.75,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 19642"
+    }
+  },
+  "ensemble_signal": 0.8065,
+  "ensemble_direction": "net long",
+  "estimated_position_bn": 12.1,
+  "aum_scalar_bn": 15.0,
+  "cftc_primary_net_contracts": -55663.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}

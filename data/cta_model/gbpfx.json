@@ -1,0 +1,52 @@
+{
+  "market": "gbpfx",
+  "title": "British Pound",
+  "price_label": "GBP/USD",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 1.35,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": -0.07,
+      "vol_annual_pct": 5.87,
+      "raw_signal": -0.0216,
+      "signal": -0.0216,
+      "trigger_price": 1.35,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": -0.0,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 1"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": -0.95,
+      "vol_annual_pct": 5.87,
+      "raw_signal": -0.2058,
+      "signal": -0.2058,
+      "trigger_price": 1.37,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": -0.01,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 1"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": 0.85,
+      "vol_annual_pct": 5.87,
+      "raw_signal": 0.1444,
+      "signal": 0.1444,
+      "trigger_price": 1.34,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": 0.01,
+      "direction": "long",
+      "flip_note": "Signal flips when price falls below 1"
+    }
+  },
+  "ensemble_signal": -0.0277,
+  "ensemble_direction": "mixed / transitioning",
+  "estimated_position_bn": -0.08,
+  "aum_scalar_bn": 3.0,
+  "cftc_primary_net_contracts": 28882.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}

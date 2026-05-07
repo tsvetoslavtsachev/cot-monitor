@@ -1,0 +1,52 @@
+{
+  "market": "usultra10y",
+  "title": "Ultra UST 10Y",
+  "price_label": "Ultra 10Y Note",
+  "cot_date": "2026-04-28",
+  "model_date": "2026-04-28",
+  "current_price": 113.19,
+  "signals": {
+    "16w": {
+      "lookback_weeks": 16,
+      "cumulative_return_pct": -1.35,
+      "vol_annual_pct": 5.26,
+      "raw_signal": -0.4624,
+      "signal": -0.4624,
+      "trigger_price": 114.73,
+      "trigger_date": "2026-01-06",
+      "current_vs_trigger": -1.55,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 115"
+    },
+    "32w": {
+      "lookback_weeks": 32,
+      "cumulative_return_pct": -2.6,
+      "vol_annual_pct": 5.26,
+      "raw_signal": -0.6294,
+      "signal": -0.6294,
+      "trigger_price": 116.2,
+      "trigger_date": "2025-09-16",
+      "current_vs_trigger": -3.02,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 116"
+    },
+    "52w": {
+      "lookback_weeks": 52,
+      "cumulative_return_pct": -1.38,
+      "vol_annual_pct": 5.26,
+      "raw_signal": -0.2616,
+      "signal": -0.2616,
+      "trigger_price": 114.77,
+      "trigger_date": "2025-04-29",
+      "current_vs_trigger": -1.58,
+      "direction": "short",
+      "flip_note": "Signal flips when price rises above 115"
+    }
+  },
+  "ensemble_signal": -0.4511,
+  "ensemble_direction": "net short",
+  "estimated_position_bn": -4.51,
+  "aum_scalar_bn": 10.0,
+  "cftc_primary_net_contracts": -221789.0,
+  "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
+}
