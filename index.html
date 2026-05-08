@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Пазарни позиции — седмичен наратив</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
@@ -30,6 +33,59 @@
     a:hover { text-decoration: underline; }
 
     .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Update available banner (auto-detect new deploy) ── */
+    #update-banner {
+      position: fixed;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #4338ca 0%, #6366f1 100%);
+      color: white;
+      padding: 0.7rem 1.25rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+      z-index: 1000;
+      font-size: 0.88rem;
+      display: none;
+      align-items: center;
+      gap: 0.85rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #update-banner:hover { transform: translateX(-50%) translateY(-2px); }
+    #update-banner.visible { display: flex; animation: slideDown 0.3s ease; }
+    #update-banner button {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font: inherit;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    #update-banner button:hover { background: rgba(255,255,255,0.3); }
+    @keyframes slideDown { from { opacity: 0; transform: translateX(-50%) translateY(-12px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+
+    /* ── Manual refresh button in header ── */
+    .refresh-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 999px;
+      padding: 0.32rem 0.75rem;
+      font: inherit;
+      font-size: 0.78rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.15s;
+    }
+    .refresh-btn:hover { color: var(--text); border-color: var(--accent); }
+    .refresh-btn.spin svg { animation: spin 0.6s linear infinite; }
+    @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
 
     /* ── Disclaimer banner ── */
     .disclaimer {
@@ -579,6 +635,11 @@
 </head>
 <body>
 
+<div id="update-banner" onclick="forceReload()">
+  <span>🔄 Налична е нова версия на дашборда</span>
+  <button>Презареди</button>
+</div>
+
 <div class="disclaimer">
   <strong>Не е инвестиционен съвет.</strong>
   Това е инструмент за <strong>контекст</strong> върху позиционирането на големите участници —
@@ -593,7 +654,13 @@
       Данните идват от <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm" target="_blank">CFTC COT отчета</a> —
       позициите са към <strong>вторник</strong>, публикуват се в <strong>петък 15:30 ET</strong>.
     </p>
-    <div class="meta-row" id="meta-row"></div>
+    <div class="meta-row">
+      <div id="meta-row" style="display:contents"></div>
+      <button class="refresh-btn" onclick="forceReload()" title="Презареди дашборда — заобикаля кеша на браузъра">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        Презареди
+      </button>
+    </div>
   </div>
 </header>
 
@@ -2298,9 +2365,50 @@ function setupExports() {
 }
 
 // ════════════════════════════════════════════════════════════════════════════
+// Update detection — auto-notify when a new deploy is live
+// ════════════════════════════════════════════════════════════════════════════
+
+function forceReload() {
+  // Bypass HTTP cache: append unique query param + force reload from server.
+  // Some browsers ignore location.reload(true) — append cache-buster URL instead.
+  const btn = document.querySelector('.refresh-btn');
+  if (btn) { btn.classList.add('spin'); }
+  const url = new URL(window.location.href);
+  url.searchParams.set('_v', Date.now());
+  window.location.replace(url.toString());
+}
+
+let _initialBuildTime = null;
+
+async function fetchOwnLastModified() {
+  try {
+    const r = await fetch(window.location.pathname + '?_check=' + Date.now(), { method: 'HEAD', cache: 'no-store' });
+    const lm = r.headers.get('Last-Modified');
+    return lm ? new Date(lm).getTime() : null;
+  } catch (e) { return null; }
+}
+
+async function setupUpdateChecker() {
+  _initialBuildTime = await fetchOwnLastModified() || new Date(document.lastModified).getTime();
+  // Poll every 2 minutes; show banner when remote is meaningfully newer
+  setInterval(async () => {
+    const live = await fetchOwnLastModified();
+    if (live && live > _initialBuildTime + 30000) {  // 30s jitter threshold
+      const banner = document.getElementById('update-banner');
+      if (banner && !banner.classList.contains('visible')) {
+        banner.classList.add('visible');
+      }
+    }
+  }, 120000);
+}
+
+// ════════════════════════════════════════════════════════════════════════════
 // Boot
 // ════════════════════════════════════════════════════════════════════════════
-init().then(() => setupExports());
+init().then(() => {
+  setupExports();
+  setupUpdateChecker();
+});
 </script>
 </body>
 </html>
