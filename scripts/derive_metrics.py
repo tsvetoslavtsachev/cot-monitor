@@ -259,6 +259,82 @@ def compute_streak(cot: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
 
+def detect_crossings(cot: List[Dict[str, Any]], current_summary: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Detect week-over-week regime/threshold crossings — 'what changed this week'.
+
+    Returns structured events (type + payload) so the frontend can format them in BG.
+    Event types:
+        sign_flip:        net position direction flipped (long ↔ short)
+        percentile_cross: crossed a key threshold (10, 90) up or down
+        regime_change:    regime classification differs from previous week
+        streak_start:     streak just hit ≥3 weeks (was <3 last week)
+    """
+    events: List[Dict[str, Any]] = []
+    if len(cot) < 2:
+        return events
+
+    cur = cot[-1]
+    prev = cot[-2]
+    cur_net = cur.get("primary_net") or 0.0
+    prev_net = prev.get("primary_net") or 0.0
+
+    # 1. Sign flip (long ↔ short)
+    if cur_net * prev_net < 0:
+        events.append({
+            "type": "sign_flip",
+            "from": "long" if prev_net > 0 else "short",
+            "to": "long" if cur_net > 0 else "short",
+            "from_value": round(prev_net, 0),
+            "to_value": round(cur_net, 0),
+        })
+
+    # 2. Percentile threshold crossings
+    nets = [r.get("primary_net") for r in cot if r.get("primary_net") is not None]
+    if len(nets) >= 2:
+        cur_pct = percentile(nets, cur_net)
+        prev_pct_val = percentile(nets[:-1], prev_net)
+        for t in (10, 90):
+            crossed_up = prev_pct_val < t and cur_pct >= t
+            crossed_down = prev_pct_val > t and cur_pct <= t
+            if crossed_up or crossed_down:
+                events.append({
+                    "type": "percentile_cross",
+                    "threshold": t,
+                    "direction": "up" if crossed_up else "down",
+                    "from_pct": round(prev_pct_val, 1),
+                    "to_pct": round(cur_pct, 1),
+                })
+
+    # 3. Regime change — recompute previous week's regime synthetically
+    if len(nets) >= 2:
+        prev_synthetic = dict(prev)
+        prev_synthetic["primary_percentile"] = percentile(nets[:-1], prev_net)
+        prev_synthetic["primary_delta_4w"] = (
+            (prev_net - (cot[-6].get("primary_net") or 0.0)) if len(cot) >= 6 else 0.0
+        )
+        # No 4w price for prev week — neutral default; affects only Contrarian classifications
+        prev_synthetic["price_change_4w_pct"] = 0.0
+        prev_regime = regime_label(prev_synthetic)
+        cur_regime = current_summary.get("regime")
+        if prev_regime and cur_regime and prev_regime != cur_regime:
+            events.append({
+                "type": "regime_change",
+                "from": prev_regime,
+                "to": cur_regime,
+            })
+
+    # 4. Streak just hit 3 weeks this week
+    streak_weeks = current_summary.get("streak_weeks") or 0
+    if streak_weeks == 3:
+        events.append({
+            "type": "streak_start",
+            "direction": current_summary.get("streak_direction"),
+            "weeks": streak_weeks,
+        })
+
+    return events
+
+
 def regime_label(row: Dict[str, Any]) -> str:
     pct = row.get("primary_percentile", 50.0)
     price = row.get("price_change_4w_pct") or 0.0
@@ -329,6 +405,7 @@ def build_market_summary(market_meta: Dict[str, Any], payload: Dict[str, Any]) -
     latest.update(streak_info)
 
     latest["regime"] = regime_label(latest)
+    latest["crossings"] = detect_crossings(cot, latest)
     latest["watchlist_score"] = score_market(latest, previous_4w)
     latest["market_key"] = market_meta["key"]
     latest["market_title"] = market_meta["title"]
@@ -440,6 +517,7 @@ def main() -> None:
                 "streak_weeks": summary.get("streak_weeks"),
                 "streak_direction": summary.get("streak_direction"),
                 "streak_total_change": summary.get("streak_total_change"),
+                "crossings": summary.get("crossings", []),
                 "takeaway": summary.get("takeaway"),
             }
         )

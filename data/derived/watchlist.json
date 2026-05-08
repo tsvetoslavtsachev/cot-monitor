@@ -18,6 +18,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_short",
     "streak_total_change": -1425.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 1
   },
@@ -40,6 +41,7 @@
     "streak_weeks": 2,
     "streak_direction": "building_long",
     "streak_total_change": 17405.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 2
   },
@@ -62,6 +64,20 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_short",
     "streak_total_change": 10387.0,
+    "crossings": [
+      {
+        "type": "percentile_cross",
+        "threshold": 10,
+        "direction": "up",
+        "from_pct": 8.9,
+        "to_pct": 12.7
+      },
+      {
+        "type": "regime_change",
+        "from": "Crowded Short",
+        "to": "Divergence"
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 3
   },
@@ -84,6 +100,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_short",
     "streak_total_change": 12866.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 4
   },
@@ -106,6 +123,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_long",
     "streak_total_change": -7602.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 5
   },
@@ -128,6 +146,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_short",
     "streak_total_change": 362.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 6
   },
@@ -150,6 +169,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 1796.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 7
   },
@@ -172,6 +192,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 333.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 8
   },
@@ -194,6 +215,13 @@
     "streak_weeks": 3,
     "streak_direction": "building_short",
     "streak_total_change": -28529.0,
+    "crossings": [
+      {
+        "type": "streak_start",
+        "direction": "building_short",
+        "weeks": 3
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 9
   },
@@ -216,6 +244,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 2.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 10
   },
@@ -238,6 +267,13 @@
     "streak_weeks": 3,
     "streak_direction": "building_long",
     "streak_total_change": 21992.0,
+    "crossings": [
+      {
+        "type": "streak_start",
+        "direction": "building_long",
+        "weeks": 3
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 11
   },
@@ -260,6 +296,7 @@
     "streak_weeks": 2,
     "streak_direction": "building_long",
     "streak_total_change": 104620.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 12
   },
@@ -282,6 +319,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_short",
     "streak_total_change": 2215.0,
+    "crossings": [],
     "takeaway": "Short crowding remains heavy (4th percentile from the bottom).",
     "rank": 13
   },
@@ -304,6 +342,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_long",
     "streak_total_change": -470.0,
+    "crossings": [],
     "takeaway": "Positioning is easing without a clear high-conviction signal.",
     "rank": 14
   },
@@ -326,6 +365,13 @@
     "streak_weeks": 3,
     "streak_direction": "unwinding_long",
     "streak_total_change": -40496.0,
+    "crossings": [
+      {
+        "type": "streak_start",
+        "direction": "unwinding_long",
+        "weeks": 3
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 15
   },
@@ -348,6 +394,15 @@
     "streak_weeks": 4,
     "streak_direction": "building_short",
     "streak_total_change": -29620.0,
+    "crossings": [
+      {
+        "type": "percentile_cross",
+        "threshold": 10,
+        "direction": "down",
+        "from_pct": 11.6,
+        "to_pct": 7.7
+      }
+    ],
     "takeaway": "Short crowding remains heavy (8th percentile from the bottom).",
     "rank": 16
   },
@@ -370,6 +425,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_long",
     "streak_total_change": -255.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 17
   },
@@ -392,6 +448,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_short",
     "streak_total_change": -752.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 18
   },
@@ -414,6 +471,7 @@
     "streak_weeks": 5,
     "streak_direction": "building_short",
     "streak_total_change": -247034.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 19
   },
@@ -436,6 +494,20 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 21381.0,
+    "crossings": [
+      {
+        "type": "sign_flip",
+        "from": "short",
+        "to": "long",
+        "from_value": -10717.0,
+        "to_value": 10664.0
+      },
+      {
+        "type": "regime_change",
+        "from": "Neutral / Transition",
+        "to": "Divergence"
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 20
   },
@@ -458,6 +530,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_short",
     "streak_total_change": 10659.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 21
   },
@@ -480,6 +553,7 @@
     "streak_weeks": 2,
     "streak_direction": "building_long",
     "streak_total_change": 5518.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 22
   },
@@ -502,6 +576,7 @@
     "streak_weeks": 4,
     "streak_direction": "building_short",
     "streak_total_change": -48219.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 23
   },
@@ -524,6 +599,7 @@
     "streak_weeks": 0,
     "streak_direction": "flat",
     "streak_total_change": 0.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 24
   },
@@ -546,6 +622,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 1882.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 25
   },
@@ -568,6 +645,7 @@
     "streak_weeks": 4,
     "streak_direction": "building_short",
     "streak_total_change": -6664.0,
+    "crossings": [],
     "takeaway": "Positioning is easing without a clear high-conviction signal.",
     "rank": 26
   },
@@ -590,6 +668,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_short",
     "streak_total_change": -3499.0,
+    "crossings": [],
     "takeaway": "Positioning is easing without a clear high-conviction signal.",
     "rank": 27
   },
@@ -612,6 +691,7 @@
     "streak_weeks": 2,
     "streak_direction": "building_short",
     "streak_total_change": -38808.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 28
   },
@@ -634,6 +714,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_long",
     "streak_total_change": -7276.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 29
   },
@@ -656,6 +737,7 @@
     "streak_weeks": 8,
     "streak_direction": "building_long",
     "streak_total_change": 111292.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 30
   },
@@ -678,6 +760,7 @@
     "streak_weeks": 1,
     "streak_direction": "building_long",
     "streak_total_change": 5577.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 31
   },
@@ -700,6 +783,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_long",
     "streak_total_change": -2295.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 32
   },
@@ -722,6 +806,7 @@
     "streak_weeks": 1,
     "streak_direction": "unwinding_short",
     "streak_total_change": 2062.0,
+    "crossings": [],
     "takeaway": "Positioning is improving but not yet in an extreme regime.",
     "rank": 33
   },
@@ -744,6 +829,7 @@
     "streak_weeks": 4,
     "streak_direction": "unwinding_long",
     "streak_total_change": -7130.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 34
   },
@@ -766,6 +852,13 @@
     "streak_weeks": 3,
     "streak_direction": "unwinding_short",
     "streak_total_change": 108105.0,
+    "crossings": [
+      {
+        "type": "streak_start",
+        "direction": "unwinding_short",
+        "weeks": 3
+      }
+    ],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 35
   },
@@ -788,6 +881,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_long",
     "streak_total_change": -13788.0,
+    "crossings": [],
     "takeaway": "Positioning is improving but not yet in an extreme regime.",
     "rank": 36
   },
@@ -810,6 +904,7 @@
     "streak_weeks": 2,
     "streak_direction": "unwinding_short",
     "streak_total_change": 46746.0,
+    "crossings": [],
     "takeaway": "Fast money and slower cohorts are pulling in different directions.",
     "rank": 37
   },
@@ -832,6 +927,7 @@
     "streak_weeks": 2,
     "streak_direction": "building_short",
     "streak_total_change": -622.0,
+    "crossings": [],
     "takeaway": "Positioning is easing without a clear high-conviction signal.",
     "rank": 38
   }

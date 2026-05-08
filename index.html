@@ -686,6 +686,12 @@
       </h2>
       <div id="hero-narrative" class="hero-narrative" hidden></div>
 
+      <h3 style="margin-top:1.6rem">🔔 Промени тази седмица</h3>
+      <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:0.7rem">
+        Свежи сигнали — пазари които току-що пресекоха ключов праг, обърнаха посоката си, или започнаха multi-week streak.
+      </p>
+      <div id="crossings" class="change-grid"></div>
+
       <h3 style="margin-top:1.6rem">Най-силни седмични движения</h3>
       <div id="big-moves" class="change-grid"></div>
 
@@ -1219,6 +1225,7 @@ async function init() {
 
     setHeaderMeta();
     renderHeroNarrative();
+    renderCrossings();
     renderBigMoves();
     renderExtremes();
     renderSectors();
@@ -1395,6 +1402,66 @@ function computeSectorTilt() {
     result[sector] = { totalNotional, avgZ, dir };
   }
   return result;
+}
+
+function formatCrossing(c) {
+  if (!c || !c.type) return '';
+  if (c.type === 'sign_flip') {
+    return `позицията се обърна от ${c.from === 'long' ? 'нет дълга' : 'нет къса'} (${fmt(Math.abs(c.from_value))}) в ${c.to === 'long' ? 'нет дълга' : 'нет къса'} (${fmt(Math.abs(c.to_value))})`;
+  }
+  if (c.type === 'percentile_cross') {
+    const dirArrow = c.direction === 'up' ? '↑' : '↓';
+    const dirWord = c.direction === 'up' ? 'нагоре' : 'надолу';
+    return `пресича ${c.threshold}-и перцентил ${dirArrow} ${dirWord} (от ${c.from_pct?.toFixed(0)}-и → ${c.to_pct?.toFixed(0)}-и)`;
+  }
+  if (c.type === 'regime_change') {
+    const fromLabel = REGIME_BG[c.from]?.label || c.from;
+    const toLabel = REGIME_BG[c.to]?.label || c.to;
+    return `режим: <strong>${fromLabel}</strong> → <strong>${toLabel}</strong>`;
+  }
+  if (c.type === 'streak_start') {
+    const dirLabel = STREAK_DIR_BG[c.direction] || c.direction;
+    return `започва streak — ${c.weeks} седмици ${dirLabel}`;
+  }
+  return '';
+}
+
+function renderCrossings() {
+  const rows = state.watchlist
+    .filter(r => Array.isArray(r.crossings) && r.crossings.length > 0)
+    .map(r => {
+      // Priority score: regime_change (3) > sign_flip (3) > percentile_cross (2) > streak_start (1)
+      const weights = { regime_change: 3, sign_flip: 3, percentile_cross: 2, streak_start: 1 };
+      const score = r.crossings.reduce((s, c) => s + (weights[c.type] || 0), 0);
+      return { ...r, _score: score };
+    })
+    .sort((a, b) => b._score - a._score);
+
+  if (!rows.length) {
+    $('crossings').innerHTML = `<div class="card"><div class="card-body">Няма забележителни промени тази седмица — всички пазари са в стабилни режими.</div></div>`;
+    return;
+  }
+
+  $('crossings').innerHTML = rows.map(r => {
+    const isNetLong = (r.primary_net || 0) >= 0;
+    const cardCls = isNetLong ? 'up' : 'down';
+    const sectorLabel = SECTOR_BG[r.subtitle] || r.subtitle || '';
+    const stateLabel = isNetLong
+      ? `<span class="num long">нет дълго</span> ${fmt(Math.abs(r.primary_net))} (${fmtBn(r.notional_usd_bn)})`
+      : `<span class="num short">нет късо</span> ${fmt(Math.abs(r.primary_net))} (${fmtBn(r.notional_usd_bn)})`;
+    const eventsList = r.crossings.map(c => {
+      const icon = { sign_flip: '🔁', percentile_cross: '📊', regime_change: '⚡', streak_start: '🚀' }[c.type] || '•';
+      return `<li style="margin-bottom:0.3rem">${icon} ${formatCrossing(c)}</li>`;
+    }).join('');
+    return `<div class="change-card ${cardCls}">
+      <div class="market">${marketLabel(r.market)}</div>
+      <div class="sector">${sectorLabel} · ${marketSub(r.market)}</div>
+      <div class="delta" style="margin-top:0.4rem">📍 Сега: ${stateLabel}</div>
+      <ul style="margin:0.5rem 0 0 0; padding:0; list-style:none; font-size:0.85rem; color:var(--text)">
+        ${eventsList}
+      </ul>
+    </div>`;
+  }).join('');
 }
 
 function renderBigMoves() {
