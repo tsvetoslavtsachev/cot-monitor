@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Пазарни позиции — седмичен наратив</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
   <style>
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -1027,6 +1028,17 @@ const COHORT_BG = {
   },
 };
 
+// Historical macro markers for chart context.
+// Date is the key event date; idx will be resolved at runtime against the chart's cot rows.
+const HISTORICAL_MARKERS = [
+  { date: '2020-03-24', label: 'COVID crash',          color: 'rgba(239,68,68,0.55)'  },
+  { date: '2022-03-16', label: 'Fed liftoff',          color: 'rgba(245,158,11,0.55)' },
+  { date: '2022-06-14', label: 'CPI peak 9.1%',        color: 'rgba(245,158,11,0.55)' },
+  { date: '2023-03-10', label: 'SVB / regional banks', color: 'rgba(239,68,68,0.55)'  },
+  { date: '2024-08-05', label: 'JPY carry unwind',     color: 'rgba(168,85,247,0.55)' },
+  { date: '2024-09-18', label: 'Fed first cut',        color: 'rgba(34,197,94,0.55)'  },
+];
+
 // Period selector options for detail chart
 const PERIOD_OPTIONS = [
   { value: 52,   label: '1 година' },
@@ -1715,6 +1727,40 @@ function formatTooltipDate(dateStr) {
   return `${d.getUTCDate()} ${MONTHS_BG_FULL[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
+function buildHistoricalAnnotations(cot) {
+  // For each marker, find the cot index whose date is closest to (but >=) the marker date.
+  // Skip markers outside the visible cot range.
+  const annotations = {};
+  if (!cot.length) return annotations;
+  const firstDate = (cot[0].date || '').slice(0, 10);
+  const lastDate = (cot[cot.length - 1].date || '').slice(0, 10);
+  HISTORICAL_MARKERS.forEach((m, i) => {
+    if (m.date < firstDate || m.date > lastDate) return;
+    const idx = cot.findIndex(r => (r.date || '').slice(0, 10) >= m.date);
+    if (idx < 0) return;
+    annotations['marker_' + i] = {
+      type: 'line',
+      xMin: idx,
+      xMax: idx,
+      borderColor: m.color,
+      borderWidth: 1,
+      borderDash: [4, 3],
+      label: {
+        content: m.label,
+        display: true,
+        position: 'start',
+        backgroundColor: 'rgba(15,17,23,0.85)',
+        color: '#e6ebf3',
+        font: { size: 9, weight: 'normal' },
+        padding: { top: 2, bottom: 2, left: 4, right: 4 },
+        borderRadius: 3,
+        yAdjust: i % 2 === 0 ? 0 : 14,  // stagger to reduce overlap
+      },
+    };
+  });
+  return annotations;
+}
+
 function renderDetailChart(key, mkt, periodWeeks = PERIOD_DEFAULT) {
   const ctxEl = $('detail-chart-' + key);
   if (!ctxEl) return;
@@ -1723,6 +1769,7 @@ function renderDetailChart(key, mkt, periodWeeks = PERIOD_DEFAULT) {
   const labels = cot.map(r => formatChartDate(r.date, yearsSpan));
   const fullDates = cot.map(r => r.date);
   const data = cot.map(r => r.primary_net);
+  const annotations = buildHistoricalAnnotations(cot);
   if (state.charts['detail-' + key]) state.charts['detail-' + key].destroy();
   state.charts['detail-' + key] = new Chart(ctxEl.getContext('2d'), {
     type: 'line',
@@ -1750,7 +1797,8 @@ function renderDetailChart(key, mkt, periodWeeks = PERIOD_DEFAULT) {
             title: (items) => formatTooltipDate(fullDates[items[0].dataIndex] || ''),
             label: (item) => `Нет позиция: ${item.parsed.y.toLocaleString('bg-BG')} контракта`,
           }
-        }
+        },
+        annotation: { annotations }
       },
       scales: {
         x: {
