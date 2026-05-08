@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 21032.0,
       "tertiary_short": 44031.0,
       "tertiary_net": -22999.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 117570.0,
+      "primary_long": 16203.0,
+      "primary_short": 5262.0,
+      "primary_net": 10941.0,
+      "secondary_long": 3107.0,
+      "secondary_short": 20578.0,
+      "secondary_net": -17471.0,
+      "tertiary_long": 19629.0,
+      "tertiary_short": 43049.0,
+      "tertiary_net": -23420.0,
       "report_family": "disaggregated"
     }
   ],
@@ -17869,7 +17884,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 80.93000030517578
+      "close": 80.83499908447266
     }
   ]
 }

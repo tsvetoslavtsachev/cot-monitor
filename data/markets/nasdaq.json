@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "NQ=F",
     "price_label": "Nasdaq 100",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8851,6 +8851,23 @@
       "tertiary_net": -37188.0,
       "other_long": 9804.0,
       "other_short": 2914.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "NASDAQ-100 Consolidated - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 315421.0,
+      "primary_long": 38173.0,
+      "primary_short": 94512.0,
+      "primary_net": -56339.0,
+      "secondary_long": 118978.0,
+      "secondary_short": 32325.0,
+      "secondary_net": 86653.0,
+      "tertiary_long": 53679.0,
+      "tertiary_short": 95941.0,
+      "tertiary_net": -42262.0,
+      "other_long": 9087.0,
+      "other_short": 2736.0,
       "report_family": "tff"
     }
   ],
@@ -18917,7 +18934,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 29306.25
+      "close": 29333.75
     }
   ]
 }

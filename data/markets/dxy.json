@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 221,
+    "record_count": 222,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3768,6 +3768,23 @@
       "tertiary_net": -7012.0,
       "other_long": 3006.0,
       "other_short": 1657.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 32496.0,
+      "primary_long": 7407.0,
+      "primary_short": 13212.0,
+      "primary_net": -5805.0,
+      "secondary_long": 12659.0,
+      "secondary_short": 2084.0,
+      "secondary_net": 10575.0,
+      "tertiary_long": 3503.0,
+      "tertiary_short": 10473.0,
+      "tertiary_net": -6970.0,
+      "other_long": 3269.0,
+      "other_short": 1945.0,
       "report_family": "tff"
     }
   ],
@@ -13830,7 +13847,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 97.9219970703125
+      "close": 97.84300231933594
     }
   ]
 }

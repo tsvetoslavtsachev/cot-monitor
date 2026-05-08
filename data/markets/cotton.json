@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 61200.0,
       "tertiary_short": 34887.0,
       "tertiary_net": 26313.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 496723.0,
+      "primary_long": 75120.0,
+      "primary_short": 23936.0,
+      "primary_net": 51184.0,
+      "secondary_long": 78439.0,
+      "secondary_short": 217185.0,
+      "secondary_net": -138746.0,
+      "tertiary_long": 59605.0,
+      "tertiary_short": 40070.0,
+      "tertiary_net": 19535.0,
       "report_family": "disaggregated"
     }
   ],

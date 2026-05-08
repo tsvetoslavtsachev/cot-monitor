@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "EURUSD=X",
     "price_label": "EUR/USD",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8851,6 +8851,23 @@
       "tertiary_net": -347889.0,
       "other_long": 22813.0,
       "other_short": 16841.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 815942.0,
+      "primary_long": 110859.0,
+      "primary_short": 99013.0,
+      "primary_net": 11846.0,
+      "secondary_long": 443607.0,
+      "secondary_short": 157994.0,
+      "secondary_net": 285613.0,
+      "tertiary_long": 50574.0,
+      "tertiary_short": 393749.0,
+      "tertiary_net": -343175.0,
+      "other_long": 22983.0,
+      "other_short": 18444.0,
       "report_family": "tff"
     }
   ],
@@ -19260,8 +19277,12 @@
       "close": 1.1747430562973022
     },
     {
-      "timestamp": 1778261774,
-      "close": 1.1778563261032104
+      "timestamp": 1778194800,
+      "close": 1.1731581687927246
+    },
+    {
+      "timestamp": 1778275755,
+      "close": 1.1789672374725342
     }
   ]
 }

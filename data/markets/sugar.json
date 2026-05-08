@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 242924.0,
       "tertiary_short": 45526.0,
       "tertiary_net": 197398.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1191826.0,
+      "primary_long": 171276.0,
+      "primary_short": 285422.0,
+      "primary_net": -114146.0,
+      "secondary_long": 229334.0,
+      "secondary_short": 365842.0,
+      "secondary_net": -136508.0,
+      "tertiary_long": 247193.0,
+      "tertiary_short": 58327.0,
+      "tertiary_net": 188866.0,
       "report_family": "disaggregated"
     }
   ],

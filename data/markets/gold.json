@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "GC=F",
     "price_label": "Gold Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 29369.0,
       "tertiary_short": 195935.0,
       "tertiary_net": -166566.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "GOLD - COMMODITY EXCHANGE INC.",
+      "open_interest": 526987.0,
+      "primary_long": 124667.0,
+      "primary_short": 29003.0,
+      "primary_net": 95664.0,
+      "secondary_long": 18823.0,
+      "secondary_short": 41173.0,
+      "secondary_net": -22350.0,
+      "tertiary_long": 28715.0,
+      "tertiary_short": 200373.0,
+      "tertiary_net": -171658.0,
       "report_family": "disaggregated"
     }
   ],
@@ -17869,7 +17884,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 4728.39990234375
+      "close": 4723.7001953125
     }
   ]
 }

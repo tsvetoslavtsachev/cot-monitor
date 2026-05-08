@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "BTC-USD",
     "price_label": "BTC/USD",
-    "record_count": 421,
+    "record_count": 422,
     "history_first_date": "2018-04-10",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7168,6 +7168,23 @@
       "tertiary_net": 4561.0,
       "other_long": 727.0,
       "other_short": 293.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 23402.0,
+      "primary_long": 4148.0,
+      "primary_short": 15886.0,
+      "primary_net": -11738.0,
+      "secondary_long": 7096.0,
+      "secondary_short": 909.0,
+      "secondary_net": 6187.0,
+      "tertiary_long": 6891.0,
+      "tertiary_short": 2422.0,
+      "tertiary_net": 4469.0,
+      "other_long": 1356.0,
+      "other_short": 372.0,
       "report_family": "tff"
     }
   ],
@@ -21782,7 +21799,7 @@
     },
     {
       "timestamp": 1778198400,
-      "close": 80171.3515625
+      "close": 80333.9609375
     }
   ]
 }

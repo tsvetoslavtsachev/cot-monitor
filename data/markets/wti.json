@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 256.0,
       "tertiary_short": 144970.0,
       "tertiary_net": -144714.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "CRUDE OIL, LIGHT SWEET-WTI - ICE FUTURES EUROPE",
+      "open_interest": 1200949.0,
+      "primary_long": 11978.0,
+      "primary_short": 37656.0,
+      "primary_net": -25678.0,
+      "secondary_long": 549562.0,
+      "secondary_short": 401294.0,
+      "secondary_net": 148268.0,
+      "tertiary_long": 225.0,
+      "tertiary_short": 154450.0,
+      "tertiary_net": -154225.0,
       "report_family": "disaggregated"
     }
   ],
@@ -17873,7 +17888,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 95.44000244140625
+      "close": 94.68000030517578
     }
   ]
 }

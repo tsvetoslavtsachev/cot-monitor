@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7811,6 +7811,21 @@
       "tertiary_long": 23810.0,
       "tertiary_short": 289308.0,
       "tertiary_net": -265498.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "HENRY HUB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 384686.0,
+      "primary_long": 0.0,
+      "primary_short": 7516.0,
+      "primary_net": -7516.0,
+      "secondary_long": 30781.0,
+      "secondary_short": 12460.0,
+      "secondary_net": 18321.0,
+      "tertiary_long": 23199.0,
+      "tertiary_short": 283492.0,
+      "tertiary_net": -260293.0,
       "report_family": "disaggregated"
     }
   ],
@@ -17877,7 +17892,7 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 2.763000011444092
+      "close": 2.75
     }
   ]
 }

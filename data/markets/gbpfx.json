@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "GBPUSD=X",
     "price_label": "GBP/USD",
-    "record_count": 520,
+    "record_count": 521,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-04-28",
+    "history_last_date": "2026-05-05",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8850,6 +8850,23 @@
       "tertiary_short": 63446.0,
       "tertiary_net": 67869.0,
       "other_long": 483.0,
+      "other_short": 0.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-05-05T00:00:00.000",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 276143.0,
+      "primary_long": 63113.0,
+      "primary_short": 37064.0,
+      "primary_net": 26049.0,
+      "secondary_long": 38205.0,
+      "secondary_short": 140835.0,
+      "secondary_net": -102630.0,
+      "tertiary_long": 131954.0,
+      "tertiary_short": 53597.0,
+      "tertiary_net": 78357.0,
+      "other_long": 0.0,
       "other_short": 0.0,
       "report_family": "tff"
     }
@@ -19260,8 +19277,12 @@
       "close": 1.3591758012771606
     },
     {
-      "timestamp": 1778261774,
-      "close": 1.3622123003005981
+      "timestamp": 1778194800,
+      "close": 1.3555645942687988
+    },
+    {
+      "timestamp": 1778275755,
+      "close": 1.3632335662841797
     }
   ]
 }
