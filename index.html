@@ -530,6 +530,83 @@
     .export-card button.dl:hover { background: var(--accent); }
     .export-card button.dl:disabled { background: var(--neutral); cursor: not-allowed; opacity: 0.6; }
 
+    /* ── Correlations heatmap + pairs ── */
+    .corr-section { margin-bottom: 1.5rem; }
+    .corr-section h3 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .corr-section .corr-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+    .sector-heatmap {
+      display: grid;
+      gap: 2px;
+      font-size: 0.74rem;
+      background: var(--border);
+      padding: 2px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .hm-header {
+      background: var(--surface2);
+      padding: 0.5rem 0.4rem;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.72rem;
+      line-height: 1.15;
+    }
+    .hm-header.row-label {
+      text-align: right;
+      padding-right: 0.7rem;
+    }
+    .hm-cell {
+      padding: 0.55rem 0.4rem;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      cursor: default;
+      color: var(--text);
+      background: var(--surface);
+    }
+    .hm-cell.diag { color: var(--text-muted); font-weight: 400; }
+    .pair-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .pair-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0.7rem;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.55rem 0.85rem;
+      font-size: 0.86rem;
+    }
+    .pair-corr {
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      padding: 0.25rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.84rem;
+    }
+    .pair-names {
+      color: var(--text);
+    }
+    .pair-names .arrow {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin: 0 0.4rem;
+    }
+
     /* ── Glossary ── */
     .glossary-toc {
       display: flex;
@@ -669,6 +746,7 @@
     <button data-tab="week" class="active">Тази седмица</button>
     <button data-tab="sectors">Секторна картина</button>
     <button data-tab="all">Пълен преглед (38 пазара)</button>
+    <button data-tab="correlations">Корелации</button>
     <button data-tab="glossary">Речник</button>
     <button data-tab="method">Какво НЕ виждаме</button>
   </div>
@@ -726,6 +804,27 @@
           </thead>
           <tbody id="full-table-body"></tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- ── Tab: Correlations ── -->
+    <section class="tab" id="tab-correlations">
+      <h2>Корелации между пазари
+        <span class="sub">Колко често пазарите се движат заедно. Високата корелация означава "една макро тема", не три независими сигнала.</span>
+      </h2>
+
+      <div style="display:flex; gap:0.85rem; align-items:center; margin-bottom:1.2rem; flex-wrap:wrap">
+        <span style="font-size:0.85rem; color:var(--text-muted)">Време:</span>
+        <select id="corr-period" style="background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:5px; padding:0.4rem 0.6rem; font:inherit; cursor:pointer">
+          <option value="26">26 седмици (~6 месеца)</option>
+          <option value="52" selected>52 седмици (~1 година)</option>
+          <option value="104">104 седмици (~2 години)</option>
+        </select>
+        <span style="font-size:0.78rem; color:var(--text-muted); font-style:italic">Базира се на седмичните промени в спекулативните позиции, нормализирани per market.</span>
+      </div>
+
+      <div id="correlations-content">
+        <div class="card"><div class="card-body">Кликни на таб "Корелации" за зареждане...</div></div>
       </div>
     </section>
 
@@ -2036,6 +2135,17 @@ function setupTabs() {
       btn.classList.add('active');
       document.querySelectorAll('section.tab').forEach(s => s.classList.remove('active'));
       $('tab-' + btn.dataset.tab).classList.add('active');
+
+      // Lazy-load correlations on first visit (computes from all 38 market files)
+      if (btn.dataset.tab === 'correlations' && !_correlationsLoaded) {
+        _correlationsLoaded = true;
+        const periodSel = $('corr-period');
+        const initPeriod = periodSel ? parseInt(periodSel.value, 10) : 52;
+        renderCorrelations(initPeriod);
+        if (periodSel) {
+          periodSel.onchange = (e) => renderCorrelations(parseInt(e.target.value, 10));
+        }
+      }
     };
   });
 }
@@ -2429,6 +2539,181 @@ function setupExports() {
   // E
   const btnE = $('export-btn-e');
   if (btnE) btnE.onclick = () => downloadFile(`cot-alerts_${dateSlug}.md`, generateAlertsBriefing(), 'text/markdown;charset=utf-8');
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Correlations — cross-market positioning relationships
+// ════════════════════════════════════════════════════════════════════════════
+
+let _correlationsLoaded = false;
+const _corrCache = {};  // keyed by period weeks
+
+async function ensureAllMarketsLoaded(progressEl) {
+  const keys = (state.manifest?.markets || []).map(m => m.key);
+  const missing = keys.filter(k => !state.markets[k]);
+  if (!missing.length) return;
+  if (progressEl) progressEl.textContent = `Зареждане на ${missing.length} от ${keys.length} пазара...`;
+  let loaded = 0;
+  // Parallelize but with reasonable concurrency
+  const BATCH = 8;
+  for (let i = 0; i < missing.length; i += BATCH) {
+    const batch = missing.slice(i, i + BATCH);
+    await Promise.all(batch.map(async k => {
+      await ensureMarketLoaded(k);
+      loaded++;
+      if (progressEl) progressEl.textContent = `Зареждане ${loaded}/${missing.length}...`;
+    }));
+  }
+}
+
+function computeNormalizedDeltas(cot, weeks) {
+  if (!cot || cot.length < weeks + 1) return null;
+  const slice = cot.slice(-(weeks + 1));
+  const raw = [];
+  for (let i = 1; i < slice.length; i++) {
+    const cur = slice[i].primary_net;
+    const prev = slice[i-1].primary_net;
+    raw.push((cur != null && prev != null) ? cur - prev : 0);
+  }
+  const mean = raw.reduce((s,v)=>s+v,0) / raw.length;
+  const std = Math.sqrt(raw.reduce((s,v)=>s+(v-mean)**2,0) / raw.length) || 1;
+  return raw.map(v => (v - mean) / std);
+}
+
+function pearson(x, y) {
+  const n = Math.min(x.length, y.length);
+  if (n < 5) return 0;
+  let sx = 0, sy = 0, sxy = 0, sx2 = 0, sy2 = 0;
+  for (let i = 0; i < n; i++) {
+    sx += x[i]; sy += y[i];
+    sxy += x[i] * y[i];
+    sx2 += x[i] * x[i]; sy2 += y[i] * y[i];
+  }
+  const num = n * sxy - sx * sy;
+  const denom = Math.sqrt((n * sx2 - sx * sx) * (n * sy2 - sy * sy));
+  return denom > 0 ? num / denom : 0;
+}
+
+function corrToColor(v) {
+  // Diverging scale: red (negative) ↔ neutral ↔ green (positive)
+  const a = Math.min(Math.abs(v), 1);
+  if (v >= 0) {
+    return `rgba(34, 197, 94, ${0.08 + a * 0.55})`;
+  } else {
+    return `rgba(239, 68, 68, ${0.08 + a * 0.55})`;
+  }
+}
+
+async function computeCorrelations(weeks) {
+  if (_corrCache[weeks]) return _corrCache[weeks];
+  const seriesByMarket = {};
+  for (const m of (state.manifest?.markets || [])) {
+    const mkt = state.markets[m.key];
+    if (!mkt) continue;
+    const series = computeNormalizedDeltas(mkt.cot, weeks);
+    if (series && series.length >= weeks) seriesByMarket[m.key] = series;
+  }
+
+  // Pairwise market correlations
+  const keys = Object.keys(seriesByMarket);
+  const pairs = [];
+  for (let i = 0; i < keys.length; i++) {
+    for (let j = i + 1; j < keys.length; j++) {
+      pairs.push({ a: keys[i], b: keys[j], corr: pearson(seriesByMarket[keys[i]], seriesByMarket[keys[j]]) });
+    }
+  }
+
+  // Sector aggregates: avg of normalized series within sector
+  const sectorSeries = {};
+  for (const [sector, sectorKeys] of Object.entries(SECTOR_GROUPS)) {
+    const present = sectorKeys.filter(k => seriesByMarket[k]);
+    if (!present.length) continue;
+    const len = seriesByMarket[present[0]].length;
+    const agg = new Array(len).fill(0);
+    present.forEach(k => seriesByMarket[k].forEach((v, i) => { agg[i] += v; }));
+    sectorSeries[sector] = agg.map(v => v / present.length);
+  }
+  const sectorList = Object.keys(sectorSeries);
+  const sectorMatrix = sectorList.map(sa =>
+    sectorList.map(sb => sa === sb ? 1 : pearson(sectorSeries[sa], sectorSeries[sb]))
+  );
+
+  const result = { pairs, sectorList, sectorMatrix };
+  _corrCache[weeks] = result;
+  return result;
+}
+
+async function renderCorrelations(weeks = 52) {
+  const container = $('correlations-content');
+  if (!container) return;
+  container.innerHTML = `<div class="card"><div class="card-body" id="corr-progress">Зареждане на данни...</div></div>`;
+  const progressEl = $('corr-progress');
+
+  await ensureAllMarketsLoaded(progressEl);
+  if (progressEl) progressEl.textContent = 'Изчисление на корелациите...';
+  const data = await computeCorrelations(weeks);
+
+  let html = '';
+
+  // Section A: Sector heatmap
+  html += `<div class="corr-section">
+    <h3>Секторна heatmap</h3>
+    <p class="corr-desc">
+      Колко синхронно се движат секторите. Зелено = заедно, червено = обратно. Числата са Pearson корелация на седмичните промени в позиционирането (нормализирани per market).
+    </p>`;
+  const cols = data.sectorList.length + 1;
+  html += `<div class="sector-heatmap" style="grid-template-columns: 110px repeat(${data.sectorList.length}, 1fr); min-width: ${110 + data.sectorList.length * 90}px">`;
+  // Header row
+  html += '<div></div>';
+  data.sectorList.forEach(s => html += `<div class="hm-header">${s}</div>`);
+  // Data rows
+  data.sectorList.forEach((sa, i) => {
+    html += `<div class="hm-header row-label">${sa}</div>`;
+    data.sectorMatrix[i].forEach((v, j) => {
+      const isDiag = i === j;
+      const bg = isDiag ? 'var(--surface2)' : corrToColor(v);
+      const cls = isDiag ? 'hm-cell diag' : 'hm-cell';
+      const tooltip = isDiag ? '' : `${sa} ↔ ${data.sectorList[j]}: ${v.toFixed(2)}`;
+      html += `<div class="${cls}" style="background:${bg}" title="${tooltip}">${isDiag ? '—' : v.toFixed(2)}</div>`;
+    });
+  });
+  html += `</div></div>`;
+
+  // Section B: Top correlated pairs
+  const sorted = data.pairs.slice().sort((a, b) => b.corr - a.corr);
+  const topPos = sorted.slice(0, 10);
+  const topNeg = sorted.slice(-10).reverse();
+
+  html += `<div class="corr-section" style="margin-top:1.5rem">
+    <h3>🟢 Най-корелирани двойки</h3>
+    <p class="corr-desc">Тези пазари се движат най-синхронно — често са израз на една макро тема (USD-силен/слаб, risk-on/risk-off, reflation, и т.н.).</p>
+    <div class="pair-list">`;
+  topPos.forEach(p => {
+    html += `<div class="pair-row">
+      <span class="pair-corr" style="background:${corrToColor(p.corr)}">${p.corr >= 0 ? '+' : ''}${p.corr.toFixed(2)}</span>
+      <span class="pair-names">${marketLabel(p.a)} <span class="arrow">↔</span> ${marketLabel(p.b)}</span>
+    </div>`;
+  });
+  html += `</div></div>`;
+
+  html += `<div class="corr-section" style="margin-top:1.5rem">
+    <h3>🔴 Най-антикорелирани двойки</h3>
+    <p class="corr-desc">Тези пазари се движат в противоположни посоки — често са естествени hedges или opposing trades (long X = short Y).</p>
+    <div class="pair-list">`;
+  topNeg.forEach(p => {
+    html += `<div class="pair-row">
+      <span class="pair-corr" style="background:${corrToColor(p.corr)}">${p.corr.toFixed(2)}</span>
+      <span class="pair-names">${marketLabel(p.a)} <span class="arrow">↔</span> ${marketLabel(p.b)}</span>
+    </div>`;
+  });
+  html += `</div></div>`;
+
+  // Methodology note
+  html += `<div class="card" style="margin-top:1.5rem; font-size:0.82rem; color:var(--text-muted)">
+    <strong style="color:var(--text)">Как да четеш:</strong> корелацията не е причинност. Ако gold и silver имат +0.85, не значи че едното причинява другото — често и двете отразяват една и съща тема (USD-слабост, реални активи). Ако вече играеш едното, добавянето на другото удвоява експозицията към същата теза, не я диверсифицира.
+  </div>`;
+
+  container.innerHTML = html;
 }
 
 // ════════════════════════════════════════════════════════════════════════════
