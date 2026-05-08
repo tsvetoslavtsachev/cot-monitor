@@ -473,6 +473,66 @@
     .export-card button.dl:hover { background: var(--accent); }
     .export-card button.dl:disabled { background: var(--neutral); cursor: not-allowed; opacity: 0.6; }
 
+    /* ── Glossary ── */
+    .glossary-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .glossary-toc a {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 0.32rem 0.7rem;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      color: var(--text);
+    }
+    .glossary-toc a:hover { border-color: var(--accent); text-decoration: none; }
+    .glossary-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .glossary-section h3 {
+      color: var(--accent);
+      font-size: 1.05rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .glossary-section dl {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    .glossary-section dt {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+    .glossary-section dt .alt {
+      color: var(--text-muted);
+      font-weight: 400;
+      font-size: 0.84rem;
+      font-style: italic;
+    }
+    .glossary-section dd {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin-left: 0;
+      padding-left: 0.85rem;
+      border-left: 2px solid var(--border);
+    }
+    .glossary-section dd strong { color: var(--text); }
+
     /* ── Methodology ── */
     .method-grid {
       display: grid;
@@ -541,6 +601,7 @@
     <button data-tab="week" class="active">Тази седмица</button>
     <button data-tab="sectors">Секторна картина</button>
     <button data-tab="all">Пълен преглед (38 пазара)</button>
+    <button data-tab="glossary">Речник</button>
     <button data-tab="method">Какво НЕ виждаме</button>
   </div>
 </nav>
@@ -594,7 +655,137 @@
       </div>
     </section>
 
-    <!-- ── Tab 4: Методология / какво не виждаме ── -->
+    <!-- ── Tab 4: Glossary ── -->
+    <section class="tab" id="tab-glossary">
+      <h2>Речник на термините
+        <span class="sub">Всичко, което срещаш в дашборда — обяснено с примери. Кликни на категория за бързо превъртане.</span>
+      </h2>
+
+      <div class="glossary-toc">
+        <a href="#g-cohorts">Групи играчи</a>
+        <a href="#g-metrics">Метрики</a>
+        <a href="#g-reports">Видове отчети</a>
+        <a href="#g-regimes">Режими</a>
+        <a href="#g-streaks">Streaks &amp; trends</a>
+        <a href="#g-finance">Финансови термини</a>
+      </div>
+
+      <div class="glossary-section" id="g-cohorts">
+        <h3>Групи играчи (cohorts)</h3>
+        <dl>
+          <dt>Спекулативни фондове <span class="alt">(Leveraged Money / Managed Money)</span></dt>
+          <dd>Хедж фондове, CTA-та, family offices, дискреционни макро мениджъри. "Бързи пари" — реагират на тренд, моментум и пазарни сигнали. <strong>Важно:</strong> това НЕ са само CTA фондове — терминът "CTA позициониране" е често неточен. Истинските CTA-та са ~10-30% от тази група, варира спрямо пазара.</dd>
+
+          <dt>Институционални управляващи <span class="alt">(Asset Managers)</span></dt>
+          <dd>Пенсионни фондове, mutual funds, ETF мениджъри, застрахователни компании. "Бавни пари" — позиции с дългосрочен хоризонт, базирани на стратегическо разпределение, не на тактически сигнали. Появяват се само в TFF отчета (финансови фючърси).</dd>
+
+          <dt>Производители / Хеджъри <span class="alt">(Producers / Commercials)</span></dt>
+          <dd>Реални компании които хеджират физическата си експозиция: фермери, минни компании, рафинерии, утилити, авиокомпании. Тяхната позиция отразява реалното търсене и предлагане на физическата стока. Появяват се само в Disaggregated отчета (суровини).</dd>
+
+          <dt>Дилъри <span class="alt">(Dealers)</span></dt>
+          <dd>Маркет-мейкъри и инвестиционни банки. Често обратната страна на спекулативните позиции — не са насочена позиция, а пазарна услуга (предоставят ликвидност). Появяват се само в TFF.</dd>
+
+          <dt>Суап дилъри <span class="alt">(Swap Dealers)</span></dt>
+          <dd>Банки и брокери които правят пазара в OTC деривати. Често обратната страна на спекулативните и производителите — посредници, не насочена позиция. Появяват се само в Disaggregated.</dd>
+        </dl>
+      </div>
+
+      <div class="glossary-section" id="g-metrics">
+        <h3>Метрики</h3>
+        <dl>
+          <dt>Net позиция (нет позиция)</dt>
+          <dd><strong>Long минус Short.</strong> Положително число = групата е нет дълга (повече покупки от продажби). Отрицателно = нет къса. Това е основната метрика за позициониране.</dd>
+
+          <dt>Перцентил <span class="alt">(percentile)</span></dt>
+          <dd>Къде е текущата позиция спрямо историята. <strong>90-и перцентил</strong> = по-високо от 90% от наблюденията за периода. <strong>10-и перцентил</strong> = по-ниско от 90%. Внимание: перцентилът е <em>относителен</em> спрямо следения период (обикновено 156-520 седмици), не спрямо целия исторически период на инструмента.</dd>
+
+          <dt>Z-score</dt>
+          <dd>Колко стандартни отклонения над/под историческата средна е текущата позиция. Z = +2 означава "необичайно високо"; Z = -2 означава "необичайно ниско". За разлика от перцентила, z-score е чувствителен към extreme outliers.</dd>
+
+          <dt>Δ 4 седмици <span class="alt">(delta 4w)</span></dt>
+          <dd>Промяната в нет позицията за последните 4 седмици. Положително = групата е добавила long или е намалила short. Отрицателно = добавила short или намалила long.</dd>
+
+          <dt>Notional USD <span class="alt">(номинална стойност)</span></dt>
+          <dd>Стойност на нет позицията в долари: <em>контракти × multiplier × цена</em>. <strong>Важно:</strong> това е <em>номинална</em> стойност, не риск. За облигациите особено: $50B нет в 2-год. има много по-малък риск (DV01) от $50B нет в 30-год. Не сравнявай директно номинални стойности между различни типове инструменти.</dd>
+        </dl>
+      </div>
+
+      <div class="glossary-section" id="g-reports">
+        <h3>Видове CFTC отчети</h3>
+        <dl>
+          <dt>TFF <span class="alt">(Traders in Financial Futures)</span></dt>
+          <dd>Седмичен отчет за <strong>финансови фючърси</strong>: акции, облигации, валути, VIX, Bitcoin. Групи: Leveraged Money, Asset Managers, Dealers, Other Reportables.</dd>
+
+          <dt>Disaggregated</dt>
+          <dd>Седмичен отчет за <strong>физически суровини</strong>: метали, енергия, зърно, soft commodities, животновъдство. Групи: Managed Money, Producer/Merchant/Processor/User, Swap Dealers, Other Reportables.</dd>
+        </dl>
+      </div>
+
+      <div class="glossary-section" id="g-regimes">
+        <h3>Режими (regimes)</h3>
+        <dl>
+          <dt>Пренаситен дълъг <span class="alt">(Crowded Long)</span></dt>
+          <dd>Спекулативните позиции са в горните 15% от историческия диапазон, при това продължават да се добавят. Често предхожда корекция надолу при изненадваща негативна новина — "everyone is on the same side".</dd>
+
+          <dt>Пренаситен къс <span class="alt">(Crowded Short)</span></dt>
+          <dd>Огледалното — спекулативните са в долните 15%, продължават да добавят shorts. Често предхожда short squeeze при positive новина.</dd>
+
+          <dt>Контра-сигнал (дълъг/къс) <span class="alt">(Contrarian Long/Short)</span></dt>
+          <dd>Позиционирането е в крайник, но цената вече се движи в обратна посока. Сигнал за "the trade is unwinding" — групата може да се принуди да затвори позиции.</dd>
+
+          <dt>Дивергенция <span class="alt">(Divergence)</span></dt>
+          <dd>Спекулативните и институционалните/производителите са в противоположни посоки. Не е консенсус — наблюдавай кой се окаже прав. По-малко информативна от единен сигнал.</dd>
+
+          <dt>Неутрално</dt>
+          <dd>Позицията е близо до средата за следения период, без сигнал за крайност в нито една посока.</dd>
+        </dl>
+      </div>
+
+      <div class="glossary-section" id="g-streaks">
+        <h3>Streaks и многоседмични трендове</h3>
+        <dl>
+          <dt>Streak (брой поредни седмици в посока)</dt>
+          <dd>Колко поредни седмици спекулативните се движат в една посока. <strong>5+ седмици</strong> е значимо — показва устойчиво конвикция, не моментна реакция.</dd>
+
+          <dt>Building long</dt>
+          <dd>Спекулативните добавят long позиции (или намаляват short при net&nbsp;<&nbsp;0).</dd>
+
+          <dt>Building short</dt>
+          <dd>Добавят short (или намаляват long).</dd>
+
+          <dt>Unwinding short / покриване на къси</dt>
+          <dd>Затваряне на къси позиции — позицията остава нет къса, но става "по-малко къса". Често предхожда обръщане на тренда.</dd>
+
+          <dt>Unwinding long / намаляване на дълги</dt>
+          <dd>Затваряне на дълги позиции — позицията остава нет дълга, но става "по-малко дълга".</dd>
+        </dl>
+      </div>
+
+      <div class="glossary-section" id="g-finance">
+        <h3>Финансови термини</h3>
+        <dl>
+          <dt>Long / Дълго</dt>
+          <dd>Покупка с очакване цената да расте. Печели когато активът се увеличава.</dd>
+
+          <dt>Short / Късо</dt>
+          <dd>Продажба на заем с очакване цената да падне. Печели когато активът се обезценява.</dd>
+
+          <dt>Open Interest <span class="alt">(OI / общ обем)</span></dt>
+          <dd>Общ брой отворени контракти на пазара. Расте когато се отварят нови позиции, пада когато се затварят. Контекст за големината на пазара.</dd>
+
+          <dt>Basis trade</dt>
+          <dd>Арбитраж между cash и futures market — често се вижда в US Treasury фючърсите като огромни short позиции на спекулативни фондове, които имат еквивалентна long позиция в cash bonds. Това НЕ е directional bet, а funding play.</dd>
+
+          <dt>DV01 <span class="alt">(Dollar Value of 01)</span></dt>
+          <dd>Промяна в стойността на облигацията при движение от 1 базисен пункт (0.01%) на доходността. За 2-год. ~$20 на $100K face. За 30-год. ~$200 на $100K. Затова rates позиции трябва да се сравняват по DV01, не по номинал.</dd>
+
+          <dt>VIX <span class="alt">(имплицитна волатилност на S&P 500)</span></dt>
+          <dd>"Страх индекс". Висок VIX = пазарите очакват големи движения. Нисък VIX = очакват спокойствие. Перцентилът на VIX в горния десен ъгъл показва текущия волатилен режим — context за интерпретацията на всички други перцентили.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ── Tab 5: Методология / какво не виждаме ── -->
     <section class="tab" id="tab-method">
       <h2>Какво НЕ виждаме
         <span class="sub">Ограниченията на данните и метода. Прочетете преди да правите изводи.</span>
@@ -1277,7 +1468,21 @@ function bgTakeaway(r) {
     regimePhrase = 'Цената вече се движи надолу въпреки дългото позициониране.';
   }
 
-  const parts = [streak, regimePhrase, cohortPhrase].filter(Boolean);
+  // Vol-regime context: at extreme percentile + non-normal vol regime, add nuance.
+  // High vol → extreme readings are more frequent and less significant.
+  // Low vol → extreme readings are rarer and more meaningful.
+  let volContext = '';
+  const isExtreme = pct != null && (pct >= 90 || pct <= 10);
+  const vp = state.vixPercentile;
+  if (isExtreme && vp != null && r.market !== 'vix') {
+    if (vp >= 75) {
+      volContext = `Помни: пазарът е във висок волатилен режим (VIX ${vp}-и перцентил) — крайни позиционирания тук са по-чести и по-малко необичайни от обикновено.`;
+    } else if (vp <= 25) {
+      volContext = `Помни: пазарът е в спокоен волатилен режим (VIX ${vp}-и перцентил) — крайни позиционирания при тези условия са по-редки и често по-значими.`;
+    }
+  }
+
+  const parts = [streak, regimePhrase, cohortPhrase, volContext].filter(Boolean);
   return parts.join(' ') || 'Без ясен сигнал в моментната снимка.';
 }
 
@@ -1481,6 +1686,11 @@ function detailPanelHtml(mkt, key) {
           ${periodOptions}
         </select>
         <span>· ${histW} налични седмици общо</span>
+        <button id="png-export-${key}" data-key="${key}"
+          title="Изтегли графиката като PNG (за LinkedIn / Substack share)"
+          style="background:var(--surface2); color:var(--text); border:1px solid var(--border); border-radius:4px; padding:0.25rem 0.55rem; font:inherit; font-size:0.78rem; cursor:pointer; margin-left:0.4rem">
+          📷 PNG
+        </button>
       </div>
     </div>
   </div>`;
@@ -1564,6 +1774,72 @@ function renderDetailChart(key, mkt, periodWeeks = PERIOD_DEFAULT) {
     sel.onchange = (e) => renderDetailChart(key, mkt, parseInt(e.target.value, 10));
     sel._wired = true;
   }
+
+  // Wire up PNG export — composites a clean header on top of the chart
+  const pngBtn = $('png-export-' + key);
+  if (pngBtn && !pngBtn._wired) {
+    pngBtn.onclick = () => exportChartPNG(key, mkt, periodWeeks);
+    pngBtn._wired = true;
+  }
+}
+
+function exportChartPNG(key, mkt, periodWeeks) {
+  const chart = state.charts['detail-' + key];
+  if (!chart) return;
+  const wlRow = state.watchlist.find(r => r.market === key);
+  if (!wlRow) return;
+
+  // Build a composite canvas: title strip + chart + footer with metadata
+  const chartImg = new Image();
+  chartImg.onload = () => {
+    const W = chartImg.width;
+    const headerH = 80;
+    const footerH = 60;
+    const H = chartImg.height + headerH + footerH;
+    const canvas = document.createElement('canvas');
+    canvas.width = W;
+    canvas.height = H;
+    const ctx = canvas.getContext('2d');
+
+    // Background
+    ctx.fillStyle = '#161b27';
+    ctx.fillRect(0, 0, W, H);
+
+    // Header — market name + sector + date
+    const sectorLabel = SECTOR_BG[wlRow.subtitle] || wlRow.subtitle || '';
+    ctx.fillStyle = '#e6ebf3';
+    ctx.font = 'bold 22px Inter, system-ui, sans-serif';
+    ctx.fillText(marketLabel(key), 24, 32);
+    ctx.fillStyle = '#9aa4b8';
+    ctx.font = '13px Inter, system-ui, sans-serif';
+    ctx.fillText(`${sectorLabel} · ${marketSub(key)}`, 24, 54);
+    const dateText = `Спекулативно нет позициониране · ${(wlRow.date || '').slice(0,10)} · последните ${periodWeeks >= 9999 ? 'всички' : periodWeeks} седмици`;
+    ctx.fillText(dateText, 24, 72);
+
+    // Chart
+    ctx.drawImage(chartImg, 0, headerH);
+
+    // Footer — current state + source
+    const yFooter = headerH + chartImg.height + 24;
+    const pos = wlRow.primary_net >= 0 ? 'нет ДЪЛГО' : 'нет КЪСО';
+    ctx.fillStyle = wlRow.primary_net >= 0 ? '#22c55e' : '#ef4444';
+    ctx.font = 'bold 14px Inter, system-ui, sans-serif';
+    ctx.fillText(`📍 ${pos}: ${fmt(Math.abs(wlRow.primary_net))} контракта (${fmtBn(wlRow.notional_usd_bn)})`, 24, yFooter);
+    ctx.fillStyle = '#9aa4b8';
+    ctx.font = '11px Inter, system-ui, sans-serif';
+    ctx.fillText(`Източник: CFTC COT · Дашборд: cot-monitor (github.com/tsvetoslavtsachev/cot-monitor) · Не е инвестиционен съвет`, 24, yFooter + 22);
+
+    // Download
+    canvas.toBlob(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `cot-${key}_${(wlRow.date || '').slice(0,10)}.png`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }, 'image/png');
+  };
+  chartImg.src = chart.toBase64Image('image/png', 1.0);
 }
 
 // ════════════════════════════════════════════════════════════════════════════
