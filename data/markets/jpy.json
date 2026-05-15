@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8869,29 +8869,26 @@
       "other_long": 42106.0,
       "other_short": 2543.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 362042.0,
+      "primary_long": 75029.0,
+      "primary_short": 137469.0,
+      "primary_net": -62440.0,
+      "secondary_long": 66868.0,
+      "secondary_short": 86860.0,
+      "secondary_net": -19992.0,
+      "tertiary_long": 85065.0,
+      "tertiary_short": 42886.0,
+      "tertiary_net": 42179.0,
+      "other_long": 43481.0,
+      "other_short": 4187.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 0.009225999936461449
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 0.009157000109553337
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 0.009227000176906586
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 0.009170000441372395
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 0.009212000295519829
-    },
     {
       "timestamp": 1463371200,
       "close": 0.00918199960142374
@@ -18934,7 +18931,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 0.006401000078767538
+      "close": 0.006386000197380781
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 0.006364999804645777
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 0.00634900014847517
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 0.006335999816656113
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 0.0063229999504983425
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 0.006314499769359827
     }
   ]
 }

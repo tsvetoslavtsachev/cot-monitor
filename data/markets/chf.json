@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8869,29 +8869,26 @@
       "other_long": 1000.0,
       "other_short": 1274.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 94743.0,
+      "primary_long": 5389.0,
+      "primary_short": 13097.0,
+      "primary_net": -7708.0,
+      "secondary_long": 5638.0,
+      "secondary_short": 43409.0,
+      "secondary_net": -37771.0,
+      "tertiary_long": 66537.0,
+      "tertiary_short": 12680.0,
+      "tertiary_net": 53857.0,
+      "other_long": 1000.0,
+      "other_short": 1295.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 1.0312999486923218
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 1.0262000560760498
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 1.0311000347137451
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 1.0312999486923218
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 1.0267000198364258
-    },
     {
       "timestamp": 1463371200,
       "close": 1.0234999656677246
@@ -18934,7 +18931,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 1.2930999994277954
+      "close": 1.2927000522613525
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 1.2898499965667725
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 1.28534996509552
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 1.2825000286102295
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 1.2805999517440796
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 1.2748500108718872
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 9310.0,
       "tertiary_net": 56729.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 480057.0,
+      "primary_long": 143316.0,
+      "primary_short": 12430.0,
+      "primary_net": 130886.0,
+      "secondary_long": 40360.0,
+      "secondary_short": 211230.0,
+      "secondary_net": -170870.0,
+      "tertiary_long": 67188.0,
+      "tertiary_short": 10007.0,
+      "tertiary_net": 57181.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 123.30000305175781
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 123.2750015258789
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 122.82499694824219
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 122.57499694824219
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 123.42500305175781
-    },
     {
       "timestamp": 1463371200,
       "close": 123.0250015258789
@@ -17884,7 +17879,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 249.1750030517578
+      "close": 248.89999389648438
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 249.39999389648438
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 247.6999969482422
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 252.8000030517578
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 252.0749969482422
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 248.02499389648438
     }
   ]
 }

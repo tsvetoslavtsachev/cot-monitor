@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 20740.0,
       "tertiary_net": 70508.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 859167.0,
+      "primary_long": 181457.0,
+      "primary_short": 19170.0,
+      "primary_net": 162287.0,
+      "secondary_long": 213074.0,
+      "secondary_short": 459330.0,
+      "secondary_net": -246256.0,
+      "tertiary_long": 93118.0,
+      "tertiary_short": 18617.0,
+      "tertiary_net": 74501.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 32.540000915527344
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 33.130001068115234
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 33.08000183105469
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 32.29999923706055
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 32.16999816894531
-    },
     {
       "timestamp": 1463371200,
       "close": 32.790000915527344
@@ -17884,7 +17879,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 74.16000366210938
+      "close": 75.26000213623047
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 74.68000030517578
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 76.30000305175781
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 75.26000213623047
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 74.81999969482422
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 73.76000213623047
     }
   ]
 }

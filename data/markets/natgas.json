@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 283492.0,
       "tertiary_net": -260293.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "HENRY HUB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 388461.0,
+      "primary_long": 0.0,
+      "primary_short": 7516.0,
+      "primary_net": -7516.0,
+      "secondary_long": 30781.0,
+      "secondary_short": 12460.0,
+      "secondary_net": 18321.0,
+      "tertiary_long": 23319.0,
+      "tertiary_short": 288817.0,
+      "tertiary_net": -265498.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 2.0980000495910645
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 2.1579999923706055
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 2.1730000972747803
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 2.1549999713897705
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 2.0959999561309814
-    },
     {
       "timestamp": 1463371200,
       "close": 2.0290000438690186
@@ -17892,7 +17887,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 2.75
+      "close": 2.756999969482422
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 2.9100000858306885
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 2.8429999351501465
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 2.864000082015991
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 2.8940000534057617
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 2.9609999656677246
     }
   ]
 }

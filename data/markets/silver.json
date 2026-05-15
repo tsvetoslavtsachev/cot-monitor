@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 43049.0,
       "tertiary_net": -23420.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 132647.0,
+      "primary_long": 22218.0,
+      "primary_short": 6023.0,
+      "primary_net": 16195.0,
+      "secondary_long": 3342.0,
+      "secondary_short": 22808.0,
+      "secondary_net": -19466.0,
+      "tertiary_long": 20006.0,
+      "tertiary_short": 45387.0,
+      "tertiary_net": -25381.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 17.06999969482422
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 17.075000762939453
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 17.302000045776367
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 17.086999893188477
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 17.114999771118164
-    },
     {
       "timestamp": 1463371200,
       "close": 17.142000198364258
@@ -17884,7 +17879,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 80.83499908447266
+      "close": 80.3949966430664
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 85.48500061035156
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 85.12999725341797
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 88.88800048828125
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 84.91200256347656
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 76.29499816894531
     }
   ]
 }

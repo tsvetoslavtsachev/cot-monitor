@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 221,
+    "record_count": 222,
     "history_first_date": "2022-02-15",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3327,29 +3327,24 @@
       "tertiary_short": 15501.0,
       "tertiary_net": 36117.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 275753.0,
+      "primary_long": 26948.0,
+      "primary_short": 17342.0,
+      "primary_net": 9606.0,
+      "secondary_long": 64302.0,
+      "secondary_short": 131540.0,
+      "secondary_net": -67238.0,
+      "tertiary_long": 51835.0,
+      "tertiary_short": 15300.0,
+      "tertiary_net": 36535.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 1.2862999439239502
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 1.337499976158142
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 1.3967000246047974
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 1.3940000534057617
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 1.4031000137329102
-    },
     {
       "timestamp": 1463371200,
       "close": 1.4400999546051025
@@ -13392,7 +13387,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 3.8838999271392822
+      "close": 3.8991000652313232
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 3.968600034713745
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 4.15880012512207
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 3.9667000770568848
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 3.905600070953369
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 4.042699813842773
     }
   ]
 }

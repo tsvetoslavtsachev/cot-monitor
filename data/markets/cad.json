@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8869,29 +8869,26 @@
       "other_long": 13535.0,
       "other_short": 454.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 251467.0,
+      "primary_long": 29032.0,
+      "primary_short": 66695.0,
+      "primary_net": -37663.0,
+      "secondary_long": 90749.0,
+      "secondary_short": 66981.0,
+      "secondary_net": 23768.0,
+      "tertiary_long": 69818.0,
+      "tertiary_short": 72243.0,
+      "tertiary_net": -2425.0,
+      "other_long": 13795.0,
+      "other_short": 0.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 0.7713000178337097
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 0.7735999822616577
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 0.7788000106811523
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 0.7799000144004822
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 0.7730000019073486
-    },
     {
       "timestamp": 1463371200,
       "close": 0.7753000259399414
@@ -18930,7 +18927,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 0.7324000000953674
+      "close": 0.731249988079071
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 0.7315999865531921
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 0.7300999760627747
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 0.7293000221252441
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 0.7287499904632568
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 0.7281000018119812
     }
   ]
 }

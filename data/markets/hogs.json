@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HE=F",
     "price_label": "Lean Hogs Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 10027.0,
       "tertiary_net": 66831.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "LEAN HOGS - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 436108.0,
+      "primary_long": 80153.0,
+      "primary_short": 39293.0,
+      "primary_net": 40860.0,
+      "secondary_long": 64713.0,
+      "secondary_short": 164974.0,
+      "secondary_net": -100261.0,
+      "tertiary_long": 79517.0,
+      "tertiary_short": 10053.0,
+      "tertiary_net": 69464.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 76.0999984741211
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 76.69999694824219
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 76.875
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 76.92500305175781
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 76.8499984741211
-    },
     {
       "timestamp": 1463371200,
       "close": 83.0250015258789
@@ -17884,7 +17879,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 98.82499694824219
+      "close": 90.875
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 90.875
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 90.92500305175781
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 90.9000015258789
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 90.44999694824219
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 103.3499984741211
     }
   ]
 }

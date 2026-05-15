@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 222,
+    "record_count": 223,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3342,29 +3342,24 @@
       "tertiary_short": 28980.0,
       "tertiary_net": 6236.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 330082.0,
+      "primary_long": 68977.0,
+      "primary_short": 5234.0,
+      "primary_net": 63743.0,
+      "secondary_long": 111320.0,
+      "secondary_short": 191151.0,
+      "secondary_net": -79831.0,
+      "tertiary_long": 37856.0,
+      "tertiary_short": 29032.0,
+      "tertiary_net": 8824.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 1.4427000284194946
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 1.485700011253357
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 1.5815000534057617
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 1.583299994468689
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 1.5881999731063843
-    },
     {
       "timestamp": 1463371200,
       "close": 1.6062999963760376
@@ -13407,7 +13402,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 3.3540000915527344
+      "close": 3.526700019836426
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 3.5998001098632812
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 3.697700023651123
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 3.6187000274658203
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 3.6057000160217285
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 3.558799982070923
     }
   ]
 }

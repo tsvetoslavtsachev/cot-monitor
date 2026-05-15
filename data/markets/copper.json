@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 21481.0,
       "tertiary_net": 29617.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 291157.0,
+      "primary_long": 87641.0,
+      "primary_short": 14118.0,
+      "primary_net": 73523.0,
+      "secondary_long": 26215.0,
+      "secondary_short": 140613.0,
+      "secondary_net": -114398.0,
+      "tertiary_long": 53102.0,
+      "tertiary_short": 24283.0,
+      "tertiary_net": 28819.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 2.1040000915527344
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 2.0899999141693115
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 2.1010000705718994
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 2.072999954223633
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 2.075000047683716
-    },
     {
       "timestamp": 1463371200,
       "close": 2.0910000801086426
@@ -17888,7 +17883,27 @@
     },
     {
       "timestamp": 1778212800,
-      "close": 6.28249979019165
+      "close": 6.249000072479248
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 6.41349983215332
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 6.485000133514404
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 6.635499954223633
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 6.567500114440918
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 6.2895002365112305
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 521,
+    "record_count": 522,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-05",
+    "history_last_date": "2026-05-12",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7827,29 +7827,24 @@
       "tertiary_short": 58327.0,
       "tertiary_net": 188866.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-12T00:00:00.000",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1183981.0,
+      "primary_long": 164138.0,
+      "primary_short": 264594.0,
+      "primary_net": -100456.0,
+      "secondary_long": 227417.0,
+      "secondary_short": 371526.0,
+      "secondary_net": -144109.0,
+      "tertiary_long": 253804.0,
+      "tertiary_short": 56705.0,
+      "tertiary_net": 197099.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1462766400,
-      "close": 15.880000114440918
-    },
-    {
-      "timestamp": 1462852800,
-      "close": 16.020000457763672
-    },
-    {
-      "timestamp": 1462939200,
-      "close": 16.770000457763672
-    },
-    {
-      "timestamp": 1463025600,
-      "close": 16.979999542236328
-    },
-    {
-      "timestamp": 1463112000,
-      "close": 16.739999771118164
-    },
     {
       "timestamp": 1463371200,
       "close": 16.889999389648438
@@ -17893,6 +17888,26 @@
     {
       "timestamp": 1778212800,
       "close": 14.6899995803833
+    },
+    {
+      "timestamp": 1778472000,
+      "close": 14.90999984741211
+    },
+    {
+      "timestamp": 1778558400,
+      "close": 15.010000228881836
+    },
+    {
+      "timestamp": 1778644800,
+      "close": 15.380000114440918
+    },
+    {
+      "timestamp": 1778731200,
+      "close": 14.989999771118164
+    },
+    {
+      "timestamp": 1778817600,
+      "close": 14.779999732971191
     }
   ]
 }
