@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T22:04:28.726448Z",
+  "generated_at": "2026-05-22T22:12:36.744870Z",
   "sources": {
     "tff": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "disaggregated": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
@@ -12,7 +12,7 @@
       "subtitle": "US Equities",
       "report_family": "tff",
       "file": "markets/sp500.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "S&P 500"
     },
     {
@@ -21,7 +21,7 @@
       "subtitle": "US Equities",
       "report_family": "tff",
       "file": "markets/nasdaq.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Nasdaq 100"
     },
     {
@@ -30,7 +30,7 @@
       "subtitle": "Rates",
       "report_family": "tff",
       "file": "markets/us10y.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "US 10Y Note"
     },
     {
@@ -39,7 +39,7 @@
       "subtitle": "Volatility",
       "report_family": "tff",
       "file": "markets/vix.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "VIX"
     },
     {
@@ -48,7 +48,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/eurfx.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "EUR/USD"
     },
     {
@@ -57,7 +57,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/gbpfx.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "GBP/USD"
     },
     {
@@ -66,7 +66,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/dxy.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "DXY"
     },
     {
@@ -75,7 +75,7 @@
       "subtitle": "Crypto",
       "report_family": "tff",
       "file": "markets/bitcoin.json",
-      "record_count": 423,
+      "record_count": 424,
       "price_label": "BTC/USD"
     },
     {
@@ -84,7 +84,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/gold.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Gold Futures"
     },
     {
@@ -93,7 +93,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/wti.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "WTI Futures"
     },
     {
@@ -102,7 +102,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/corn.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Corn Futures"
     },
     {
@@ -111,7 +111,7 @@
       "subtitle": "Rates",
       "report_family": "tff",
       "file": "markets/us2y.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "US 2Y Note"
     },
     {
@@ -120,7 +120,7 @@
       "subtitle": "Rates",
       "report_family": "tff",
       "file": "markets/us5y.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "US 5Y Note"
     },
     {
@@ -129,7 +129,7 @@
       "subtitle": "Rates",
       "report_family": "tff",
       "file": "markets/us30y.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "US 30Y Bond"
     },
     {
@@ -138,7 +138,7 @@
       "subtitle": "Rates",
       "report_family": "tff",
       "file": "markets/usultra10y.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "Ultra 10Y Note"
     },
     {
@@ -147,7 +147,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/jpy.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "JPY/USD"
     },
     {
@@ -156,7 +156,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/chf.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "CHF/USD"
     },
     {
@@ -165,7 +165,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/cad.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "CAD/USD"
     },
     {
@@ -174,7 +174,7 @@
       "subtitle": "FX",
       "report_family": "tff",
       "file": "markets/aud.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "AUD/USD"
     },
     {
@@ -183,7 +183,7 @@
       "subtitle": "US Equities",
       "report_family": "tff",
       "file": "markets/russell.json",
-      "record_count": 457,
+      "record_count": 458,
       "price_label": "Russell 2000"
     },
     {
@@ -192,7 +192,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/silver.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Silver Futures"
     },
     {
@@ -201,7 +201,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/copper.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Copper Futures"
     },
     {
@@ -210,7 +210,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/platinum.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Platinum Futures"
     },
     {
@@ -219,7 +219,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/palladium.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Palladium Futures"
     },
     {
@@ -228,7 +228,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/natgas.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Natural Gas Futures"
     },
     {
@@ -237,7 +237,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/brent.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "Brent Futures"
     },
     {
@@ -246,7 +246,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/rbob.json",
-      "record_count": 223,
+      "record_count": 224,
       "price_label": "RBOB Futures"
     },
     {
@@ -255,7 +255,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/heatingoil.json",
-      "record_count": 222,
+      "record_count": 223,
       "price_label": "Heating Oil Futures"
     },
     {
@@ -264,7 +264,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/soybeans.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Soybeans Futures"
     },
     {
@@ -273,7 +273,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/wheat.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Chicago Wheat Futures"
     },
     {
@@ -282,7 +282,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/soyoil.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Soybean Oil Futures"
     },
     {
@@ -291,7 +291,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/soymeal.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Soybean Meal Futures"
     },
     {
@@ -300,7 +300,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/coffee.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Coffee Futures"
     },
     {
@@ -309,7 +309,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/sugar.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Sugar Futures"
     },
     {
@@ -318,7 +318,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/cocoa.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Cocoa Futures"
     },
     {
@@ -327,7 +327,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/cotton.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Cotton Futures"
     },
     {
@@ -336,7 +336,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/cattle.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Live Cattle Futures"
     },
     {
@@ -345,7 +345,7 @@
       "subtitle": "Commodities",
       "report_family": "disaggregated",
       "file": "markets/hogs.json",
-      "record_count": 522,
+      "record_count": 523,
       "price_label": "Lean Hogs Futures"
     }
   ],

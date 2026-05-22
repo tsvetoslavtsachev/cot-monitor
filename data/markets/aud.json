@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8886,29 +8886,26 @@
       "other_long": 5977.0,
       "other_short": 500.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 301269.0,
+      "primary_long": 92064.0,
+      "primary_short": 30886.0,
+      "primary_net": 61178.0,
+      "secondary_long": 98671.0,
+      "secondary_short": 58076.0,
+      "secondary_net": 40595.0,
+      "tertiary_long": 41467.0,
+      "tertiary_short": 170711.0,
+      "tertiary_net": -129244.0,
+      "other_long": 4543.0,
+      "other_short": 1000.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 0.7279999852180481
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 0.7315000295639038
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 0.7228999733924866
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 0.7214999794960022
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 0.7214000225067139
-    },
     {
       "timestamp": 1463976000,
       "close": 0.7215999960899353
@@ -18951,7 +18948,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 0.7142999768257141
+      "close": 0.7152500152587891
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 0.7166000008583069
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 0.7102500200271606
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 0.7154499888420105
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 0.7143999934196472
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 0.7125499844551086
     }
   ]
 }

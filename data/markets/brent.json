@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 223,
+    "record_count": 224,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3357,29 +3357,24 @@
       "tertiary_short": 1101.0,
       "tertiary_net": 43293.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 359970.0,
+      "primary_long": 19090.0,
+      "primary_short": 2834.0,
+      "primary_net": 16256.0,
+      "secondary_long": 42257.0,
+      "secondary_short": 67289.0,
+      "secondary_net": -25032.0,
+      "tertiary_long": 48686.0,
+      "tertiary_short": 1501.0,
+      "tertiary_net": 47185.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 48.970001220703125
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 49.279998779296875
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 48.93000030517578
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 48.810001373291016
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 48.720001220703125
-    },
     {
       "timestamp": 1463976000,
       "close": 48.349998474121094
@@ -13422,7 +13417,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 109.23999786376953
+      "close": 109.26000213623047
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 112.0999984741211
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 111.27999877929688
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 105.0199966430664
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 102.58000183105469
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 103.94000244140625
     }
   ]
 }

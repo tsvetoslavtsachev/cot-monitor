@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7842,29 +7842,24 @@
       "tertiary_short": 155966.0,
       "tertiary_net": -155742.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "CRUDE OIL, LIGHT SWEET-WTI - ICE FUTURES EUROPE",
+      "open_interest": 1111465.0,
+      "primary_long": 6794.0,
+      "primary_short": 35220.0,
+      "primary_net": -28426.0,
+      "secondary_long": 509977.0,
+      "secondary_short": 378627.0,
+      "secondary_net": 131350.0,
+      "tertiary_long": 0.0,
+      "tertiary_short": 141587.0,
+      "tertiary_net": -141587.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 47.720001220703125
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 48.310001373291016
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 48.189998626708984
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 48.15999984741211
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 47.75
-    },
     {
       "timestamp": 1463976000,
       "close": 48.08000183105469
@@ -17903,7 +17898,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 101.16000366210938
+      "close": 105.41999816894531
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 108.66000366210938
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 107.7699966430664
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 98.26000213623047
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 96.3499984741211
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 97.0
     }
   ]
 }

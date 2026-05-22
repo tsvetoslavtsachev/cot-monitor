@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7842,29 +7842,24 @@
       "tertiary_short": 24283.0,
       "tertiary_net": 28819.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 286261.0,
+      "primary_long": 88284.0,
+      "primary_short": 13285.0,
+      "primary_net": 74999.0,
+      "secondary_long": 23686.0,
+      "secondary_short": 135241.0,
+      "secondary_net": -111555.0,
+      "tertiary_long": 51864.0,
+      "tertiary_short": 26205.0,
+      "tertiary_net": 25659.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 2.0910000801086426
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 2.0920000076293945
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 2.0815000534057617
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 2.062999963760376
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 2.058500051498413
-    },
     {
       "timestamp": 1463976000,
       "close": 2.057499885559082
@@ -17903,7 +17898,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 6.2895002365112305
+      "close": 6.251500129699707
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 6.271999835968018
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 6.164999961853027
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 6.290500164031982
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 6.256999969482422
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 6.380499839782715
     }
   ]
 }

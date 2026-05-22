@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "GBPUSD=X",
     "price_label": "GBP/USD",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8886,29 +8886,26 @@
       "other_long": 566.0,
       "other_short": 0.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 285647.0,
+      "primary_long": 68279.0,
+      "primary_short": 36910.0,
+      "primary_net": 31369.0,
+      "secondary_long": 33906.0,
+      "secondary_short": 146219.0,
+      "secondary_net": -112313.0,
+      "tertiary_long": 131699.0,
+      "tertiary_short": 46364.0,
+      "tertiary_net": 85335.0,
+      "other_long": 0.0,
+      "other_short": 0.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463353200,
-      "close": 1.4349260330200195
-    },
-    {
-      "timestamp": 1463439600,
-      "close": 1.4446901082992554
-    },
-    {
-      "timestamp": 1463526000,
-      "close": 1.4455254077911377
-    },
-    {
-      "timestamp": 1463612400,
-      "close": 1.4596196413040161
-    },
-    {
-      "timestamp": 1463698800,
-      "close": 1.4601097106933594
-    },
     {
       "timestamp": 1463958000,
       "close": 1.4490653276443481
@@ -19298,8 +19295,28 @@
       "close": 1.3391362428665161
     },
     {
-      "timestamp": 1778880566,
-      "close": 1.3323917388916016
+      "timestamp": 1779058800,
+      "close": 1.330849051475525
+    },
+    {
+      "timestamp": 1779145200,
+      "close": 1.3432012796401978
+    },
+    {
+      "timestamp": 1779231600,
+      "close": 1.3396027088165283
+    },
+    {
+      "timestamp": 1779318000,
+      "close": 1.3433998823165894
+    },
+    {
+      "timestamp": 1779404400,
+      "close": 1.3432555198669434
+    },
+    {
+      "timestamp": 1779485356,
+      "close": 1.3432915210723877
     }
   ]
 }

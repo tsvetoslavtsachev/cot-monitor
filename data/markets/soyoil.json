@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7842,29 +7842,24 @@
       "tertiary_short": 18617.0,
       "tertiary_net": 74501.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 871317.0,
+      "primary_long": 177185.0,
+      "primary_short": 20751.0,
+      "primary_net": 156434.0,
+      "secondary_long": 226822.0,
+      "secondary_short": 475077.0,
+      "secondary_net": -248255.0,
+      "tertiary_long": 94514.0,
+      "tertiary_short": 19032.0,
+      "tertiary_net": 75482.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 32.790000915527344
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 32.779998779296875
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 32.45000076293945
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 31.90999984741211
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 31.270000457763672
-    },
     {
       "timestamp": 1463976000,
       "close": 31.149999618530273
@@ -17899,7 +17894,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 73.76000213623047
+      "close": 73.87999725341797
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 75.62999725341797
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 75.44000244140625
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 74.66000366210938
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 73.87000274658203
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 73.94999694824219
     }
   ]
 }

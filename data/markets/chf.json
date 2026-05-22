@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8886,29 +8886,26 @@
       "other_long": 1000.0,
       "other_short": 1295.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 104225.0,
+      "primary_long": 6894.0,
+      "primary_short": 11739.0,
+      "primary_net": -4845.0,
+      "secondary_long": 5836.0,
+      "secondary_short": 47698.0,
+      "secondary_net": -41862.0,
+      "tertiary_long": 69321.0,
+      "tertiary_short": 13308.0,
+      "tertiary_net": 56013.0,
+      "other_long": 1000.0,
+      "other_short": 468.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 1.0234999656677246
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 1.021399974822998
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 1.0147000551223755
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 1.010699987411499
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 1.01010000705719
-    },
     {
       "timestamp": 1463976000,
       "close": 1.011299967765808
@@ -18951,7 +18948,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 1.2748500108718872
+      "close": 1.274649977684021
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 1.2760000228881836
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 1.2707500457763672
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 1.2744499444961548
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 1.2730000019073486
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 1.276900053024292
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 223,
+    "record_count": 224,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3357,29 +3357,24 @@
       "tertiary_short": 29032.0,
       "tertiary_net": 8824.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 322416.0,
+      "primary_long": 68870.0,
+      "primary_short": 6241.0,
+      "primary_net": 62629.0,
+      "secondary_long": 102910.0,
+      "secondary_short": 181837.0,
+      "secondary_net": -78927.0,
+      "tertiary_long": 38381.0,
+      "tertiary_short": 24421.0,
+      "tertiary_net": 13960.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 1.6062999963760376
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 1.6340999603271484
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 1.648900032043457
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 1.6339000463485718
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 1.635599970817566
-    },
     {
       "timestamp": 1463976000,
       "close": 1.6455999612808228
@@ -13422,7 +13417,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 3.558799982070923
+      "close": 3.701900005340576
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 3.760699987411499
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 3.696199893951416
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 3.4874000549316406
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 3.3796000480651855
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 3.3545000553131104
     }
   ]
 }

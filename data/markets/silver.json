@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 522,
+    "record_count": 523,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-12",
+    "history_last_date": "2026-05-19",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7842,29 +7842,24 @@
       "tertiary_short": 45387.0,
       "tertiary_net": -25381.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-19T00:00:00.000",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 126166.0,
+      "primary_long": 18536.0,
+      "primary_short": 6775.0,
+      "primary_net": 11761.0,
+      "secondary_long": 3515.0,
+      "secondary_short": 22520.0,
+      "secondary_net": -19005.0,
+      "tertiary_long": 18853.0,
+      "tertiary_short": 42651.0,
+      "tertiary_net": -23798.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463371200,
-      "close": 17.142000198364258
-    },
-    {
-      "timestamp": 1463457600,
-      "close": 17.235000610351562
-    },
-    {
-      "timestamp": 1463544000,
-      "close": 17.1200008392334
-    },
-    {
-      "timestamp": 1463630400,
-      "close": 16.479000091552734
-    },
-    {
-      "timestamp": 1463716800,
-      "close": 16.518999099731445
-    },
     {
       "timestamp": 1463976000,
       "close": 16.40999984741211
@@ -17899,7 +17894,27 @@
     },
     {
       "timestamp": 1778817600,
-      "close": 76.29499816894531
+      "close": 77.16100311279297
+    },
+    {
+      "timestamp": 1779076800,
+      "close": 77.072998046875
+    },
+    {
+      "timestamp": 1779163200,
+      "close": 74.8280029296875
+    },
+    {
+      "timestamp": 1779249600,
+      "close": 75.85099792480469
+    },
+    {
+      "timestamp": 1779336000,
+      "close": 76.41400146484375
+    },
+    {
+      "timestamp": 1779422400,
+      "close": 75.91500091552734
     }
   ]
 }
