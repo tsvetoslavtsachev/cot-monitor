@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 523,
+    "record_count": 524,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-19",
+    "history_last_date": "2026-05-26",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8903,29 +8903,26 @@
       "other_long": 15174.0,
       "other_short": 0.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-05-26T00:00:00.000",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 297944.0,
+      "primary_long": 33148.0,
+      "primary_short": 71243.0,
+      "primary_net": -38095.0,
+      "secondary_long": 69081.0,
+      "secondary_short": 96281.0,
+      "secondary_net": -27200.0,
+      "tertiary_long": 109183.0,
+      "tertiary_short": 56159.0,
+      "tertiary_net": 53024.0,
+      "other_long": 15234.0,
+      "other_short": 0.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463976000,
-      "close": 0.7613000273704529
-    },
-    {
-      "timestamp": 1464062400,
-      "close": 0.7609000205993652
-    },
-    {
-      "timestamp": 1464148800,
-      "close": 0.767300009727478
-    },
-    {
-      "timestamp": 1464235200,
-      "close": 0.7699000239372253
-    },
-    {
-      "timestamp": 1464321600,
-      "close": 0.7688000202178955
-    },
     {
       "timestamp": 1464667200,
       "close": 0.7615000009536743
@@ -18964,7 +18961,23 @@
     },
     {
       "timestamp": 1779422400,
-      "close": 0.7240999937057495
+      "close": 0.7247999906539917
+    },
+    {
+      "timestamp": 1779768000,
+      "close": 0.7246000170707703
+    },
+    {
+      "timestamp": 1779854400,
+      "close": 0.7233999967575073
+    },
+    {
+      "timestamp": 1779940800,
+      "close": 0.7260500192642212
+    },
+    {
+      "timestamp": 1780027200,
+      "close": 0.725350022315979
     }
   ]
 }

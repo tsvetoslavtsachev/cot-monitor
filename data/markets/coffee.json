@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "KC=F",
     "price_label": "Coffee Futures",
-    "record_count": 523,
+    "record_count": 524,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-19",
+    "history_last_date": "2026-05-26",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7857,29 +7857,24 @@
       "tertiary_short": 20514.0,
       "tertiary_net": 5966.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-26T00:00:00.000",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 235416.0,
+      "primary_long": 41267.0,
+      "primary_short": 23833.0,
+      "primary_net": 17434.0,
+      "secondary_long": 54487.0,
+      "secondary_short": 74450.0,
+      "secondary_net": -19963.0,
+      "tertiary_long": 26319.0,
+      "tertiary_short": 21157.0,
+      "tertiary_net": 5162.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463976000,
-      "close": 122.1500015258789
-    },
-    {
-      "timestamp": 1464062400,
-      "close": 121.80000305175781
-    },
-    {
-      "timestamp": 1464148800,
-      "close": 121.4000015258789
-    },
-    {
-      "timestamp": 1464235200,
-      "close": 121.5
-    },
-    {
-      "timestamp": 1464321600,
-      "close": 121.30000305175781
-    },
     {
       "timestamp": 1464667200,
       "close": 121.55000305175781
@@ -17922,7 +17917,23 @@
     },
     {
       "timestamp": 1779422400,
-      "close": 271.45001220703125
+      "close": 272.3500061035156
+    },
+    {
+      "timestamp": 1779768000,
+      "close": 274.0
+    },
+    {
+      "timestamp": 1779854400,
+      "close": 269.8500061035156
+    },
+    {
+      "timestamp": 1779940800,
+      "close": 274.25
+    },
+    {
+      "timestamp": 1780027200,
+      "close": 265.8999938964844
     }
   ]
 }

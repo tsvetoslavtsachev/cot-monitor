@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 523,
+    "record_count": 524,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-19",
+    "history_last_date": "2026-05-26",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7857,29 +7857,24 @@
       "tertiary_short": 42651.0,
       "tertiary_net": -23798.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-26T00:00:00.000",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 120844.0,
+      "primary_long": 17279.0,
+      "primary_short": 7035.0,
+      "primary_net": 10244.0,
+      "secondary_long": 2299.0,
+      "secondary_short": 22042.0,
+      "secondary_net": -19743.0,
+      "tertiary_long": 19729.0,
+      "tertiary_short": 42080.0,
+      "tertiary_net": -22351.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463976000,
-      "close": 16.40999984741211
-    },
-    {
-      "timestamp": 1464062400,
-      "close": 16.238000869750977
-    },
-    {
-      "timestamp": 1464148800,
-      "close": 16.2549991607666
-    },
-    {
-      "timestamp": 1464235200,
-      "close": 16.33799934387207
-    },
-    {
-      "timestamp": 1464321600,
-      "close": 16.246000289916992
-    },
     {
       "timestamp": 1464667200,
       "close": 15.972000122070312
@@ -17914,7 +17909,23 @@
     },
     {
       "timestamp": 1779422400,
-      "close": 75.91500091552734
+      "close": 75.89299774169922
+    },
+    {
+      "timestamp": 1779768000,
+      "close": 76.30500030517578
+    },
+    {
+      "timestamp": 1779854400,
+      "close": 74.5989990234375
+    },
+    {
+      "timestamp": 1779940800,
+      "close": 75.6449966430664
+    },
+    {
+      "timestamp": 1780027200,
+      "close": 75.58499908447266
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 523,
+    "record_count": 524,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-19",
+    "history_last_date": "2026-05-26",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7857,29 +7857,24 @@
       "tertiary_short": 19032.0,
       "tertiary_net": 75482.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-05-26T00:00:00.000",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 845469.0,
+      "primary_long": 169976.0,
+      "primary_short": 28558.0,
+      "primary_net": 141418.0,
+      "secondary_long": 230494.0,
+      "secondary_short": 464439.0,
+      "secondary_net": -233945.0,
+      "tertiary_long": 94339.0,
+      "tertiary_short": 16466.0,
+      "tertiary_net": 77873.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1463976000,
-      "close": 31.149999618530273
-    },
-    {
-      "timestamp": 1464062400,
-      "close": 30.889999389648438
-    },
-    {
-      "timestamp": 1464148800,
-      "close": 31.34000015258789
-    },
-    {
-      "timestamp": 1464235200,
-      "close": 31.040000915527344
-    },
-    {
-      "timestamp": 1464321600,
-      "close": 31.479999542236328
-    },
     {
       "timestamp": 1464667200,
       "close": 31.81999969482422
@@ -17914,7 +17909,23 @@
     },
     {
       "timestamp": 1779422400,
-      "close": 73.94999694824219
+      "close": 73.9800033569336
+    },
+    {
+      "timestamp": 1779768000,
+      "close": 74.36000061035156
+    },
+    {
+      "timestamp": 1779854400,
+      "close": 75.26000213623047
+    },
+    {
+      "timestamp": 1779940800,
+      "close": 76.69999694824219
+    },
+    {
+      "timestamp": 1780027200,
+      "close": 77.66000366210938
     }
   ]
 }
