@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 524,
+    "record_count": 525,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-26",
+    "history_last_date": "2026-06-02",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8920,25 +8920,26 @@
       "other_long": 53032.0,
       "other_short": 4181.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-02T00:00:00.000",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 505555.0,
+      "primary_long": 88645.0,
+      "primary_short": 176708.0,
+      "primary_net": -88063.0,
+      "secondary_long": 69418.0,
+      "secondary_short": 135430.0,
+      "secondary_net": -66012.0,
+      "tertiary_long": 133277.0,
+      "tertiary_short": 32649.0,
+      "tertiary_net": 100628.0,
+      "other_long": 54723.0,
+      "other_short": 3075.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1464667200,
-      "close": 0.009045000188052654
-    },
-    {
-      "timestamp": 1464753600,
-      "close": 0.009128999896347523
-    },
-    {
-      "timestamp": 1464840000,
-      "close": 0.009185000322759151
-    },
-    {
-      "timestamp": 1464926400,
-      "close": 0.009374000132083893
-    },
     {
       "timestamp": 1465185600,
       "close": 0.00931399967521429
@@ -18981,7 +18982,27 @@
     },
     {
       "timestamp": 1780027200,
-      "close": 0.0062865000218153
+      "close": 0.0062870001420378685
+    },
+    {
+      "timestamp": 1780286400,
+      "close": 0.006266999989748001
+    },
+    {
+      "timestamp": 1780372800,
+      "close": 0.006260000169277191
+    },
+    {
+      "timestamp": 1780459200,
+      "close": 0.006254999898374081
+    },
+    {
+      "timestamp": 1780545600,
+      "close": 0.006254000123590231
+    },
+    {
+      "timestamp": 1780632000,
+      "close": 0.006241499911993742
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 524,
+    "record_count": 525,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-26",
+    "history_last_date": "2026-06-02",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7872,25 +7872,24 @@
       "tertiary_short": 138155.0,
       "tertiary_net": -138155.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-02T00:00:00.000",
+      "market_name": "CRUDE OIL, LIGHT SWEET-WTI - ICE FUTURES EUROPE",
+      "open_interest": 1099557.0,
+      "primary_long": 6804.0,
+      "primary_short": 27370.0,
+      "primary_net": -20566.0,
+      "secondary_long": 488718.0,
+      "secondary_short": 368801.0,
+      "secondary_net": 119917.0,
+      "tertiary_long": 0.0,
+      "tertiary_short": 148730.0,
+      "tertiary_net": -148730.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1464667200,
-      "close": 49.099998474121094
-    },
-    {
-      "timestamp": 1464753600,
-      "close": 49.0099983215332
-    },
-    {
-      "timestamp": 1464840000,
-      "close": 49.16999816894531
-    },
-    {
-      "timestamp": 1464926400,
-      "close": 48.619998931884766
-    },
     {
       "timestamp": 1465185600,
       "close": 49.689998626708984
@@ -17929,7 +17928,27 @@
     },
     {
       "timestamp": 1780027200,
-      "close": 87.76000213623047
+      "close": 87.36000061035156
+    },
+    {
+      "timestamp": 1780286400,
+      "close": 92.16000366210938
+    },
+    {
+      "timestamp": 1780372800,
+      "close": 93.76000213623047
+    },
+    {
+      "timestamp": 1780459200,
+      "close": 96.0199966430664
+    },
+    {
+      "timestamp": 1780545600,
+      "close": 93.04000091552734
+    },
+    {
+      "timestamp": 1780632000,
+      "close": 90.25
     }
   ]
 }

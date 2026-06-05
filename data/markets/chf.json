@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 524,
+    "record_count": 525,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-05-26",
+    "history_last_date": "2026-06-02",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8920,25 +8920,26 @@
       "other_long": 1000.0,
       "other_short": 2021.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-02T00:00:00.000",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 111432.0,
+      "primary_long": 5604.0,
+      "primary_short": 15553.0,
+      "primary_net": -9949.0,
+      "secondary_long": 6528.0,
+      "secondary_short": 39045.0,
+      "secondary_net": -32517.0,
+      "tertiary_long": 67421.0,
+      "tertiary_short": 12787.0,
+      "tertiary_net": 54634.0,
+      "other_long": 1000.0,
+      "other_short": 1248.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1464667200,
-      "close": 1.0061999559402466
-    },
-    {
-      "timestamp": 1464753600,
-      "close": 1.0116000175476074
-    },
-    {
-      "timestamp": 1464840000,
-      "close": 1.0095000267028809
-    },
-    {
-      "timestamp": 1464926400,
-      "close": 1.0240000486373901
-    },
     {
       "timestamp": 1465185600,
       "close": 1.031499981880188
@@ -18982,6 +18983,26 @@
     {
       "timestamp": 1780027200,
       "close": 1.2824000120162964
+    },
+    {
+      "timestamp": 1780286400,
+      "close": 1.2734999656677246
+    },
+    {
+      "timestamp": 1780372800,
+      "close": 1.2717499732971191
+    },
+    {
+      "timestamp": 1780459200,
+      "close": 1.2636499404907227
+    },
+    {
+      "timestamp": 1780545600,
+      "close": 1.2682499885559082
+    },
+    {
+      "timestamp": 1780632000,
+      "close": 1.2568000555038452
     }
   ]
 }

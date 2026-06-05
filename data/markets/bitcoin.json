@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "BTC-USD",
     "price_label": "BTC/USD",
-    "record_count": 425,
+    "record_count": 426,
     "history_first_date": "2018-04-10",
-    "history_last_date": "2026-05-26",
+    "history_last_date": "2026-06-02",
     "lookback_weeks": 520
   },
   "cot": [
@@ -7237,37 +7237,26 @@
       "other_long": 421.0,
       "other_short": 329.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-02T00:00:00.000",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 19882.0,
+      "primary_long": 6269.0,
+      "primary_short": 12827.0,
+      "primary_net": -6558.0,
+      "secondary_long": 5256.0,
+      "secondary_short": 2153.0,
+      "secondary_net": 3103.0,
+      "tertiary_long": 5504.0,
+      "tertiary_short": 2033.0,
+      "tertiary_net": 3471.0,
+      "other_long": 365.0,
+      "other_short": 518.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1464480000,
-      "close": 526.2329711914062
-    },
-    {
-      "timestamp": 1464566400,
-      "close": 533.864013671875
-    },
-    {
-      "timestamp": 1464652800,
-      "close": 531.385986328125
-    },
-    {
-      "timestamp": 1464739200,
-      "close": 536.9199829101562
-    },
-    {
-      "timestamp": 1464825600,
-      "close": 537.9719848632812
-    },
-    {
-      "timestamp": 1464912000,
-      "close": 569.1939697265625
-    },
-    {
-      "timestamp": 1464998400,
-      "close": 572.7269897460938
-    },
     {
       "timestamp": 1465084800,
       "close": 574.9769897460938
@@ -21850,7 +21839,35 @@
     },
     {
       "timestamp": 1780012800,
-      "close": 73378.0078125
+      "close": 73372.5234375
+    },
+    {
+      "timestamp": 1780099200,
+      "close": 73754.8359375
+    },
+    {
+      "timestamp": 1780185600,
+      "close": 73579.6875
+    },
+    {
+      "timestamp": 1780272000,
+      "close": 71319.7734375
+    },
+    {
+      "timestamp": 1780358400,
+      "close": 66703.65625
+    },
+    {
+      "timestamp": 1780444800,
+      "close": 64014.3671875
+    },
+    {
+      "timestamp": 1780531200,
+      "close": 63801.57421875
+    },
+    {
+      "timestamp": 1780617600,
+      "close": 61576.44140625
     }
   ]
 }
