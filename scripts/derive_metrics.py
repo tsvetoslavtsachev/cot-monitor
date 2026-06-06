@@ -101,6 +101,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 DERIVED_DIR = DATA_DIR / "derived"
 
+# Minimum number of non-missing historical net observations required before a
+# percentile / z-score is trustworthy. Below this a percentile collapses to a
+# coarse 0/100 and a z-score to ~0 — both fake extremes. All live markets carry
+# 150+ weeks, so this is a no-op on real data and only guards new contracts.
+MIN_HISTORY_OBS = 8
+
 
 
 def read_json(path: Path) -> Any:
@@ -178,20 +184,30 @@ def get_price_on_date(
 
 
 
-def score_market(latest: Dict[str, Any], previous_4w: Optional[Dict[str, Any]]) -> float:
-    primary_pct = latest.get("primary_percentile", 50.0)
-    primary_z = latest.get("primary_zscore", 0.0)
+def score_market(latest: Dict[str, Any], previous_4w: Optional[Dict[str, Any]]) -> Optional[float]:
+    # Core positioning (percentile + z = 50% of the score) is unknown when the
+    # latest net is missing. Return None instead of fabricating a rank from a
+    # neutral 50/0 — a phantom rank can push a no-data market up the watchlist.
+    primary_pct = latest.get("primary_percentile")
+    primary_z = latest.get("primary_zscore")
+    if primary_pct is None or primary_z is None:
+        return None
     pct_extreme = abs(primary_pct - 50.0) / 50.0
     z_extreme = min(abs(primary_z), 3.0) / 3.0
 
     delta_4w = latest.get("primary_delta_4w") or 0.0
-    oi = latest.get("open_interest") or 1.0
-    momentum_4w = min(abs(delta_4w) / max(oi, 1.0) * 10.0, 1.0)
+    oi = latest.get("open_interest")
+    if oi is not None and oi > 0:
+        momentum_4w = min(abs(delta_4w) / oi * 10.0, 1.0)
+        oi_change = latest.get("oi_delta_4w") or 0.0
+        oi_confirmation = min(abs(oi_change) / oi * 10.0, 1.0)
+    else:
+        # Missing/zero OI is unknown, NOT a denominator of 1.0 — that would clamp
+        # momentum to its max (1.0) and fabricate a confirmation. Drop both.
+        momentum_4w = 0.0
+        oi_confirmation = 0.0
 
     divergence_score = 1.0 if sign(latest.get("primary_net")) != sign(latest.get("secondary_net")) else 0.0
-
-    oi_change = latest.get("oi_delta_4w") or 0.0
-    oi_confirmation = min(abs(oi_change) / max(oi, 1.0) * 10.0, 1.0)
 
     price_4w = latest.get("price_change_4w_pct") or 0.0
     price_position_dislocation = 1.0 if sign(price_4w) != sign(delta_4w) and abs(price_4w) > 1.0 else 0.0
@@ -272,6 +288,9 @@ def detect_crossings(cot: List[Dict[str, Any]], current_summary: Dict[str, Any])
     events: List[Dict[str, Any]] = []
     if len(cot) < 2:
         return events
+    if cot[-1].get("primary_net") is None:
+        # Latest net missing → any crossing would be measured against a fake 0.
+        return events
 
     cur = cot[-1]
     prev = cot[-2]
@@ -336,7 +355,11 @@ def detect_crossings(cot: List[Dict[str, Any]], current_summary: Dict[str, Any])
 
 
 def regime_label(row: Dict[str, Any]) -> str:
-    pct = row.get("primary_percentile", 50.0)
+    pct = row.get("primary_percentile")
+    if pct is None:
+        # No trustworthy percentile (missing net / too little history) → don't
+        # default to "Neutral", which would read as a real, calm signal.
+        return "Insufficient Data"
     price = row.get("price_change_4w_pct") or 0.0
     delta = row.get("primary_delta_4w") or 0.0
     primary_sign = sign(row.get("primary_net"))
@@ -365,8 +388,32 @@ def build_market_summary(market_meta: Dict[str, Any], payload: Dict[str, Any]) -
     latest = dict(cot[-1])
     previous_4w = cot[-5] if len(cot) >= 5 else None
 
-    latest["primary_percentile"] = percentile(nets, latest.get("primary_net") or 0.0)
-    latest["primary_zscore"] = zscore(nets, latest.get("primary_net") or 0.0)
+    # --- Positioning percentile / z-score, with explicit missing-data handling ---
+    # A missing latest net is UNKNOWN, not zero: ranking a fabricated 0 against
+    # real history manufactures a false extreme (e.g. S&P leveraged net is
+    # chronically negative, so 0 ranks ~100th pct → phantom "Crowded Long").
+    data_quality: List[str] = []
+    latest_net = latest.get("primary_net")
+    if latest_net is None:
+        latest["primary_percentile"] = None
+        latest["primary_zscore"] = None
+        data_quality.append("missing_primary_net")
+    elif len(nets) < MIN_HISTORY_OBS:
+        latest["primary_percentile"] = None
+        latest["primary_zscore"] = None
+        data_quality.append(f"insufficient_history:{len(nets)}")
+    elif pstdev(nets) == 0:
+        # Flat history: every observation identical → percentile collapses to a
+        # degenerate 0/100 and z to 0. Neither is a real extreme.
+        latest["primary_percentile"] = None
+        latest["primary_zscore"] = None
+        data_quality.append("zero_dispersion")
+    else:
+        latest["primary_percentile"] = percentile(nets, latest_net)
+        latest["primary_zscore"] = zscore(nets, latest_net)
+
+    if latest.get("open_interest") is None:
+        data_quality.append("missing_open_interest")
 
     if previous_4w:
         latest["primary_delta_4w"] = safe_sub(latest.get("primary_net"), previous_4w.get("primary_net"))
@@ -414,6 +461,7 @@ def build_market_summary(market_meta: Dict[str, Any], payload: Dict[str, Any]) -
     latest["takeaway"] = build_takeaway(latest)
     latest["changes"] = build_changes(latest, previous_4w)
     latest["narrative"] = build_narrative(latest)
+    latest["data_quality"] = data_quality
     return latest
 
 
@@ -427,6 +475,8 @@ def safe_sub(a: Optional[float], b: Optional[float]) -> Optional[float]:
 
 def build_takeaway(row: Dict[str, Any]) -> str:
     regime = row.get("regime")
+    if regime == "Insufficient Data":
+        return "Latest-week positioning data is missing — no regime read this week."
     pct = row.get("primary_percentile", 50.0)
     delta = row.get("primary_delta_4w") or 0.0
     if regime == "Divergence":
@@ -446,6 +496,8 @@ def build_takeaway(row: Dict[str, Any]) -> str:
 
 
 def build_changes(latest: Dict[str, Any], previous_4w: Optional[Dict[str, Any]]) -> List[str]:
+    if latest.get("regime") == "Insufficient Data":
+        return ["Latest-week positioning data is missing; percentile, z-score and regime were not computed."]
     changes: List[str] = []
     delta = latest.get("primary_delta_4w") or 0.0
     pct = latest.get("primary_percentile", 50.0)
@@ -468,6 +520,9 @@ def build_changes(latest: Dict[str, Any], previous_4w: Optional[Dict[str, Any]])
 def build_narrative(row: Dict[str, Any]) -> str:
     market = row.get("market_title")
     regime = row.get("regime")
+    if regime == "Insufficient Data":
+        return (f"{market}: latest-week positioning data is missing, so percentile, "
+                f"z-score and regime could not be computed this week.")
     pct = row.get("primary_percentile", 50.0)
     delta = row.get("primary_delta_4w") or 0.0
     delta_word = "rose" if delta > 0 else "fell" if delta < 0 else "was broadly unchanged"
@@ -519,6 +574,7 @@ def main() -> None:
                 "streak_total_change": summary.get("streak_total_change"),
                 "crossings": summary.get("crossings", []),
                 "takeaway": summary.get("takeaway"),
+                "data_quality": summary.get("data_quality", []),
             }
         )
         weekly_changes.append(

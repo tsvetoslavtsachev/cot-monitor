@@ -1238,6 +1238,8 @@ const REGIME_BG = {
     desc: 'Различните групи играчи действат в противоположни посоки. По-малко информативна от единен консенсус.' },
   'Neutral':           { label: 'Неутрално',             cls: 'neutral',
     desc: 'Позициите са близо до историческата средна. Без сигнал за крайност в нито една посока.' },
+  'Insufficient Data': { label: 'Няма данни',            cls: 'neutral',
+    desc: 'Нетната позиция за последната седмица липсва (или историята е твърде къса) — перцентил, z-score и режим не са изчислени, за да не покажем фалшиво число.' },
 };
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -1273,6 +1275,9 @@ const fmtPct = n => (n == null) ? '—' :
   (n >= 0 ? '+' : '') + n.toLocaleString('bg-BG', { maximumFractionDigits: 1 }) + '%';
 const fmtZ = n => (n == null) ? '—' :
   (n >= 0 ? '+' : '') + n.toFixed(2);
+// Percentile is null when the latest net is missing / history too thin — show
+// '—', never a fake 0 (which would read as an extreme-low reading).
+const fmtPctile = (n, suffix = '') => (n == null) ? '—' : n.toFixed(0) + suffix;
 const fmtDate = s => {
   if (!s) return '—';
   const d = new Date(s.length > 10 ? s : (s + 'T00:00:00Z'));
@@ -1491,7 +1496,10 @@ function computeSectorTilt() {
     const rows = keys.map(k => byKey[k]).filter(Boolean);
     if (!rows.length) continue;
     const totalNotional = rows.reduce((s, r) => s + (r.notional_usd_bn || 0), 0);
-    const avgZ = rows.reduce((s, r) => s + (r.primary_zscore || 0), 0) / rows.length;
+    // Average only over markets with a real z — a missing z is unknown, not 0,
+    // and would otherwise drag the sector tilt toward a fake neutral.
+    const zRows = rows.filter(r => r.primary_zscore != null);
+    const avgZ = zRows.length ? zRows.reduce((s, r) => s + r.primary_zscore, 0) / zRows.length : 0;
     let dir;
     if (Math.abs(avgZ) < 0.3) dir = 'е близо до неутрално';
     else if (avgZ > 0.7) dir = 'е силно дълго';
@@ -1769,11 +1777,11 @@ function sectorRowHtml(r) {
   const dir = net >= 0 ? 'long' : 'short';
   const w = Math.min(Math.abs(z) / 2, 1) * 45;
   const netLabel = net >= 0 ? 'нет дълго' : 'нет късо';
-  const tooltip = `${netLabel} ${fmt(Math.abs(net))} контракта · z=${fmtZ(z)} (отклонение от историческата средна) · ${(r.primary_percentile||0).toFixed(0)}-и перцентил спрямо ${r.history_weeks||156} наблюдения`;
+  const tooltip = `${netLabel} ${fmt(Math.abs(net))} контракта · z=${fmtZ(r.primary_zscore)} (отклонение от историческата средна) · ${fmtPctile(r.primary_percentile, '-и перцентил')} спрямо ${r.history_weeks||156} наблюдения`;
   return `<div class="sector-row" data-key="${r.market}" title="${tooltip}">
     <span class="name">${marketLabel(r.market)}</span>
     <span class="bar"><span class="bar-fill ${dir}" style="width:${w}px"></span></span>
-    <span class="pct">${fmtZ(z)}σ · ${(r.primary_percentile || 0).toFixed(0)}п</span>
+    <span class="pct">${fmtZ(r.primary_zscore)}σ · ${fmtPctile(r.primary_percentile, 'п')}</span>
   </div>`;
 }
 
@@ -2235,7 +2243,7 @@ function generateWeeklyBriefing() {
       md += `- **Streak:** ${r.streak_weeks} поредни седмици ${STREAK_DIR_BG[r.streak_direction] || ''}, кумулативно ${fmt(Math.abs(r.streak_total_change || 0))} контракта\n`;
     }
     md += `- **Регим:** ${REGIME_BG[r.regime]?.label || r.regime}\n`;
-    md += `- **Перцентил:** ${(r.primary_percentile || 0).toFixed(0)}-и спрямо ${r.history_weeks || 156} седмици · z=${fmtZ(r.primary_zscore)}\n`;
+    md += `- **Перцентил:** ${fmtPctile(r.primary_percentile, '-и')} спрямо ${r.history_weeks || 156} седмици · z=${fmtZ(r.primary_zscore)}\n`;
     md += `- **Контекст:** ${stripHtml(bgTakeaway(r))}\n\n`;
   });
 
@@ -2284,7 +2292,7 @@ function generateWeeklyBriefing() {
     rows.sort((a, b) => Math.abs(b.primary_zscore || 0) - Math.abs(a.primary_zscore || 0));
     rows.slice(0, 6).forEach(r => {
       const dir = r.primary_net >= 0 ? '+' : '−';
-      md += `- ${marketLabel(r.market)}: ${dir}${fmt(Math.abs(r.primary_net))} контракта · z=${fmtZ(r.primary_zscore)} · ${(r.primary_percentile || 0).toFixed(0)}-и перцентил\n`;
+      md += `- ${marketLabel(r.market)}: ${dir}${fmt(Math.abs(r.primary_net))} контракта · z=${fmtZ(r.primary_zscore)} · ${fmtPctile(r.primary_percentile, '-и перцентил')}\n`;
     });
     md += '\n';
   }
@@ -2388,7 +2396,7 @@ async function generateMarketBriefing(key) {
   const pos = wl.primary_net >= 0 ? 'НЕТ ДЪЛГО' : 'НЕТ КЪСО';
   md += `**${pos}** ${fmt(Math.abs(wl.primary_net))} контракта · номинална стойност ${fmtBn(wl.notional_usd_bn)}\n\n`;
   md += `| Метрика | Стойност |\n|---|---|\n`;
-  md += `| Перцентил | ${(wl.primary_percentile || 0).toFixed(0)}-и (спрямо ${wl.history_weeks} седмици) |\n`;
+  md += `| Перцентил | ${fmtPctile(wl.primary_percentile, '-и')} (спрямо ${wl.history_weeks} седмици) |\n`;
   md += `| Z-score | ${fmtZ(wl.primary_zscore)} (отклонение от историческата средна за периода) |\n`;
   md += `| Регим | ${REGIME_BG[wl.regime]?.label || wl.regime} |\n`;
   md += `| Δ 4 седмици | ${(wl.primary_delta_4w >= 0 ? '+' : '') + fmt(wl.primary_delta_4w)} контракта |\n`;
@@ -2438,7 +2446,7 @@ async function generateMarketBriefing(key) {
     md += `## 4. Исторически екстремуми за следения период\n\n`;
     md += `- **Максимална нет дълга позиция:** ${fmt(maxNet)} контракта (${(mkt.cot[maxIdx]?.date || '').slice(0, 10)})\n`;
     md += `- **Максимална нет къса позиция:** ${fmt(minNet)} контракта (${(mkt.cot[minIdx]?.date || '').slice(0, 10)})\n`;
-    md += `- **Текуща позиция:** ${fmt(wl.primary_net)} контракта — ${(wl.primary_percentile || 0).toFixed(0)}-и перцентил\n\n`;
+    md += `- **Текуща позиция:** ${fmt(wl.primary_net)} контракта — ${fmtPctile(wl.primary_percentile, '-и перцентил')}\n\n`;
   }
 
   // 5. Methodology
