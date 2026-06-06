@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T22:19:15.944589Z",
+  "generated_at": "2026-06-06T16:48:02.501176Z",
   "latest_cot_date": "2026-06-02",
   "data_sources": {
     "cftc_cot": "CFTC Commitments of Traders (public, ~3 business day lag)",
