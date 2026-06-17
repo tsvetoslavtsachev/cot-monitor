@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 525,
+    "record_count": 526,
     "history_first_date": "2016-05-17",
-    "history_last_date": "2026-06-02",
+    "history_last_date": "2026-06-09",
     "lookback_weeks": 520
   },
   "cot": [
@@ -8937,29 +8937,26 @@
       "other_long": 4154.0,
       "other_short": 519.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-09T00:00:00.000",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 314177.0,
+      "primary_long": 71653.0,
+      "primary_short": 29361.0,
+      "primary_net": 42292.0,
+      "secondary_long": 61743.0,
+      "secondary_short": 73826.0,
+      "secondary_net": -12083.0,
+      "tertiary_long": 66025.0,
+      "tertiary_short": 115933.0,
+      "tertiary_net": -49908.0,
+      "other_long": 1690.0,
+      "other_short": 500.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1465185600,
-      "close": 0.7376000285148621
-    },
-    {
-      "timestamp": 1465272000,
-      "close": 0.7454000115394592
-    },
-    {
-      "timestamp": 1465358400,
-      "close": 0.7476000189781189
-    },
-    {
-      "timestamp": 1465444800,
-      "close": 0.7444999814033508
-    },
-    {
-      "timestamp": 1465531200,
-      "close": 0.7378000020980835
-    },
     {
       "timestamp": 1465790400,
       "close": 0.7400000095367432
@@ -19003,6 +19000,26 @@
     {
       "timestamp": 1780632000,
       "close": 0.7042499780654907
+    },
+    {
+      "timestamp": 1780891200,
+      "close": 0.7043499946594238
+    },
+    {
+      "timestamp": 1780977600,
+      "close": 0.7031999826431274
+    },
+    {
+      "timestamp": 1781064000,
+      "close": 0.7009000182151794
+    },
+    {
+      "timestamp": 1781150400,
+      "close": 0.7028999924659729
+    },
+    {
+      "timestamp": 1781236800,
+      "close": 0.7031999826431274
     }
   ]
 }

@@ -7,9 +7,9 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 226,
+    "record_count": 227,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-06-02",
+    "history_last_date": "2026-06-09",
     "lookback_weeks": 520
   },
   "cot": [
@@ -3854,29 +3854,26 @@
       "other_long": 3358.0,
       "other_short": 1914.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-09T00:00:00.000",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 50285.0,
+      "primary_long": 15886.0,
+      "primary_short": 29542.0,
+      "primary_net": -13656.0,
+      "secondary_long": 20419.0,
+      "secondary_short": 3818.0,
+      "secondary_net": 16601.0,
+      "tertiary_long": 4005.0,
+      "tertiary_short": 10962.0,
+      "tertiary_net": -6957.0,
+      "other_long": 3554.0,
+      "other_short": 1757.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1465185600,
-      "close": 93.9000015258789
-    },
-    {
-      "timestamp": 1465272000,
-      "close": 93.83000183105469
-    },
-    {
-      "timestamp": 1465358400,
-      "close": 93.58999633789062
-    },
-    {
-      "timestamp": 1465444800,
-      "close": 94.0999984741211
-    },
-    {
-      "timestamp": 1465531200,
-      "close": 94.5999984741211
-    },
     {
       "timestamp": 1465790400,
       "close": 94.37000274658203
@@ -13916,6 +13913,26 @@
     {
       "timestamp": 1780632000,
       "close": 100.06999969482422
+    },
+    {
+      "timestamp": 1780891200,
+      "close": 100.05000305175781
+    },
+    {
+      "timestamp": 1780977600,
+      "close": 99.91000366210938
+    },
+    {
+      "timestamp": 1781064000,
+      "close": 99.94999694824219
+    },
+    {
+      "timestamp": 1781150400,
+      "close": 99.86000061035156
+    },
+    {
+      "timestamp": 1781236800,
+      "close": 99.80699920654297
     }
   ]
 }
