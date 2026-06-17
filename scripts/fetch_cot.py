@@ -22,6 +22,19 @@ from typing import Dict, List, Any, Optional
 
 import requests
 
+# S13c cut-over (INIT-22): the per-market cohort rows now come FROM data-core (the
+# guarded base), not a local CFTC fetch. consumer.cot_rows(key) reproduces the cot
+# array; WTI (oil-reuse: only a percentile is in the base) and any base-absent
+# series fall back to the CFTC path below. Requires the `collectors` package on the
+# path + DATACORE_ROOT pointing at a data-core checkout (set in CI). If that wiring
+# is unavailable the import fails CLOSED to None -> every market falls back to CFTC,
+# so the dashboard keeps working exactly as before (strangler: production never stops).
+try:
+    from collectors.cot import consumer as _cot_consumer
+except Exception as _exc:  # pragma: no cover - environment-dependent
+    _cot_consumer = None
+    print(f"  [base] collectors.cot.consumer unavailable ({_exc}); CFTC fallback for all")
+
 BASE_TFF = "https://publicreporting.cftc.gov/resource/gpe5-46if.json"
 BASE_DISAGG = "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json"
 YAHOO_CHART = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=10y&interval=1d"
@@ -601,7 +614,50 @@ def deduplicate_by_date(raw_rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return result
 
 
+def _cot_from_base(key: str) -> List[Dict[str, Any]]:
+    """The cot array sourced from data-core (S13c). [] -> caller uses CFTC fallback."""
+    if _cot_consumer is None:
+        return []
+    try:
+        return _cot_consumer.cot_rows(key)
+    except Exception as exc:
+        print(f"  [{key}] base read failed ({exc}); CFTC fallback")
+        return []
+
+
+def _assemble(market: Dict[str, Any], cot: List[Dict[str, Any]],
+              prices: List[Dict[str, Any]], source: str) -> Dict[str, Any]:
+    """Build the markets/<key>.json payload (identical shape regardless of source)."""
+    family = market["report_family"]
+    base_url = BASE_TFF if family == "tff" else BASE_DISAGG
+    return {
+        "metadata": {
+            "key": market["key"],
+            "title": market["title"],
+            "subtitle": market["subtitle"],
+            "report_family": family,
+            "source_url": base_url,
+            "price_symbol": market["price_symbol"],
+            "price_label": market["price_label"],
+            "record_count": len(cot),
+            "history_first_date": (cot[0].get("date") or "")[:10] if cot else None,
+            "history_last_date": (cot[-1].get("date") or "")[:10] if cot else None,
+            "lookback_weeks": LOOKBACK,
+            "cot_source": source,
+        },
+        "cot": cot,
+        "prices": prices,
+    }
+
+
 def fetch_market(market: Dict[str, Any]) -> Dict[str, Any]:
+    # S13c base-first: the guarded base holds the full cohort history for every
+    # migrated market; only WTI (oil-reuse) and base-absent series hit CFTC below.
+    base_cot = _cot_from_base(market["key"])
+    if base_cot:
+        prices = fetch_price_series(market["price_symbol"])
+        return _assemble(market, base_cot, prices, "data-core")
+
     family = market["report_family"]
     base_url = BASE_TFF if family == "tff" else BASE_DISAGG
 
@@ -663,25 +719,7 @@ def fetch_market(market: Dict[str, Any]) -> Dict[str, Any]:
         print(f"  [{market['key']}] cache merge: {len(existing_cot)} existing + {new_count} new = {len(merged)} total")
 
     prices = fetch_price_series(market["price_symbol"])
-
-    payload = {
-        "metadata": {
-            "key": market["key"],
-            "title": market["title"],
-            "subtitle": market["subtitle"],
-            "report_family": family,
-            "source_url": base_url,
-            "price_symbol": market["price_symbol"],
-            "price_label": market["price_label"],
-            "record_count": len(merged),
-            "history_first_date": (merged[0].get("date") or "")[:10] if merged else None,
-            "history_last_date": (merged[-1].get("date") or "")[:10] if merged else None,
-            "lookback_weeks": LOOKBACK,
-        },
-        "cot": merged,
-        "prices": prices,
-    }
-    return payload
+    return _assemble(market, merged, prices, "cftc")
 
 
 def write_json(path: Path, payload: Any) -> None:

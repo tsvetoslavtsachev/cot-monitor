@@ -17,6 +17,13 @@ concurrency:
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
+    env:
+      # S13c (INIT-22): set this repo secret to source COT cohorts from data-core
+      # (the guarded base). ABSENT -> the base/collectors checkouts are skipped and
+      # scripts/fetch_cot.py falls back to its CFTC fetch (production unchanged —
+      # strangler: the dashboard never stops). data-core is private (needs the PAT);
+      # collectors is public.
+      DATACORE_PAT: ${{ secrets.DATACORE_PAT }}
     outputs:
       data_changed: ${{ steps.commit.outputs.data_changed }}
     steps:
@@ -33,7 +40,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ---- S13c: COT cohorts come FROM data-core; only present when PAT is set ----
+      - name: Checkout data-core (private base)
+        if: ${{ env.DATACORE_PAT != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: tsvetoslavtsachev/data-core
+          token: ${{ env.DATACORE_PAT }}
+          path: .data-core
+      - name: Checkout collectors (consumer lib)
+        if: ${{ env.DATACORE_PAT != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: tsvetoslavtsachev/collectors
+          path: .collectors
+
       - name: Fetch COT data
+        env:
+          # When the checkouts ran, fetch_cot sources the cohort rows from the base;
+          # otherwise these point at absent dirs and it transparently uses CFTC.
+          DATACORE_ROOT: ${{ github.workspace }}/.data-core
+          PYTHONPATH: ${{ github.workspace }}/.collectors
         run: python scripts/fetch_cot.py
 
       - name: Build derived metrics
