@@ -325,6 +325,27 @@
     .sector-row .bar-fill.long { background: var(--long); left: 50%; }
     .sector-row .bar-fill.short { background: var(--short); right: 50%; }
 
+    /* ── CTA trend ── */
+    .cta-card .cta-price { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.7rem; }
+    .cta-card .sector-net.mixed { color: var(--text-muted); }
+    .cta-triggers { display: flex; flex-direction: column; gap: 0.4rem; }
+    .cta-trow {
+      display: grid;
+      grid-template-columns: 2.6rem 4.6rem 1fr;
+      gap: 0.7rem;
+      align-items: center;
+      padding: 0.4rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      background: var(--surface2);
+    }
+    .cta-trow .cta-lb { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .cta-trow .cta-side { font-weight: 600; }
+    .cta-trow .cta-side.long { color: var(--long); }
+    .cta-trow .cta-side.short { color: var(--short); }
+    .cta-trow .cta-side.mixed { color: var(--text-muted); }
+    .cta-trow .cta-flip { color: var(--text); font-variant-numeric: tabular-nums; }
+
     /* ── Full table ── */
     .table-wrap {
       background: var(--surface);
@@ -747,6 +768,7 @@
     <button data-tab="sectors">Секторна картина</button>
     <button data-tab="all">Пълен преглед (38 пазара)</button>
     <button data-tab="correlations">Корелации</button>
+    <button data-tab="cta">CTA тренд</button>
     <button data-tab="glossary">Речник</button>
     <button data-tab="method">Какво НЕ виждаме</button>
   </div>
@@ -826,6 +848,20 @@
       <div id="correlations-content">
         <div class="card"><div class="card-body">Кликни на таб "Корелации" за зареждане...</div></div>
       </div>
+    </section>
+
+    <!-- ── Tab: CTA тренд ── -->
+    <section class="tab" id="tab-cta">
+      <h2>CTA тренд
+        <span class="sub">Накъде са наклонени тренд-следящите фондове, оценено през ценови моментум (TSMOM, 16/32/52 седмици), и при кое ниво всеки хоризонт обръща.</span>
+      </h2>
+      <div class="card">
+        <div class="card-body" style="max-width:74ch">
+          <strong>Какво е:</strong> оценка <em>по цена</em> на посоката на тренд-следящото позициониране и нивото, при което моментумът се обръща.<br>
+          <strong>Какво НЕ е:</strong> реални CTA позиции или доларова големина. Нарочно не показваме оценка в долари — тя зависи от непроверими допускания за капитала под управление. Нивата на обръщане са точни (цената отпреди N седмици); посоката е моделна оценка, не измерване.
+        </div>
+      </div>
+      <div id="cta-grid" class="sector-grid"></div>
     </section>
 
     <!-- ── Tab 4: Glossary ── -->
@@ -1333,6 +1369,7 @@ async function init() {
     renderBigMoves();
     renderExtremes();
     renderSectors();
+    renderCtaTriggers();
     renderFullTable();
 
     $('loading').hidden = true;
@@ -1783,6 +1820,55 @@ function sectorRowHtml(r) {
     <span class="bar"><span class="bar-fill ${dir}" style="width:${w}px"></span></span>
     <span class="pct">${fmtZ(r.primary_zscore)}σ · ${fmtPctile(r.primary_percentile, 'п')}</span>
   </div>`;
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// Tab — CTA тренд (trend-follower lean via price momentum; estimate, not positions)
+// ════════════════════════════════════════════════════════════════════════════
+
+function ctaFmtPrice(v) {
+  if (v == null) return '—';
+  const a = Math.abs(v);
+  const dp = a >= 1000 ? 0 : a >= 10 ? 1 : a >= 1 ? 2 : a >= 0.1 ? 4 : 6;
+  return v.toLocaleString('bg-BG', { minimumFractionDigits: dp, maximumFractionDigits: dp });
+}
+
+function renderCtaTriggers() {
+  const grid = $('cta-grid');
+  if (!grid) return;
+  const markets = (state.cta && Array.isArray(state.cta.markets)) ? state.cta.markets : [];
+  const usable = markets.filter(m => m.ensemble_signal != null && m.signals);
+  if (!usable.length) {
+    grid.innerHTML = '<div class="card"><div class="card-body">Няма налични CTA тренд данни тази седмица.</div></div>';
+    return;
+  }
+  // Strongest trend first (largest absolute ensemble signal)
+  usable.sort((a, b) => Math.abs(b.ensemble_signal) - Math.abs(a.ensemble_signal));
+
+  const ensClass = e => e > 0.33 ? 'long' : e < -0.33 ? 'short' : 'mixed';
+  const ensLabel = e => e > 0.33 ? 'нетно нагоре' : e < -0.33 ? 'нетно надолу' : 'смесен / преход';
+
+  let html = '';
+  for (const m of usable) {
+    const rows = ['16w', '32w', '52w'].map(L => {
+      const s = m.signals[L];
+      if (!s || s.trigger_price == null) return '';
+      const side = s.direction === 'long' ? 'long' : s.direction === 'short' ? 'short' : 'mixed';
+      const sideTxt = s.direction === 'long' ? 'нагоре' : s.direction === 'short' ? 'надолу' : 'неутрален';
+      const verb = s.direction === 'long' ? 'обръща надолу под' : s.direction === 'short' ? 'обръща нагоре над' : 'праг';
+      return `<div class="cta-trow">
+            <span class="cta-lb">${L.replace('w', 'с')}</span>
+            <span class="cta-side ${side}">${sideTxt}</span>
+            <span class="cta-flip">${verb} <strong>${ctaFmtPrice(s.trigger_price)}</strong></span>
+          </div>`;
+    }).join('');
+    html += `<div class="sector-card cta-card">
+        <h3>${marketLabel(m.market) || m.title || m.market}<span class="sector-net ${ensClass(m.ensemble_signal)}">${ensLabel(m.ensemble_signal)}</span></h3>
+        <div class="cta-price">Цена ${ctaFmtPrice(m.current_price)}${m.price_label ? ' · ' + m.price_label : ''}</div>
+        <div class="cta-triggers">${rows}</div>
+      </div>`;
+  }
+  grid.innerHTML = html;
 }
 
 // ════════════════════════════════════════════════════════════════════════════
