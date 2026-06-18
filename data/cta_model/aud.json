@@ -16,7 +16,7 @@
       "trigger_date": "2026-02-17",
       "current_vs_trigger": -0.0,
       "direction": "short",
-      "flip_note": "Signal flips when price rises above 1"
+      "flip_note": "Signal flips when price rises above 0.71"
     },
     "32w": {
       "lookback_weeks": 32,
@@ -28,7 +28,7 @@
       "trigger_date": "2025-10-28",
       "current_vs_trigger": 0.04,
       "direction": "long",
-      "flip_note": "Signal flips when price falls below 1"
+      "flip_note": "Signal flips when price falls below 0.66"
     },
     "52w": {
       "lookback_weeks": 52,
@@ -40,7 +40,7 @@
       "trigger_date": "2025-06-10",
       "current_vs_trigger": 0.05,
       "direction": "long",
-      "flip_note": "Signal flips when price falls below 1"
+      "flip_note": "Signal flips when price falls below 0.65"
     }
   },
   "ensemble_signal": 0.5267,

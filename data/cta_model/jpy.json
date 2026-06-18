@@ -4,7 +4,7 @@
   "price_label": "JPY/USD",
   "cot_date": "2026-06-09",
   "model_date": "2026-06-09",
-  "current_price": 0.01,
+  "current_price": 0.006239,
   "signals": {
     "16w": {
       "lookback_weeks": 16,
@@ -12,11 +12,11 @@
       "vol_annual_pct": 3.84,
       "raw_signal": -2.1663,
       "signal": -1.0,
-      "trigger_price": 0.01,
+      "trigger_price": 0.006541,
       "trigger_date": "2026-02-17",
-      "current_vs_trigger": -0.0,
+      "current_vs_trigger": -0.000302,
       "direction": "short",
-      "flip_note": "Signal flips when price rises above 0"
+      "flip_note": "Signal flips when price rises above 0.006541"
     },
     "32w": {
       "lookback_weeks": 32,
@@ -24,11 +24,11 @@
       "vol_annual_pct": 3.84,
       "raw_signal": -1.7576,
       "signal": -1.0,
-      "trigger_price": 0.01,
+      "trigger_price": 0.006588,
       "trigger_date": "2025-10-28",
-      "current_vs_trigger": -0.0,
+      "current_vs_trigger": -0.000349,
       "direction": "short",
-      "flip_note": "Signal flips when price rises above 0"
+      "flip_note": "Signal flips when price rises above 0.006588"
     },
     "52w": {
       "lookback_weeks": 52,
@@ -36,11 +36,11 @@
       "vol_annual_pct": 3.84,
       "raw_signal": -2.5035,
       "signal": -1.0,
-      "trigger_price": 0.01,
+      "trigger_price": 0.006903,
       "trigger_date": "2025-06-10",
-      "current_vs_trigger": -0.0,
+      "current_vs_trigger": -0.000664,
       "direction": "short",
-      "flip_note": "Signal flips when price rises above 0"
+      "flip_note": "Signal flips when price rises above 0.006903"
     }
   },
   "ensemble_signal": -1.0,

@@ -41,7 +41,7 @@ from __future__ import annotations
 
 import json
 from datetime import datetime, timezone
-from math import sqrt
+from math import sqrt, floor, log10
 from pathlib import Path
 from statistics import pstdev
 from typing import Any, Dict, List, Optional, Tuple
@@ -120,6 +120,40 @@ def read_json(path: Path) -> Any:
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def price_decimals(value: float) -> int:
+    """Decimal places that preserve a price's signal at its magnitude.
+
+    Normal-scale prices (|value| >= 0.1) keep the historical 2-decimal
+    convention, so every market except the sub-0.1 ones stays byte-identical.
+    Sub-0.1 prices — notably JPY/USD (~0.0063) — collapse to a single "0.01"
+    under 2-decimal rounding, erasing the entire trigger structure; for them we
+    scale precision to retain ~4 significant figures.
+    """
+    a = abs(value)
+    if a >= 0.1 or a == 0:
+        return 2
+    return 3 - floor(log10(a))
+
+
+def round_price(value: Optional[float]) -> Optional[float]:
+    """Round a price to magnitude-appropriate precision (see price_decimals)."""
+    if value is None:
+        return None
+    return round(value, price_decimals(value))
+
+
+def format_flip_level(value: float) -> str:
+    """Format a trigger level for the flip_note text.
+
+    Whole-number formatting is kept for |value| >= 1 (unchanged for the major FX
+    crosses and every dollar-priced market); sub-1 levels get enough decimals to
+    stay meaningful — JPY would otherwise read "above 0".
+    """
+    if abs(value) >= 1:
+        return f"{value:.0f}"
+    return f"{value:.{price_decimals(value)}f}"
 
 
 def build_weekly_series(
@@ -265,14 +299,17 @@ def run_market(market_key: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         flip_direction = "rises above" if sig["signal"] < 0 else "falls below"
         signals[key] = {
             **sig,
-            "trigger_price": round(trig, 2) if trig is not None else None,
+            "trigger_price": round_price(trig) if trig is not None else None,
             "trigger_date": weekly_series[-(L + 1)][0] if len(weekly_series) >= L + 1 else None,
             "current_vs_trigger": (
-                round(current_price - trig, 2) if trig is not None else None
+                # round the gap to the price's own scale, not the gap's — keeps
+                # normal-scale markets at 2 decimals while resolving JPY's gap.
+                round(current_price - trig, price_decimals(current_price))
+                if trig is not None else None
             ),
             "direction": direction,
             "flip_note": (
-                f"Signal flips when price {flip_direction} {trig:.0f}"
+                f"Signal flips when price {flip_direction} {format_flip_level(trig)}"
                 if trig is not None else None
             ),
         }
@@ -307,7 +344,7 @@ def run_market(market_key: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         "price_label": meta.get("price_label", ""),
         "cot_date": latest_cot.get("date", "")[:10],
         "model_date": current_date,
-        "current_price": round(current_price, 2),
+        "current_price": round_price(current_price),
         "signals": signals,
         "ensemble_signal": ensemble,
         "ensemble_direction": ensemble_direction,
