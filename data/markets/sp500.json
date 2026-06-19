@@ -10,7 +10,8 @@
     "record_count": 526,
     "history_first_date": "2016-05-17",
     "history_last_date": "2026-06-09",
-    "lookback_weeks": 520
+    "lookback_weeks": 520,
+    "cot_source": "cftc"
   },
   "cot": [
     {
@@ -8957,26 +8958,6 @@
     }
   ],
   "prices": [
-    {
-      "timestamp": 1465790400,
-      "close": 2078.75
-    },
-    {
-      "timestamp": 1465876800,
-      "close": 2074.5
-    },
-    {
-      "timestamp": 1465963200,
-      "close": 2071.75
-    },
-    {
-      "timestamp": 1466049600,
-      "close": 2079.25
-    },
-    {
-      "timestamp": 1466136000,
-      "close": 2078.5
-    },
     {
       "timestamp": 1466395200,
       "close": 2074.25
@@ -19019,7 +19000,27 @@
     },
     {
       "timestamp": 1781236800,
-      "close": 7436.25
+      "close": 7435.0
+    },
+    {
+      "timestamp": 1781496000,
+      "close": 7561.25
+    },
+    {
+      "timestamp": 1781582400,
+      "close": 7518.5
+    },
+    {
+      "timestamp": 1781668800,
+      "close": 7424.5
+    },
+    {
+      "timestamp": 1781755200,
+      "close": 7508.43017578125
+    },
+    {
+      "timestamp": 1781888399,
+      "close": 7556.25
     }
   ]
 }

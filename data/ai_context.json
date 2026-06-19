@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:28:17.303049Z",
+  "generated_at": "2026-06-19T22:09:23.288278Z",
   "latest_cot_date": "2026-06-09",
   "data_sources": {
     "cftc_cot": "CFTC Commitments of Traders (public, ~3 business day lag)",
@@ -346,7 +346,7 @@
       "price_change_4w_pct": -1.73,
       "takeaway": "Short crowding remains heavy (2th percentile from the bottom).",
       "narrative": "Japanese Yen remains in a Crowded Short setup. Primary positioning is at the 2th percentile over the recent history. Over the last 4 weeks, net positioning fell by 37,404 contracts and is currently confirmed by the secondary cohort. Price is down 1.73% over the same 4-week window.",
-      "cta_current_price": 0.01,
+      "cta_current_price": 0.006239,
       "cta_ensemble_signal": -1.0,
       "cta_ensemble_direction": "net short",
       "cta_estimated_position_bn": -8.0,
@@ -354,26 +354,26 @@
       "cta_signal_16w": {
         "signal": -1.0,
         "direction": "short",
-        "trigger_price": 0.01,
+        "trigger_price": 0.006541,
         "trigger_date": "2026-02-17",
-        "price_vs_trigger": -0.0,
-        "flip_note": "Signal flips when price rises above 0"
+        "price_vs_trigger": -0.000302,
+        "flip_note": "Signal flips when price rises above 0.006541"
       },
       "cta_signal_32w": {
         "signal": -1.0,
         "direction": "short",
-        "trigger_price": 0.01,
+        "trigger_price": 0.006588,
         "trigger_date": "2025-10-28",
-        "price_vs_trigger": -0.0,
-        "flip_note": "Signal flips when price rises above 0"
+        "price_vs_trigger": -0.000349,
+        "flip_note": "Signal flips when price rises above 0.006588"
       },
       "cta_signal_52w": {
         "signal": -1.0,
         "direction": "short",
-        "trigger_price": 0.01,
+        "trigger_price": 0.006903,
         "trigger_date": "2025-06-10",
-        "price_vs_trigger": -0.0,
-        "flip_note": "Signal flips when price rises above 0"
+        "price_vs_trigger": -0.000664,
+        "flip_note": "Signal flips when price rises above 0.006903"
       },
       "cta_vs_cftc_gap": -0.21
     },
@@ -405,7 +405,7 @@
         "trigger_price": 0.71,
         "trigger_date": "2026-02-17",
         "price_vs_trigger": -0.0,
-        "flip_note": "Signal flips when price rises above 1"
+        "flip_note": "Signal flips when price rises above 0.71"
       },
       "cta_signal_32w": {
         "signal": 0.8918,
@@ -413,7 +413,7 @@
         "trigger_price": 0.66,
         "trigger_date": "2025-10-28",
         "price_vs_trigger": 0.04,
-        "flip_note": "Signal flips when price falls below 1"
+        "flip_note": "Signal flips when price falls below 0.66"
       },
       "cta_signal_52w": {
         "signal": 0.8202,
@@ -421,7 +421,7 @@
         "trigger_price": 0.65,
         "trigger_date": "2025-06-10",
         "price_vs_trigger": 0.05,
-        "flip_note": "Signal flips when price falls below 1"
+        "flip_note": "Signal flips when price falls below 0.65"
       },
       "cta_vs_cftc_gap": -1.39
     },
@@ -693,7 +693,7 @@
         "trigger_price": 0.73,
         "trigger_date": "2026-02-17",
         "price_vs_trigger": -0.01,
-        "flip_note": "Signal flips when price rises above 1"
+        "flip_note": "Signal flips when price rises above 0.73"
       },
       "cta_signal_32w": {
         "signal": -0.0414,
@@ -701,7 +701,7 @@
         "trigger_price": 0.72,
         "trigger_date": "2025-10-28",
         "price_vs_trigger": -0.0,
-        "flip_note": "Signal flips when price rises above 1"
+        "flip_note": "Signal flips when price rises above 0.72"
       },
       "cta_signal_52w": {
         "signal": -0.4016,
@@ -709,7 +709,7 @@
         "trigger_price": 0.73,
         "trigger_date": "2025-06-10",
         "price_vs_trigger": -0.01,
-        "flip_note": "Signal flips when price rises above 1"
+        "flip_note": "Signal flips when price rises above 0.73"
       },
       "cta_vs_cftc_gap": 3.02
     },
