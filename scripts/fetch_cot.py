@@ -24,11 +24,13 @@ import requests
 
 # S13c cut-over (INIT-22): the per-market cohort rows now come FROM data-core (the
 # guarded base), not a local CFTC fetch. consumer.cot_rows(key) reproduces the cot
-# array; WTI (oil-reuse: only a percentile is in the base) and any base-absent
-# series fall back to the CFTC path below. Requires the `collectors` package on the
-# path + DATACORE_ROOT pointing at a data-core checkout (set in CI). If that wiring
-# is unavailable the import fails CLOSED to None -> every market falls back to CFTC,
-# so the dashboard keeps working exactly as before (strangler: production never stops).
+# array. As of A1 (2026-06-24) ALL 38 markets are migrated — incl. WTI (cot_wti_net,
+# NYMEX 067651); only an unmigrated / base-absent series would fall back to the CFTC
+# path below. Requires the `collectors` package on the path + DATACORE_ROOT pointing
+# at a data-core checkout (set in CI). If that wiring is unavailable the import fails
+# CLOSED to None -> every market falls back to CFTC, so the dashboard keeps working
+# (strangler: production never stops). CI then fails RED via assert_base_sourced.py
+# when DATACORE_PAT is set but a migrated market silently came from CFTC.
 try:
     from collectors.cot import consumer as _cot_consumer
 except Exception as _exc:  # pragma: no cover - environment-dependent
@@ -642,7 +644,10 @@ def _assemble(market: Dict[str, Any], cot: List[Dict[str, Any]],
             "record_count": len(cot),
             "history_first_date": (cot[0].get("date") or "")[:10] if cot else None,
             "history_last_date": (cot[-1].get("date") or "")[:10] if cot else None,
-            "lookback_weeks": LOOKBACK,
+            # The percentile ranks over the WHOLE series, so the honest lookback is the
+            # actual row count — not the CFTC fetch's LOOKBACK constant. Base-sourced
+            # markets carry full history (~1045 wks); stamping LOOKBACK (520) here lied.
+            "lookback_weeks": len(cot),
             "cot_source": source,
         },
         "cot": cot,
@@ -652,7 +657,8 @@ def _assemble(market: Dict[str, Any], cot: List[Dict[str, Any]],
 
 def fetch_market(market: Dict[str, Any]) -> Dict[str, Any]:
     # S13c base-first: the guarded base holds the full cohort history for every
-    # migrated market; only WTI (oil-reuse) and base-absent series hit CFTC below.
+    # migrated market (all 38 since A1, incl. WTI=cot_wti_net). Only an unmigrated /
+    # base-absent series would hit the CFTC fallback below.
     base_cot = _cot_from_base(market["key"])
     if base_cot:
         prices = fetch_price_series(market["price_symbol"])

@@ -63,6 +63,13 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/.collectors
         run: python scripts/fetch_cot.py
 
+      # A1 guard: with the PAT set, base sourcing is INTENDED — fail RED (before any
+      # commit/deploy) if a market silently fell back to CFTC, so the spliced
+      # percentiles can never quietly return on a green run.
+      - name: Assert base-sourced (no silent CFTC fallback)
+        if: ${{ env.DATACORE_PAT != '' }}
+        run: python scripts/assert_base_sourced.py
+
       - name: Build derived metrics
         run: python scripts/derive_metrics.py
 
