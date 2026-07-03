@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "EURUSD=X",
     "price_label": "EUR/USD",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 331417.0,
       "tertiary_net": -298968.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 785477.0,
+      "primary_long": 108150.0,
+      "primary_short": 123560.0,
+      "primary_net": -15410.0,
+      "secondary_long": 462293.0,
+      "secondary_short": 207563.0,
+      "secondary_net": 254730.0,
+      "tertiary_long": 36965.0,
+      "tertiary_short": 312295.0,
+      "tertiary_net": -275330.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1466982000,
-      "close": 1.103594422340393
-    },
-    {
-      "timestamp": 1467068400,
-      "close": 1.1015034914016724
-    },
-    {
-      "timestamp": 1467154800,
-      "close": 1.1073951721191406
-    },
-    {
-      "timestamp": 1467241200,
-      "close": 1.1128050088882446
-    },
-    {
-      "timestamp": 1467327600,
-      "close": 1.1106051206588745
-    },
     {
       "timestamp": 1467586800,
       "close": 1.1131023168563843
@@ -26100,8 +26095,28 @@
       "close": 1.1361699104309082
     },
     {
-      "timestamp": 1782509371,
-      "close": 1.1389521360397339
+      "timestamp": 1782687600,
+      "close": 1.1385631561279297
+    },
+    {
+      "timestamp": 1782774000,
+      "close": 1.1422044038772583
+    },
+    {
+      "timestamp": 1782860400,
+      "close": 1.1413310766220093
+    },
+    {
+      "timestamp": 1782946800,
+      "close": 1.13779878616333
+    },
+    {
+      "timestamp": 1783033200,
+      "close": 1.1422696113586426
+    },
+    {
+      "timestamp": 1783114145,
+      "close": 1.1440337896347046
     }
   ]
 }

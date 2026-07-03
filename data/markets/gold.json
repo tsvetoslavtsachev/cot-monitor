@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "GC=F",
     "price_label": "Gold Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 213010.0,
       "tertiary_net": -183954.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "GOLD - COMMODITY EXCHANGE INC.",
+      "open_interest": 497446.0,
+      "primary_long": 130663.0,
+      "primary_short": 17653.0,
+      "primary_net": 113010.0,
+      "secondary_long": 19800.0,
+      "secondary_short": 31157.0,
+      "secondary_net": -11357.0,
+      "tertiary_long": 28059.0,
+      "tertiary_short": 214572.0,
+      "tertiary_net": -186513.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 1322.5
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 1315.300048828125
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 1323.9000244140625
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 1318.4000244140625
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 1336.699951171875
-    },
     {
       "timestamp": 1467691200,
       "close": 1356.4000244140625
@@ -25741,7 +25736,27 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 4103.0
+      "close": 4078.699951171875
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 4022.300048828125
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 4022.89990234375
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 4068.300048828125
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 4112.7001953125
+    },
+    {
+      "timestamp": 1783097998,
+      "close": 4187.2998046875
     }
   ]
 }

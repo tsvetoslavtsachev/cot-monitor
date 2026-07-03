@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 24969.0,
       "tertiary_net": -20892.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 54908.0,
+      "primary_long": 17440.0,
+      "primary_short": 22792.0,
+      "primary_net": -5352.0,
+      "secondary_long": 21027.0,
+      "secondary_short": 2317.0,
+      "secondary_net": 18710.0,
+      "tertiary_long": 4095.0,
+      "tertiary_short": 24692.0,
+      "tertiary_net": -20597.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 96.54000091552734
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 96.25
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 95.7699966430664
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 96.13999938964844
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 95.6500015258789
-    },
     {
       "timestamp": 1467691200,
       "close": 96.16999816894531
@@ -25745,7 +25740,27 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 101.36599731445312
+      "close": 101.36000061035156
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 101.11000061035156
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 101.19000244140625
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 101.38999938964844
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 100.86000061035156
+    },
+    {
+      "timestamp": 1783112399,
+      "close": 100.85700225830078
     }
   ]
 }

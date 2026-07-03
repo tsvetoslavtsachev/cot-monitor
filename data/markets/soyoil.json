@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 9393.0,
       "tertiary_net": 74346.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 805184.0,
+      "primary_long": 132086.0,
+      "primary_short": 28497.0,
+      "primary_net": 103589.0,
+      "secondary_long": 218523.0,
+      "secondary_short": 404503.0,
+      "secondary_net": -185980.0,
+      "tertiary_long": 84643.0,
+      "tertiary_short": 10426.0,
+      "tertiary_net": 74217.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 31.260000228881836
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 31.110000610351562
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 30.81999969482422
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 31.3799991607666
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 31.030000686645508
-    },
     {
       "timestamp": 1467691200,
       "close": 30.81999969482422
@@ -25741,7 +25736,23 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 67.04000091552734
+      "close": 71.30000305175781
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 69.06999969482422
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 66.73999786376953
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 67.0199966430664
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 66.94999694824219
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZW=F",
     "price_label": "Chicago Wheat Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 14199.0,
       "tertiary_net": 77947.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "WHEAT-SRW - CHICAGO BOARD OF TRADE",
+      "open_interest": 534792.0,
+      "primary_long": 66844.0,
+      "primary_short": 138050.0,
+      "primary_net": -71206.0,
+      "secondary_long": 75387.0,
+      "secondary_short": 90683.0,
+      "secondary_net": -15296.0,
+      "tertiary_long": 89741.0,
+      "tertiary_short": 14533.0,
+      "tertiary_net": 75208.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 446.75
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 443.75
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 429.5
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 431.25
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 416.25
-    },
     {
       "timestamp": 1467691200,
       "close": 419.5
@@ -25741,7 +25736,23 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 588.75
+      "close": 578.25
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 569.5
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 580.75
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 592.0
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 590.5
     }
   ]
 }

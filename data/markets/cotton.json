@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 26501.0,
       "tertiary_net": 30002.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 425263.0,
+      "primary_long": 63927.0,
+      "primary_short": 25482.0,
+      "primary_net": 38445.0,
+      "secondary_long": 66595.0,
+      "secondary_short": 183577.0,
+      "secondary_net": -116982.0,
+      "tertiary_long": 55040.0,
+      "tertiary_short": 30547.0,
+      "tertiary_net": 24493.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 63.47999954223633
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 64.66000366210938
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 64.5
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 62.81999969482422
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 63.619998931884766
-    },
     {
       "timestamp": 1467691200,
       "close": 63.75
@@ -25749,7 +25744,23 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 76.77999877929688
+      "close": 71.66000366210938
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 72.0
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 72.22000122070312
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 73.27999877929688
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 72.56999969482422
     }
   ]
 }

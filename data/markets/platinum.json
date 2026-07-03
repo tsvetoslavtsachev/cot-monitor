@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PL=F",
     "price_label": "Platinum Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 22569.0,
       "tertiary_net": -6594.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 59896.0,
+      "primary_long": 14846.0,
+      "primary_short": 6328.0,
+      "primary_net": 8518.0,
+      "secondary_long": 2207.0,
+      "secondary_short": 13316.0,
+      "secondary_net": -11109.0,
+      "tertiary_long": 14597.0,
+      "tertiary_short": 21817.0,
+      "tertiary_net": -7220.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 978.7999877929688
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 978.5
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 1011.2999877929688
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 1021.5
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 1054.699951171875
-    },
     {
       "timestamp": 1467691200,
       "close": 1072.4000244140625
@@ -25741,7 +25736,27 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 1629.0999755859375
+      "close": 1630.9000244140625
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 1574.5
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 1550.199951171875
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 1588.9000244140625
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 1616.5999755859375
+    },
+    {
+      "timestamp": 1783097997,
+      "close": 1651.9000244140625
     }
   ]
 }

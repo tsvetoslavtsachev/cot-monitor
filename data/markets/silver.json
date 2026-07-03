@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 45628.0,
       "tertiary_net": -25282.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 134115.0,
+      "primary_long": 17354.0,
+      "primary_short": 5695.0,
+      "primary_net": 11659.0,
+      "secondary_long": 5270.0,
+      "secondary_short": 19341.0,
+      "secondary_net": -14071.0,
+      "tertiary_long": 18429.0,
+      "tertiary_short": 44012.0,
+      "tertiary_net": -25583.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 17.739999771118164
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 17.839000701904297
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 18.36199951171875
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 18.582000732421875
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 19.54400062561035
-    },
     {
       "timestamp": 1467691200,
       "close": 19.865999221801758
@@ -25741,7 +25736,27 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 59.60499954223633
+      "close": 59.21699905395508
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 58.17499923706055
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 59.47700119018555
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 60.084999084472656
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 60.643001556396484
+    },
+    {
+      "timestamp": 1783097996,
+      "close": 62.814998626708984
     }
   ]
 }

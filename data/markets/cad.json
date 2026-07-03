@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 34365.0,
       "tertiary_net": 148647.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 342860.0,
+      "primary_long": 32530.0,
+      "primary_short": 115907.0,
+      "primary_net": -83377.0,
+      "secondary_long": 52526.0,
+      "secondary_short": 136394.0,
+      "secondary_net": -83868.0,
+      "tertiary_long": 201839.0,
+      "tertiary_short": 35689.0,
+      "tertiary_net": 166150.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 0.7635999917984009
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 0.7663000226020813
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 0.7703999876976013
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 0.7712000012397766
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 0.774399995803833
-    },
     {
       "timestamp": 1467691200,
       "close": 0.7700999975204468
@@ -25745,7 +25740,27 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 0.7069000005722046
+      "close": 0.7050999999046326
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 0.7045000195503235
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 0.7044500112533569
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 0.7038499712944031
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 0.7054499983787537
+    },
+    {
+      "timestamp": 1783097995,
+      "close": 0.7063000202178955
     }
   ]
 }

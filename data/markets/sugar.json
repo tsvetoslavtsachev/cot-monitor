@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1045,
+    "record_count": 1046,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-16",
-    "lookback_weeks": 1045,
+    "history_last_date": "2026-06-23",
+    "lookback_weeks": 1046,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15688,29 +15688,24 @@
       "tertiary_short": 43371.0,
       "tertiary_net": 214057.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-23",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1159845.0,
+      "primary_long": 132557.0,
+      "primary_short": 318040.0,
+      "primary_net": -185483.0,
+      "secondary_long": 265013.0,
+      "secondary_short": 351388.0,
+      "secondary_net": -86375.0,
+      "tertiary_long": 260249.0,
+      "tertiary_short": 37335.0,
+      "tertiary_net": 222914.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1467000000,
-      "close": 19.479999542236328
-    },
-    {
-      "timestamp": 1467086400,
-      "close": 19.809999465942383
-    },
-    {
-      "timestamp": 1467172800,
-      "close": 20.81999969482422
-    },
-    {
-      "timestamp": 1467259200,
-      "close": 20.149999618530273
-    },
-    {
-      "timestamp": 1467345600,
-      "close": 20.780000686645508
-    },
     {
       "timestamp": 1467691200,
       "close": 20.8700008392334
@@ -25749,7 +25744,23 @@
     },
     {
       "timestamp": 1782446400,
-      "close": 14.550000190734863
+      "close": 13.979999542236328
+    },
+    {
+      "timestamp": 1782705600,
+      "close": 14.289999961853027
+    },
+    {
+      "timestamp": 1782792000,
+      "close": 14.34000015258789
+    },
+    {
+      "timestamp": 1782878400,
+      "close": 14.989999771118164
+    },
+    {
+      "timestamp": 1782964800,
+      "close": 14.850000381469727
     }
   ]
 }
