@@ -45,8 +45,6 @@
   },
   "ensemble_signal": 0.6052,
   "ensemble_direction": "net long",
-  "estimated_position_bn": 3.03,
-  "aum_scalar_bn": 5.0,
   "cftc_primary_net_contracts": 68818.0,
   "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
 }

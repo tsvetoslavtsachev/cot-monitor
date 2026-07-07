@@ -9,13 +9,13 @@
     "market": "nasdaq",
     "title": "Nasdaq Mini",
     "date": "2026-06-23",
-    "narrative": "Nasdaq Mini remains in a Divergence setup. Primary positioning is at the 9th percentile over the recent history. Over the last 4 weeks, net positioning rose by 617 contracts and is currently diverging from the secondary cohort. Price is down 1.36% over the same 4-week window."
+    "narrative": "Nasdaq Mini remains in a Neutral / Transition setup. Primary positioning is at the 9th percentile over the recent history. Over the last 4 weeks, net positioning rose by 617 contracts and is currently diverging from the secondary cohort. Price is down 1.36% over the same 4-week window."
   },
   {
     "market": "us10y",
     "title": "UST 10Y Note",
     "date": "2026-06-23",
-    "narrative": "UST 10Y Note remains in a Divergence setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning rose by 67,233 contracts and is currently diverging from the secondary cohort. Price is down 0.41% over the same 4-week window."
+    "narrative": "UST 10Y Note remains in a Neutral / Transition setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning rose by 67,233 contracts and is currently diverging from the secondary cohort. Price is down 0.41% over the same 4-week window."
   },
   {
     "market": "vix",
@@ -69,19 +69,19 @@
     "market": "us2y",
     "title": "UST 2Y Note",
     "date": "2026-06-23",
-    "narrative": "UST 2Y Note remains in a Divergence setup. Primary positioning is at the 10th percentile over the recent history. Over the last 4 weeks, net positioning fell by 14,995 contracts and is currently diverging from the secondary cohort. Price is down 0.21% over the same 4-week window."
+    "narrative": "UST 2Y Note remains in a Crowded Short setup. Primary positioning is at the 10th percentile over the recent history. Over the last 4 weeks, net positioning fell by 14,995 contracts and is currently diverging from the secondary cohort. Price is down 0.21% over the same 4-week window."
   },
   {
     "market": "us5y",
     "title": "UST 5Y Note",
     "date": "2026-06-23",
-    "narrative": "UST 5Y Note remains in a Divergence setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning fell by 94,220 contracts and is currently diverging from the secondary cohort. Price is down 0.27% over the same 4-week window."
+    "narrative": "UST 5Y Note remains in a Crowded Short setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning fell by 94,220 contracts and is currently diverging from the secondary cohort. Price is down 0.27% over the same 4-week window."
   },
   {
     "market": "us30y",
     "title": "UST Bond (30Y)",
     "date": "2026-06-23",
-    "narrative": "UST Bond (30Y) remains in a Divergence setup. Primary positioning is at the 14th percentile over the recent history. Over the last 4 weeks, net positioning fell by 30,200 contracts and is currently diverging from the secondary cohort. Price is up 0.56% over the same 4-week window."
+    "narrative": "UST Bond (30Y) remains in a Crowded Short setup. Primary positioning is at the 14th percentile over the recent history. Over the last 4 weeks, net positioning fell by 30,200 contracts and is currently diverging from the secondary cohort. Price is up 0.56% over the same 4-week window."
   },
   {
     "market": "usultra10y",
@@ -129,7 +129,7 @@
     "market": "copper",
     "title": "Copper",
     "date": "2026-06-23",
-    "narrative": "Copper remains in a Divergence setup. Primary positioning is at the 92th percentile over the recent history. Over the last 4 weeks, net positioning fell by 3,156 contracts and is currently diverging from the secondary cohort. Price is down 3.46% over the same 4-week window."
+    "narrative": "Copper remains in a Contrarian Short setup. Primary positioning is at the 92th percentile over the recent history. Over the last 4 weeks, net positioning fell by 3,156 contracts and is currently diverging from the secondary cohort. Price is down 3.46% over the same 4-week window."
   },
   {
     "market": "platinum",
@@ -183,7 +183,7 @@
     "market": "soyoil",
     "title": "Soybean Oil",
     "date": "2026-06-23",
-    "narrative": "Soybean Oil remains in a Divergence setup. Primary positioning is at the 96th percentile over the recent history. Over the last 4 weeks, net positioning fell by 37,829 contracts and is currently diverging from the secondary cohort. Price is down 5.07% over the same 4-week window."
+    "narrative": "Soybean Oil remains in a Contrarian Short setup. Primary positioning is at the 96th percentile over the recent history. Over the last 4 weeks, net positioning fell by 37,829 contracts and is currently diverging from the secondary cohort. Price is down 5.07% over the same 4-week window."
   },
   {
     "market": "soymeal",
@@ -219,7 +219,7 @@
     "market": "cattle",
     "title": "Live Cattle",
     "date": "2026-06-23",
-    "narrative": "Live Cattle remains in a Divergence setup. Primary positioning is at the 92th percentile over the recent history. Over the last 4 weeks, net positioning rose by 5,456 contracts and is currently diverging from the secondary cohort. Price is up 2.79% over the same 4-week window."
+    "narrative": "Live Cattle remains in a Crowded Long setup. Primary positioning is at the 92th percentile over the recent history. Over the last 4 weeks, net positioning rose by 5,456 contracts and is currently diverging from the secondary cohort. Price is up 2.79% over the same 4-week window."
   },
   {
     "market": "hogs",

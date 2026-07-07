@@ -106,32 +106,23 @@ def build_market_entry(
             "cta_current_price": cta_row.get("current_price"),
             "cta_ensemble_signal": cta_row.get("ensemble_signal"),      # –1 to +1
             "cta_ensemble_direction": cta_row.get("ensemble_direction"),
-            "cta_estimated_position_bn": cta_row.get("estimated_position_bn"),
-            "cta_aum_scalar_bn": cta_row.get("aum_scalar_bn"),
             "cta_signal_16w": sig_summary("16w"),
             "cta_signal_32w": sig_summary("32w"),
             "cta_signal_52w": sig_summary("52w"),
-            # Key divergence metric: model says X, CFTC shows Y
-            # Positive = model more bullish than CFTC → potential covering rally
-            # Negative = model more bearish → potential new shorts building
-            "cta_vs_cftc_gap": (
-                _safe_sub(
-                    cta_row.get("estimated_position_bn"),
-                    wl_row.get("notional_usd_bn"),
-                )
-            ),
+            # 4C (analytics audit 07.07): the dollar-estimate fields
+            # (cta_estimated_position_bn / cta_aum_scalar_bn) and the derived
+            # cta_vs_cftc_gap are dropped — they were signal × an explicit AUM guess,
+            # exactly the figure that must not be published. This AI-export is the most
+            # likely place for a signal×guess number to be repeated as if measured.
         })
     else:
         entry.update({
             "cta_current_price": None,
             "cta_ensemble_signal": None,
             "cta_ensemble_direction": None,
-            "cta_estimated_position_bn": None,
-            "cta_aum_scalar_bn": None,
             "cta_signal_16w": None,
             "cta_signal_32w": None,
             "cta_signal_52w": None,
-            "cta_vs_cftc_gap": None,
         })
 
     return entry
@@ -172,22 +163,6 @@ def main() -> None:
     crowded_shorts = [m["title"] for m in markets_out if m.get("regime") == "Crowded Short"]
     divergences = [m["title"] for m in markets_out if m.get("regime") == "Divergence"]
 
-    # Markets where CTA model disagrees strongly with CFTC positioning
-    big_gaps = []
-    for m in markets_out:
-        gap = m.get("cta_vs_cftc_gap")
-        if gap is not None and abs(gap) > 5:  # >$5B divergence is notable
-            big_gaps.append({
-                "market": m["market"],
-                "title": m["title"],
-                "gap_bn": gap,
-                "interpretation": (
-                    "Model more bullish than CFTC — short-covering likely in progress"
-                    if gap > 0 else
-                    "Model more bearish than CFTC — new shorts may be building"
-                ),
-            })
-
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "latest_cot_date": latest_cot,
@@ -213,13 +188,10 @@ def main() -> None:
             "crowded_longs": crowded_longs,
             "crowded_shorts": crowded_shorts,
             "divergence_regimes": divergences,
-            "cta_model_vs_cftc_gaps": big_gaps,
         },
         "markets": markets_out,
         "field_guide": {
             "cftc_primary_net_bn": "Net notional of CFTC Leveraged Money (TFF) or Managed Money (Disagg) in $B. Broader than CTA-only.",
-            "cta_estimated_position_bn": "Model estimate of CTA-only trend-following position in $B. Based on AUM scalar × ensemble signal.",
-            "cta_vs_cftc_gap": "Model position minus CFTC notional ($B). Positive = model more bullish than CFTC → short-covering pressure.",
             "cta_signal_Xw": "Signal for lookback X: range –1 (full short) to +1 (full long). trigger_price is the level where signal flips.",
             "percentile": "Current net positioning vs full history window (0=most short ever, 100=most long ever).",
             "zscore": "Standard deviations from mean positioning. |z|>2 = statistically extreme.",
@@ -235,8 +207,6 @@ def main() -> None:
         print(f"  Crowded Longs: {', '.join(crowded_longs)}")
     if crowded_shorts:
         print(f"  Crowded Shorts: {', '.join(crowded_shorts)}")
-    if big_gaps:
-        print(f"  Large CTA/CFTC gaps (>$5B): {', '.join(g['market'] for g in big_gaps)}")
 
 
 if __name__ == "__main__":

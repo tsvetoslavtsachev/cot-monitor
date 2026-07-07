@@ -348,8 +348,10 @@ def run_market(market_key: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         "signals": signals,
         "ensemble_signal": ensemble,
         "ensemble_direction": ensemble_direction,
-        "estimated_position_bn": estimated_position_bn,
-        "aum_scalar_bn": round(aum_scalar / 1e9, 1),
+        # 4C (analytics audit 07.07): estimated_position_bn = signal × AUM_SCALAR, and
+        # the scalar is an explicit guess (see CTA_AUM_SCALAR comments). Publishing a
+        # dollar figure that is signal × guess invites it being cited as a measured CTA
+        # position. Both are dropped from the output; the direction/trigger signals stay.
         "cftc_primary_net_contracts": cftc_primary_net,
         "methodology_note": (
             "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). "

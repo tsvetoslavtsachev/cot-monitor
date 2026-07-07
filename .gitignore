@@ -6,3 +6,4 @@ node_modules/
 out/
 .next/
 data/manifest.example.json
+.claude/

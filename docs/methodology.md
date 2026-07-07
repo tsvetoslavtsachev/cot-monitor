@@ -34,13 +34,16 @@ Used for every cohort.
 
 ### Percentile pressure
 
-Compute each latest net position relative to the market's own rolling history, typically over:
+Compute each latest net position relative to the market's **entire available history**.
+The implementation (`derive_metrics.py`) ranks the latest net against *every* non-missing
+weekly observation — an expanding, full-history percentile, **not** a fixed rolling window.
 
-- 52 weeks
-- 104 weeks
-- 156 weeks
-
-This helps compare markets with very different raw contract sizes.
+Because history length varies by market (roughly **229 to 1046 weeks**), a given
+"90th percentile" is **not directly comparable across markets** — 90th over ~4 years
+(e.g. Brent) is a different bar than 90th over ~20 years (e.g. Gold). Always read the
+observation count (shown in the tooltip) alongside the percentile. Choosing a uniform
+lookback (full-history vs a rolling 3–5yr robust window) is an open convention question
+tracked in the analytics audit, not settled here.
 
 ### Z-score
 

@@ -108,6 +108,73 @@ DERIVED_DIR = DATA_DIR / "derived"
 MIN_HISTORY_OBS = 8
 
 
+# ── M5 "Клас на доверие" (analytics audit 07.07 + М6 per-tail verdicts) ──────────
+# The COT contrarian signal differs RADICALLY by asset class (empirics: rates IC
+# h13 -0.25, index ~noise p=0.68, aggregate self-cancels p=0.41). This layer states,
+# per class, how much to trust a positioning extreme — and per market, the М6
+# episodic verdict for EACH TAIL separately (a market can be a weak contrarian at one
+# tail and a CONTINUATION trap at the other — cocoa is the exemplar).
+#
+# EVERYTHING here is ARGUMENT-TIER: input for the drill's station 5 and for reading
+# the columns — NEVER a standalone decision. М6 found 0/38 markets survive FDR, so
+# every flag is directional-only, not a proven edge.
+MARKET_CLASS: Dict[str, str] = {
+    "eurfx": "fx", "gbpfx": "fx", "jpy": "fx", "chf": "fx", "cad": "fx",
+    "aud": "fx", "dxy": "fx",
+    "gold": "metals", "silver": "metals", "copper": "metals",
+    "platinum": "metals", "palladium": "metals",
+    "wti": "energy", "brent": "energy", "natgas": "energy",
+    "rbob": "energy", "heatingoil": "energy",
+    "sp500": "index", "nasdaq": "index", "russell": "index",
+    "us2y": "rates", "us5y": "rates", "us10y": "rates",
+    "usultra10y": "rates", "us30y": "rates",
+    "corn": "agri", "soybeans": "agri", "wheat": "agri", "soyoil": "agri",
+    "soymeal": "agri", "coffee": "agri", "sugar": "agri", "cocoa": "agri",
+    "cotton": "agri", "cattle": "agri", "hogs": "agri",
+    "bitcoin": "other", "vix": "other",
+}
+
+# Class-level trust note. For energy + agri the CONTINUATION warning comes FIRST
+# (staff clarification 07.07: the trap is more dangerous than the absence of signal).
+CLASS_TRUST: Dict[str, str] = {
+    "rates": ("Лихви — единственият клас с реален контрариан сигнал в позиционния "
+              "екстрем (IC h13 −0.25). НО го чети като ПОЗИЦИОНЕН РИСК / изчерпване "
+              "на basis-trade, НЕ като насочен мечи залог на хедж-фондовете — това "
+              "е арбитраж, не насочена позиция. Екстремните опашки "
+              "тук са редки."),
+    "fx": ("Валути — слаб, но чист контрариан в позиционния екстрем. Аргумент, "
+           "не сигнал."),
+    "metals": ("Метали — спекулантът е слаб предиктор; хеджърите (втората кохорта) "
+               "исторически казват повече. Чети реда на хеджърите, не само "
+               "спекуланта."),
+    "energy": ("⚠ Енергия — претовареният спекулативен LONG тук исторически "
+               "ПРОДЪЛЖАВА (континюейшън, +~20% на 6 месеца), не се обръща. Наивен "
+               "контрариан прочит на претоварен long е КАПАН. Суровият COT е близо "
+               "до шум като предиктор."),
+    "agri": ("⚠ Агро/softs — за някои (corn, cocoa) претовареният LONG ПРОДЪЛЖАВА "
+             "(континюейшън на 6м) — наивен контрариан е капан. Като цяло екстремът "
+             "тук значи волатилност, не посока."),
+    "index": ("Индекси — COT е практически ШУМ като предиктор (IC ≈ 0, p=0.68). Не "
+              "разказвай COT контрариан история за акциите; гледай цената/CTA таба."),
+    "other": ("Bitcoin/VIX — гранични; къса/особена история, чети екстремите с "
+              "повишен скептицизъм."),
+}
+
+# Per-market, per-tail М6 verdict. tail keys: "low" (washed, ≤10th pct) / "high"
+# (crowded, ≥90th pct). None = no М6 flag → the class note governs. N = episodes
+# (power label). All are argument-tier, none survived FDR.
+TAIL_FLAGS: Dict[str, Dict[str, Optional[str]]] = {
+    "jpy":        {"low": "слаб контрариан кандидат (стабилен; N=8) — аргумент, не решение", "high": None},
+    "platinum":   {"low": "слаб контрариан кандидат (стабилен; N=28) — аргумент, не решение", "high": None},
+    "soymeal":    {"low": "слаб контрариан кандидат (стабилен; N=13) — аргумент, не решение", "high": None},
+    "usultra10y": {"low": None, "high": "слаб контрариан кандидат (N=14) — но ПОЗИЦИОНЕН РИСК/basis-unwind, не насочен залог"},
+    "cocoa":      {"low": "слаб контрариан кандидат (стабилен; N=15) — аргумент, не решение",
+                   "high": "⚠ КОНТИНЮЕЙШЪН — претовареният long исторически ПРОДЪЛЖАВА (+~21%/38% на 3-6м; N=6), не контрариан"},
+    "wti":        {"low": None, "high": "⚠ КОНТИНЮЕЙШЪН — претовареният long продължава (+~21% на 6м; N=9), не контрариан"},
+    "heatingoil": {"low": None, "high": "⚠ КОНТИНЮЕЙШЪН — претовареният long продължава (+~20% на 6м; N=9), не контрариан"},
+    "corn":       {"low": None, "high": "⚠ КОНТИНЮЕЙШЪН — претовареният long продължава (+~21% на 6м; N=5), не контрариан"},
+}
+
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -365,8 +432,12 @@ def regime_label(row: Dict[str, Any]) -> str:
     primary_sign = sign(row.get("primary_net"))
     secondary_sign = sign(row.get("secondary_net"))
 
-    if primary_sign != 0 and secondary_sign != 0 and primary_sign != secondary_sign:
-        return "Divergence"
+    # M2A (analytics audit 07.07): check the informative percentile EXTREMES FIRST.
+    # "Divergence" (opposite speculator/hedger signs) is near-structural — commercials
+    # hedge the opposite side of speculators, so opposite signs are the norm, not a
+    # signal. Checked first (the old order), it fired for 68% of markets (26/38) and
+    # MASKED real extremes (e.g. cattle Crowded Long, us2y/5y/30y Crowded Short,
+    # copper/soyoil Contrarian Short). It now labels ONLY non-extreme markets.
     if pct >= 85 and delta > 0:
         return "Crowded Long"
     if pct <= 15 and delta < 0:
@@ -375,6 +446,8 @@ def regime_label(row: Dict[str, Any]) -> str:
         return "Contrarian Long"
     if pct >= 85 and price < 0:
         return "Contrarian Short"
+    if 15 < pct < 85 and primary_sign != 0 and secondary_sign != 0 and primary_sign != secondary_sign:
+        return "Divergence"
     return "Neutral / Transition"
 
 
@@ -455,6 +528,13 @@ def build_market_summary(market_meta: Dict[str, Any], payload: Dict[str, Any]) -
     latest["crossings"] = detect_crossings(cot, latest)
     latest["watchlist_score"] = score_market(latest, previous_4w)
     latest["market_key"] = market_meta["key"]
+    # M5 "Клас на доверие" — class-level trust note + per-tail М6 argument-tier flag.
+    _cls = MARKET_CLASS.get(market_meta["key"])
+    latest["trust_class"] = _cls
+    latest["class_trust_note"] = CLASS_TRUST.get(_cls)
+    _tf = TAIL_FLAGS.get(market_meta["key"], {})
+    latest["tail_flag_low"] = _tf.get("low")
+    latest["tail_flag_high"] = _tf.get("high")
     latest["market_title"] = market_meta["title"]
     latest["subtitle"] = market_meta.get("subtitle")
     latest["price_label"] = market_meta.get("price_label")
@@ -575,6 +655,10 @@ def main() -> None:
                 "crossings": summary.get("crossings", []),
                 "takeaway": summary.get("takeaway"),
                 "data_quality": summary.get("data_quality", []),
+                "trust_class": summary.get("trust_class"),
+                "class_trust_note": summary.get("class_trust_note"),
+                "tail_flag_low": summary.get("tail_flag_low"),
+                "tail_flag_high": summary.get("tail_flag_high"),
             }
         )
         weekly_changes.append(

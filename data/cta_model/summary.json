@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T22:08:00.805576Z",
+  "generated_at": "2026-07-07T14:22:05.464303Z",
   "markets": [
     {
       "market": "sp500",
@@ -48,8 +48,6 @@
       },
       "ensemble_signal": 0.9261,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 32.41,
-      "aum_scalar_bn": 35.0,
       "cftc_primary_net_contracts": -373468.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -100,8 +98,6 @@
       },
       "ensemble_signal": 0.9782,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 14.67,
-      "aum_scalar_bn": 15.0,
       "cftc_primary_net_contracts": -51062.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -152,8 +148,6 @@
       },
       "ensemble_signal": -0.7762,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -38.81,
-      "aum_scalar_bn": 50.0,
       "cftc_primary_net_contracts": -1938747.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -204,8 +198,6 @@
       },
       "ensemble_signal": -0.0198,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.03,
-      "aum_scalar_bn": 1.5,
       "cftc_primary_net_contracts": -18863.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -256,8 +248,6 @@
       },
       "ensemble_signal": -0.4893,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -2.45,
-      "aum_scalar_bn": 5.0,
       "cftc_primary_net_contracts": -15410.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -308,8 +298,6 @@
       },
       "ensemble_signal": -0.298,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.89,
-      "aum_scalar_bn": 3.0,
       "cftc_primary_net_contracts": 7567.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -360,8 +348,6 @@
       },
       "ensemble_signal": 0.5908,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 2.36,
-      "aum_scalar_bn": 4.0,
       "cftc_primary_net_contracts": -5352.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -412,8 +398,6 @@
       },
       "ensemble_signal": -0.7908,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -2.37,
-      "aum_scalar_bn": 3.0,
       "cftc_primary_net_contracts": -6130.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -464,8 +448,6 @@
       },
       "ensemble_signal": 0.0097,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 0.12,
-      "aum_scalar_bn": 12.0,
       "cftc_primary_net_contracts": 113010.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -516,8 +498,6 @@
       },
       "ensemble_signal": 0.1985,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 1.59,
-      "aum_scalar_bn": 8.0,
       "cftc_primary_net_contracts": 100295.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -568,8 +548,6 @@
       },
       "ensemble_signal": -0.352,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -0.7,
-      "aum_scalar_bn": 2.0,
       "cftc_primary_net_contracts": -69691.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -620,8 +598,6 @@
       },
       "ensemble_signal": -0.8675,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -26.02,
-      "aum_scalar_bn": 30.0,
       "cftc_primary_net_contracts": -1787552.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -672,8 +648,6 @@
       },
       "ensemble_signal": -0.8678,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -34.71,
-      "aum_scalar_bn": 40.0,
       "cftc_primary_net_contracts": -2165573.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -724,8 +698,6 @@
       },
       "ensemble_signal": -0.5697,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -14.24,
-      "aum_scalar_bn": 25.0,
       "cftc_primary_net_contracts": -350946.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -776,8 +748,6 @@
       },
       "ensemble_signal": -0.6718,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -6.72,
-      "aum_scalar_bn": 10.0,
       "cftc_primary_net_contracts": -248756.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -828,8 +798,6 @@
       },
       "ensemble_signal": -1.0,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -8.0,
-      "aum_scalar_bn": 8.0,
       "cftc_primary_net_contracts": -97092.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -880,8 +848,6 @@
       },
       "ensemble_signal": -0.2299,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.46,
-      "aum_scalar_bn": 2.0,
       "cftc_primary_net_contracts": -13816.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -932,8 +898,6 @@
       },
       "ensemble_signal": -0.6827,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -2.05,
-      "aum_scalar_bn": 3.0,
       "cftc_primary_net_contracts": -83377.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -984,8 +948,6 @@
       },
       "ensemble_signal": 0.3421,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 1.03,
-      "aum_scalar_bn": 3.0,
       "cftc_primary_net_contracts": 39111.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1036,8 +998,6 @@
       },
       "ensemble_signal": 1.0,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 5.0,
-      "aum_scalar_bn": 5.0,
       "cftc_primary_net_contracts": -56428.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1088,8 +1048,6 @@
       },
       "ensemble_signal": 0.2527,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 0.76,
-      "aum_scalar_bn": 3.0,
       "cftc_primary_net_contracts": 11659.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1140,8 +1098,6 @@
       },
       "ensemble_signal": 0.6052,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 3.03,
-      "aum_scalar_bn": 5.0,
       "cftc_primary_net_contracts": 68818.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1192,8 +1148,6 @@
       },
       "ensemble_signal": -0.0228,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.02,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": 8518.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1244,8 +1198,6 @@
       },
       "ensemble_signal": -0.3272,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.16,
-      "aum_scalar_bn": 0.5,
       "cftc_primary_net_contracts": -4712.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1296,8 +1248,6 @@
       },
       "ensemble_signal": -0.3053,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -1.22,
-      "aum_scalar_bn": 4.0,
       "cftc_primary_net_contracts": -82812.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1348,8 +1298,6 @@
       },
       "ensemble_signal": 0.1962,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 0.98,
-      "aum_scalar_bn": 5.0,
       "cftc_primary_net_contracts": 8110.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1400,8 +1348,6 @@
       },
       "ensemble_signal": 0.9396,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 1.88,
-      "aum_scalar_bn": 2.0,
       "cftc_primary_net_contracts": 71366.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1452,8 +1398,6 @@
       },
       "ensemble_signal": 0.4233,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 0.85,
-      "aum_scalar_bn": 2.0,
       "cftc_primary_net_contracts": 6254.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1504,8 +1448,6 @@
       },
       "ensemble_signal": 0.0205,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 0.08,
-      "aum_scalar_bn": 4.0,
       "cftc_primary_net_contracts": 36679.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1556,8 +1498,6 @@
       },
       "ensemble_signal": 0.2853,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": 0.57,
-      "aum_scalar_bn": 2.0,
       "cftc_primary_net_contracts": -71206.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1608,8 +1548,6 @@
       },
       "ensemble_signal": 0.9248,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 0.92,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": 103589.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1660,8 +1598,6 @@
       },
       "ensemble_signal": -0.0463,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.05,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": 8601.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1712,8 +1648,6 @@
       },
       "ensemble_signal": -0.3554,
       "ensemble_direction": "net short",
-      "estimated_position_bn": -0.36,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": 14002.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1764,8 +1698,6 @@
       },
       "ensemble_signal": -0.3285,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.33,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": -185483.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1816,8 +1748,6 @@
       },
       "ensemble_signal": -0.0313,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.02,
-      "aum_scalar_bn": 0.5,
       "cftc_primary_net_contracts": -22958.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1868,8 +1798,6 @@
       },
       "ensemble_signal": 0.6451,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 0.32,
-      "aum_scalar_bn": 0.5,
       "cftc_primary_net_contracts": 38445.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1920,8 +1848,6 @@
       },
       "ensemble_signal": 1.0,
       "ensemble_direction": "net long",
-      "estimated_position_bn": 1.0,
-      "aum_scalar_bn": 1.0,
       "cftc_primary_net_contracts": 126025.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     },
@@ -1972,8 +1898,6 @@
       },
       "ensemble_signal": -0.0199,
       "ensemble_direction": "mixed / transitioning",
-      "estimated_position_bn": -0.01,
-      "aum_scalar_bn": 0.5,
       "cftc_primary_net_contracts": -25560.0,
       "methodology_note": "TSMOM ensemble of 16/32/52-week lookbacks, vol-normalized (12-week realized vol). Signal capped at ±1.0. AUM scalar is an estimate — proprietary prime brokerage data (GS, UBS) would give exact CTA-only figures. CFTC Leveraged Money is broader than CTA-only and includes hedge funds."
     }
