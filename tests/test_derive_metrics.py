@@ -142,3 +142,21 @@ def test_pct_change_reference_no_div_by_zero():
 def test_percentile_empty_and_zscore_short():
     assert dm.percentile([], 5.0) == 50.0       # primitive default (now unreachable in pipeline)
     assert dm.zscore([5.0], 5.0) == 0.0
+
+
+# ── O3 window label: carries per-market N + "несравним между пазари" ──────────
+
+def test_percentile_window_label_carries_n_and_incomparability():
+    # A real percentile → full-history label with the exact week count on it.
+    lbl = dm.percentile_window_label(1046, 5.93)
+    assert lbl is not None
+    assert "1046" in lbl                 # per-market N is visible (229 vs 1046)
+    assert "несравним между пазари" in lbl
+    assert "пълна история" in lbl
+    # Different market, different N → different label (the 229↔1046 spread).
+    assert dm.percentile_window_label(229, 58.5) != lbl
+
+
+def test_percentile_window_label_none_when_no_percentile():
+    # No number → no window claim (missing/thin/degenerate markets).
+    assert dm.percentile_window_label(1046, None) is None

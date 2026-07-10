@@ -719,6 +719,46 @@
     }
     #error { color: var(--short); }
 
+    /* ── O4 badge (наблюдение, не сигнал · хоризонт) — flot-wide carrier ── */
+    .o4-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em;
+      color: var(--info);
+      background: rgba(56,189,248,0.10);
+      border: 1px solid rgba(56,189,248,0.35);
+      border-radius: 999px; padding: 0.18rem 0.7rem;
+      text-transform: uppercase;
+    }
+    .o4-badge .sep { opacity: 0.5; }
+    .o4-badge .horizon { color: var(--text-muted); text-transform: none; font-weight: 500; }
+
+    /* ── Class-trust chip + legend (B6 — hierarchy on the face) ── */
+    .class-chip {
+      display: inline-block; font-size: 0.68rem; font-weight: 600;
+      padding: 0.05rem 0.4rem; border-radius: 4px; margin-left: 0.35rem;
+      vertical-align: middle; cursor: help; white-space: nowrap;
+    }
+    .class-chip.ct-strong { color: #c7d2fe; background: rgba(129,140,248,0.16); border: 1px solid rgba(129,140,248,0.4); }
+    .class-chip.ct-weak   { color: #cbd5e1; background: rgba(100,116,139,0.16); border: 1px solid rgba(100,116,139,0.4); }
+    .class-chip.ct-trap   { color: #fcd9a8; background: rgba(245,158,11,0.14);  border: 1px solid rgba(245,158,11,0.45); }
+    .class-chip.ct-noise  { color: #9aa4b8; background: rgba(100,116,139,0.10); border: 1px dashed rgba(100,116,139,0.5); }
+    .pct-window {
+      display: block; font-size: 0.7rem; color: var(--text-muted);
+      margin-top: 0.1rem; font-weight: 400;
+    }
+    .class-legend {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.85rem 1rem; margin-bottom: 1rem;
+      font-size: 0.82rem; color: var(--text-muted);
+    }
+    .class-legend .lg-title {
+      color: var(--text); font-weight: 600; font-size: 0.86rem;
+      margin-bottom: 0.5rem; display: block;
+    }
+    .class-legend ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+    .class-legend li { display: flex; gap: 0.5rem; align-items: baseline; }
+    .class-legend li .rank { color: var(--text-muted); font-variant-numeric: tabular-nums; min-width: 1.1rem; }
+
     /* ── Responsive ── */
     @media (max-width: 720px) {
       header h1 { font-size: 1.25rem; }
@@ -747,6 +787,11 @@
 <header class="site">
   <div class="container">
     <h1>Пазарни позиции — седмичен наратив</h1>
+    <div style="margin:0.35rem 0 0.6rem">
+      <span class="o4-badge" title="Дескриптивен позиционен инвентар. Наблюдение, не trade-сигнал; съвпадащ (coincident) — не изпреварва пазара.">
+        Наблюдение, не сигнал <span class="sep">·</span> <span class="horizon">coincident</span>
+      </span>
+    </div>
     <p class="lede">
       Какво направиха големите играчи (хедж фондове, институционални управляващи, производители) на 38 фючърсни пазара миналата седмица.
       Данните идват от <a href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm" target="_blank">CFTC COT отчета</a> —
@@ -812,12 +857,16 @@
       <h2>Пълен преглед — 38 пазара
         <span class="sub">Сортирайте по колоните. Кликнете ред за разбивка по групи играчи и обяснение.</span>
       </h2>
+      <div class="class-legend" id="class-legend">
+        <span class="lg-title">Клас на доверие — колко тежи позиционният екстрем (низходящо; одит 07.07, аргумент за анализа, не решение)</span>
+        <ol id="class-legend-list"></ol>
+      </div>
       <div class="table-wrap">
         <table class="full" id="full-table">
           <thead>
             <tr>
               <th data-sort="title">Пазар</th>
-              <th data-sort="primary_percentile">Перцентил <small>(спекулативни)</small></th>
+              <th data-sort="primary_percentile">Перцентил <small>(спекулативни · пълна история, несравним между пазари)</small></th>
               <th data-sort="primary_zscore">Z-score</th>
               <th data-sort="primary_delta_4w">Δ 4 седмици</th>
               <th data-sort="regime">Режим</th>
@@ -1291,6 +1340,40 @@ const REGIME_BG = {
     desc: 'Нетната позиция за последната седмица липсва (или историята е твърде къса) — перцентил, z-score и режим не са изчислени, за да не покажем фалшиво число.' },
 };
 
+// ── M5 "Клас на доверие" на лицето (B6) ──────────────────────────────────────
+// The COT contrarian signal differs RADICALLY by class (audit 07.07). This is the
+// same trust hierarchy already in the JSON (trust_class / class_trust_note) — here
+// as short, ALWAYS-VISIBLE labels so the hierarchy Лихви→FX→метали→(⚠)енергия/агро→
+// индекси reads off the face, not only inside the expanded detail. The full note
+// stays in the row tooltip + detail panel; these are faithful compressions of it.
+// order = trust descending; tier = one-line "how to read this class".
+const CLASS_TRUST_TIER = {
+  rates:  { label: 'Лихви',      order: 1, cls: 'ct-strong', tier: 'единственият реален контрариан (IC −0.25) — но позиционен риск/изчерпване на basis-trade, не посока' },
+  fx:     { label: 'Валути',     order: 2, cls: 'ct-weak',   tier: 'слаб, но чист контрариан — аргумент, не сигнал' },
+  metals: { label: 'Метали',     order: 3, cls: 'ct-weak',   tier: 'спекулантът е слаб предиктор — чети реда на хеджъра' },
+  energy: { label: 'Енергия',    order: 4, cls: 'ct-trap',   tier: '⚠ претовареният long ПРОДЪЛЖАВА (континюейшън-капан, +~20%/6м), не се обръща' },
+  agri:   { label: 'Агро/softs', order: 5, cls: 'ct-trap',   tier: '⚠ част от опашките са континюейшън-капан; екстремът значи волатилност, не посока' },
+  index:  { label: 'Индекси',    order: 6, cls: 'ct-noise',  tier: 'COT е практически ШУМ (IC≈0, p=0.68) — гледай цената/CTA, не COT' },
+  other:  { label: 'Bitcoin/VIX',order: 7, cls: 'ct-noise',  tier: 'гранични; къса/особена история — чети екстремите с повишен скептицизъм' },
+};
+
+// Percentile window label (O3 canon §1 rule 2/3). Prefer the JSON field
+// (regenerated by derive_metrics); fall back to building it from history_weeks
+// (already in the JSON today) so the face shows the 229↔1046 spread immediately.
+function pctWindowLabel(r) {
+  if (r && r.percentile_window) return r.percentile_window;
+  if (r && r.history_weeks) return `пълна история, ${r.history_weeks} седм — несравним между пазари`;
+  return '';
+}
+
+// Compact class-trust chip for a market row (hierarchy visible on the face).
+function classChip(r) {
+  const t = r && r.trust_class ? CLASS_TRUST_TIER[r.trust_class] : null;
+  if (!t) return '';
+  const note = (r.class_trust_note || t.tier).replace(/"/g, '&quot;');
+  return `<span class="class-chip ${t.cls}" title="${note}">${t.label}</span>`;
+}
+
 // ════════════════════════════════════════════════════════════════════════════
 // State
 // ════════════════════════════════════════════════════════════════════════════
@@ -1701,10 +1784,11 @@ function renderExtremes() {
         : `<span class="num short" title="${tooltip}">${r.primary_percentile.toFixed(0)}-и перцентил</span> — позицията е към долния край за ${periodLabel} (екстремно късо)`;
     }
     return `<div class="change-card ${cls}">
-      <div class="market">${marketLabel(r.market)}</div>
+      <div class="market">${marketLabel(r.market)}${classChip(r)}</div>
       <div class="sector">${sectorLabel} · ${marketSub(r.market)}</div>
       <div class="delta" style="margin-top:0.3rem">📍 Сега: ${stateLabel}</div>
       <div class="delta" style="margin-top:0.2rem; font-size:0.84rem">${pctLabel}</div>
+      <div class="pct-window" style="margin-top:0.15rem">${pctWindowLabel(r)}</div>
       <div class="takeaway">${takeaway}</div>
     </div>`;
   }).join('');
@@ -1888,8 +1972,22 @@ function renderCtaTriggers() {
 // Tab 3 — Full table
 // ════════════════════════════════════════════════════════════════════════════
 
+function renderClassLegend() {
+  const list = $('class-legend-list');
+  if (!list) return;
+  // Show only classes actually present, ordered by trust (descending).
+  const present = new Set(state.watchlist.map(r => r.trust_class).filter(Boolean));
+  const rows = Object.entries(CLASS_TRUST_TIER)
+    .filter(([k]) => present.has(k))
+    .sort((a, b) => a[1].order - b[1].order);
+  list.innerHTML = rows.map(([, t], i) =>
+    `<li><span class="rank">${i + 1}.</span><span><span class="class-chip ${t.cls}" style="margin-left:0">${t.label}</span> — ${t.tier}</span></li>`
+  ).join('');
+}
+
 function renderFullTable() {
   applyFullTableSort();
+  renderClassLegend();
   const tbody = $('full-table-body');
   tbody.innerHTML = state.watchlist.map(r => fullRowHtml(r)).join('');
   // Mark sort indicator
@@ -1934,12 +2032,16 @@ function fullRowHtml(r) {
   const pctBar = pct != null
     ? `<span class="pct-bar"><span class="pct-bar-fill" style="width:${pct}%"></span></span>`
     : '';
+  // Window label visible under the number: makes the per-market N (229↔1046)
+  // and cross-market incomparability read off the face, not only on hover.
+  const winLbl = pct != null ? pctWindowLabel(r) : '';
+  const pctWin = winLbl ? `<span class="pct-window" title="${winLbl}">${winLbl}</span>` : '';
   return `<tr class="market-row" data-key="${r.market}">
     <td class="market-cell">
-      <div class="name">${marketLabel(r.market)}</div>
+      <div class="name">${marketLabel(r.market)}${classChip(r)}</div>
       <div class="sub">${sectorLabel} · ${marketSub(r.market)}</div>
     </td>
-    <td>${pct != null ? pct.toFixed(0) + '-и' : '—'}${pctBar}</td>
+    <td>${pct != null ? pct.toFixed(0) + '-и' : '—'}${pctBar}${pctWin}</td>
     <td class="${numClass(r.primary_zscore)}">${fmtZ(r.primary_zscore)}</td>
     <td class="${numClass(r.primary_delta_4w)}">${fmt(r.primary_delta_4w)}</td>
     <td>${regimeHtml}</td>

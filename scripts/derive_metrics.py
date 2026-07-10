@@ -187,6 +187,20 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 
+def percentile_window_label(history_weeks: int, primary_percentile: Optional[float]) -> Optional[str]:
+    """O3 window label for a COT percentile (canon §1 rule 2/3).
+
+    COT percentile is a FULL-HISTORY rank over a per-market, different-length
+    window (229→1046 weeks), so a "90th" in one market is NOT comparable to a
+    "90th" in another. The label carries both facts to the face. Returns None
+    when there is no percentile (missing/thin/degenerate) — never label a
+    non-number.
+    """
+    if primary_percentile is None:
+        return None
+    return f"пълна история, {history_weeks} седм — несравним между пазари"
+
+
 def percentile(values: List[float], current: float) -> float:
     if not values:
         return 50.0
@@ -632,6 +646,14 @@ def main() -> None:
         summary = build_market_summary(market, payload)
         history_weeks = len(payload.get("cot", []))
         history_first_date = payload.get("metadata", {}).get("history_first_date")
+        # O3 window label (canon §1 rule 2/3): every percentile carries its window
+        # ON the face and in the JSON. COT is FULL-HISTORY over a per-market,
+        # different-length window (229→1046 wks), so it is NOT comparable across
+        # markets — the label states this explicitly. None when the percentile is
+        # unknown (missing/thin/degenerate) so no window is claimed for a non-number.
+        percentile_window = percentile_window_label(
+            history_weeks, summary.get("primary_percentile")
+        )
         watchlist.append(
             {
                 "market": summary["market_key"],
@@ -642,6 +664,7 @@ def main() -> None:
                 "regime": summary.get("regime"),
                 "history_weeks": history_weeks,
                 "history_first_date": history_first_date,
+                "percentile_window": percentile_window,
                 "primary_percentile": summary.get("primary_percentile"),
                 "primary_zscore": summary.get("primary_zscore"),
                 "primary_net": summary.get("primary_net"),
