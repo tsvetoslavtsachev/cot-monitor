@@ -15707,22 +15707,6 @@
   ],
   "prices": [
     {
-      "timestamp": 1467691200,
-      "close": 3104.0
-    },
-    {
-      "timestamp": 1467777600,
-      "close": 3119.0
-    },
-    {
-      "timestamp": 1467864000,
-      "close": 3149.0
-    },
-    {
-      "timestamp": 1467950400,
-      "close": 3136.0
-    },
-    {
       "timestamp": 1468209600,
       "close": 3138.0
     },
@@ -25757,6 +25741,26 @@
     {
       "timestamp": 1782964800,
       "close": 4949.0
+    },
+    {
+      "timestamp": 1783310400,
+      "close": 5602.0
+    },
+    {
+      "timestamp": 1783396800,
+      "close": 5667.0
+    },
+    {
+      "timestamp": 1783483200,
+      "close": 5959.0
+    },
+    {
+      "timestamp": 1783569600,
+      "close": 6309.0
+    },
+    {
+      "timestamp": 1783656000,
+      "close": 5973.0
     }
   ]
 }
