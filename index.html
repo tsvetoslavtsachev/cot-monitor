@@ -385,6 +385,10 @@
     }
     table.full td.market-cell { width: 32%; }
     table.full td.market-cell .name { font-weight: 600; color: var(--text); }
+    /* Името е линк към графиката (ФОРМА-КАНОН §1, правило 2) — запазва вида си,
+       подчертава се при hover, за да личи че е кликаемо. */
+    table.full td.market-cell .name a { color: inherit; text-decoration: none; }
+    table.full td.market-cell .name a:hover { color: var(--accent); text-decoration: underline; }
     table.full td.market-cell .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }
     .pct-bar {
       display: inline-block;
@@ -865,12 +869,12 @@
         <table class="full" id="full-table">
           <thead>
             <tr>
-              <th data-sort="title">Пазар</th>
-              <th data-sort="primary_percentile">Перцентил <small>(спекулативни · пълна история, несравним между пазари)</small></th>
-              <th data-sort="primary_zscore">Z-score</th>
-              <th data-sort="primary_delta_4w">Δ 4 седмици</th>
-              <th data-sort="regime">Режим</th>
-              <th data-sort="notional_usd_bn">Нет позиция (≈$B)</th>
+              <th data-sort="title" title="Фючърсният пазар. Клик на реда разгъва разбивката по групи играчи; клик на името отваря графиката в TradingView.">Пазар</th>
+              <th data-sort="primary_percentile" title="Къде е текущата спекулативна нет позиция спрямо собствената история на пазара. 90 = по-високо от 90% от миналите наблюдения. Несравним между пазари (различна дължина история).">Перцентил <small>(спекулативни · пълна история, несравним между пазари)</small></th>
+              <th data-sort="primary_zscore" title="Колко стандартни отклонения над/под историческата средна е позицията. +2 = необичайно високо, −2 = необичайно ниско. По-чувствителен към екстремни outliers от перцентила.">Z-score</th>
+              <th data-sort="primary_delta_4w" title="Промяна на нетната спекулативна позиция за последните 4 седмици (в контракти). Плюс = добавен long или намален short.">Δ 4 седмици</th>
+              <th data-sort="regime" title="Класификация на позиционната картина: Пренаситен дълъг/къс · Контра-сигнал · Дивергенция · Неутрално. Обяснения в таб „Речник".">Режим</th>
+              <th data-sort="notional_usd_bn" title="Номинална доларова стойност на нетната позиция (контракти × мултипликатор × цена). Номинал, НЕ риск — не сравнявай директно между инструменти (виж DV01 в Речника).">Нет позиция (≈$B)</th>
             </tr>
           </thead>
           <tbody id="full-table-body"></tbody>
@@ -1237,45 +1241,47 @@ const SECTOR_GROUPS = {
 };
 
 // Per-market translation: Bulgarian name + descriptive subtitle
+// tv = непрекъснат фючърсен символ в TradingView (напр. ES1!). Ползва се само за
+// линк на името в пълната таблица: https://www.tradingview.com/symbols/<tv>/
 const MARKET_BG = {
-  sp500:      { name: 'S&P 500',                    sub: 'Бенчмарк на американските акции' },
-  nasdaq:     { name: 'Nasdaq 100',                 sub: 'Технологични компании, мега капове' },
-  russell:    { name: 'Russell 2000',               sub: 'Малки американски компании' },
-  us2y:       { name: 'US 2-годишни облигации',     sub: 'Кратък край (Fed expectations)' },
-  us5y:       { name: 'US 5-годишни облигации',     sub: 'Среден край на кривата' },
-  us10y:      { name: 'US 10-годишни облигации',    sub: 'Бенчмарк дюрация' },
-  usultra10y: { name: 'Ultra 10-годишни облигации', sub: 'Дълга дюрация (бенчмарк)' },
-  us30y:      { name: 'US 30-годишни облигации',    sub: 'Дълъг край (long bond)' },
-  vix:        { name: 'VIX',                        sub: 'Имплицитна волатилност на S&P 500' },
-  eurfx:      { name: 'Евро (EUR/USD)',             sub: 'Главна европейска валута' },
-  gbpfx:      { name: 'Британски паунд (GBP/USD)',  sub: 'Британска валута' },
-  jpy:        { name: 'Японска йена (JPY)',         sub: 'Carry-trade финансираща валута' },
-  chf:        { name: 'Швейцарски франк (CHF)',     sub: 'Защитна валута' },
-  cad:        { name: 'Канадски долар (CAD)',       sub: 'Петролно-чувствителна валута' },
-  aud:        { name: 'Австралийски долар (AUD)',   sub: 'Чувствителна към китайско търсене' },
-  dxy:        { name: 'Долар индекс (DXY)',         sub: 'USD срещу 6 валути' },
-  bitcoin:    { name: 'Bitcoin',                    sub: 'Водеща криптовалута' },
-  gold:       { name: 'Злато',                      sub: 'Защитен / реален актив' },
-  silver:     { name: 'Сребро',                     sub: 'Полу-индустриален метал' },
-  copper:     { name: 'Мед',                        sub: 'Индустриален барометър ("Dr. Copper")' },
-  platinum:   { name: 'Платина',                    sub: 'Авто-катализатор метал' },
-  palladium:  { name: 'Паладий',                    sub: 'Авто-катализатор метал' },
-  wti:        { name: 'WTI петрол',                 sub: 'Американски бенчмарк суров нефт' },
-  brent:      { name: 'Brent петрол',               sub: 'Глобален бенчмарк суров нефт' },
-  natgas:     { name: 'Природен газ (Henry Hub)',   sub: 'Американски газов бенчмарк' },
-  rbob:       { name: 'Бензин (RBOB)',              sub: 'Преработен продукт' },
-  heatingoil: { name: 'Дизел (NY Harbor ULSD)',     sub: 'Ultra Low Sulfur Diesel — средни дестилати' },
-  corn:       { name: 'Царевица',                   sub: 'Зърно за фураж и етанол' },
-  soybeans:   { name: 'Соя',                        sub: 'Маслодайно зърно' },
-  wheat:      { name: 'Пшеница (Чикаго SRW)',       sub: 'Мека червена пшеница' },
-  soyoil:     { name: 'Соево олио',                 sub: 'Растителни масла' },
-  soymeal:    { name: 'Соев шрот',                  sub: 'Протеинова храна' },
-  coffee:     { name: 'Кафе (Арабика)',             sub: 'ICE Coffee C' },
-  sugar:      { name: 'Захар (сурова)',             sub: 'ICE No.11' },
-  cocoa:      { name: 'Какао',                      sub: 'ICE NY' },
-  cotton:     { name: 'Памук',                      sub: 'ICE No.2' },
-  cattle:     { name: 'Едър рогат добитък',         sub: 'Живи говеда (CME)' },
-  hogs:       { name: 'Свине',                      sub: 'CME Lean Hogs' },
+  sp500:      { name: 'S&P 500',                    sub: 'Бенчмарк на американските акции',        tv: 'ES1!' },
+  nasdaq:     { name: 'Nasdaq 100',                 sub: 'Технологични компании, мега капове',      tv: 'NQ1!' },
+  russell:    { name: 'Russell 2000',               sub: 'Малки американски компании',              tv: 'RTY1!' },
+  us2y:       { name: 'US 2-годишни облигации',     sub: 'Кратък край (Fed expectations)',          tv: 'ZT1!' },
+  us5y:       { name: 'US 5-годишни облигации',     sub: 'Среден край на кривата',                  tv: 'ZF1!' },
+  us10y:      { name: 'US 10-годишни облигации',    sub: 'Бенчмарк дюрация',                        tv: 'ZN1!' },
+  usultra10y: { name: 'Ultra 10-годишни облигации', sub: 'Дълга дюрация (бенчмарк)',                tv: 'TN1!' },
+  us30y:      { name: 'US 30-годишни облигации',    sub: 'Дълъг край (long bond)',                  tv: 'ZB1!' },
+  vix:        { name: 'VIX',                        sub: 'Имплицитна волатилност на S&P 500',       tv: 'VX1!' },
+  eurfx:      { name: 'Евро (EUR/USD)',             sub: 'Главна европейска валута',                tv: '6E1!' },
+  gbpfx:      { name: 'Британски паунд (GBP/USD)',  sub: 'Британска валута',                        tv: '6B1!' },
+  jpy:        { name: 'Японска йена (JPY)',         sub: 'Carry-trade финансираща валута',          tv: '6J1!' },
+  chf:        { name: 'Швейцарски франк (CHF)',     sub: 'Защитна валута',                          tv: '6S1!' },
+  cad:        { name: 'Канадски долар (CAD)',       sub: 'Петролно-чувствителна валута',            tv: '6C1!' },
+  aud:        { name: 'Австралийски долар (AUD)',   sub: 'Чувствителна към китайско търсене',       tv: '6A1!' },
+  dxy:        { name: 'Долар индекс (DXY)',         sub: 'USD срещу 6 валути',                       tv: 'DX1!' },
+  bitcoin:    { name: 'Bitcoin',                    sub: 'Водеща криптовалута',                     tv: 'BTC1!' },
+  gold:       { name: 'Злато',                      sub: 'Защитен / реален актив',                  tv: 'GC1!' },
+  silver:     { name: 'Сребро',                     sub: 'Полу-индустриален метал',                 tv: 'SI1!' },
+  copper:     { name: 'Мед',                        sub: 'Индустриален барометър ("Dr. Copper")',   tv: 'HG1!' },
+  platinum:   { name: 'Платина',                    sub: 'Авто-катализатор метал',                  tv: 'PL1!' },
+  palladium:  { name: 'Паладий',                    sub: 'Авто-катализатор метал',                  tv: 'PA1!' },
+  wti:        { name: 'WTI петрол',                 sub: 'Американски бенчмарк суров нефт',          tv: 'CL1!' },
+  brent:      { name: 'Brent петрол',               sub: 'Глобален бенчмарк суров нефт',            tv: 'BZ1!' },
+  natgas:     { name: 'Природен газ (Henry Hub)',   sub: 'Американски газов бенчмарк',              tv: 'NG1!' },
+  rbob:       { name: 'Бензин (RBOB)',              sub: 'Преработен продукт',                      tv: 'RB1!' },
+  heatingoil: { name: 'Дизел (NY Harbor ULSD)',     sub: 'Ultra Low Sulfur Diesel — средни дестилати', tv: 'HO1!' },
+  corn:       { name: 'Царевица',                   sub: 'Зърно за фураж и етанол',                 tv: 'ZC1!' },
+  soybeans:   { name: 'Соя',                        sub: 'Маслодайно зърно',                        tv: 'ZS1!' },
+  wheat:      { name: 'Пшеница (Чикаго SRW)',       sub: 'Мека червена пшеница',                    tv: 'ZW1!' },
+  soyoil:     { name: 'Соево олио',                 sub: 'Растителни масла',                        tv: 'ZL1!' },
+  soymeal:    { name: 'Соев шрот',                  sub: 'Протеинова храна',                        tv: 'ZM1!' },
+  coffee:     { name: 'Кафе (Арабика)',             sub: 'ICE Coffee C',                            tv: 'KC1!' },
+  sugar:      { name: 'Захар (сурова)',             sub: 'ICE No.11',                               tv: 'SB1!' },
+  cocoa:      { name: 'Какао',                      sub: 'ICE NY',                                  tv: 'CC1!' },
+  cotton:     { name: 'Памук',                      sub: 'ICE No.2',                                tv: 'CT1!' },
+  cattle:     { name: 'Едър рогат добитък',         sub: 'Живи говеда (CME)',                       tv: 'LE1!' },
+  hogs:       { name: 'Свине',                      sub: 'CME Lean Hogs',                           tv: 'HE1!' },
 };
 
 // Cohort definitions per report family
@@ -1425,6 +1431,20 @@ function marketLabel(key) {
 function marketSub(key) {
   const m = MARKET_BG[key];
   return m ? m.sub : '';
+}
+// URL към графиката на непрекъснатия фючърс в TradingView (или null).
+function marketTvUrl(key) {
+  const m = MARKET_BG[key];
+  return m && m.tv ? `https://www.tradingview.com/symbols/${m.tv}/` : null;
+}
+// Име на пазара като линк (ФОРМА-КАНОН §1, правило 2). САМО за HTML контексти —
+// НЕ ползвай в CSV/Markdown/canvas експортите (там остава marketLabel plain text).
+function marketNameHtml(key) {
+  const label = marketLabel(key);
+  const url = marketTvUrl(key);
+  if (!url) return label;
+  const sym = MARKET_BG[key].tv;
+  return `<a href="${url}" target="_blank" rel="noopener" title="Отвори графиката на ${label} в TradingView (непрекъснат фючърс ${sym})" onclick="event.stopPropagation()">${label}</a>`;
 }
 
 async function fetchJson(url) {
@@ -2038,7 +2058,7 @@ function fullRowHtml(r) {
   const pctWin = winLbl ? `<span class="pct-window" title="${winLbl}">${winLbl}</span>` : '';
   return `<tr class="market-row" data-key="${r.market}">
     <td class="market-cell">
-      <div class="name">${marketLabel(r.market)}${classChip(r)}</div>
+      <div class="name">${marketNameHtml(r.market)}${classChip(r)}</div>
       <div class="sub">${sectorLabel} · ${marketSub(r.market)}</div>
     </td>
     <td>${pct != null ? pct.toFixed(0) + '-и' : '—'}${pctBar}${pctWin}</td>
