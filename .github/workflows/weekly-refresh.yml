@@ -2,7 +2,11 @@ name: Weekly COT Refresh
 
 on:
   schedule:
-    - cron: '0 21 * * 5'   # Friday 21:00 UTC = 5:00 PM ET, after CFTC 3:30 PM ET release
+    # Sat 08:00 UTC — deliberately AFTER collectors/cot.yml (Sat 07:30 UTC) writes
+    # the weekly data-core base. The old Fri 21:00 slot ran BEFORE that Saturday
+    # write, so the dashboard read the base one cycle behind by construction and
+    # froze silently when a holiday slipped a reporting cycle (the Jul-4 2026 bug).
+    - cron: '0 8 * * 6'
   workflow_dispatch:        # Allow manual trigger
 
 permissions:
@@ -69,6 +73,14 @@ jobs:
       - name: Assert base-sourced (no silent CFTC fallback)
         if: ${{ env.DATACORE_PAT != '' }}
         run: python scripts/assert_base_sourced.py
+
+      # Freshness guard: the COT report dates come from the data-core base (written
+      # Sat 07:30 UTC). Prices (Yahoo) and manifest.generated_at move on EVERY run,
+      # so a commit ALWAYS lands and a frozen COT frontier can ship green. Fail RED
+      # here — before any build/commit/deploy — when the newest report date across
+      # data/markets/*.json is stale (a missed weekly reporting cycle).
+      - name: Assert data freshness (COT frontier advanced)
+        run: python scripts/check_freshness.py
 
       - name: Build derived metrics
         run: python scripts/derive_metrics.py
