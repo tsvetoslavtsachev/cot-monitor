@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 2205.0,
       "tertiary_net": 3206.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 19151.0,
+      "primary_long": 4166.0,
+      "primary_short": 10155.0,
+      "primary_net": -5989.0,
+      "secondary_long": 1506.0,
+      "secondary_short": 1196.0,
+      "secondary_net": 310.0,
+      "tertiary_long": 6180.0,
+      "tertiary_short": 2444.0,
+      "tertiary_net": 3736.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 19157.0,
+      "primary_long": 3626.0,
+      "primary_short": 10008.0,
+      "primary_net": -6382.0,
+      "secondary_long": 1622.0,
+      "secondary_short": 1185.0,
+      "secondary_net": 437.0,
+      "tertiary_long": 6554.0,
+      "tertiary_short": 2434.0,
+      "tertiary_net": 4120.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 625.7999877929688
-    },
     {
       "timestamp": 1468296000,
       "close": 629.0
@@ -25752,7 +25778,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 1280.5
+      "close": 1276.300048828125
     }
   ]
 }

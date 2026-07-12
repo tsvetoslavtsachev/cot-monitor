@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 21087.0,
       "tertiary_net": 192404.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1643920.0,
+      "primary_long": 221284.0,
+      "primary_short": 286338.0,
+      "primary_net": -65054.0,
+      "secondary_long": 247002.0,
+      "secondary_short": 278241.0,
+      "secondary_net": -31239.0,
+      "tertiary_long": 203554.0,
+      "tertiary_short": 18504.0,
+      "tertiary_net": 185050.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1678099.0,
+      "primary_long": 238315.0,
+      "primary_short": 298692.0,
+      "primary_net": -60377.0,
+      "secondary_long": 214416.0,
+      "secondary_short": 252365.0,
+      "secondary_net": -37949.0,
+      "tertiary_long": 206368.0,
+      "tertiary_short": 18923.0,
+      "tertiary_net": 187445.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 2.7019999027252197
-    },
     {
       "timestamp": 1468296000,
       "close": 2.7339999675750732
@@ -25764,7 +25790,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 2.947999954223633
+      "close": 2.940000057220459
     }
   ]
 }

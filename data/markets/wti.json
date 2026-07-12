@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 702110.0,
       "tertiary_net": -623932.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2568532.0,
+      "primary_long": 199357.0,
+      "primary_short": 105644.0,
+      "primary_net": 93713.0,
+      "secondary_long": 709925.0,
+      "secondary_short": 325612.0,
+      "secondary_net": 384313.0,
+      "tertiary_long": 79748.0,
+      "tertiary_short": 683973.0,
+      "tertiary_net": -604225.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2560340.0,
+      "primary_long": 186489.0,
+      "primary_short": 111810.0,
+      "primary_net": 74679.0,
+      "secondary_long": 734977.0,
+      "secondary_short": 330736.0,
+      "secondary_net": 404241.0,
+      "tertiary_long": 80324.0,
+      "tertiary_short": 665907.0,
+      "tertiary_net": -585583.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 44.7599983215332
-    },
     {
       "timestamp": 1468296000,
       "close": 46.79999923706055
@@ -25760,7 +25786,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 71.51000213623047
+      "close": 71.41000366210938
     }
   ]
 }

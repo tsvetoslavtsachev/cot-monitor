@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 10426.0,
       "tertiary_net": 74217.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 722118.0,
+      "primary_long": 129157.0,
+      "primary_short": 36925.0,
+      "primary_net": 92232.0,
+      "secondary_long": 212310.0,
+      "secondary_short": 393492.0,
+      "secondary_net": -181182.0,
+      "tertiary_long": 88832.0,
+      "tertiary_short": 8189.0,
+      "tertiary_net": 80643.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 737817.0,
+      "primary_long": 123096.0,
+      "primary_short": 33868.0,
+      "primary_net": 89228.0,
+      "secondary_long": 218959.0,
+      "secondary_short": 391726.0,
+      "secondary_net": -172767.0,
+      "tertiary_long": 84427.0,
+      "tertiary_short": 11172.0,
+      "tertiary_net": 73255.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 30.25
-    },
     {
       "timestamp": 1468296000,
       "close": 30.709999084472656
@@ -25756,7 +25782,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 68.94999694824219
+      "close": 68.9800033569336
     }
   ]
 }

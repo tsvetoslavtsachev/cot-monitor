@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1005,
+    "record_count": 1007,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1005,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1007,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15087,6 +15087,36 @@
       "tertiary_long": 81181.0,
       "tertiary_short": 35494.0,
       "tertiary_net": 45687.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 354497.0,
+      "primary_long": 73565.0,
+      "primary_short": 75582.0,
+      "primary_net": -2017.0,
+      "secondary_long": 40440.0,
+      "secondary_short": 73098.0,
+      "secondary_net": -32658.0,
+      "tertiary_long": 74221.0,
+      "tertiary_short": 37072.0,
+      "tertiary_net": 37149.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 372859.0,
+      "primary_long": 85768.0,
+      "primary_short": 80656.0,
+      "primary_net": 5112.0,
+      "secondary_long": 42096.0,
+      "secondary_short": 80934.0,
+      "secondary_net": -38838.0,
+      "tertiary_long": 75152.0,
+      "tertiary_short": 38373.0,
+      "tertiary_net": 36779.0,
       "report_family": "tff"
     }
   ],

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "GBPUSD=X",
     "price_label": "GBP/USD",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,6 +15703,36 @@
       "tertiary_short": 34703.0,
       "tertiary_net": 159992.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 295062.0,
+      "primary_long": 52097.0,
+      "primary_short": 35824.0,
+      "primary_net": 16273.0,
+      "secondary_long": 12147.0,
+      "secondary_short": 168454.0,
+      "secondary_net": -156307.0,
+      "tertiary_long": 193859.0,
+      "tertiary_short": 33934.0,
+      "tertiary_net": 159925.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 282969.0,
+      "primary_long": 57660.0,
+      "primary_short": 39681.0,
+      "primary_net": 17979.0,
+      "secondary_long": 13996.0,
+      "secondary_short": 157253.0,
+      "secondary_net": -143257.0,
+      "tertiary_long": 169290.0,
+      "tertiary_short": 33983.0,
+      "tertiary_net": 135307.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
@@ -26115,8 +26145,8 @@
       "close": 1.3415615558624268
     },
     {
-      "timestamp": 1783718970,
-      "close": 1.339818000793457
+      "timestamp": 1783820404,
+      "close": 1.3401411771774292
     }
   ]
 }

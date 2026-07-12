@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 14367.0,
       "tertiary_net": 118390.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 438825.0,
+      "primary_long": 87437.0,
+      "primary_short": 202837.0,
+      "primary_net": -115400.0,
+      "secondary_long": 71903.0,
+      "secondary_short": 140596.0,
+      "secondary_net": -68693.0,
+      "tertiary_long": 142623.0,
+      "tertiary_short": 13205.0,
+      "tertiary_net": 129418.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 398103.0,
+      "primary_long": 84990.0,
+      "primary_short": 175073.0,
+      "primary_net": -90083.0,
+      "secondary_long": 74113.0,
+      "secondary_short": 122766.0,
+      "secondary_net": -48653.0,
+      "tertiary_long": 108938.0,
+      "tertiary_short": 21659.0,
+      "tertiary_net": 87279.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 0.009751999750733376
-    },
     {
       "timestamp": 1468296000,
       "close": 0.00956599973142147

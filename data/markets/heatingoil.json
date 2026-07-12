@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 9143.0,
       "tertiary_net": 39584.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 267942.0,
+      "primary_long": 33131.0,
+      "primary_short": 24637.0,
+      "primary_net": 8494.0,
+      "secondary_long": 57898.0,
+      "secondary_short": 124670.0,
+      "secondary_net": -66772.0,
+      "tertiary_long": 50181.0,
+      "tertiary_short": 6874.0,
+      "tertiary_net": 43307.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 281215.0,
+      "primary_long": 34583.0,
+      "primary_short": 29780.0,
+      "primary_net": 4803.0,
+      "secondary_long": 66105.0,
+      "secondary_short": 133105.0,
+      "secondary_net": -67000.0,
+      "tertiary_long": 50110.0,
+      "tertiary_short": 6824.0,
+      "tertiary_net": 43286.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 1.4163000583648682
-    },
     {
       "timestamp": 1468296000,
       "close": 1.4631999731063843
@@ -25764,7 +25790,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 3.533900022506714
+      "close": 3.553299903869629
     }
   ]
 }

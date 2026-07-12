@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 6081.0,
       "tertiary_net": 120340.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 646350.0,
+      "primary_long": 107681.0,
+      "primary_short": 105840.0,
+      "primary_net": 1841.0,
+      "secondary_long": 163437.0,
+      "secondary_short": 330988.0,
+      "secondary_net": -167551.0,
+      "tertiary_long": 121384.0,
+      "tertiary_short": 3806.0,
+      "tertiary_net": 117578.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 655757.0,
+      "primary_long": 116040.0,
+      "primary_short": 97015.0,
+      "primary_net": 19025.0,
+      "secondary_long": 156728.0,
+      "secondary_short": 343552.0,
+      "secondary_net": -186824.0,
+      "tertiary_long": 118881.0,
+      "tertiary_short": 7261.0,
+      "tertiary_net": 111620.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 373.70001220703125
-    },
     {
       "timestamp": 1468296000,
       "close": 378.29998779296875
@@ -25756,7 +25782,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 317.8999938964844
+      "close": 318.70001220703125
     }
   ]
 }

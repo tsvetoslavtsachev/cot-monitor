@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 24692.0,
       "tertiary_net": -20597.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 54306.0,
+      "primary_long": 15604.0,
+      "primary_short": 21184.0,
+      "primary_net": -5580.0,
+      "secondary_long": 22171.0,
+      "secondary_short": 2110.0,
+      "secondary_net": 20061.0,
+      "tertiary_long": 4520.0,
+      "tertiary_short": 25890.0,
+      "tertiary_net": -21370.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 53384.0,
+      "primary_long": 14930.0,
+      "primary_short": 19384.0,
+      "primary_net": -4454.0,
+      "secondary_long": 22461.0,
+      "secondary_short": 1037.0,
+      "secondary_net": 21424.0,
+      "tertiary_long": 4258.0,
+      "tertiary_short": 28046.0,
+      "tertiary_net": -23788.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 96.56999969482422
-    },
     {
       "timestamp": 1468296000,
       "close": 96.44000244140625
@@ -25760,7 +25786,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 100.96499633789062
+      "close": 100.97000122070312
     }
   ]
 }

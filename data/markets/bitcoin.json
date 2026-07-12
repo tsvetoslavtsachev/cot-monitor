@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "BTC-USD",
     "price_label": "BTC/USD",
-    "record_count": 429,
+    "record_count": 431,
     "history_first_date": "2018-04-10",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 429,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 431,
     "cot_source": "data-core"
   },
   "cot": [
@@ -6448,17 +6448,39 @@
       "tertiary_short": 2044.0,
       "tertiary_net": 4031.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 18336.0,
+      "primary_long": 5408.0,
+      "primary_short": 10721.0,
+      "primary_net": -5313.0,
+      "secondary_long": 4754.0,
+      "secondary_short": 2754.0,
+      "secondary_net": 2000.0,
+      "tertiary_long": 6260.0,
+      "tertiary_short": 1735.0,
+      "tertiary_net": 4525.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 18832.0,
+      "primary_long": 4406.0,
+      "primary_short": 11123.0,
+      "primary_net": -6717.0,
+      "secondary_long": 4790.0,
+      "secondary_short": 2405.0,
+      "secondary_net": 2385.0,
+      "tertiary_long": 6718.0,
+      "tertiary_short": 1939.0,
+      "tertiary_net": 4779.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468108800,
-      "close": 649.3599853515625
-    },
-    {
-      "timestamp": 1468195200,
-      "close": 647.6589965820312
-    },
     {
       "timestamp": 1468281600,
       "close": 664.551025390625
@@ -21061,7 +21083,15 @@
     },
     {
       "timestamp": 1783641600,
-      "close": 63978.7109375
+      "close": 64127.140625
+    },
+    {
+      "timestamp": 1783728000,
+      "close": 63802.02734375
+    },
+    {
+      "timestamp": 1783814400,
+      "close": 64003.98046875
     }
   ]
 }

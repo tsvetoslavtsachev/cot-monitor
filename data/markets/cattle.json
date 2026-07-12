@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 9743.0,
       "tertiary_net": 54721.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 430431.0,
+      "primary_long": 128502.0,
+      "primary_short": 9199.0,
+      "primary_net": 119303.0,
+      "secondary_long": 41502.0,
+      "secondary_short": 206823.0,
+      "secondary_net": -165321.0,
+      "tertiary_long": 64233.0,
+      "tertiary_short": 8839.0,
+      "tertiary_net": 55394.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 423855.0,
+      "primary_long": 124864.0,
+      "primary_short": 11543.0,
+      "primary_net": 113321.0,
+      "secondary_long": 43338.0,
+      "secondary_short": 202324.0,
+      "secondary_net": -158986.0,
+      "tertiary_long": 64266.0,
+      "tertiary_short": 7706.0,
+      "tertiary_net": 56560.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 109.3499984741211
-    },
     {
       "timestamp": 1468296000,
       "close": 108.9000015258789
@@ -25756,7 +25782,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 235.0
+      "close": 235.1999969482422
     }
   ]
 }

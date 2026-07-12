@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1046,
+    "record_count": 1048,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-06-23",
-    "lookback_weeks": 1046,
+    "history_last_date": "2026-07-07",
+    "lookback_weeks": 1048,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15703,13 +15703,39 @@
       "tertiary_short": 19963.0,
       "tertiary_net": 25172.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-06-30",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 304323.0,
+      "primary_long": 82673.0,
+      "primary_short": 10365.0,
+      "primary_net": 72308.0,
+      "secondary_long": 73903.0,
+      "secondary_short": 163394.0,
+      "secondary_net": -89491.0,
+      "tertiary_long": 46081.0,
+      "tertiary_short": 20661.0,
+      "tertiary_net": 25420.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-07",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 319106.0,
+      "primary_long": 86443.0,
+      "primary_short": 14900.0,
+      "primary_net": 71543.0,
+      "secondary_long": 77522.0,
+      "secondary_short": 169347.0,
+      "secondary_net": -91825.0,
+      "tertiary_long": 44953.0,
+      "tertiary_short": 20024.0,
+      "tertiary_net": 24929.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468209600,
-      "close": 1.3834999799728394
-    },
     {
       "timestamp": 1468296000,
       "close": 1.4300999641418457
@@ -25764,7 +25790,7 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 2.8203001022338867
+      "close": 2.8215999603271484
     }
   ]
 }
