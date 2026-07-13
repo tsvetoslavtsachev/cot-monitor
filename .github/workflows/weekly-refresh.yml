@@ -102,7 +102,10 @@ jobs:
             echo "No data changes to commit."
           else
             git commit -m "data: weekly COT refresh $(date -u +'%Y-%m-%d')"
-            git pull --rebase origin main
+            # -X theirs: the refresh regenerates data/ wholesale, so a rebase against a
+            # concurrent push always conflicts; ours-is-newest wins (P9 dashboards pattern,
+            # мандат №32/cot push-race).
+            git pull --rebase -X theirs origin main
             git push
             echo "data_changed=true" >> $GITHUB_OUTPUT
           fi
