@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1048,
+    "record_count": 1049,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-07",
-    "lookback_weeks": 1048,
+    "history_last_date": "2026-07-14",
+    "lookback_weeks": 1049,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15733,25 +15733,24 @@
       "tertiary_short": 18923.0,
       "tertiary_net": 187445.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-14",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1676383.0,
+      "primary_long": 227311.0,
+      "primary_short": 332812.0,
+      "primary_net": -105501.0,
+      "secondary_long": 213545.0,
+      "secondary_short": 241479.0,
+      "secondary_net": -27934.0,
+      "tertiary_long": 214868.0,
+      "tertiary_short": 18077.0,
+      "tertiary_net": 196791.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468296000,
-      "close": 2.7339999675750732
-    },
-    {
-      "timestamp": 1468382400,
-      "close": 2.736999988555908
-    },
-    {
-      "timestamp": 1468468800,
-      "close": 2.7269999980926514
-    },
-    {
-      "timestamp": 1468555200,
-      "close": 2.75600004196167
-    },
     {
       "timestamp": 1468814400,
       "close": 2.7219998836517334
@@ -25791,6 +25790,26 @@
     {
       "timestamp": 1783656000,
       "close": 2.940000057220459
+    },
+    {
+      "timestamp": 1783915200,
+      "close": 2.8970000743865967
+    },
+    {
+      "timestamp": 1784001600,
+      "close": 2.9040000438690186
+    },
+    {
+      "timestamp": 1784088000,
+      "close": 2.9240000247955322
+    },
+    {
+      "timestamp": 1784174400,
+      "close": 2.8580000400543213
+    },
+    {
+      "timestamp": 1784260800,
+      "close": 2.9110000133514404
     }
   ]
 }

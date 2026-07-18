@@ -2,229 +2,229 @@
   {
     "market": "sp500",
     "title": "E-mini S&P 500",
-    "date": "2026-07-07",
-    "narrative": "E-mini S&P 500 remains in a Divergence setup. Primary positioning is at the 31th percentile over the recent history. Over the last 4 weeks, net positioning rose by 89,711 contracts and is currently diverging from the secondary cohort. Price is up 2.14% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "E-mini S&P 500 remains in a Divergence setup. Primary positioning is at the 31th percentile over the recent history. Over the last 4 weeks, net positioning rose by 150,518 contracts and is currently diverging from the secondary cohort. Price is up 0.97% over the same 4-week window."
   },
   {
     "market": "nasdaq",
     "title": "Nasdaq Mini",
-    "date": "2026-07-07",
-    "narrative": "Nasdaq Mini remains in a Crowded Short setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning fell by 20,707 contracts and is currently diverging from the secondary cohort. Price is up 0.94% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Nasdaq Mini remains in a Crowded Short setup. Primary positioning is at the 4th percentile over the recent history. Over the last 4 weeks, net positioning fell by 36,009 contracts and is currently diverging from the secondary cohort. Price is down 0.68% over the same 4-week window."
   },
   {
     "market": "us10y",
     "title": "UST 10Y Note",
-    "date": "2026-07-07",
-    "narrative": "UST 10Y Note remains in a Crowded Short setup. Primary positioning is at the 4th percentile over the recent history. Over the last 4 weeks, net positioning fell by 24,512 contracts and is currently diverging from the secondary cohort. Price is down 0.14% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "UST 10Y Note remains in a Neutral / Transition setup. Primary positioning is at the 3th percentile over the recent history. Over the last 4 weeks, net positioning rose by 2,583 contracts and is currently diverging from the secondary cohort. Price is down 1.15% over the same 4-week window."
   },
   {
     "market": "vix",
     "title": "VIX Futures",
-    "date": "2026-07-07",
-    "narrative": "VIX Futures remains in a Crowded Long setup. Primary positioning is at the 86th percentile over the recent history. Over the last 4 weeks, net positioning rose by 40,402 contracts and is currently diverging from the secondary cohort. Price is down 18.82% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "VIX Futures remains in a Crowded Long setup. Primary positioning is at the 91th percentile over the recent history. Over the last 4 weeks, net positioning rose by 23,484 contracts and is currently diverging from the secondary cohort. Price is up 0.55% over the same 4-week window."
   },
   {
     "market": "eurfx",
     "title": "Euro FX",
-    "date": "2026-07-07",
-    "narrative": "Euro FX remains in a Divergence setup. Primary positioning is at the 32th percentile over the recent history. Over the last 4 weeks, net positioning fell by 28,073 contracts and is currently diverging from the secondary cohort. Price is down 1.14% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Euro FX remains in a Divergence setup. Primary positioning is at the 28th percentile over the recent history. Over the last 4 weeks, net positioning fell by 44,765 contracts and is currently diverging from the secondary cohort. Price is down 1.60% over the same 4-week window."
   },
   {
     "market": "gbpfx",
     "title": "British Pound",
-    "date": "2026-07-07",
-    "narrative": "British Pound remains in a Divergence setup. Primary positioning is at the 57th percentile over the recent history. Over the last 4 weeks, net positioning fell by 4,333 contracts and is currently diverging from the secondary cohort. Price is down 0.17% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "British Pound remains in a Divergence setup. Primary positioning is at the 69th percentile over the recent history. Over the last 4 weeks, net positioning rose by 11,705 contracts and is currently diverging from the secondary cohort. Price is down 0.22% over the same 4-week window."
   },
   {
     "market": "dxy",
     "title": "USD Index",
-    "date": "2026-07-07",
-    "narrative": "USD Index remains in a Divergence setup. Primary positioning is at the 42th percentile over the recent history. Over the last 4 weeks, net positioning rose by 9,202 contracts and is currently diverging from the secondary cohort. Price is up 1.23% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "USD Index remains in a Divergence setup. Primary positioning is at the 41th percentile over the recent history. Over the last 4 weeks, net positioning fell by 2,996 contracts and is currently diverging from the secondary cohort. Price is up 1.41% over the same 4-week window."
   },
   {
     "market": "bitcoin",
     "title": "Bitcoin Futures",
-    "date": "2026-07-07",
-    "narrative": "Bitcoin Futures remains in a Divergence setup. Primary positioning is at the 33th percentile over the recent history. Over the last 4 weeks, net positioning fell by 722 contracts and is currently diverging from the secondary cohort. Price is up 2.68% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Bitcoin Futures remains in a Divergence setup. Primary positioning is at the 32th percentile over the recent history. Over the last 4 weeks, net positioning fell by 884 contracts and is currently diverging from the secondary cohort. Price is down 0.98% over the same 4-week window."
   },
   {
     "market": "gold",
     "title": "Gold",
-    "date": "2026-07-07",
-    "narrative": "Gold remains in a Divergence setup. Primary positioning is at the 49th percentile over the recent history. Over the last 4 weeks, net positioning rose by 11,194 contracts and is currently diverging from the secondary cohort. Price is down 2.69% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Gold remains in a Divergence setup. Primary positioning is at the 51th percentile over the recent history. Over the last 4 weeks, net positioning rose by 6,229 contracts and is currently diverging from the secondary cohort. Price is down 6.23% over the same 4-week window."
   },
   {
     "market": "wti",
     "title": "WTI Crude",
-    "date": "2026-07-07",
-    "narrative": "WTI Crude remains in a Crowded Short setup. Primary positioning is at the 12th percentile over the recent history. Over the last 4 weeks, net positioning fell by 48,528 contracts and is currently confirmed by the secondary cohort. Price is down 20.14% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "WTI Crude remains in a Crowded Short setup. Primary positioning is at the 15th percentile over the recent history. Over the last 4 weeks, net positioning fell by 31,502 contracts and is currently confirmed by the secondary cohort. Price is up 4.33% over the same 4-week window."
   },
   {
     "market": "corn",
     "title": "Corn",
-    "date": "2026-07-07",
-    "narrative": "Corn remains in a Divergence setup. Primary positioning is at the 35th percentile over the recent history. Over the last 4 weeks, net positioning rose by 17,984 contracts and is currently diverging from the secondary cohort. Price is up 5.48% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Corn remains in a Divergence setup. Primary positioning is at the 41th percentile over the recent history. Over the last 4 weeks, net positioning rose by 89,818 contracts and is currently diverging from the secondary cohort. Price is up 4.83% over the same 4-week window."
   },
   {
     "market": "us2y",
     "title": "UST 2Y Note",
-    "date": "2026-07-07",
-    "narrative": "UST 2Y Note remains in a Crowded Short setup. Primary positioning is at the 10th percentile over the recent history. Over the last 4 weeks, net positioning fell by 75,586 contracts and is currently diverging from the secondary cohort. Price is down 0.12% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "UST 2Y Note remains in a Neutral / Transition setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning rose by 33,051 contracts and is currently diverging from the secondary cohort. Price is down 0.33% over the same 4-week window."
   },
   {
     "market": "us5y",
     "title": "UST 5Y Note",
-    "date": "2026-07-07",
-    "narrative": "UST 5Y Note remains in a Neutral / Transition setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning rose by 55,494 contracts and is currently diverging from the secondary cohort. Price is down 0.09% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "UST 5Y Note remains in a Neutral / Transition setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning rose by 57,860 contracts and is currently diverging from the secondary cohort. Price is down 0.74% over the same 4-week window."
   },
   {
     "market": "us30y",
     "title": "UST Bond (30Y)",
-    "date": "2026-07-07",
-    "narrative": "UST Bond (30Y) remains in a Crowded Short setup. Primary positioning is at the 13th percentile over the recent history. Over the last 4 weeks, net positioning fell by 83,550 contracts and is currently diverging from the secondary cohort. Price is down 0.56% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "UST Bond (30Y) remains in a Crowded Short setup. Primary positioning is at the 13th percentile over the recent history. Over the last 4 weeks, net positioning fell by 55,375 contracts and is currently diverging from the secondary cohort. Price is down 2.42% over the same 4-week window."
   },
   {
     "market": "usultra10y",
     "title": "Ultra UST 10Y",
-    "date": "2026-07-07",
-    "narrative": "Ultra UST 10Y remains in a Crowded Short setup. Primary positioning is at the 7th percentile over the recent history. Over the last 4 weeks, net positioning fell by 91,370 contracts and is currently diverging from the secondary cohort. Price is down 0.18% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Ultra UST 10Y remains in a Crowded Short setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning fell by 144,580 contracts and is currently diverging from the secondary cohort. Price is down 1.41% over the same 4-week window."
   },
   {
     "market": "jpy",
     "title": "Japanese Yen",
-    "date": "2026-07-07",
-    "narrative": "Japanese Yen remains in a Neutral / Transition setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning rose by 9,761 contracts and is currently confirmed by the secondary cohort. Price is down 0.96% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Japanese Yen remains in a Neutral / Transition setup. Primary positioning is at the 6th percentile over the recent history. Over the last 4 weeks, net positioning rose by 6,311 contracts and is currently confirmed by the secondary cohort. Price is down 1.02% over the same 4-week window."
   },
   {
     "market": "chf",
     "title": "Swiss Franc",
-    "date": "2026-07-07",
-    "narrative": "Swiss Franc remains in a Neutral / Transition setup. Primary positioning is at the 31th percentile over the recent history. Over the last 4 weeks, net positioning rose by 3,567 contracts and is currently confirmed by the secondary cohort. Price is down 0.53% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Swiss Franc remains in a Neutral / Transition setup. Primary positioning is at the 26th percentile over the recent history. Over the last 4 weeks, net positioning rose by 2,866 contracts and is currently confirmed by the secondary cohort. Price is down 2.26% over the same 4-week window."
   },
   {
     "market": "cad",
     "title": "Canadian Dollar",
-    "date": "2026-07-07",
-    "narrative": "Canadian Dollar remains in a Crowded Short setup. Primary positioning is at the 1th percentile over the recent history. Over the last 4 weeks, net positioning fell by 27,334 contracts and is currently confirmed by the secondary cohort. Price is down 1.70% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Canadian Dollar remains in a Crowded Short setup. Primary positioning is at the 0th percentile over the recent history. Over the last 4 weeks, net positioning fell by 27,718 contracts and is currently confirmed by the secondary cohort. Price is down 0.45% over the same 4-week window."
   },
   {
     "market": "aud",
     "title": "Australian Dollar",
-    "date": "2026-07-07",
-    "narrative": "Australian Dollar remains in a Divergence setup. Primary positioning is at the 66th percentile over the recent history. Over the last 4 weeks, net positioning fell by 12,609 contracts and is currently diverging from the secondary cohort. Price is down 1.41% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Australian Dollar remains in a Divergence setup. Primary positioning is at the 63th percentile over the recent history. Over the last 4 weeks, net positioning fell by 14,316 contracts and is currently diverging from the secondary cohort. Price is down 1.39% over the same 4-week window."
   },
   {
     "market": "russell",
     "title": "Russell 2000 Mini",
-    "date": "2026-07-07",
-    "narrative": "Russell 2000 Mini remains in a Neutral / Transition setup. Primary positioning is at the 24th percentile over the recent history. Over the last 4 weeks, net positioning rose by 2,192 contracts and is currently confirmed by the secondary cohort. Price is up 4.55% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Russell 2000 Mini remains in a Crowded Short setup. Primary positioning is at the 13th percentile over the recent history. Over the last 4 weeks, net positioning fell by 3,542 contracts and is currently diverging from the secondary cohort. Price is up 1.26% over the same 4-week window."
   },
   {
     "market": "silver",
     "title": "Silver",
-    "date": "2026-07-07",
-    "narrative": "Silver remains in a Divergence setup. Primary positioning is at the 31th percentile over the recent history. Over the last 4 weeks, net positioning rose by 2,337 contracts and is currently diverging from the secondary cohort. Price is down 6.40% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Silver remains in a Divergence setup. Primary positioning is at the 26th percentile over the recent history. Over the last 4 weeks, net positioning fell by 1,693 contracts and is currently diverging from the secondary cohort. Price is down 15.92% over the same 4-week window."
   },
   {
     "market": "copper",
     "title": "Copper",
-    "date": "2026-07-07",
-    "narrative": "Copper remains in a Contrarian Short setup. Primary positioning is at the 90th percentile over the recent history. Over the last 4 weeks, net positioning fell by 10,730 contracts and is currently diverging from the secondary cohort. Price is down 2.08% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Copper remains in a Contrarian Short setup. Primary positioning is at the 91th percentile over the recent history. Over the last 4 weeks, net positioning fell by 9,144 contracts and is currently diverging from the secondary cohort. Price is down 2.45% over the same 4-week window."
   },
   {
     "market": "platinum",
     "title": "Platinum",
-    "date": "2026-07-07",
-    "narrative": "Platinum remains in a Divergence setup. Primary positioning is at the 38th percentile over the recent history. Over the last 4 weeks, net positioning fell by 901 contracts and is currently diverging from the secondary cohort. Price is down 3.36% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Platinum remains in a Divergence setup. Primary positioning is at the 40th percentile over the recent history. Over the last 4 weeks, net positioning rose by 74 contracts and is currently diverging from the secondary cohort. Price is down 9.97% over the same 4-week window."
   },
   {
     "market": "palladium",
     "title": "Palladium",
-    "date": "2026-07-07",
-    "narrative": "Palladium remains in a Crowded Short setup. Primary positioning is at the 10th percentile over the recent history. Over the last 4 weeks, net positioning fell by 1,862 contracts and is currently diverging from the secondary cohort. Price is up 4.70% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Palladium remains in a Crowded Short setup. Primary positioning is at the 10th percentile over the recent history. Over the last 4 weeks, net positioning fell by 1,937 contracts and is currently diverging from the secondary cohort. Price is down 4.23% over the same 4-week window."
   },
   {
     "market": "natgas",
     "title": "Natural Gas",
-    "date": "2026-07-07",
-    "narrative": "Natural Gas remains in a Neutral / Transition setup. Primary positioning is at the 38th percentile over the recent history. Over the last 4 weeks, net positioning rose by 62,236 contracts and is currently confirmed by the secondary cohort. Price is up 3.98% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Natural Gas remains in a Neutral / Transition setup. Primary positioning is at the 17th percentile over the recent history. Over the last 4 weeks, net positioning fell by 20,829 contracts and is currently confirmed by the secondary cohort. Price is down 10.34% over the same 4-week window."
   },
   {
     "market": "brent",
     "title": "Brent Crude",
-    "date": "2026-07-07",
-    "narrative": "Brent Crude remains in a Divergence setup. Primary positioning is at the 78th percentile over the recent history. Over the last 4 weeks, net positioning rose by 4,066 contracts and is currently diverging from the secondary cohort. Price is down 18.91% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Brent Crude remains in a Divergence setup. Primary positioning is at the 76th percentile over the recent history. Over the last 4 weeks, net positioning rose by 3,591 contracts and is currently diverging from the secondary cohort. Price is up 7.31% over the same 4-week window."
   },
   {
     "market": "rbob",
     "title": "RBOB Gasoline",
-    "date": "2026-07-07",
-    "narrative": "RBOB Gasoline remains in a Divergence setup. Primary positioning is at the 83th percentile over the recent history. Over the last 4 weeks, net positioning rose by 7,209 contracts and is currently diverging from the secondary cohort. Price is down 2.22% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "RBOB Gasoline remains in a Divergence setup. Primary positioning is at the 80th percentile over the recent history. Over the last 4 weeks, net positioning rose by 1,275 contracts and is currently diverging from the secondary cohort. Price is up 12.04% over the same 4-week window."
   },
   {
     "market": "heatingoil",
     "title": "Heating Oil",
-    "date": "2026-07-07",
-    "narrative": "Heating Oil remains in a Divergence setup. Primary positioning is at the 34th percentile over the recent history. Over the last 4 weeks, net positioning fell by 4,802 contracts and is currently diverging from the secondary cohort. Price is down 6.78% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Heating Oil remains in a Divergence setup. Primary positioning is at the 44th percentile over the recent history. Over the last 4 weeks, net positioning rose by 1,472 contracts and is currently diverging from the secondary cohort. Price is up 26.63% over the same 4-week window."
   },
   {
     "market": "soybeans",
     "title": "Soybeans",
-    "date": "2026-07-07",
-    "narrative": "Soybeans remains in a Divergence setup. Primary positioning is at the 50th percentile over the recent history. Over the last 4 weeks, net positioning fell by 22,077 contracts and is currently diverging from the secondary cohort. Price is up 7.45% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Soybeans remains in a Divergence setup. Primary positioning is at the 51th percentile over the recent history. Over the last 4 weeks, net positioning rose by 19,870 contracts and is currently diverging from the secondary cohort. Price is up 6.84% over the same 4-week window."
   },
   {
     "market": "wheat",
     "title": "Wheat (SRW)",
-    "date": "2026-07-07",
-    "narrative": "Wheat (SRW) remains in a Neutral / Transition setup. Primary positioning is at the 25th percentile over the recent history. Over the last 4 weeks, net positioning rose by 17,082 contracts and is currently confirmed by the secondary cohort. Price is up 4.10% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Wheat (SRW) remains in a Neutral / Transition setup. Primary positioning is at the 38th percentile over the recent history. Over the last 4 weeks, net positioning rose by 32,733 contracts and is currently confirmed by the secondary cohort. Price is up 5.91% over the same 4-week window."
   },
   {
     "market": "soyoil",
     "title": "Soybean Oil",
-    "date": "2026-07-07",
-    "narrative": "Soybean Oil remains in a Contrarian Short setup. Primary positioning is at the 93th percentile over the recent history. Over the last 4 weeks, net positioning fell by 42,208 contracts and is currently diverging from the secondary cohort. Price is down 8.17% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Soybean Oil remains in a Neutral / Transition setup. Primary positioning is at the 98th percentile over the recent history. Over the last 4 weeks, net positioning fell by 9,885 contracts and is currently diverging from the secondary cohort. Price is up 0.16% over the same 4-week window."
   },
   {
     "market": "soymeal",
     "title": "Soybean Meal",
-    "date": "2026-07-07",
-    "narrative": "Soybean Meal remains in a Divergence setup. Primary positioning is at the 36th percentile over the recent history. Over the last 4 weeks, net positioning fell by 33,577 contracts and is currently diverging from the secondary cohort. Price is up 5.75% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Soybean Meal remains in a Divergence setup. Primary positioning is at the 64th percentile over the recent history. Over the last 4 weeks, net positioning rose by 30,400 contracts and is currently diverging from the secondary cohort. Price is up 4.86% over the same 4-week window."
   },
   {
     "market": "coffee",
     "title": "Coffee",
-    "date": "2026-07-07",
-    "narrative": "Coffee remains in a Divergence setup. Primary positioning is at the 65th percentile over the recent history. Over the last 4 weeks, net positioning rose by 22,379 contracts and is currently diverging from the secondary cohort. Price is up 35.68% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Coffee remains in a Divergence setup. Primary positioning is at the 64th percentile over the recent history. Over the last 4 weeks, net positioning rose by 16,993 contracts and is currently diverging from the secondary cohort. Price is up 21.62% over the same 4-week window."
   },
   {
     "market": "sugar",
     "title": "Sugar",
-    "date": "2026-07-07",
-    "narrative": "Sugar remains in a Contrarian Long setup. Primary positioning is at the 11th percentile over the recent history. Over the last 4 weeks, net positioning rose by 32,620 contracts and is currently confirmed by the secondary cohort. Price is up 7.53% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Sugar remains in a Contrarian Long setup. Primary positioning is at the 12th percentile over the recent history. Over the last 4 weeks, net positioning rose by 58,537 contracts and is currently confirmed by the secondary cohort. Price is up 7.67% over the same 4-week window."
   },
   {
     "market": "cocoa",
     "title": "Cocoa",
-    "date": "2026-07-07",
-    "narrative": "Cocoa remains in a Contrarian Long setup. Primary positioning is at the 12th percentile over the recent history. Over the last 4 weeks, net positioning rose by 13,536 contracts and is currently confirmed by the secondary cohort. Price is up 47.92% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Cocoa remains in a Contrarian Long setup. Primary positioning is at the 15th percentile over the recent history. Over the last 4 weeks, net positioning rose by 13,802 contracts and is currently confirmed by the secondary cohort. Price is up 36.65% over the same 4-week window."
   },
   {
     "market": "cotton",
     "title": "Cotton",
-    "date": "2026-07-07",
-    "narrative": "Cotton remains in a Divergence setup. Primary positioning is at the 60th percentile over the recent history. Over the last 4 weeks, net positioning fell by 3,098 contracts and is currently diverging from the secondary cohort. Price is up 7.97% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Cotton remains in a Divergence setup. Primary positioning is at the 70th percentile over the recent history. Over the last 4 weeks, net positioning rose by 14,548 contracts and is currently diverging from the secondary cohort. Price is up 6.12% over the same 4-week window."
   },
   {
     "market": "cattle",
     "title": "Live Cattle",
-    "date": "2026-07-07",
-    "narrative": "Live Cattle remains in a Divergence setup. Primary positioning is at the 85th percentile over the recent history. Over the last 4 weeks, net positioning rose by 4,319 contracts and is currently diverging from the secondary cohort. Price is down 3.87% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Live Cattle remains in a Divergence setup. Primary positioning is at the 74th percentile over the recent history. Over the last 4 weeks, net positioning fell by 28,025 contracts and is currently diverging from the secondary cohort. Price is down 9.35% over the same 4-week window."
   },
   {
     "market": "hogs",
     "title": "Lean Hogs",
-    "date": "2026-07-07",
-    "narrative": "Lean Hogs remains in a Crowded Short setup. Primary positioning is at the 0th percentile over the recent history. Over the last 4 weeks, net positioning fell by 15,301 contracts and is currently confirmed by the secondary cohort. Price is down 0.13% over the same 4-week window."
+    "date": "2026-07-14",
+    "narrative": "Lean Hogs remains in a Crowded Short setup. Primary positioning is at the 0th percentile over the recent history. Over the last 4 weeks, net positioning fell by 9,479 contracts and is currently confirmed by the secondary cohort. Price is up 0.32% over the same 4-week window."
   }
 ]

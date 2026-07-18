@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1048,
+    "record_count": 1049,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-07",
-    "lookback_weeks": 1048,
+    "history_last_date": "2026-07-14",
+    "lookback_weeks": 1049,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15733,25 +15733,24 @@
       "tertiary_short": 665907.0,
       "tertiary_net": -585583.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-14",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2620973.0,
+      "primary_long": 182883.0,
+      "primary_short": 96500.0,
+      "primary_net": 86383.0,
+      "secondary_long": 741011.0,
+      "secondary_short": 329495.0,
+      "secondary_net": 411516.0,
+      "tertiary_long": 86299.0,
+      "tertiary_short": 660797.0,
+      "tertiary_net": -574498.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468296000,
-      "close": 46.79999923706055
-    },
-    {
-      "timestamp": 1468382400,
-      "close": 44.75
-    },
-    {
-      "timestamp": 1468468800,
-      "close": 45.68000030517578
-    },
-    {
-      "timestamp": 1468555200,
-      "close": 45.95000076293945
-    },
     {
       "timestamp": 1468814400,
       "close": 45.2400016784668
@@ -25787,6 +25786,26 @@
     {
       "timestamp": 1783656000,
       "close": 71.41000366210938
+    },
+    {
+      "timestamp": 1783915200,
+      "close": 78.13999938964844
+    },
+    {
+      "timestamp": 1784001600,
+      "close": 79.33999633789062
+    },
+    {
+      "timestamp": 1784088000,
+      "close": 79.5999984741211
+    },
+    {
+      "timestamp": 1784174400,
+      "close": 78.94999694824219
+    },
+    {
+      "timestamp": 1784260800,
+      "close": 82.48999786376953
     }
   ]
 }

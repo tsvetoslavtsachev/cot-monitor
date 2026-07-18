@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 1048,
+    "record_count": 1049,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-07",
-    "lookback_weeks": 1048,
+    "history_last_date": "2026-07-14",
+    "lookback_weeks": 1049,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15733,25 +15733,24 @@
       "tertiary_short": 6824.0,
       "tertiary_net": 43286.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-14",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 270297.0,
+      "primary_long": 36451.0,
+      "primary_short": 25532.0,
+      "primary_net": 10919.0,
+      "secondary_long": 53376.0,
+      "secondary_short": 128160.0,
+      "secondary_net": -74784.0,
+      "tertiary_long": 50464.0,
+      "tertiary_short": 8209.0,
+      "tertiary_net": 42255.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468296000,
-      "close": 1.4631999731063843
-    },
-    {
-      "timestamp": 1468382400,
-      "close": 1.3809000253677368
-    },
-    {
-      "timestamp": 1468468800,
-      "close": 1.4063999652862549
-    },
-    {
-      "timestamp": 1468555200,
-      "close": 1.3974000215530396
-    },
     {
       "timestamp": 1468814400,
       "close": 1.3777999877929688
@@ -25791,6 +25790,26 @@
     {
       "timestamp": 1783656000,
       "close": 3.553299903869629
+    },
+    {
+      "timestamp": 1783915200,
+      "close": 3.8236000537872314
+    },
+    {
+      "timestamp": 1784001600,
+      "close": 4.0142998695373535
+    },
+    {
+      "timestamp": 1784088000,
+      "close": 3.9482998847961426
+    },
+    {
+      "timestamp": 1784174400,
+      "close": 4.030700206756592
+    },
+    {
+      "timestamp": 1784260800,
+      "close": 4.064599990844727
     }
   ]
 }

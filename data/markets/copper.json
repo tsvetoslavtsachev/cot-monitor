@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1048,
+    "record_count": 1049,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-07",
-    "lookback_weeks": 1048,
+    "history_last_date": "2026-07-14",
+    "lookback_weeks": 1049,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15733,25 +15733,24 @@
       "tertiary_short": 35902.0,
       "tertiary_net": 15905.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-14",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 282589.0,
+      "primary_long": 79022.0,
+      "primary_short": 17090.0,
+      "primary_net": 61932.0,
+      "secondary_long": 26602.0,
+      "secondary_short": 112621.0,
+      "secondary_net": -86019.0,
+      "tertiary_long": 51234.0,
+      "tertiary_short": 40238.0,
+      "tertiary_net": 10996.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468296000,
-      "close": 2.2109999656677246
-    },
-    {
-      "timestamp": 1468382400,
-      "close": 2.23799991607666
-    },
-    {
-      "timestamp": 1468468800,
-      "close": 2.240999937057495
-    },
-    {
-      "timestamp": 1468555200,
-      "close": 2.2304999828338623
-    },
     {
       "timestamp": 1468814400,
       "close": 2.2339999675750732
@@ -25786,7 +25785,27 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 6.2820000648498535
+      "close": 6.233500003814697
+    },
+    {
+      "timestamp": 1783915200,
+      "close": 6.232999801635742
+    },
+    {
+      "timestamp": 1784001600,
+      "close": 6.329999923706055
+    },
+    {
+      "timestamp": 1784088000,
+      "close": 6.293499946594238
+    },
+    {
+      "timestamp": 1784174400,
+      "close": 6.296000003814697
+    },
+    {
+      "timestamp": 1784260800,
+      "close": 6.21999979019165
     }
   ]
 }

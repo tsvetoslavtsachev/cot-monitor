@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1048,
+    "record_count": 1049,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-07",
-    "lookback_weeks": 1048,
+    "history_last_date": "2026-07-14",
+    "lookback_weeks": 1049,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15733,25 +15733,24 @@
       "tertiary_short": 20024.0,
       "tertiary_net": 24929.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-14",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 327876.0,
+      "primary_long": 82581.0,
+      "primary_short": 13630.0,
+      "primary_net": 68951.0,
+      "secondary_long": 85350.0,
+      "secondary_short": 177814.0,
+      "secondary_net": -92464.0,
+      "tertiary_long": 46252.0,
+      "tertiary_short": 22062.0,
+      "tertiary_net": 24190.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468296000,
-      "close": 1.4300999641418457
-    },
-    {
-      "timestamp": 1468382400,
-      "close": 1.3783999681472778
-    },
-    {
-      "timestamp": 1468468800,
-      "close": 1.4140000343322754
-    },
-    {
-      "timestamp": 1468555200,
-      "close": 1.4220000505447388
-    },
     {
       "timestamp": 1468814400,
       "close": 1.3871999979019165
@@ -25790,7 +25789,27 @@
     },
     {
       "timestamp": 1783656000,
-      "close": 2.8215999603271484
+      "close": 2.984600067138672
+    },
+    {
+      "timestamp": 1783915200,
+      "close": 3.166300058364868
+    },
+    {
+      "timestamp": 1784001600,
+      "close": 3.227299928665161
+    },
+    {
+      "timestamp": 1784088000,
+      "close": 3.3008999824523926
+    },
+    {
+      "timestamp": 1784174400,
+      "close": 3.2846999168395996
+    },
+    {
+      "timestamp": 1784260800,
+      "close": 3.392699956893921
     }
   ]
 }
