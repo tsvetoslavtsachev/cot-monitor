@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 232,
+    "record_count": 233,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 232,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 233,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3493,29 +3493,24 @@
       "tertiary_short": 3621.0,
       "tertiary_net": 43051.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 366464.0,
+      "primary_long": 15483.0,
+      "primary_short": 737.0,
+      "primary_net": 14746.0,
+      "secondary_long": 36440.0,
+      "secondary_short": 71161.0,
+      "secondary_net": -34721.0,
+      "tertiary_long": 52171.0,
+      "tertiary_short": 6189.0,
+      "tertiary_net": 45982.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 46.959999084472656
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 46.65999984741211
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 47.16999816894531
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 46.20000076293945
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 45.689998626708984
-    },
     {
       "timestamp": 1469419200,
       "close": 44.720001220703125
@@ -13555,6 +13550,26 @@
     {
       "timestamp": 1784260800,
       "close": 88.0999984741211
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 89.22000122070312
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 91.01000213623047
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 94.06999969482422
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 100.69000244140625
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 96.77999877929688
     }
   ]
 }

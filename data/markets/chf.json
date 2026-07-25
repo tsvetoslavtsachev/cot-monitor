@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1049,
+    "record_count": 1050,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 1049,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 1050,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15748,29 +15748,24 @@
       "tertiary_short": 8817.0,
       "tertiary_net": 64809.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 107866.0,
+      "primary_long": 9588.0,
+      "primary_short": 18485.0,
+      "primary_net": -8897.0,
+      "secondary_long": 6652.0,
+      "secondary_short": 44210.0,
+      "secondary_net": -37558.0,
+      "tertiary_long": 69972.0,
+      "tertiary_short": 8817.0,
+      "tertiary_net": 61155.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 1.0210000276565552
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 1.017899990081787
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 1.0160000324249268
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 1.0163999795913696
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 1.0146000385284424
-    },
     {
       "timestamp": 1469419200,
       "close": 1.016800045967102
@@ -25810,6 +25805,26 @@
     {
       "timestamp": 1784260800,
       "close": 1.2460999488830566
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 1.2421000003814697
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 1.2375500202178955
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 1.2347999811172485
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 1.2309000492095947
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 1.228950023651123
     }
   ]
 }

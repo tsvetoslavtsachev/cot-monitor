@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1049,
+    "record_count": 1050,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 1049,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 1050,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15748,29 +15748,24 @@
       "tertiary_short": 59228.0,
       "tertiary_net": 182973.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1192719.0,
+      "primary_long": 184494.0,
+      "primary_short": 281090.0,
+      "primary_net": -96596.0,
+      "secondary_long": 249407.0,
+      "secondary_short": 387763.0,
+      "secondary_net": -138356.0,
+      "tertiary_long": 239939.0,
+      "tertiary_short": 60232.0,
+      "tertiary_net": 179707.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 19.3700008392334
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 19.360000610351562
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 19.280000686645508
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 19.559999465942383
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 19.59000015258789
-    },
     {
       "timestamp": 1469419200,
       "close": 19.889999389648438
@@ -25810,6 +25805,26 @@
     {
       "timestamp": 1784260800,
       "close": 14.829999923706055
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 14.819999694824219
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 14.880000114440918
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 14.739999771118164
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 14.6899995803833
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 14.770000457763672
     }
   ]
 }

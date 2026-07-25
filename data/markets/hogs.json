@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HE=F",
     "price_label": "Lean Hogs Futures",
-    "record_count": 1049,
+    "record_count": 1050,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 1049,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 1050,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15748,29 +15748,24 @@
       "tertiary_short": 6278.0,
       "tertiary_net": 71022.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "LEAN HOGS - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 372403.0,
+      "primary_long": 53942.0,
+      "primary_short": 72099.0,
+      "primary_net": -18157.0,
+      "secondary_long": 50581.0,
+      "secondary_short": 101320.0,
+      "secondary_net": -50739.0,
+      "tertiary_long": 74198.0,
+      "tertiary_short": 7993.0,
+      "tertiary_net": 66205.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 77.82499694824219
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 77.3499984741211
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 76.19999694824219
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 74.44999694824219
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 75.2750015258789
-    },
     {
       "timestamp": 1469419200,
       "close": 75.67500305175781
@@ -25802,6 +25797,26 @@
     {
       "timestamp": 1784260800,
       "close": 101.6500015258789
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 101.2750015258789
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 101.5
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 101.44999694824219
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 102.1500015258789
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 102.8499984741211
     }
   ]
 }

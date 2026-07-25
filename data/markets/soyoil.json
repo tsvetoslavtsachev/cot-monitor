@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1049,
+    "record_count": 1050,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 1049,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 1050,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15748,29 +15748,24 @@
       "tertiary_short": 16999.0,
       "tertiary_net": 64104.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 779213.0,
+      "primary_long": 145542.0,
+      "primary_short": 20194.0,
+      "primary_net": 125348.0,
+      "secondary_long": 215193.0,
+      "secondary_short": 426507.0,
+      "secondary_net": -211314.0,
+      "tertiary_long": 85101.0,
+      "tertiary_short": 16202.0,
+      "tertiary_net": 68899.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 30.940000534057617
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 30.65999984741211
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 30.709999084472656
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 31.059999465942383
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 30.209999084472656
-    },
     {
       "timestamp": 1469419200,
       "close": 29.459999084472656
@@ -25802,6 +25797,26 @@
     {
       "timestamp": 1784260800,
       "close": 74.80999755859375
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 74.68000030517578
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 74.30000305175781
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 75.4800033569336
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 75.58999633789062
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 74.33000183105469
     }
   ]
 }

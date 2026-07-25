@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1049,
+    "record_count": 1050,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-14",
-    "lookback_weeks": 1049,
+    "history_last_date": "2026-07-21",
+    "lookback_weeks": 1050,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15748,29 +15748,24 @@
       "tertiary_short": 30200.0,
       "tertiary_net": 198960.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-07-21",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 365599.0,
+      "primary_long": 31615.0,
+      "primary_short": 129992.0,
+      "primary_net": -98377.0,
+      "secondary_long": 42492.0,
+      "secondary_short": 140657.0,
+      "secondary_net": -98165.0,
+      "tertiary_long": 227422.0,
+      "tertiary_short": 30009.0,
+      "tertiary_net": 197413.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1468814400,
-      "close": 0.7724000215530396
-    },
-    {
-      "timestamp": 1468900800,
-      "close": 0.7679499983787537
-    },
-    {
-      "timestamp": 1468987200,
-      "close": 0.765749990940094
-    },
-    {
-      "timestamp": 1469073600,
-      "close": 0.763949990272522
-    },
-    {
-      "timestamp": 1469160000,
-      "close": 0.760699987411499
-    },
     {
       "timestamp": 1469419200,
       "close": 0.7565500140190125
@@ -25806,6 +25801,26 @@
     {
       "timestamp": 1784260800,
       "close": 0.7146499752998352
+    },
+    {
+      "timestamp": 1784520000,
+      "close": 0.7121000289916992
+    },
+    {
+      "timestamp": 1784606400,
+      "close": 0.7096999883651733
+    },
+    {
+      "timestamp": 1784692800,
+      "close": 0.7107499837875366
+    },
+    {
+      "timestamp": 1784779200,
+      "close": 0.7111999988555908
+    },
+    {
+      "timestamp": 1784865600,
+      "close": 0.710099995136261
     }
   ]
 }
