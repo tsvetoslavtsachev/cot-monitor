@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 30009.0,
       "tertiary_net": 197413.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 372447.0,
+      "primary_long": 26391.0,
+      "primary_short": 128886.0,
+      "primary_net": -102495.0,
+      "secondary_long": 41277.0,
+      "secondary_short": 142437.0,
+      "secondary_net": -101160.0,
+      "tertiary_long": 236930.0,
+      "tertiary_short": 31423.0,
+      "tertiary_net": 205507.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 0.7565500140190125
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 0.7580500245094299
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 0.7572500109672546
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 0.7598999738693237
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 0.7668499946594238
-    },
     {
       "timestamp": 1470024000,
       "close": 0.7635999917984009
@@ -25821,6 +25816,26 @@
     {
       "timestamp": 1784865600,
       "close": 0.710099995136261
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 0.7086499929428101
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 0.7095999717712402
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 0.7128499746322632
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 0.715149998664856
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 0.7138000130653381
     }
   ]
 }

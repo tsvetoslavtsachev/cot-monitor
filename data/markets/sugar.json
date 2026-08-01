@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 60232.0,
       "tertiary_net": 179707.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1203654.0,
+      "primary_long": 181809.0,
+      "primary_short": 294222.0,
+      "primary_net": -112413.0,
+      "secondary_long": 257220.0,
+      "secondary_short": 372317.0,
+      "secondary_net": -115097.0,
+      "tertiary_long": 248720.0,
+      "tertiary_short": 57167.0,
+      "tertiary_net": 191553.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 19.889999389648438
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 19.520000457763672
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 19.100000381469727
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 18.799999237060547
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 19.049999237060547
-    },
     {
       "timestamp": 1470024000,
       "close": 18.809999465942383
@@ -25825,6 +25820,26 @@
     {
       "timestamp": 1784865600,
       "close": 14.770000457763672
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 14.579999923706055
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 14.550000190734863
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 14.5
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 14.430000305175781
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 14.65999984741211
     }
   ]
 }

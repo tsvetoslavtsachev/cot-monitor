@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "GC=F",
     "price_label": "Gold Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 212335.0,
       "tertiary_net": -188837.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "GOLD - COMMODITY EXCHANGE INC.",
+      "open_interest": 493548.0,
+      "primary_long": 136656.0,
+      "primary_short": 16328.0,
+      "primary_net": 120328.0,
+      "secondary_long": 18803.0,
+      "secondary_short": 37218.0,
+      "secondary_net": -18415.0,
+      "tertiary_long": 23417.0,
+      "tertiary_short": 210223.0,
+      "tertiary_net": -186806.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 1319.300048828125
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 1320.699951171875
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 1326.5999755859375
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 1332.300048828125
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 1349.0
-    },
     {
       "timestamp": 1470024000,
       "close": 1351.4000244140625
@@ -25817,6 +25812,26 @@
     {
       "timestamp": 1784865600,
       "close": 4067.60009765625
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 4074.5
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 4036.300048828125
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 4034.699951171875
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 4100.10009765625
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 4049.10009765625
     }
   ]
 }

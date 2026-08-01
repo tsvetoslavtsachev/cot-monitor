@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 7164.0,
       "tertiary_net": 61932.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 445137.0,
+      "primary_long": 80842.0,
+      "primary_short": 14319.0,
+      "primary_net": 66523.0,
+      "secondary_long": 72473.0,
+      "secondary_short": 187764.0,
+      "secondary_net": -115291.0,
+      "tertiary_long": 67479.0,
+      "tertiary_short": 7420.0,
+      "tertiary_net": 60059.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 112.94999694824219
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 113.875
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 113.94999694824219
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 113.32499694824219
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 113.07499694824219
-    },
     {
       "timestamp": 1470024000,
       "close": 115.92500305175781
@@ -25817,6 +25812,26 @@
     {
       "timestamp": 1784865600,
       "close": 227.0749969482422
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 225.22500610351562
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 227.47500610351562
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 227.89999389648438
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 231.22500610351562
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 231.75
     }
   ]
 }

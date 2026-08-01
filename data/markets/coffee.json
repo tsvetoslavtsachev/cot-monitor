@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "KC=F",
     "price_label": "Coffee Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 25932.0,
       "tertiary_net": -410.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 225341.0,
+      "primary_long": 37333.0,
+      "primary_short": 12197.0,
+      "primary_net": 25136.0,
+      "secondary_long": 41595.0,
+      "secondary_short": 70169.0,
+      "secondary_net": -28574.0,
+      "tertiary_long": 25082.0,
+      "tertiary_short": 25642.0,
+      "tertiary_net": -560.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 141.10000610351562
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 141.60000610351562
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 141.1999969482422
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 142.14999389648438
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 146.1999969482422
-    },
     {
       "timestamp": 1470024000,
       "close": 143.4499969482422
@@ -25825,6 +25820,26 @@
     {
       "timestamp": 1784865600,
       "close": 313.79998779296875
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 324.54998779296875
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 339.3999938964844
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 325.79998779296875
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 323.04998779296875
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 332.1000061035156
     }
   ]
 }

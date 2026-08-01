@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 14240.0,
       "tertiary_net": 133699.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 432366.0,
+      "primary_long": 76752.0,
+      "primary_short": 178742.0,
+      "primary_net": -101990.0,
+      "secondary_long": 70643.0,
+      "secondary_short": 153700.0,
+      "secondary_net": -83057.0,
+      "tertiary_long": 155239.0,
+      "tertiary_short": 15902.0,
+      "tertiary_net": 139337.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 0.009468999691307545
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 0.009577999822795391
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 0.009504999965429306
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 0.009503000415861607
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 0.009820000268518925
-    },
     {
       "timestamp": 1470024000,
       "close": 0.009785999543964863
@@ -25825,6 +25820,22 @@
     {
       "timestamp": 1784865600,
       "close": 0.006113999988883734
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 0.0061160000041127205
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 0.006113000214099884
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 0.006132000125944614
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 0.006300999782979488
     }
   ]
 }

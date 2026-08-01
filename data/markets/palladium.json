@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 2394.0,
       "tertiary_net": 4415.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 19954.0,
+      "primary_long": 4396.0,
+      "primary_short": 10569.0,
+      "primary_net": -6173.0,
+      "secondary_long": 1795.0,
+      "secondary_short": 1182.0,
+      "secondary_net": 613.0,
+      "tertiary_long": 6553.0,
+      "tertiary_short": 2255.0,
+      "tertiary_net": 4298.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 687.1500244140625
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 691.2000122070312
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 702.2999877929688
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 697.3499755859375
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 708.4500122070312
-    },
     {
       "timestamp": 1470024000,
       "close": 714.9500122070312
@@ -25813,6 +25808,26 @@
     {
       "timestamp": 1784865600,
       "close": 1246.699951171875
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 1289.5999755859375
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 1266.5
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 1245.699951171875
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 1302.199951171875
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 1275.5999755859375
     }
   ]
 }

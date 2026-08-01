@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HE=F",
     "price_label": "Lean Hogs Futures",
-    "record_count": 1050,
+    "record_count": 1051,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-21",
-    "lookback_weeks": 1050,
+    "history_last_date": "2026-07-28",
+    "lookback_weeks": 1051,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15763,29 +15763,24 @@
       "tertiary_short": 7993.0,
       "tertiary_net": 66205.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-07-28",
+      "market_name": "LEAN HOGS - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 377546.0,
+      "primary_long": 56586.0,
+      "primary_short": 67470.0,
+      "primary_net": -10884.0,
+      "secondary_long": 49950.0,
+      "secondary_short": 106284.0,
+      "secondary_net": -56334.0,
+      "tertiary_long": 74116.0,
+      "tertiary_short": 8608.0,
+      "tertiary_net": 65508.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1469419200,
-      "close": 75.67500305175781
-    },
-    {
-      "timestamp": 1469505600,
-      "close": 74.5999984741211
-    },
-    {
-      "timestamp": 1469592000,
-      "close": 71.67500305175781
-    },
-    {
-      "timestamp": 1469678400,
-      "close": 68.8499984741211
-    },
-    {
-      "timestamp": 1469764800,
-      "close": 68.9749984741211
-    },
     {
       "timestamp": 1470024000,
       "close": 68.6500015258789
@@ -25817,6 +25812,26 @@
     {
       "timestamp": 1784865600,
       "close": 102.8499984741211
+    },
+    {
+      "timestamp": 1785124800,
+      "close": 102.9749984741211
+    },
+    {
+      "timestamp": 1785211200,
+      "close": 103.0999984741211
+    },
+    {
+      "timestamp": 1785297600,
+      "close": 100.67500305175781
+    },
+    {
+      "timestamp": 1785384000,
+      "close": 98.42500305175781
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 98.8499984741211
     }
   ]
 }
