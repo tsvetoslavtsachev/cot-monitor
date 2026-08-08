@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1010,
+    "record_count": 1011,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1010,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1011,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15163,29 +15163,24 @@
       "tertiary_short": 29442.0,
       "tertiary_net": 46382.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 369655.0,
+      "primary_long": 94849.0,
+      "primary_short": 91076.0,
+      "primary_net": 3773.0,
+      "secondary_long": 44514.0,
+      "secondary_short": 78214.0,
+      "secondary_net": -33700.0,
+      "tertiary_long": 72193.0,
+      "tertiary_short": 39097.0,
+      "tertiary_net": 33096.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470034800,
-      "close": 12.4399995803833
-    },
-    {
-      "timestamp": 1470121200,
-      "close": 13.369999885559082
-    },
-    {
-      "timestamp": 1470207600,
-      "close": 12.859999656677246
-    },
-    {
-      "timestamp": 1470294000,
-      "close": 12.420000076293945
-    },
-    {
-      "timestamp": 1470380400,
-      "close": 11.390000343322754
-    },
     {
       "timestamp": 1470639600,
       "close": 11.5
@@ -25225,6 +25220,26 @@
     {
       "timestamp": 1785481200,
       "close": 15.989999771118164
+    },
+    {
+      "timestamp": 1785740400,
+      "close": 15.859999656677246
+    },
+    {
+      "timestamp": 1785826800,
+      "close": 16.5
+    },
+    {
+      "timestamp": 1785913200,
+      "close": 15.8100004196167
+    },
+    {
+      "timestamp": 1785999600,
+      "close": 15.149999618530273
+    },
+    {
+      "timestamp": 1786086000,
+      "close": 14.899999618530273
     }
   ]
 }

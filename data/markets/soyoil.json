@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 11567.0,
       "tertiary_net": 81197.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 713493.0,
+      "primary_long": 106763.0,
+      "primary_short": 26082.0,
+      "primary_net": 80681.0,
+      "secondary_long": 210443.0,
+      "secondary_short": 382914.0,
+      "secondary_net": -172471.0,
+      "tertiary_long": 89929.0,
+      "tertiary_short": 11189.0,
+      "tertiary_net": 78740.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 29.75
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 30.059999465942383
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 30.299999237060547
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 30.540000915527344
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 30.520000457763672
-    },
     {
       "timestamp": 1470628800,
       "close": 30.93000030517578
@@ -25832,6 +25827,26 @@
     {
       "timestamp": 1785470400,
       "close": 67.12000274658203
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 68.69000244140625
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 68.18000030517578
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 67.75
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 67.69999694824219
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 68.16000366210938
     }
   ]
 }

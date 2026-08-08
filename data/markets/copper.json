@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 43994.0,
       "tertiary_net": 7325.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 310202.0,
+      "primary_long": 95081.0,
+      "primary_short": 17285.0,
+      "primary_net": 77796.0,
+      "secondary_long": 23069.0,
+      "secondary_short": 115097.0,
+      "secondary_net": -92028.0,
+      "tertiary_long": 52725.0,
+      "tertiary_short": 47209.0,
+      "tertiary_net": 5516.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 2.196500062942505
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 2.2065000534057617
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 2.196000099182129
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 2.1740000247955322
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 2.1530001163482666
-    },
     {
       "timestamp": 1470628800,
       "close": 2.1640000343322754
@@ -25836,6 +25831,26 @@
     {
       "timestamp": 1785470400,
       "close": 6.435999870300293
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 6.513999938964844
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 6.618500232696533
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 6.703000068664551
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 6.686999797821045
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 6.570499897003174
     }
   ]
 }

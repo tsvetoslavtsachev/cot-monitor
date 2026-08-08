@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "GC=F",
     "price_label": "Gold Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 210223.0,
       "tertiary_net": -186806.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "GOLD - COMMODITY EXCHANGE INC.",
+      "open_interest": 488312.0,
+      "primary_long": 141820.0,
+      "primary_short": 9422.0,
+      "primary_net": 132398.0,
+      "secondary_long": 19765.0,
+      "secondary_short": 36168.0,
+      "secondary_net": -16403.0,
+      "tertiary_long": 19881.0,
+      "tertiary_short": 223821.0,
+      "tertiary_net": -203940.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 1351.4000244140625
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 1364.4000244140625
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 1356.0999755859375
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 1358.800048828125
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 1336.4000244140625
-    },
     {
       "timestamp": 1470628800,
       "close": 1333.4000244140625
@@ -25832,6 +25827,26 @@
     {
       "timestamp": 1785470400,
       "close": 4049.10009765625
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 4033.699951171875
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 4095.39990234375
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 4245.7998046875
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 4242.0
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 4340.7001953125
     }
   ]
 }

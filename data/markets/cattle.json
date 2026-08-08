@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 7420.0,
       "tertiary_net": 60059.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 427008.0,
+      "primary_long": 80784.0,
+      "primary_short": 14717.0,
+      "primary_net": 66067.0,
+      "secondary_long": 69491.0,
+      "secondary_short": 183579.0,
+      "secondary_net": -114088.0,
+      "tertiary_long": 66892.0,
+      "tertiary_short": 6593.0,
+      "tertiary_net": 60299.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 115.92500305175781
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 116.2249984741211
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 116.75
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 116.32499694824219
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 117.67500305175781
-    },
     {
       "timestamp": 1470628800,
       "close": 116.92500305175781
@@ -25832,6 +25827,26 @@
     {
       "timestamp": 1785470400,
       "close": 231.75
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 231.10000610351562
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 231.9499969482422
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 234.1750030517578
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 231.22500610351562
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 231.6999969482422
     }
   ]
 }

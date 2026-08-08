@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 31423.0,
       "tertiary_net": 205507.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 365083.0,
+      "primary_long": 24786.0,
+      "primary_short": 126534.0,
+      "primary_net": -101748.0,
+      "secondary_long": 35201.0,
+      "secondary_short": 136515.0,
+      "secondary_net": -101314.0,
+      "tertiary_long": 231493.0,
+      "tertiary_short": 30673.0,
+      "tertiary_net": 200820.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 0.7635999917984009
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 0.76419997215271
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 0.7648000121116638
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 0.7687000036239624
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 0.7599999904632568
-    },
     {
       "timestamp": 1470628800,
       "close": 0.7595999836921692
@@ -25836,6 +25831,26 @@
     {
       "timestamp": 1785470400,
       "close": 0.7138000130653381
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 0.7124500274658203
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 0.7113500237464905
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 0.7142999768257141
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 0.713949978351593
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 0.7178000211715698
     }
   ]
 }

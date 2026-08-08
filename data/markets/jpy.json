@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 15902.0,
       "tertiary_net": 139337.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 419393.0,
+      "primary_long": 75758.0,
+      "primary_short": 136583.0,
+      "primary_net": -60825.0,
+      "secondary_long": 72815.0,
+      "secondary_short": 115237.0,
+      "secondary_net": -42422.0,
+      "tertiary_long": 112779.0,
+      "tertiary_short": 81356.0,
+      "tertiary_net": 31423.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 0.009785999543964863
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 0.009926999919116497
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 0.009902999736368656
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 0.00989999994635582
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 0.009846000000834465
-    },
     {
       "timestamp": 1470628800,
       "close": 0.00977300014346838
@@ -25836,6 +25831,30 @@
     {
       "timestamp": 1785384000,
       "close": 0.006300999782979488
+    },
+    {
+      "timestamp": 1785470400,
+      "close": 0.006300999782979488
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 0.006388000212609768
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 0.00634999992325902
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 0.00634900014847517
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 0.006320999935269356
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 0.006351000163704157
     }
   ]
 }

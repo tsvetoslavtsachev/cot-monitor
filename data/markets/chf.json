@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 8817.0,
       "tertiary_net": 64722.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 109573.0,
+      "primary_long": 11408.0,
+      "primary_short": 21492.0,
+      "primary_net": -10084.0,
+      "secondary_long": 4571.0,
+      "secondary_short": 44338.0,
+      "secondary_net": -39767.0,
+      "tertiary_long": 72581.0,
+      "tertiary_short": 8817.0,
+      "tertiary_net": 63764.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 1.0362000465393066
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 1.0398999452590942
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 1.0298999547958374
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 1.0292999744415283
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 1.0230000019073486
-    },
     {
       "timestamp": 1470628800,
       "close": 1.0194000005722046
@@ -25839,6 +25834,26 @@
     },
     {
       "timestamp": 1785470400,
+      "close": 1.2430000305175781
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 1.2400000095367432
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 1.2410999536514282
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 1.2446000576019287
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 1.2361500263214111
+    },
+    {
+      "timestamp": 1786075200,
       "close": 1.2430000305175781
     }
   ]

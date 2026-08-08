@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 12002.0,
       "tertiary_net": 110782.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 659602.0,
+      "primary_long": 126652.0,
+      "primary_short": 49201.0,
+      "primary_net": 77451.0,
+      "secondary_long": 134783.0,
+      "secondary_short": 373671.0,
+      "secondary_net": -238888.0,
+      "tertiary_long": 125214.0,
+      "tertiary_short": 8575.0,
+      "tertiary_net": 116639.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 334.0
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 328.3999938964844
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 330.5
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 329.70001220703125
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 335.79998779296875
-    },
     {
       "timestamp": 1470628800,
       "close": 337.8999938964844
@@ -25832,6 +25827,26 @@
     {
       "timestamp": 1785470400,
       "close": 312.20001220703125
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 313.3999938964844
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 310.6000061035156
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 309.29998779296875
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 310.70001220703125
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 308.1000061035156
     }
   ]
 }

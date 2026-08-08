@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CC=F",
     "price_label": "Cocoa Futures",
-    "record_count": 1051,
+    "record_count": 1052,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-04",
+    "lookback_weeks": 1052,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,24 @@
       "tertiary_short": 9624.0,
       "tertiary_net": 32477.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "COCOA - ICE FUTURES U.S.",
+      "open_interest": 277024.0,
+      "primary_long": 16008.0,
+      "primary_short": 27922.0,
+      "primary_net": -11914.0,
+      "secondary_long": 60953.0,
+      "secondary_short": 81360.0,
+      "secondary_net": -20407.0,
+      "tertiary_long": 41924.0,
+      "tertiary_short": 10108.0,
+      "tertiary_net": 31816.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470024000,
-      "close": 2926.0
-    },
-    {
-      "timestamp": 1470110400,
-      "close": 2896.0
-    },
-    {
-      "timestamp": 1470196800,
-      "close": 2993.0
-    },
-    {
-      "timestamp": 1470283200,
-      "close": 2991.0
-    },
-    {
-      "timestamp": 1470369600,
-      "close": 3021.0
-    },
     {
       "timestamp": 1470628800,
       "close": 3031.0
@@ -25836,6 +25831,26 @@
     {
       "timestamp": 1785470400,
       "close": 5397.0
+    },
+    {
+      "timestamp": 1785729600,
+      "close": 5939.0
+    },
+    {
+      "timestamp": 1785816000,
+      "close": 5924.0
+    },
+    {
+      "timestamp": 1785902400,
+      "close": 5882.0
+    },
+    {
+      "timestamp": 1785988800,
+      "close": 5776.0
+    },
+    {
+      "timestamp": 1786075200,
+      "close": 5782.0
     }
   ]
 }
