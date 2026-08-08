@@ -2,11 +2,15 @@ name: Weekly COT Refresh
 
 on:
   schedule:
-    # Sat 08:00 UTC — deliberately AFTER collectors/cot.yml (Sat 07:30 UTC) writes
-    # the weekly data-core base. The old Fri 21:00 slot ran BEFORE that Saturday
-    # write, so the dashboard read the base one cycle behind by construction and
-    # froze silently when a holiday slipped a reporting cycle (the Jul-4 2026 bug).
-    - cron: '0 8 * * 6'
+    # Sat 06:23 UTC — deliberately AFTER collectors/cot.yml (Sat 04:23 UTC since
+    # the Р2 swap 06.08.2026; observed push ~05:15 UTC) writes the weekly data-core
+    # base: ~1h buffer, and odd minutes to dodge the round-hour scheduler queue
+    # (the old 08:00 slot queued 1.5-3h -> map landed ~12:30 Sofia; now ~10:00).
+    # The old Fri 21:00 slot ran BEFORE the Saturday write, so the dashboard read
+    # the base one cycle behind by construction and froze silently when a holiday
+    # slipped a reporting cycle (the Jul-4 2026 bug). The check_freshness gate
+    # fails RED (loud) if this ever races ahead of the cot collect on a slow day.
+    - cron: '23 6 * * 6'
   workflow_dispatch:        # Allow manual trigger
 
 permissions:
