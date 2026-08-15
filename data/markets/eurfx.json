@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "EURUSD=X",
     "price_label": "EUR/USD",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 255728.0,
       "tertiary_net": -204478.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 801884.0,
+      "primary_long": 86753.0,
+      "primary_short": 147353.0,
+      "primary_net": -60600.0,
+      "secondary_long": 450831.0,
+      "secondary_short": 225442.0,
+      "secondary_net": 225389.0,
+      "tertiary_long": 53721.0,
+      "tertiary_short": 259757.0,
+      "tertiary_net": -206036.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470610800,
-      "close": 1.1089547872543335
-    },
-    {
-      "timestamp": 1470697200,
-      "close": 1.1083648204803467
-    },
-    {
-      "timestamp": 1470783600,
-      "close": 1.111580491065979
-    },
-    {
-      "timestamp": 1470870000,
-      "close": 1.1186434030532837
-    },
-    {
-      "timestamp": 1470956400,
-      "close": 1.113908290863037
-    },
     {
       "timestamp": 1471215600,
       "close": 1.1166945695877075
@@ -26205,8 +26200,24 @@
       "close": 1.1524720191955566
     },
     {
-      "timestamp": 1786138197,
-      "close": 1.156203031539917
+      "timestamp": 1786316400,
+      "close": 1.155641794204712
+    },
+    {
+      "timestamp": 1786402800,
+      "close": 1.1546411514282227
+    },
+    {
+      "timestamp": 1786489200,
+      "close": 1.1543744802474976
+    },
+    {
+      "timestamp": 1786575600,
+      "close": 1.1530035734176636
+    },
+    {
+      "timestamp": 1786742961,
+      "close": 1.157273530960083
     }
   ]
 }

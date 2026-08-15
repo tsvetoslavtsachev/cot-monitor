@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1011,
+    "record_count": 1012,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1011,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1012,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15178,29 +15178,24 @@
       "tertiary_short": 39097.0,
       "tertiary_net": 33096.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 382010.0,
+      "primary_long": 83434.0,
+      "primary_short": 95561.0,
+      "primary_net": -12127.0,
+      "secondary_long": 49073.0,
+      "secondary_short": 76177.0,
+      "secondary_net": -27104.0,
+      "tertiary_long": 79670.0,
+      "tertiary_short": 39502.0,
+      "tertiary_net": 40168.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470639600,
-      "close": 11.5
-    },
-    {
-      "timestamp": 1470726000,
-      "close": 11.65999984741211
-    },
-    {
-      "timestamp": 1470812400,
-      "close": 12.050000190734863
-    },
-    {
-      "timestamp": 1470898800,
-      "close": 11.680000305175781
-    },
-    {
-      "timestamp": 1470985200,
-      "close": 11.550000190734863
-    },
     {
       "timestamp": 1471244400,
       "close": 11.8100004196167
@@ -25186,14 +25181,6 @@
       "close": 18.649999618530273
     },
     {
-      "timestamp": 1784617200,
-      "close": 17.049999237060547
-    },
-    {
-      "timestamp": 1784703600,
-      "close": 16.639999389648438
-    },
-    {
       "timestamp": 1784790000,
       "close": 18.700000762939453
     },
@@ -25218,10 +25205,6 @@
       "close": 17.09000015258789
     },
     {
-      "timestamp": 1785481200,
-      "close": 15.989999771118164
-    },
-    {
       "timestamp": 1785740400,
       "close": 15.859999656677246
     },
@@ -25240,6 +25223,26 @@
     {
       "timestamp": 1786086000,
       "close": 14.899999618530273
+    },
+    {
+      "timestamp": 1786345200,
+      "close": 15.460000038146973
+    },
+    {
+      "timestamp": 1786431600,
+      "close": 15.279999732971191
+    },
+    {
+      "timestamp": 1786518000,
+      "close": 14.550000190734863
+    },
+    {
+      "timestamp": 1786604400,
+      "close": 14.630000114440918
+    },
+    {
+      "timestamp": 1786690800,
+      "close": 14.25
     }
   ]
 }

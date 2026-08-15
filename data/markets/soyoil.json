@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 11189.0,
       "tertiary_net": 78740.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 711680.0,
+      "primary_long": 111461.0,
+      "primary_short": 30539.0,
+      "primary_net": 80922.0,
+      "secondary_long": 210974.0,
+      "secondary_short": 390376.0,
+      "secondary_net": -179402.0,
+      "tertiary_long": 91751.0,
+      "tertiary_short": 11523.0,
+      "tertiary_net": 80228.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 30.93000030517578
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 31.170000076293945
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 31.5
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 31.709999084472656
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 31.899999618530273
-    },
     {
       "timestamp": 1471233600,
       "close": 33.209999084472656
@@ -25847,6 +25842,26 @@
     {
       "timestamp": 1786075200,
       "close": 68.16000366210938
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 69.45999908447266
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 68.44999694824219
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 68.95999908447266
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 68.66999816894531
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 69.05000305175781
     }
   ]
 }

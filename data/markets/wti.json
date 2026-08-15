@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 667460.0,
       "tertiary_net": -573926.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2608236.0,
+      "primary_long": 192505.0,
+      "primary_short": 88790.0,
+      "primary_net": 103715.0,
+      "secondary_long": 696485.0,
+      "secondary_short": 342716.0,
+      "secondary_net": 353769.0,
+      "tertiary_long": 95805.0,
+      "tertiary_short": 654745.0,
+      "tertiary_net": -558940.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 43.02000045776367
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 42.77000045776367
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 41.709999084472656
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 43.4900016784668
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 44.4900016784668
-    },
     {
       "timestamp": 1471233600,
       "close": 45.7400016784668
@@ -25851,6 +25846,26 @@
     {
       "timestamp": 1786075200,
       "close": 78.18000030517578
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 82.12999725341797
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 83.19999694824219
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 83.2699966430664
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 81.25
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 82.4000015258789
     }
   ]
 }

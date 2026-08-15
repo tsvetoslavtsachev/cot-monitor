@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "KC=F",
     "price_label": "Coffee Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 25770.0,
       "tertiary_net": -1167.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 234079.0,
+      "primary_long": 36811.0,
+      "primary_short": 12641.0,
+      "primary_net": 24170.0,
+      "secondary_long": 49508.0,
+      "secondary_short": 78348.0,
+      "secondary_net": -28840.0,
+      "tertiary_long": 24068.0,
+      "tertiary_short": 24586.0,
+      "tertiary_net": -518.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 141.10000610351562
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 141.10000610351562
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 138.64999389648438
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 137.6999969482422
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 136.85000610351562
-    },
     {
       "timestamp": 1471233600,
       "close": 136.9499969482422
@@ -25855,6 +25850,26 @@
     {
       "timestamp": 1786075200,
       "close": 335.54998779296875
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 332.29998779296875
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 335.75
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 340.1000061035156
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 333.1000061035156
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 338.1000061035156
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 48467.0,
       "tertiary_net": -25759.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 134898.0,
+      "primary_long": 18983.0,
+      "primary_short": 8671.0,
+      "primary_net": 10312.0,
+      "secondary_long": 5832.0,
+      "secondary_short": 21727.0,
+      "secondary_net": -15895.0,
+      "tertiary_long": 23041.0,
+      "tertiary_short": 49691.0,
+      "tertiary_net": -26650.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 19.76799964904785
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 19.81399917602539
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 20.134000778198242
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 19.983999252319336
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 19.672000885009766
-    },
     {
       "timestamp": 1471233600,
       "close": 19.820999145507812
@@ -25847,6 +25842,26 @@
     {
       "timestamp": 1786075200,
       "close": 63.332000732421875
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 65.10600280761719
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 64.76899719238281
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 65.55500030517578
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 64.87300109863281
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 64.98799896240234
     }
   ]
 }

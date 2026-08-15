@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 33438.0,
       "tertiary_net": 24574.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 498899.0,
+      "primary_long": 91058.0,
+      "primary_short": 18188.0,
+      "primary_net": 72870.0,
+      "secondary_long": 74045.0,
+      "secondary_short": 221045.0,
+      "secondary_net": -147000.0,
+      "tertiary_long": 62234.0,
+      "tertiary_short": 36682.0,
+      "tertiary_net": 25552.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 76.05999755859375
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 73.05999755859375
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 71.16000366210938
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 71.2699966430664
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 69.87999725341797
-    },
     {
       "timestamp": 1471233600,
       "close": 68.08999633789062
@@ -25855,6 +25850,26 @@
     {
       "timestamp": 1786075200,
       "close": 83.22000122070312
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 82.72000122070312
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 83.08999633789062
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 83.20999908447266
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 82.36000061035156
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 83.5999984741211
     }
   ]
 }

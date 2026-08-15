@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 8575.0,
       "tertiary_net": 116639.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 656966.0,
+      "primary_long": 120520.0,
+      "primary_short": 48944.0,
+      "primary_net": 71576.0,
+      "secondary_long": 136928.0,
+      "secondary_short": 374830.0,
+      "secondary_net": -237902.0,
+      "tertiary_long": 126356.0,
+      "tertiary_short": 4024.0,
+      "tertiary_net": 122332.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 337.8999938964844
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 339.20001220703125
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 336.20001220703125
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 333.8999938964844
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 332.8999938964844
-    },
     {
       "timestamp": 1471233600,
       "close": 339.6000061035156
@@ -25847,6 +25842,26 @@
     {
       "timestamp": 1786075200,
       "close": 308.1000061035156
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 303.70001220703125
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 303.3999938964844
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 311.0
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 309.8999938964844
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 308.70001220703125
     }
   ]
 }

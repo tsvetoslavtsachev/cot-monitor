@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 2303.0,
       "tertiary_net": 4133.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 19540.0,
+      "primary_long": 4522.0,
+      "primary_short": 9426.0,
+      "primary_net": -4904.0,
+      "secondary_long": 1712.0,
+      "secondary_short": 1932.0,
+      "secondary_net": -220.0,
+      "tertiary_long": 6304.0,
+      "tertiary_short": 2347.0,
+      "tertiary_net": 3957.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 692.0499877929688
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 693.0999755859375
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 725.1500244140625
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 690.5499877929688
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 689.5499877929688
-    },
     {
       "timestamp": 1471233600,
       "close": 691.0999755859375
@@ -25843,6 +25838,26 @@
     {
       "timestamp": 1786075200,
       "close": 1374.0999755859375
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 1377.199951171875
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 1366.0999755859375
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 1370.199951171875
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 1322.5999755859375
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 1322.5
     }
   ]
 }

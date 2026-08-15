@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 6593.0,
       "tertiary_net": 60299.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 380363.0,
+      "primary_long": 79363.0,
+      "primary_short": 14701.0,
+      "primary_net": 64662.0,
+      "secondary_long": 59525.0,
+      "secondary_short": 175680.0,
+      "secondary_net": -116155.0,
+      "tertiary_long": 67857.0,
+      "tertiary_short": 4988.0,
+      "tertiary_net": 62869.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 116.92500305175781
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 116.9749984741211
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 116.8499984741211
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 116.0250015258789
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 116.32499694824219
-    },
     {
       "timestamp": 1471233600,
       "close": 115.92500305175781
@@ -25847,6 +25842,26 @@
     {
       "timestamp": 1786075200,
       "close": 231.6999969482422
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 233.27499389648438
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 232.75
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 230.5749969482422
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 226.22500610351562
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 223.625
     }
   ]
 }

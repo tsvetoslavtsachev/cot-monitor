@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 30673.0,
       "tertiary_net": 200820.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 364104.0,
+      "primary_long": 26511.0,
+      "primary_short": 118516.0,
+      "primary_net": -92005.0,
+      "secondary_long": 31274.0,
+      "secondary_short": 135819.0,
+      "secondary_net": -104545.0,
+      "tertiary_long": 228200.0,
+      "tertiary_short": 35069.0,
+      "tertiary_net": 193131.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 0.7595999836921692
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 0.7613999843597412
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 0.7660499811172485
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 0.7712000012397766
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 0.7721499800682068
-    },
     {
       "timestamp": 1471233600,
       "close": 0.7744500041007996
@@ -25851,6 +25846,26 @@
     {
       "timestamp": 1786075200,
       "close": 0.7178000211715698
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 0.7174999713897705
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 0.7186499834060669
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 0.7172499895095825
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 0.7177500128746033
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 0.7207000255584717
     }
   ]
 }

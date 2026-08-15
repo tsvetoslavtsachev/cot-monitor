@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1051,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-07-28",
-    "lookback_weeks": 1051,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15778,29 +15778,39 @@
       "tertiary_short": 18598.0,
       "tertiary_net": 198443.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-04",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1719031.0,
+      "primary_long": 229069.0,
+      "primary_short": 355614.0,
+      "primary_net": -126545.0,
+      "secondary_long": 229951.0,
+      "secondary_short": 243551.0,
+      "secondary_net": -13600.0,
+      "tertiary_long": 221040.0,
+      "tertiary_short": 17805.0,
+      "tertiary_net": 203235.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1706695.0,
+      "primary_long": 248566.0,
+      "primary_short": 358948.0,
+      "primary_net": -110382.0,
+      "secondary_long": 235349.0,
+      "secondary_short": 253104.0,
+      "secondary_net": -17755.0,
+      "tertiary_long": 218853.0,
+      "tertiary_short": 18574.0,
+      "tertiary_net": 200279.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 2.747999906539917
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 2.615000009536743
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 2.561000108718872
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 2.5510001182556152
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 2.5859999656677246
-    },
     {
       "timestamp": 1471233600,
       "close": 2.5899999141693115
@@ -25840,6 +25850,26 @@
     {
       "timestamp": 1786075200,
       "close": 2.6619999408721924
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 2.7939999103546143
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 2.7669999599456787
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 2.803999900817871
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 2.7269999980926514
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 2.7330000400543213
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 8817.0,
       "tertiary_net": 63764.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 109874.0,
+      "primary_long": 10165.0,
+      "primary_short": 21597.0,
+      "primary_net": -11432.0,
+      "secondary_long": 4509.0,
+      "secondary_short": 42831.0,
+      "secondary_net": -38322.0,
+      "tertiary_long": 70998.0,
+      "tertiary_short": 8616.0,
+      "tertiary_net": 62382.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 1.0194000005722046
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 1.0200999975204468
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 1.0273000001907349
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 1.0281000137329102
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 1.027400016784668
-    },
     {
       "timestamp": 1471233600,
       "close": 1.0299999713897705
@@ -25855,6 +25850,26 @@
     {
       "timestamp": 1786075200,
       "close": 1.2430000305175781
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 1.2389500141143799
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 1.2372499704360962
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 1.2332500219345093
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 1.2325999736785889
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 1.2337499856948853
     }
   ]
 }

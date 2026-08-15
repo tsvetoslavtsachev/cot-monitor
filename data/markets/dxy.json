@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 1052,
+    "record_count": 1053,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-04",
-    "lookback_weeks": 1052,
+    "history_last_date": "2026-08-11",
+    "lookback_weeks": 1053,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15793,29 +15793,24 @@
       "tertiary_short": 32826.0,
       "tertiary_net": -27070.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-11",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 49541.0,
+      "primary_long": 15398.0,
+      "primary_short": 9626.0,
+      "primary_net": 5772.0,
+      "secondary_long": 18450.0,
+      "secondary_short": 1923.0,
+      "secondary_net": 16527.0,
+      "tertiary_long": 5724.0,
+      "tertiary_short": 33016.0,
+      "tertiary_net": -27292.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1470628800,
-      "close": 96.4000015258789
-    },
-    {
-      "timestamp": 1470715200,
-      "close": 96.18000030517578
-    },
-    {
-      "timestamp": 1470801600,
-      "close": 95.6500015258789
-    },
-    {
-      "timestamp": 1470888000,
-      "close": 95.86000061035156
-    },
-    {
-      "timestamp": 1470974400,
-      "close": 95.72000122070312
-    },
     {
       "timestamp": 1471233600,
       "close": 95.62999725341797
@@ -25797,14 +25792,6 @@
       "close": 100.98999786376953
     },
     {
-      "timestamp": 1784606400,
-      "close": 101.18000030517578
-    },
-    {
-      "timestamp": 1784692800,
-      "close": 101.13999938964844
-    },
-    {
       "timestamp": 1784779200,
       "close": 101.43000030517578
     },
@@ -25829,10 +25816,6 @@
       "close": 100.01000213623047
     },
     {
-      "timestamp": 1785470400,
-      "close": 99.80000305175781
-    },
-    {
       "timestamp": 1785729600,
       "close": 99.95999908447266
     },
@@ -25851,6 +25834,26 @@
     {
       "timestamp": 1786075200,
       "close": 99.5999984741211
+    },
+    {
+      "timestamp": 1786334400,
+      "close": 99.80999755859375
+    },
+    {
+      "timestamp": 1786420800,
+      "close": 99.81999969482422
+    },
+    {
+      "timestamp": 1786507200,
+      "close": 100.01000213623047
+    },
+    {
+      "timestamp": 1786593600,
+      "close": 99.95999908447266
+    },
+    {
+      "timestamp": 1786680000,
+      "close": 99.66999816894531
     }
   ]
 }
