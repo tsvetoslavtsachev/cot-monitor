@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "ZN=F",
     "price_label": "US 10Y Note",
-    "record_count": 1053,
+    "record_count": 1054,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-11",
-    "lookback_weeks": 1053,
+    "history_last_date": "2026-08-18",
+    "lookback_weeks": 1054,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15808,29 +15808,24 @@
       "tertiary_short": 637196.0,
       "tertiary_net": -474266.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-18",
+      "market_name": "UST 10Y NOTE - CHICAGO BOARD OF TRADE",
+      "open_interest": 5596739.0,
+      "primary_long": 352319.0,
+      "primary_short": 2581332.0,
+      "primary_net": -2229013.0,
+      "secondary_long": 3353552.0,
+      "secondary_short": 768057.0,
+      "secondary_net": 2585495.0,
+      "tertiary_long": 190379.0,
+      "tertiary_short": 679773.0,
+      "tertiary_net": -489394.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471233600,
-      "close": 132.25
-    },
-    {
-      "timestamp": 1471320000,
-      "close": 132.0
-    },
-    {
-      "timestamp": 1471406400,
-      "close": 132.109375
-    },
-    {
-      "timestamp": 1471492800,
-      "close": 132.375
-    },
-    {
-      "timestamp": 1471579200,
-      "close": 131.953125
-    },
     {
       "timestamp": 1471838400,
       "close": 132.28125
@@ -25866,6 +25861,26 @@
     {
       "timestamp": 1786680000,
       "close": 108.578125
+    },
+    {
+      "timestamp": 1786939200,
+      "close": 108.453125
+    },
+    {
+      "timestamp": 1787025600,
+      "close": 108.5625
+    },
+    {
+      "timestamp": 1787112000,
+      "close": 108.78125
+    },
+    {
+      "timestamp": 1787198400,
+      "close": 108.5
+    },
+    {
+      "timestamp": 1787284800,
+      "close": 108.265625
     }
   ]
 }

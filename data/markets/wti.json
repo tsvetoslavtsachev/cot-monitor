@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1053,
+    "record_count": 1054,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-11",
-    "lookback_weeks": 1053,
+    "history_last_date": "2026-08-18",
+    "lookback_weeks": 1054,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15808,29 +15808,24 @@
       "tertiary_short": 654745.0,
       "tertiary_net": -558940.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-18",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2448684.0,
+      "primary_long": 195631.0,
+      "primary_short": 91596.0,
+      "primary_net": 104035.0,
+      "secondary_long": 686166.0,
+      "secondary_short": 355579.0,
+      "secondary_net": 330587.0,
+      "tertiary_long": 103720.0,
+      "tertiary_short": 648691.0,
+      "tertiary_net": -544971.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471233600,
-      "close": 45.7400016784668
-    },
-    {
-      "timestamp": 1471320000,
-      "close": 46.58000183105469
-    },
-    {
-      "timestamp": 1471406400,
-      "close": 46.790000915527344
-    },
-    {
-      "timestamp": 1471492800,
-      "close": 48.220001220703125
-    },
-    {
-      "timestamp": 1471579200,
-      "close": 48.52000045776367
-    },
     {
       "timestamp": 1471838400,
       "close": 47.04999923706055
@@ -25866,6 +25861,26 @@
     {
       "timestamp": 1786680000,
       "close": 82.4000015258789
+    },
+    {
+      "timestamp": 1786939200,
+      "close": 84.5
+    },
+    {
+      "timestamp": 1787025600,
+      "close": 84.94000244140625
+    },
+    {
+      "timestamp": 1787112000,
+      "close": 85.83000183105469
+    },
+    {
+      "timestamp": 1787198400,
+      "close": 87.83000183105469
+    },
+    {
+      "timestamp": 1787284800,
+      "close": 87.05999755859375
     }
   ]
 }

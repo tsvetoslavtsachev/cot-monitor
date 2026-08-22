@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1053,
+    "record_count": 1054,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-11",
-    "lookback_weeks": 1053,
+    "history_last_date": "2026-08-18",
+    "lookback_weeks": 1054,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15808,29 +15808,24 @@
       "tertiary_short": 36682.0,
       "tertiary_net": 25552.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-18",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 511090.0,
+      "primary_long": 96430.0,
+      "primary_short": 17762.0,
+      "primary_net": 78668.0,
+      "secondary_long": 74531.0,
+      "secondary_short": 231556.0,
+      "secondary_net": -157025.0,
+      "tertiary_long": 63494.0,
+      "tertiary_short": 32840.0,
+      "tertiary_net": 30654.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471233600,
-      "close": 68.08999633789062
-    },
-    {
-      "timestamp": 1471320000,
-      "close": 68.01000213623047
-    },
-    {
-      "timestamp": 1471406400,
-      "close": 68.36000061035156
-    },
-    {
-      "timestamp": 1471492800,
-      "close": 68.5
-    },
-    {
-      "timestamp": 1471579200,
-      "close": 67.56999969482422
-    },
     {
       "timestamp": 1471838400,
       "close": 67.91999816894531
@@ -25870,6 +25865,26 @@
     {
       "timestamp": 1786680000,
       "close": 83.5999984741211
+    },
+    {
+      "timestamp": 1786939200,
+      "close": 84.06999969482422
+    },
+    {
+      "timestamp": 1787025600,
+      "close": 84.12000274658203
+    },
+    {
+      "timestamp": 1787112000,
+      "close": 87.0
+    },
+    {
+      "timestamp": 1787198400,
+      "close": 87.0199966430664
+    },
+    {
+      "timestamp": 1787284800,
+      "close": 87.06999969482422
     }
   ]
 }

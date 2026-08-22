@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZC=F",
     "price_label": "Corn Futures",
-    "record_count": 1053,
+    "record_count": 1054,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-11",
-    "lookback_weeks": 1053,
+    "history_last_date": "2026-08-18",
+    "lookback_weeks": 1054,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15808,29 +15808,24 @@
       "tertiary_short": 20027.0,
       "tertiary_net": 343635.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-18",
+      "market_name": "CORN - CHICAGO BOARD OF TRADE",
+      "open_interest": 2395505.0,
+      "primary_long": 376030.0,
+      "primary_short": 125525.0,
+      "primary_net": 250505.0,
+      "secondary_long": 451106.0,
+      "secondary_short": 991880.0,
+      "secondary_net": -540774.0,
+      "tertiary_long": 363713.0,
+      "tertiary_short": 27592.0,
+      "tertiary_net": 336121.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471233600,
-      "close": 326.5
-    },
-    {
-      "timestamp": 1471320000,
-      "close": 327.5
-    },
-    {
-      "timestamp": 1471406400,
-      "close": 330.25
-    },
-    {
-      "timestamp": 1471492800,
-      "close": 332.0
-    },
-    {
-      "timestamp": 1471579200,
-      "close": 334.25
-    },
     {
       "timestamp": 1471838400,
       "close": 333.25
@@ -25854,6 +25849,26 @@
     {
       "timestamp": 1786680000,
       "close": 459.0
+    },
+    {
+      "timestamp": 1786939200,
+      "close": 465.0
+    },
+    {
+      "timestamp": 1787025600,
+      "close": 463.25
+    },
+    {
+      "timestamp": 1787112000,
+      "close": 473.0
+    },
+    {
+      "timestamp": 1787198400,
+      "close": 478.75
+    },
+    {
+      "timestamp": 1787284800,
+      "close": 483.75
     }
   ]
 }

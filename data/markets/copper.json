@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1053,
+    "record_count": 1054,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-11",
-    "lookback_weeks": 1053,
+    "history_last_date": "2026-08-18",
+    "lookback_weeks": 1054,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15808,29 +15808,24 @@
       "tertiary_short": 46234.0,
       "tertiary_net": 5198.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-18",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 296867.0,
+      "primary_long": 92690.0,
+      "primary_short": 13465.0,
+      "primary_net": 79225.0,
+      "secondary_long": 29900.0,
+      "secondary_short": 125584.0,
+      "secondary_net": -95684.0,
+      "tertiary_long": 51394.0,
+      "tertiary_short": 45888.0,
+      "tertiary_net": 5506.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471233600,
-      "close": 2.1514999866485596
-    },
-    {
-      "timestamp": 1471320000,
-      "close": 2.171999931335449
-    },
-    {
-      "timestamp": 1471406400,
-      "close": 2.1519999504089355
-    },
-    {
-      "timestamp": 1471492800,
-      "close": 2.1670000553131104
-    },
-    {
-      "timestamp": 1471579200,
-      "close": 2.1665000915527344
-    },
     {
       "timestamp": 1471838400,
       "close": 2.140000104904175
@@ -25866,6 +25861,26 @@
     {
       "timestamp": 1786680000,
       "close": 6.5995001792907715
+    },
+    {
+      "timestamp": 1786939200,
+      "close": 6.604000091552734
+    },
+    {
+      "timestamp": 1787025600,
+      "close": 6.482500076293945
+    },
+    {
+      "timestamp": 1787112000,
+      "close": 6.487500190734863
+    },
+    {
+      "timestamp": 1787198400,
+      "close": 6.460000038146973
+    },
+    {
+      "timestamp": 1787284800,
+      "close": 6.579500198364258
     }
   ]
 }
