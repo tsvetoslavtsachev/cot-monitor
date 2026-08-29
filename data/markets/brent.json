@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 237,
+    "record_count": 238,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-08-18",
-    "lookback_weeks": 237,
+    "history_last_date": "2026-08-25",
+    "lookback_weeks": 238,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3568,29 +3568,24 @@
       "tertiary_short": 7913.0,
       "tertiary_net": 46896.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-08-25",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 318384.0,
+      "primary_long": 8559.0,
+      "primary_short": 1321.0,
+      "primary_net": 7238.0,
+      "secondary_long": 27547.0,
+      "secondary_short": 57831.0,
+      "secondary_net": -30284.0,
+      "tertiary_long": 60348.0,
+      "tertiary_short": 6936.0,
+      "tertiary_net": 53412.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471838400,
-      "close": 49.15999984741211
-    },
-    {
-      "timestamp": 1471924800,
-      "close": 49.959999084472656
-    },
-    {
-      "timestamp": 1472011200,
-      "close": 49.04999923706055
-    },
-    {
-      "timestamp": 1472097600,
-      "close": 49.66999816894531
-    },
-    {
-      "timestamp": 1472184000,
-      "close": 49.91999816894531
-    },
     {
       "timestamp": 1472443200,
       "close": 49.2599983215332
@@ -13630,6 +13625,22 @@
     {
       "timestamp": 1787284800,
       "close": 94.38999938964844
+    },
+    {
+      "timestamp": 1787544000,
+      "close": 92.16999816894531
+    },
+    {
+      "timestamp": 1787630400,
+      "close": 88.58000183105469
+    },
+    {
+      "timestamp": 1787716800,
+      "close": 87.83999633789062
+    },
+    {
+      "timestamp": 1787803200,
+      "close": 89.69999694824219
     }
   ]
 }

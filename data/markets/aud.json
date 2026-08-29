@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 1054,
+    "record_count": 1055,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-18",
-    "lookback_weeks": 1054,
+    "history_last_date": "2026-08-25",
+    "lookback_weeks": 1055,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15823,29 +15823,24 @@
       "tertiary_short": 114692.0,
       "tertiary_net": -30167.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-08-25",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 333906.0,
+      "primary_long": 81344.0,
+      "primary_short": 27283.0,
+      "primary_net": 54061.0,
+      "secondary_long": 97445.0,
+      "secondary_short": 142872.0,
+      "secondary_net": -45427.0,
+      "tertiary_long": 101536.0,
+      "tertiary_short": 139579.0,
+      "tertiary_net": -38043.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1471838400,
-      "close": 0.762499988079071
-    },
-    {
-      "timestamp": 1471924800,
-      "close": 0.7617999911308289
-    },
-    {
-      "timestamp": 1472011200,
-      "close": 0.7605000138282776
-    },
-    {
-      "timestamp": 1472097600,
-      "close": 0.7610999941825867
-    },
-    {
-      "timestamp": 1472184000,
-      "close": 0.7548999786376953
-    },
     {
       "timestamp": 1472443200,
       "close": 0.7572000026702881
@@ -25885,6 +25880,22 @@
     {
       "timestamp": 1787284800,
       "close": 0.7175499796867371
+    },
+    {
+      "timestamp": 1787544000,
+      "close": 0.7145500183105469
+    },
+    {
+      "timestamp": 1787630400,
+      "close": 0.715749979019165
+    },
+    {
+      "timestamp": 1787716800,
+      "close": 0.716949999332428
+    },
+    {
+      "timestamp": 1787803200,
+      "close": 0.7193499803543091
     }
   ]
 }
