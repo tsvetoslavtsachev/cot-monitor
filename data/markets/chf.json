@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 9050.0,
       "tertiary_net": 48701.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 136962.0,
+      "primary_long": 12305.0,
+      "primary_short": 22603.0,
+      "primary_net": -10298.0,
+      "secondary_long": 12689.0,
+      "secondary_short": 44806.0,
+      "secondary_net": -32117.0,
+      "tertiary_long": 64678.0,
+      "tertiary_short": 8935.0,
+      "tertiary_net": 55743.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 1.023300051689148
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 1.0175000429153442
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 1.0180000066757202
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 1.0211999416351318
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 1.0206999778747559
-    },
     {
       "timestamp": 1473134400,
       "close": 1.031499981880188
@@ -25896,6 +25891,30 @@
     {
       "timestamp": 1787803200,
       "close": 1.2454999685287476
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 1.237149953842163
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 1.239050030708313
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 1.233549952507019
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 1.2310500144958496
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 1.2405999898910522
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 1.2352499961853027
     }
   ]
 }

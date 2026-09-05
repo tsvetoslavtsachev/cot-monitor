@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HE=F",
     "price_label": "Lean Hogs Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 2989.0,
       "tertiary_net": 73483.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "LEAN HOGS - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 397563.0,
+      "primary_long": 62818.0,
+      "primary_short": 91141.0,
+      "primary_net": -28323.0,
+      "secondary_long": 51999.0,
+      "secondary_short": 90101.0,
+      "secondary_net": -38102.0,
+      "tertiary_long": 75288.0,
+      "tertiary_short": 3186.0,
+      "tertiary_net": 72102.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 61.375
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 62.04999923706055
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 62.849998474121094
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 63.32500076293945
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 60.75
-    },
     {
       "timestamp": 1473134400,
       "close": 58.92499923706055
@@ -25888,6 +25883,30 @@
     {
       "timestamp": 1787803200,
       "close": 80.625
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 81.9000015258789
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 83.67500305175781
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 83.6500015258789
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 83.7750015258789
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 83.44999694824219
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 82.30000305175781
     }
   ]
 }

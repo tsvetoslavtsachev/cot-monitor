@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 646183.0,
       "tertiary_net": -539826.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2556627.0,
+      "primary_long": 211013.0,
+      "primary_short": 91394.0,
+      "primary_net": 119619.0,
+      "secondary_long": 680174.0,
+      "secondary_short": 357895.0,
+      "secondary_net": 322279.0,
+      "tertiary_long": 107421.0,
+      "tertiary_short": 655520.0,
+      "tertiary_net": -548099.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 46.97999954223633
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 46.349998474121094
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 44.70000076293945
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 43.15999984741211
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 44.439998626708984
-    },
     {
       "timestamp": 1473134400,
       "close": 44.83000183105469
@@ -25892,6 +25887,30 @@
     {
       "timestamp": 1787803200,
       "close": 83.52999877929688
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 83.4000015258789
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 85.76000213623047
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 90.22000122070312
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 91.01000213623047
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 91.30000305175781
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 91.4800033569336
     }
   ]
 }

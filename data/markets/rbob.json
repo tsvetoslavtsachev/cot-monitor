@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 33761.0,
       "tertiary_net": 16049.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 355460.0,
+      "primary_long": 103524.0,
+      "primary_short": 14261.0,
+      "primary_net": 89263.0,
+      "secondary_long": 86177.0,
+      "secondary_short": 187080.0,
+      "secondary_net": -100903.0,
+      "tertiary_long": 52367.0,
+      "tertiary_short": 34015.0,
+      "tertiary_net": 18352.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 1.4668999910354614
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 1.4483000040054321
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 1.4121999740600586
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 1.2724000215530396
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 1.3015999794006348
-    },
     {
       "timestamp": 1473134400,
       "close": 1.3164000511169434
@@ -25896,6 +25891,30 @@
     {
       "timestamp": 1787803200,
       "close": 3.384200096130371
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 3.4899001121520996
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 3.437000036239624
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 3.1350998878479004
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 3.103800058364868
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 3.1349000930786133
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 3.214600086212158
     }
   ]
 }

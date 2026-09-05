@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "DX-Y.NYB",
     "price_label": "DXY",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 33200.0,
       "tertiary_net": -27153.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "USD INDEX - ICE FUTURES U.S.",
+      "open_interest": 50020.0,
+      "primary_long": 16024.0,
+      "primary_short": 8891.0,
+      "primary_net": 7133.0,
+      "secondary_long": 17667.0,
+      "secondary_short": 1426.0,
+      "secondary_net": 16241.0,
+      "tertiary_long": 5796.0,
+      "tertiary_short": 32811.0,
+      "tertiary_net": -27015.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 95.58000183105469
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 96.05000305175781
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 96.0199966430664
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 95.6500015258789
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 95.87999725341797
-    },
     {
       "timestamp": 1473134400,
       "close": 94.81999969482422
@@ -25891,6 +25886,30 @@
     },
     {
       "timestamp": 1787803200,
+      "close": 99.16000366210938
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 99.69999694824219
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 99.43000030517578
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 99.66999816894531
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 99.55999755859375
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 99.0
+    },
+    {
+      "timestamp": 1788494400,
       "close": 99.16000366210938
     }
   ]

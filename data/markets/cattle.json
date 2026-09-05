@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 4047.0,
       "tertiary_net": 65462.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 447131.0,
+      "primary_long": 79038.0,
+      "primary_short": 31124.0,
+      "primary_net": 47914.0,
+      "secondary_long": 79603.0,
+      "secondary_short": 176248.0,
+      "secondary_net": -96645.0,
+      "tertiary_long": 72323.0,
+      "tertiary_short": 3613.0,
+      "tertiary_net": 68710.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 110.75
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 111.5
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 111.94999694824219
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 103.57499694824219
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 101.5999984741211
-    },
     {
       "timestamp": 1473134400,
       "close": 100.0250015258789
@@ -25888,6 +25883,30 @@
     {
       "timestamp": 1787803200,
       "close": 220.3000030517578
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 219.25
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 220.75
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 212.0749969482422
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 210.1750030517578
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 214.3000030517578
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 212.9499969482422
     }
   ]
 }

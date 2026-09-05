@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 49808.0,
       "tertiary_net": -27033.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 119827.0,
+      "primary_long": 18651.0,
+      "primary_short": 6481.0,
+      "primary_net": 12170.0,
+      "secondary_long": 5464.0,
+      "secondary_short": 22141.0,
+      "secondary_net": -16677.0,
+      "tertiary_long": 21707.0,
+      "tertiary_short": 49268.0,
+      "tertiary_net": -27561.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 18.761999130249023
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 18.57699966430664
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 18.621999740600586
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 18.85700035095215
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 19.275999069213867
-    },
     {
       "timestamp": 1473134400,
       "close": 20.048999786376953
@@ -25888,6 +25883,30 @@
     {
       "timestamp": 1787803200,
       "close": 69.42900085449219
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 66.99500274658203
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 66.22100067138672
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 64.61799621582031
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 64.7229995727539
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 66.9729995727539
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 66.0469970703125
     }
   ]
 }

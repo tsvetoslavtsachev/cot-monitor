@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 2205.0,
       "tertiary_net": 4082.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 17295.0,
+      "primary_long": 4624.0,
+      "primary_short": 9203.0,
+      "primary_net": -4579.0,
+      "secondary_long": 1025.0,
+      "secondary_short": 1336.0,
+      "secondary_net": -311.0,
+      "tertiary_long": 5925.0,
+      "tertiary_short": 2403.0,
+      "tertiary_net": 3522.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 697.2999877929688
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 677.9500122070312
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 668.7000122070312
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 661.25
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 674.2000122070312
-    },
     {
       "timestamp": 1473134400,
       "close": 701.2000122070312
@@ -25884,6 +25879,30 @@
     {
       "timestamp": 1787803200,
       "close": 1337.5999755859375
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 1428.5999755859375
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 1362.9000244140625
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 1317.199951171875
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 1346.5999755859375
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 1425.9000244140625
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 1390.0999755859375
     }
   ]
 }

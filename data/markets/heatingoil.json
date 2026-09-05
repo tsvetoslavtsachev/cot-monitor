@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 7158.0,
       "tertiary_net": 49510.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 271685.0,
+      "primary_long": 41135.0,
+      "primary_short": 20150.0,
+      "primary_net": 20985.0,
+      "secondary_long": 50115.0,
+      "secondary_short": 136559.0,
+      "secondary_net": -86444.0,
+      "tertiary_long": 55666.0,
+      "tertiary_short": 7887.0,
+      "tertiary_net": 47779.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 1.486199975013733
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 1.4710999727249146
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 1.4101999998092651
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 1.3818999528884888
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 1.409600019454956
-    },
     {
       "timestamp": 1473134400,
       "close": 1.4084999561309814
@@ -25896,6 +25891,30 @@
     {
       "timestamp": 1787803200,
       "close": 4.27869987487793
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 4.3566999435424805
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 4.495299816131592
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 4.677299976348877
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 4.682199954986572
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 4.593599796295166
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 4.540200233459473
     }
   ]
 }

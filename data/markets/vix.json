@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1014,
+    "record_count": 1015,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1014,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1015,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15223,29 +15223,24 @@
       "tertiary_short": 32864.0,
       "tertiary_net": 51790.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 410574.0,
+      "primary_long": 86075.0,
+      "primary_short": 112333.0,
+      "primary_net": -26258.0,
+      "secondary_long": 53917.0,
+      "secondary_short": 84942.0,
+      "secondary_net": -31025.0,
+      "tertiary_long": 89558.0,
+      "tertiary_short": 40696.0,
+      "tertiary_net": 48862.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472454000,
-      "close": 12.9399995803833
-    },
-    {
-      "timestamp": 1472540400,
-      "close": 13.119999885559082
-    },
-    {
-      "timestamp": 1472626800,
-      "close": 13.420000076293945
-    },
-    {
-      "timestamp": 1472713200,
-      "close": 13.479999542236328
-    },
-    {
-      "timestamp": 1472799600,
-      "close": 11.979999542236328
-    },
     {
       "timestamp": 1473145200,
       "close": 12.020000457763672
@@ -25281,6 +25276,30 @@
     {
       "timestamp": 1787814000,
       "close": 14.510000228881836
+    },
+    {
+      "timestamp": 1787900400,
+      "close": 14.430000305175781
+    },
+    {
+      "timestamp": 1788159600,
+      "close": 14.920000076293945
+    },
+    {
+      "timestamp": 1788246000,
+      "close": 16.34000015258789
+    },
+    {
+      "timestamp": 1788332400,
+      "close": 15.199999809265137
+    },
+    {
+      "timestamp": 1788418800,
+      "close": 14.319999694824219
+    },
+    {
+      "timestamp": 1788505200,
+      "close": 14.529999732971191
     }
   ]
 }

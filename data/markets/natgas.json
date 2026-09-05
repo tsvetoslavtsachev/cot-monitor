@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 17672.0,
       "tertiary_net": 208734.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1819853.0,
+      "primary_long": 258702.0,
+      "primary_short": 348225.0,
+      "primary_net": -89523.0,
+      "secondary_long": 236904.0,
+      "secondary_short": 253865.0,
+      "secondary_net": -16961.0,
+      "tertiary_long": 229470.0,
+      "tertiary_short": 19245.0,
+      "tertiary_net": 210225.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 2.8529999256134033
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 2.8269999027252197
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 2.88700008392334
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 2.7920000553131104
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 2.7920000553131104
-    },
     {
       "timestamp": 1473134400,
       "close": 2.7170000076293945
@@ -25896,6 +25891,30 @@
     {
       "timestamp": 1787803200,
       "close": 2.9070000648498535
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 2.888000011444092
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 2.934999942779541
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 2.9040000438690186
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 2.9560000896453857
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 2.9130001068115234
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 2.9749999046325684
     }
   ]
 }

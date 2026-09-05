@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 238,
+    "record_count": 239,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 238,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 239,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3583,29 +3583,24 @@
       "tertiary_short": 6936.0,
       "tertiary_net": 53412.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 310447.0,
+      "primary_long": 6518.0,
+      "primary_short": 1578.0,
+      "primary_net": 4940.0,
+      "secondary_long": 31548.0,
+      "secondary_short": 57299.0,
+      "secondary_net": -25751.0,
+      "tertiary_long": 57494.0,
+      "tertiary_short": 3885.0,
+      "tertiary_net": 53609.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 49.2599983215332
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 48.369998931884766
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 47.040000915527344
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 47.04999923706055
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 46.83000183105469
-    },
     {
       "timestamp": 1473134400,
       "close": 47.2599983215332
@@ -13641,6 +13636,30 @@
     {
       "timestamp": 1787803200,
       "close": 89.69999694824219
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 89.30999755859375
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 90.48999786376953
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 94.6500015258789
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 95.62999725341797
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 95.5199966430664
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 96.27999877929688
     }
   ]
 }

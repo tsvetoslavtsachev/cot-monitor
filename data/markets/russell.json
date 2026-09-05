@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "RTY=F",
     "price_label": "Russell 2000",
-    "record_count": 591,
+    "record_count": 592,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 591,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 592,
     "cot_source": "data-core"
   },
   "cot": [
@@ -8877,6 +8877,21 @@
       "tertiary_long": 131266.0,
       "tertiary_short": 47358.0,
       "tertiary_net": 83908.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "RUSSELL E-MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 424663.0,
+      "primary_long": 52898.0,
+      "primary_short": 162397.0,
+      "primary_net": -109499.0,
+      "secondary_long": 156116.0,
+      "secondary_short": 138618.0,
+      "secondary_net": 17498.0,
+      "tertiary_long": 137918.0,
+      "tertiary_short": 41325.0,
+      "tertiary_net": 96593.0,
       "report_family": "tff"
     }
   ],
@@ -18080,6 +18095,30 @@
     {
       "timestamp": 1787803200,
       "close": 3019.0
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 2977.5
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 2958.699951171875
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 2924.699951171875
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 2958.800048828125
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 2969.699951171875
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 2976.60009765625
     }
   ]
 }

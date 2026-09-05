@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "TN=F",
     "price_label": "Ultra 10Y Note",
-    "record_count": 545,
+    "record_count": 546,
     "history_first_date": "2016-03-08",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 545,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 546,
     "cot_source": "data-core"
   },
   "cot": [
@@ -8188,29 +8188,24 @@
       "tertiary_short": 342945.0,
       "tertiary_net": -287849.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "ULTRA UST 10Y - CHICAGO BOARD OF TRADE",
+      "open_interest": 2541606.0,
+      "primary_long": 155312.0,
+      "primary_short": 578669.0,
+      "primary_net": -423357.0,
+      "secondary_long": 1252181.0,
+      "secondary_short": 534213.0,
+      "secondary_net": 717968.0,
+      "tertiary_long": 80135.0,
+      "tertiary_short": 321368.0,
+      "tertiary_net": -241233.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 144.828125
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 144.796875
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 144.8125
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 144.765625
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 144.46875
-    },
     {
       "timestamp": 1473134400,
       "close": 145.140625
@@ -18242,6 +18237,30 @@
     {
       "timestamp": 1787803200,
       "close": 110.484375
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 110.046875
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 109.71875
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 109.390625
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 109.421875
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 109.703125
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 109.546875
     }
   ]
 }

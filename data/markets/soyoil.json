@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 8970.0,
       "tertiary_net": 85485.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 723386.0,
+      "primary_long": 133775.0,
+      "primary_short": 23863.0,
+      "primary_net": 109912.0,
+      "secondary_long": 197502.0,
+      "secondary_short": 418332.0,
+      "secondary_net": -220830.0,
+      "tertiary_long": 95332.0,
+      "tertiary_short": 13685.0,
+      "tertiary_net": 81647.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 32.810001373291016
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 32.72999954223633
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 32.470001220703125
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 32.20000076293945
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 32.65999984741211
-    },
     {
       "timestamp": 1473134400,
       "close": 32.7599983215332
@@ -25888,6 +25883,30 @@
     {
       "timestamp": 1787803200,
       "close": 68.0
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 70.58999633789062
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 70.5
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 72.37000274658203
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 70.5
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 69.5
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 68.77999877929688
     }
   ]
 }

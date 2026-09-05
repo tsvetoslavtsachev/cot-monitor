@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1055,
+    "record_count": 1056,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-08-25",
-    "lookback_weeks": 1055,
+    "history_last_date": "2026-09-01",
+    "lookback_weeks": 1056,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15838,29 +15838,24 @@
       "tertiary_short": 35923.0,
       "tertiary_net": 28680.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-01",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 543101.0,
+      "primary_long": 120482.0,
+      "primary_short": 12506.0,
+      "primary_net": 107976.0,
+      "secondary_long": 77229.0,
+      "secondary_short": 252634.0,
+      "secondary_net": -175405.0,
+      "tertiary_long": 63466.0,
+      "tertiary_short": 33059.0,
+      "tertiary_net": 30407.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1472443200,
-      "close": 66.69000244140625
-    },
-    {
-      "timestamp": 1472529600,
-      "close": 65.97000122070312
-    },
-    {
-      "timestamp": 1472616000,
-      "close": 65.31999969482422
-    },
-    {
-      "timestamp": 1472702400,
-      "close": 68.01000213623047
-    },
-    {
-      "timestamp": 1472788800,
-      "close": 67.51000213623047
-    },
     {
       "timestamp": 1473134400,
       "close": 69.05999755859375
@@ -25896,6 +25891,30 @@
     {
       "timestamp": 1787803200,
       "close": 91.05999755859375
+    },
+    {
+      "timestamp": 1787889600,
+      "close": 89.91999816894531
+    },
+    {
+      "timestamp": 1788148800,
+      "close": 91.69999694824219
+    },
+    {
+      "timestamp": 1788235200,
+      "close": 90.01000213623047
+    },
+    {
+      "timestamp": 1788321600,
+      "close": 86.37999725341797
+    },
+    {
+      "timestamp": 1788408000,
+      "close": 83.36000061035156
+    },
+    {
+      "timestamp": 1788494400,
+      "close": 82.41999816894531
     }
   ]
 }
