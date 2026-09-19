@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1057,
+    "record_count": 1058,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-08",
-    "lookback_weeks": 1057,
+    "history_last_date": "2026-09-15",
+    "lookback_weeks": 1058,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15868,29 +15868,24 @@
       "tertiary_short": 8945.0,
       "tertiary_net": 60845.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-15",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 171313.0,
+      "primary_long": 9671.0,
+      "primary_short": 24635.0,
+      "primary_net": -14964.0,
+      "secondary_long": 13903.0,
+      "secondary_short": 50024.0,
+      "secondary_net": -36121.0,
+      "tertiary_long": 85314.0,
+      "tertiary_short": 18802.0,
+      "tertiary_net": 66512.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1473652800,
-      "close": 1.0291999578475952
-    },
-    {
-      "timestamp": 1473739200,
-      "close": 1.0231000185012817
-    },
-    {
-      "timestamp": 1473825600,
-      "close": 1.027500033378601
-    },
-    {
-      "timestamp": 1473912000,
-      "close": 1.0292999744415283
-    },
-    {
-      "timestamp": 1473998400,
-      "close": 1.0192999839782715
-    },
     {
       "timestamp": 1474257600,
       "close": 1.0200999975204468
@@ -25930,6 +25925,26 @@
     {
       "timestamp": 1789099200,
       "close": 1.2246500253677368
+    },
+    {
+      "timestamp": 1789358400,
+      "close": 1.2218999862670898
+    },
+    {
+      "timestamp": 1789444800,
+      "close": 1.2344499826431274
+    },
+    {
+      "timestamp": 1789531200,
+      "close": 1.22475004196167
+    },
+    {
+      "timestamp": 1789617600,
+      "close": 1.2245500087738037
+    },
+    {
+      "timestamp": 1789704000,
+      "close": 1.2284499406814575
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 240,
+    "record_count": 241,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-09-08",
-    "lookback_weeks": 240,
+    "history_last_date": "2026-09-15",
+    "lookback_weeks": 241,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3613,29 +3613,24 @@
       "tertiary_short": 5420.0,
       "tertiary_net": 52998.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-15",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 336138.0,
+      "primary_long": 9064.0,
+      "primary_short": 1823.0,
+      "primary_net": 7241.0,
+      "secondary_long": 37521.0,
+      "secondary_short": 63865.0,
+      "secondary_net": -26344.0,
+      "tertiary_long": 61218.0,
+      "tertiary_short": 8966.0,
+      "tertiary_net": 52252.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1473652800,
-      "close": 48.31999969482422
-    },
-    {
-      "timestamp": 1473739200,
-      "close": 47.099998474121094
-    },
-    {
-      "timestamp": 1473825600,
-      "close": 45.849998474121094
-    },
-    {
-      "timestamp": 1473912000,
-      "close": 46.59000015258789
-    },
-    {
-      "timestamp": 1473998400,
-      "close": 45.77000045776367
-    },
     {
       "timestamp": 1474257600,
       "close": 45.95000076293945
@@ -13675,6 +13670,26 @@
     {
       "timestamp": 1789099200,
       "close": 104.61000061035156
+    },
+    {
+      "timestamp": 1789358400,
+      "close": 105.68000030517578
+    },
+    {
+      "timestamp": 1789444800,
+      "close": 108.75
+    },
+    {
+      "timestamp": 1789531200,
+      "close": 105.83000183105469
+    },
+    {
+      "timestamp": 1789617600,
+      "close": 104.81999969482422
+    },
+    {
+      "timestamp": 1789704000,
+      "close": 103.87000274658203
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1057,
+    "record_count": 1058,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-08",
-    "lookback_weeks": 1057,
+    "history_last_date": "2026-09-15",
+    "lookback_weeks": 1058,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15868,29 +15868,24 @@
       "tertiary_short": 16802.0,
       "tertiary_net": 110888.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-15",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 783555.0,
+      "primary_long": 195505.0,
+      "primary_short": 9959.0,
+      "primary_net": 185546.0,
+      "secondary_long": 119149.0,
+      "secondary_short": 463877.0,
+      "secondary_net": -344728.0,
+      "tertiary_long": 128735.0,
+      "tertiary_short": 18566.0,
+      "tertiary_net": 110169.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1473652800,
-      "close": 318.29998779296875
-    },
-    {
-      "timestamp": 1473739200,
-      "close": 310.3999938964844
-    },
-    {
-      "timestamp": 1473825600,
-      "close": 315.70001220703125
-    },
-    {
-      "timestamp": 1473912000,
-      "close": 308.6000061035156
-    },
-    {
-      "timestamp": 1473998400,
-      "close": 313.70001220703125
-    },
     {
       "timestamp": 1474257600,
       "close": 311.8999938964844
@@ -25922,6 +25917,26 @@
     {
       "timestamp": 1789099200,
       "close": 347.0
+    },
+    {
+      "timestamp": 1789358400,
+      "close": 349.70001220703125
+    },
+    {
+      "timestamp": 1789444800,
+      "close": 360.1000061035156
+    },
+    {
+      "timestamp": 1789531200,
+      "close": 360.8999938964844
+    },
+    {
+      "timestamp": 1789617600,
+      "close": 368.70001220703125
+    },
+    {
+      "timestamp": 1789704000,
+      "close": 354.6000061035156
     }
   ]
 }

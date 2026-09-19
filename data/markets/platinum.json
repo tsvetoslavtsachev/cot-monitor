@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PL=F",
     "price_label": "Platinum Futures",
-    "record_count": 1057,
+    "record_count": 1058,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-08",
-    "lookback_weeks": 1057,
+    "history_last_date": "2026-09-15",
+    "lookback_weeks": 1058,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15868,29 +15868,24 @@
       "tertiary_short": 23856.0,
       "tertiary_net": -7351.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-15",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 69050.0,
+      "primary_long": 17636.0,
+      "primary_short": 8454.0,
+      "primary_net": 9182.0,
+      "secondary_long": 3079.0,
+      "secondary_short": 15165.0,
+      "secondary_net": -12086.0,
+      "tertiary_long": 16198.0,
+      "tertiary_short": 24180.0,
+      "tertiary_net": -7982.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1473652800,
-      "close": 1041.300048828125
-    },
-    {
-      "timestamp": 1473739200,
-      "close": 1034.4000244140625
-    },
-    {
-      "timestamp": 1473825600,
-      "close": 1039.300048828125
-    },
-    {
-      "timestamp": 1473912000,
-      "close": 1032.199951171875
-    },
-    {
-      "timestamp": 1473998400,
-      "close": 1016.0
-    },
     {
       "timestamp": 1474257600,
       "close": 1022.0999755859375
@@ -25922,6 +25917,26 @@
     {
       "timestamp": 1789099200,
       "close": 1793.5
+    },
+    {
+      "timestamp": 1789358400,
+      "close": 1775.9000244140625
+    },
+    {
+      "timestamp": 1789444800,
+      "close": 1773.199951171875
+    },
+    {
+      "timestamp": 1789531200,
+      "close": 1783.199951171875
+    },
+    {
+      "timestamp": 1789617600,
+      "close": 1791.4000244140625
+    },
+    {
+      "timestamp": 1789704000,
+      "close": 1803.5
     }
   ]
 }
