@@ -90,3 +90,7 @@ python -m http.server 8000
 Първоначалното имплементиране и продуктовият дизайн произхождат от експерименти с
 [cot-cta-positioning-dashboard](https://github.com/tsvetoslavtsachev/cot-cta-positioning-dashboard) — техническата база остана,
 наративният layer и БГ-преводите са изградени специално за това repo.
+
+## Сигнал за signals-registry
+
+След `generate_ai_context.py` седмичният refresh пише `signals/current.json` (`scripts/export_signal.py`): един обект за модула `cot-cta` по схемата на регистъра. `state` е regime етикетът на E-mini S&P 500, `score` е CTA ансамбловият сигнал за sp500 (обхват −1…+1), `as_of` е `latest_cot_date`. Скриптът само чете `data/ai_context.json`; при грешка предупреждава и не спира refresh-а.

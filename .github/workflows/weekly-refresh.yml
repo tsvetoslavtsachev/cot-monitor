@@ -95,12 +95,18 @@ jobs:
       - name: Generate AI context file
         run: python scripts/generate_ai_context.py
 
+      - name: Export signals/current.json for signals-registry
+        # M2 на signals-registry (25.09.2026): един обект cot-cta (S&P 500 regime + CTA ансамбъл)
+        # от data/ai_context.json. Само чете; при грешка печата ::warning:: и не проваля refresh-а.
+        run: python scripts/export_signal.py
+
       - name: Commit refreshed data if changed
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
+          if [ -d signals ]; then git add signals/; fi
           if git diff --cached --quiet; then
             echo "data_changed=false" >> $GITHUB_OUTPUT
             echo "No data changes to commit."
