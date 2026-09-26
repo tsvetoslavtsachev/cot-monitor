@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 47563.0,
       "tertiary_net": -24472.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 122536.0,
+      "primary_long": 18937.0,
+      "primary_short": 5921.0,
+      "primary_net": 13016.0,
+      "secondary_long": 4393.0,
+      "secondary_short": 22834.0,
+      "secondary_net": -18441.0,
+      "tertiary_long": 22872.0,
+      "tertiary_short": 48484.0,
+      "tertiary_net": -25612.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 19.20599937438965
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 19.19499969482422
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 19.68600082397461
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 20.020000457763672
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 19.732999801635742
-    },
     {
       "timestamp": 1474862400,
       "close": 19.516000747680664
@@ -25937,6 +25932,26 @@
     {
       "timestamp": 1789704000,
       "close": 66.55599975585938
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 65.82499694824219
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 65.93199920654297
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 64.38200378417969
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 63.457000732421875
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 64.24500274658203
     }
   ]
 }

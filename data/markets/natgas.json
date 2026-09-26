@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 18206.0,
       "tertiary_net": 223515.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1853483.0,
+      "primary_long": 266602.0,
+      "primary_short": 332234.0,
+      "primary_net": -65632.0,
+      "secondary_long": 240173.0,
+      "secondary_short": 263800.0,
+      "secondary_net": -23627.0,
+      "tertiary_long": 246795.0,
+      "tertiary_short": 21081.0,
+      "tertiary_net": 225714.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 2.934000015258789
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 3.046999931335449
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 3.056999921798706
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 2.990000009536743
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 2.9549999237060547
-    },
     {
       "timestamp": 1474862400,
       "close": 2.996999979019165
@@ -25945,6 +25940,26 @@
     {
       "timestamp": 1789704000,
       "close": 2.9119999408721924
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 2.8359999656677246
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 2.9649999141693115
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 3.0230000019073486
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 3.296999931335449
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 3.196000099182129
     }
   ]
 }

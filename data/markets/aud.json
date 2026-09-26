@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 124909.0,
       "tertiary_net": -38303.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 306488.0,
+      "primary_long": 87095.0,
+      "primary_short": 28369.0,
+      "primary_net": 58726.0,
+      "secondary_long": 93979.0,
+      "secondary_short": 149332.0,
+      "secondary_net": -55353.0,
+      "tertiary_long": 78235.0,
+      "tertiary_short": 106243.0,
+      "tertiary_net": -28008.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 0.7563999891281128
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 0.7534000277519226
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 0.7585999965667725
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 0.761900007724762
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 0.760200023651123
-    },
     {
       "timestamp": 1474862400,
       "close": 0.7620999813079834
@@ -25945,6 +25940,26 @@
     {
       "timestamp": 1789704000,
       "close": 0.7122499942779541
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 0.711899995803833
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 0.7109000086784363
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 0.7036499977111816
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 0.7011500000953674
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 0.7026000022888184
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 43086.0,
       "tertiary_net": 13058.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 321565.0,
+      "primary_long": 96824.0,
+      "primary_short": 14175.0,
+      "primary_net": 82649.0,
+      "secondary_long": 29471.0,
+      "secondary_short": 141873.0,
+      "secondary_net": -112402.0,
+      "tertiary_long": 54981.0,
+      "tertiary_short": 42927.0,
+      "tertiary_net": 12054.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 2.1489999294281006
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 2.1554999351501465
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 2.1449999809265137
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 2.1875
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 2.192500114440918
-    },
     {
       "timestamp": 1474862400,
       "close": 2.190000057220459
@@ -25941,6 +25936,26 @@
     {
       "timestamp": 1789704000,
       "close": 6.614999771118164
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 6.686500072479248
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 6.759500026702881
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 6.677999973297119
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 6.718500137329102
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 6.695499897003174
     }
   ]
 }

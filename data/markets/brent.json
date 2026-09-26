@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 241,
+    "record_count": 242,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 241,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 242,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3628,29 +3628,24 @@
       "tertiary_short": 8966.0,
       "tertiary_net": 52252.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 319049.0,
+      "primary_long": 6307.0,
+      "primary_short": 1882.0,
+      "primary_net": 4425.0,
+      "secondary_long": 32853.0,
+      "secondary_short": 61630.0,
+      "secondary_net": -28777.0,
+      "tertiary_long": 64611.0,
+      "tertiary_short": 6163.0,
+      "tertiary_net": 58448.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 45.95000076293945
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 45.880001068115234
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 46.83000183105469
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 47.650001525878906
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 45.88999938964844
-    },
     {
       "timestamp": 1474862400,
       "close": 47.349998474121094
@@ -13690,6 +13685,26 @@
     {
       "timestamp": 1789704000,
       "close": 103.87000274658203
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 100.33999633789062
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 99.25
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 103.08000183105469
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 106.5999984741211
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 104.31999969482422
     }
   ]
 }

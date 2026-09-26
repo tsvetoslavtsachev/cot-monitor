@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 30785.0,
       "tertiary_net": 36306.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 536741.0,
+      "primary_long": 91126.0,
+      "primary_short": 9516.0,
+      "primary_net": 81610.0,
+      "secondary_long": 102399.0,
+      "secondary_short": 248333.0,
+      "secondary_net": -145934.0,
+      "tertiary_long": 68852.0,
+      "tertiary_short": 31395.0,
+      "tertiary_net": 37457.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 68.9800033569336
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 70.81999969482422
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 71.80999755859375
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 71.16999816894531
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 69.08000183105469
-    },
     {
       "timestamp": 1474862400,
       "close": 69.16000366210938
@@ -25945,6 +25940,26 @@
     {
       "timestamp": 1789704000,
       "close": 77.37999725341797
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 79.8499984741211
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 79.69000244140625
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 78.91000366210938
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 79.51000213623047
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 78.91000366210938
     }
   ]
 }

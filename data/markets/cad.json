@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 104189.0,
       "tertiary_net": 48614.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 311085.0,
+      "primary_long": 32415.0,
+      "primary_short": 79276.0,
+      "primary_net": -46861.0,
+      "secondary_long": 94834.0,
+      "secondary_short": 118955.0,
+      "secondary_net": -24121.0,
+      "tertiary_long": 129990.0,
+      "tertiary_short": 66178.0,
+      "tertiary_net": 63812.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 0.7574499845504761
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 0.7555000185966492
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 0.760699987411499
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 0.7658500075340271
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 0.7596499919891357
-    },
     {
       "timestamp": 1474862400,
       "close": 0.7561500072479248
@@ -25941,6 +25936,26 @@
     {
       "timestamp": 1789704000,
       "close": 0.7156500220298767
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 0.7133499979972839
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 0.7117499709129333
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 0.7102500200271606
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 0.7080000042915344
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 0.7077500224113464
     }
   ]
 }

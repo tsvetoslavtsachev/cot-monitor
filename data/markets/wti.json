@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 664193.0,
       "tertiary_net": -550744.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2432733.0,
+      "primary_long": 236061.0,
+      "primary_short": 93473.0,
+      "primary_net": 142588.0,
+      "secondary_long": 640871.0,
+      "secondary_short": 325118.0,
+      "secondary_net": 315753.0,
+      "tertiary_long": 101279.0,
+      "tertiary_short": 664019.0,
+      "tertiary_net": -562740.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 43.29999923706055
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 43.439998626708984
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 45.34000015258789
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 46.31999969482422
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 44.47999954223633
-    },
     {
       "timestamp": 1474862400,
       "close": 45.93000030517578
@@ -25941,6 +25936,26 @@
     {
       "timestamp": 1789704000,
       "close": 100.30000305175781
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 95.77999877929688
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 94.58999633789062
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 92.16000366210938
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 94.61000061035156
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 92.41000366210938
     }
   ]
 }

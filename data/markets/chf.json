@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1058,
+    "record_count": 1059,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-15",
-    "lookback_weeks": 1058,
+    "history_last_date": "2026-09-22",
+    "lookback_weeks": 1059,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15883,29 +15883,24 @@
       "tertiary_short": 18802.0,
       "tertiary_net": 66512.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-22",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 133495.0,
+      "primary_long": 8727.0,
+      "primary_short": 25184.0,
+      "primary_net": -16457.0,
+      "secondary_long": 16431.0,
+      "secondary_short": 51954.0,
+      "secondary_net": -35523.0,
+      "tertiary_long": 87286.0,
+      "tertiary_short": 19001.0,
+      "tertiary_net": 68285.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474257600,
-      "close": 1.0200999975204468
-    },
-    {
-      "timestamp": 1474344000,
-      "close": 1.0262000560760498
-    },
-    {
-      "timestamp": 1474430400,
-      "close": 1.030400037765503
-    },
-    {
-      "timestamp": 1474516800,
-      "close": 1.0360000133514404
-    },
-    {
-      "timestamp": 1474603200,
-      "close": 1.0360000133514404
-    },
     {
       "timestamp": 1474862400,
       "close": 1.0370999574661255
@@ -25945,6 +25940,26 @@
     {
       "timestamp": 1789704000,
       "close": 1.2284499406814575
+    },
+    {
+      "timestamp": 1789963200,
+      "close": 1.229599952697754
+    },
+    {
+      "timestamp": 1790049600,
+      "close": 1.2295000553131104
+    },
+    {
+      "timestamp": 1790136000,
+      "close": 1.2246500253677368
+    },
+    {
+      "timestamp": 1790222400,
+      "close": 1.2187999486923218
+    },
+    {
+      "timestamp": 1790308800,
+      "close": 1.2184499502182007
     }
   ]
 }
