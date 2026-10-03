@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 160373.0,
       "tertiary_net": 98464.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1354420.0,
+      "primary_long": 322620.0,
+      "primary_short": 94799.0,
+      "primary_net": 227821.0,
+      "secondary_long": 214458.0,
+      "secondary_short": 587678.0,
+      "secondary_net": -373220.0,
+      "tertiary_long": 256539.0,
+      "tertiary_short": 161516.0,
+      "tertiary_net": 95023.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 22.540000915527344
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 23.020000457763672
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 23.270000457763672
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 22.760000228881836
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 22.530000686645508
-    },
     {
       "timestamp": 1475467200,
       "close": 22.670000076293945
@@ -25960,6 +25955,26 @@
     {
       "timestamp": 1790308800,
       "close": 17.5
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 17.459999084472656
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 17.81999969482422
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 17.6299991607666
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 18.940000534057617
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 19.93000030517578
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "module": "cot-cta",
   "schema_version": "0.1",
-  "as_of": "2026-09-22",
-  "generated_at": "2026-09-26T11:35:38.902013Z",
+  "as_of": "2026-09-29",
+  "generated_at": "2026-10-03T11:50:43.606600Z",
   "state": "Divergence",
-  "score": 0.8121,
+  "score": 0.9022,
   "scale": [
     -1,
     1
@@ -12,33 +12,30 @@
   "confidence": null,
   "falsified": false,
   "persistence": null,
-  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,81 (net long), персентил на нетната позиция 27; COT към 2026-09-22.",
+  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,90 (net long), персентил на нетната позиция 28; COT към 2026-09-29.",
   "source_url": "https://tsvetoslavtsachev.github.io/cot-monitor/",
   "market": "sp500",
   "title": "E-mini S&P 500",
-  "cot_date": "2026-09-22",
+  "cot_date": "2026-09-29",
   "cta_ensemble_direction": "net long",
-  "percentile": 26.91,
-  "zscore": -0.643,
-  "cftc_primary_net_contracts": -375574.0,
-  "price_change_4w_pct": 1.82,
+  "percentile": 28.11,
+  "zscore": -0.6215,
+  "cftc_primary_net_contracts": -372489.0,
+  "price_change_4w_pct": 1.17,
   "crowded_longs": [
     "Soybean Meal",
-    "Soybeans",
-    "Corn",
-    "Copper",
-    "RBOB Gasoline",
-    "Sugar",
     "Australian Dollar",
-    "Soybean Oil"
+    "Copper",
+    "RBOB Gasoline"
   ],
   "crowded_shorts": [
-    "Ultra UST 10Y",
-    "Russell 2000 Mini",
-    "Lean Hogs",
-    "Swiss Franc",
     "Palladium",
-    "Cocoa"
+    "Lean Hogs",
+    "Russell 2000 Mini",
+    "Cocoa",
+    "Natural Gas",
+    "Canadian Dollar",
+    "Swiss Franc"
   ],
   "divergence_count": 15
 }

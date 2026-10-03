@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 20935.0,
       "tertiary_net": 110871.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 720749.0,
+      "primary_long": 216824.0,
+      "primary_short": 9408.0,
+      "primary_net": 207416.0,
+      "secondary_long": 91745.0,
+      "secondary_short": 447161.0,
+      "secondary_net": -355416.0,
+      "tertiary_long": 132485.0,
+      "tertiary_short": 17620.0,
+      "tertiary_net": 114865.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 297.6000061035156
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 299.29998779296875
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 299.70001220703125
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 297.8999938964844
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 297.8999938964844
-    },
     {
       "timestamp": 1475467200,
       "close": 305.8999938964844
@@ -25952,6 +25947,26 @@
     {
       "timestamp": 1790308800,
       "close": 373.8999938964844
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 361.70001220703125
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 360.1000061035156
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 357.1000061035156
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 352.1000061035156
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 344.70001220703125
     }
   ]
 }

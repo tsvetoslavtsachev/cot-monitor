@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 21081.0,
       "tertiary_net": 225714.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1796124.0,
+      "primary_long": 220564.0,
+      "primary_short": 353413.0,
+      "primary_net": -132849.0,
+      "secondary_long": 242442.0,
+      "secondary_short": 256389.0,
+      "secondary_net": -13947.0,
+      "tertiary_long": 250973.0,
+      "tertiary_short": 23200.0,
+      "tertiary_net": 227773.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 2.996999979019165
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 2.996000051498413
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 2.9519999027252197
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 2.9590001106262207
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 2.9059998989105225
-    },
     {
       "timestamp": 1475467200,
       "close": 2.9230000972747803
@@ -25960,6 +25955,26 @@
     {
       "timestamp": 1790308800,
       "close": 3.196000099182129
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 3.0
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 3.010999917984009
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 3.0260000228881836
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 2.9670000076293945
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 3.0350000858306885
     }
   ]
 }

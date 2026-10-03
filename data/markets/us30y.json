@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "ZB=F",
     "price_label": "US 30Y Bond",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 283657.0,
       "tertiary_net": -250961.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "UST BOND - CHICAGO BOARD OF TRADE",
+      "open_interest": 1879173.0,
+      "primary_long": 159474.0,
+      "primary_short": 410869.0,
+      "primary_net": -251395.0,
+      "secondary_long": 1111551.0,
+      "secondary_short": 674595.0,
+      "secondary_net": 436956.0,
+      "tertiary_long": 41114.0,
+      "tertiary_short": 221913.0,
+      "tertiary_net": -180799.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 168.25
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 169.4375
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 169.25
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 169.625
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 168.15625
-    },
     {
       "timestamp": 1475467200,
       "close": 168.0625
@@ -25956,6 +25951,26 @@
     {
       "timestamp": 1790308800,
       "close": 104.5625
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 103.75
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 103.25
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 102.65625
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 103.0625
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 102.75
     }
   ]
 }

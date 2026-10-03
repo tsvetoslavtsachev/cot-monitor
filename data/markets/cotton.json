@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 31395.0,
       "tertiary_net": 37457.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 537908.0,
+      "primary_long": 87436.0,
+      "primary_short": 12843.0,
+      "primary_net": 74593.0,
+      "secondary_long": 115806.0,
+      "secondary_short": 255872.0,
+      "secondary_net": -140066.0,
+      "tertiary_long": 68154.0,
+      "tertiary_short": 27457.0,
+      "tertiary_net": 40697.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 69.16000366210938
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 69.38999938964844
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 68.12999725341797
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 67.94999694824219
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 68.29000091552734
-    },
     {
       "timestamp": 1475467200,
       "close": 68.7300033569336
@@ -25960,6 +25955,26 @@
     {
       "timestamp": 1790308800,
       "close": 78.91000366210938
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 79.05999755859375
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 75.12999725341797
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 74.79000091552734
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 74.02999877929688
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 75.1500015258789
     }
   ]
 }

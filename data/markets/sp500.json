@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "ES=F",
     "price_label": "S&P 500",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 802335.0,
       "tertiary_net": -634203.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 1895922.0,
+      "primary_long": 125453.0,
+      "primary_short": 497942.0,
+      "primary_net": -372489.0,
+      "secondary_long": 1104434.0,
+      "secondary_short": 200431.0,
+      "secondary_net": 904003.0,
+      "tertiary_long": 178591.0,
+      "tertiary_short": 785579.0,
+      "tertiary_net": -606988.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 2139.75
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 2152.75
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 2163.25
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 2148.5
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 2160.5
-    },
     {
       "timestamp": 1475467200,
       "close": 2153.25
@@ -25960,6 +25955,26 @@
     {
       "timestamp": 1790308800,
       "close": 7803.75
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 7746.75
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 7732.0
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 7715.5
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 7724.0
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 7777.25
     }
   ]
 }

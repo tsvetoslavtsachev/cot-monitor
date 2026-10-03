@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1059,
+    "record_count": 1060,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-22",
-    "lookback_weeks": 1059,
+    "history_last_date": "2026-09-29",
+    "lookback_weeks": 1060,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15898,29 +15898,24 @@
       "tertiary_short": 3535.0,
       "tertiary_net": 63331.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-09-29",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 422762.0,
+      "primary_long": 79698.0,
+      "primary_short": 28394.0,
+      "primary_net": 51304.0,
+      "secondary_long": 75269.0,
+      "secondary_short": 177285.0,
+      "secondary_net": -102016.0,
+      "tertiary_long": 67896.0,
+      "tertiary_short": 3627.0,
+      "tertiary_net": 64269.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1474862400,
-      "close": 106.82499694824219
-    },
-    {
-      "timestamp": 1474948800,
-      "close": 103.82499694824219
-    },
-    {
-      "timestamp": 1475035200,
-      "close": 103.4749984741211
-    },
-    {
-      "timestamp": 1475121600,
-      "close": 101.9000015258789
-    },
-    {
-      "timestamp": 1475208000,
-      "close": 98.9000015258789
-    },
     {
       "timestamp": 1475467200,
       "close": 98.92500305175781
@@ -25952,6 +25947,26 @@
     {
       "timestamp": 1790308800,
       "close": 218.875
+    },
+    {
+      "timestamp": 1790568000,
+      "close": 217.4499969482422
+    },
+    {
+      "timestamp": 1790654400,
+      "close": 217.22500610351562
+    },
+    {
+      "timestamp": 1790740800,
+      "close": 218.6750030517578
+    },
+    {
+      "timestamp": 1790827200,
+      "close": 219.3000030517578
+    },
+    {
+      "timestamp": 1790913600,
+      "close": 218.85000610351562
     }
   ]
 }
