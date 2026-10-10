@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 161516.0,
       "tertiary_net": 95023.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1470323.0,
+      "primary_long": 351366.0,
+      "primary_short": 94002.0,
+      "primary_net": 257364.0,
+      "secondary_long": 209694.0,
+      "secondary_short": 610566.0,
+      "secondary_net": -400872.0,
+      "tertiary_long": 258693.0,
+      "tertiary_short": 199154.0,
+      "tertiary_net": 59539.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 22.670000076293945
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 23.260000228881836
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 23.809999465942383
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 23.110000610351562
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 23.420000076293945
-    },
     {
       "timestamp": 1476158400,
       "close": 23.290000915527344
@@ -25975,6 +25970,26 @@
     {
       "timestamp": 1790913600,
       "close": 19.93000030517578
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 20.729999542236328
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 20.81999969482422
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 20.829999923706055
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 20.149999618530273
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 20.25
     }
   ]
 }

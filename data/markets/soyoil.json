@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 7105.0,
       "tertiary_net": 89624.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 625847.0,
+      "primary_long": 122341.0,
+      "primary_short": 22894.0,
+      "primary_net": 99447.0,
+      "secondary_long": 132812.0,
+      "secondary_short": 350404.0,
+      "secondary_net": -217592.0,
+      "tertiary_long": 95176.0,
+      "tertiary_short": 7737.0,
+      "tertiary_net": 87439.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 33.04999923706055
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 32.88999938964844
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 32.65999984741211
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 33.099998474121094
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 33.11000061035156
-    },
     {
       "timestamp": 1476158400,
       "close": 33.15999984741211
@@ -25967,6 +25962,26 @@
     {
       "timestamp": 1790913600,
       "close": 68.20999908447266
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 68.94999694824219
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 69.58000183105469
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 67.41999816894531
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 67.62000274658203
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 67.72000122070312
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 659981.0,
       "tertiary_net": -557624.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2533937.0,
+      "primary_long": 198618.0,
+      "primary_short": 94127.0,
+      "primary_net": 104491.0,
+      "secondary_long": 655227.0,
+      "secondary_short": 308889.0,
+      "secondary_net": 346338.0,
+      "tertiary_long": 107901.0,
+      "tertiary_short": 670882.0,
+      "tertiary_net": -562981.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 48.810001373291016
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 48.689998626708984
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 49.83000183105469
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 50.439998626708984
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 49.810001373291016
-    },
     {
       "timestamp": 1476158400,
       "close": 50.790000915527344
@@ -25971,6 +25966,26 @@
     {
       "timestamp": 1790913600,
       "close": 91.11000061035156
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 89.43000030517578
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 89.44000244140625
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 88.27999877929688
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 91.48999786376953
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 91.8499984741211
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 7623.0,
       "tertiary_net": 50687.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 251338.0,
+      "primary_long": 31265.0,
+      "primary_short": 20312.0,
+      "primary_net": 10953.0,
+      "secondary_long": 44068.0,
+      "secondary_short": 124840.0,
+      "secondary_net": -80772.0,
+      "tertiary_long": 57287.0,
+      "tertiary_short": 6390.0,
+      "tertiary_net": 50897.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 1.5532000064849854
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 1.5543999671936035
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 1.5822999477386475
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 1.5958000421524048
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 1.579300045967102
-    },
     {
       "timestamp": 1476158400,
       "close": 1.5872999429702759
@@ -25975,6 +25970,26 @@
     {
       "timestamp": 1790913600,
       "close": 4.501100063323975
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 4.545199871063232
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 4.569399833679199
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 4.622700214385986
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 4.882900238037109
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 4.738399982452393
     }
   ]
 }

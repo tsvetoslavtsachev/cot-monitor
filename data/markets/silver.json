@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 46693.0,
       "tertiary_net": -22419.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 118562.0,
+      "primary_long": 16214.0,
+      "primary_short": 8606.0,
+      "primary_net": 7608.0,
+      "secondary_long": 4661.0,
+      "secondary_short": 20950.0,
+      "secondary_net": -16289.0,
+      "tertiary_long": 24539.0,
+      "tertiary_short": 48780.0,
+      "tertiary_net": -24241.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 18.795000076293945
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 17.71299934387207
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 17.634000778198242
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 17.288000106811523
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 17.323999404907227
-    },
     {
       "timestamp": 1476158400,
       "close": 17.45599937438965
@@ -25967,6 +25962,26 @@
     {
       "timestamp": 1790913600,
       "close": 59.97700119018555
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 60.86899948120117
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 61.167999267578125
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 59.89899826049805
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 59.06399917602539
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 60.66999816894531
     }
   ]
 }

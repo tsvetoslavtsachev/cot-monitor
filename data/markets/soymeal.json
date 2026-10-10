@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 17620.0,
       "tertiary_net": 114865.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 727248.0,
+      "primary_long": 213651.0,
+      "primary_short": 6847.0,
+      "primary_net": 206804.0,
+      "secondary_long": 88730.0,
+      "secondary_short": 452712.0,
+      "secondary_net": -363982.0,
+      "tertiary_long": 128410.0,
+      "tertiary_short": 16415.0,
+      "tertiary_net": 111995.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 305.8999938964844
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 304.5
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 303.79998779296875
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 301.5
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 298.6000061035156
-    },
     {
       "timestamp": 1476158400,
       "close": 297.6000061035156
@@ -25967,6 +25962,26 @@
     {
       "timestamp": 1790913600,
       "close": 344.70001220703125
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 345.8999938964844
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 353.3999938964844
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 365.8999938964844
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 360.70001220703125
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 368.70001220703125
     }
   ]
 }

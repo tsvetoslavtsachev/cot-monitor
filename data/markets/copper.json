@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 45122.0,
       "tertiary_net": 8970.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 318808.0,
+      "primary_long": 77381.0,
+      "primary_short": 15916.0,
+      "primary_net": 61465.0,
+      "secondary_long": 41075.0,
+      "secondary_short": 133924.0,
+      "secondary_net": -92849.0,
+      "tertiary_long": 55000.0,
+      "tertiary_short": 40550.0,
+      "tertiary_net": 14450.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 2.183500051498413
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 2.1584999561309814
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 2.1559998989105225
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 2.1480000019073486
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 2.1565001010894775
-    },
     {
       "timestamp": 1476158400,
       "close": 2.178499937057495
@@ -25971,6 +25966,26 @@
     {
       "timestamp": 1790913600,
       "close": 6.492000102996826
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 6.5854997634887695
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 6.5945000648498535
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 6.596499919891357
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 6.519000053405762
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 6.642499923706055
     }
   ]
 }

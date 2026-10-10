@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PL=F",
     "price_label": "Platinum Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 22832.0,
       "tertiary_net": -7680.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 68871.0,
+      "primary_long": 19160.0,
+      "primary_short": 11043.0,
+      "primary_net": 8117.0,
+      "secondary_long": 3435.0,
+      "secondary_short": 12818.0,
+      "secondary_net": -9383.0,
+      "tertiary_long": 14976.0,
+      "tertiary_short": 23123.0,
+      "tertiary_net": -8147.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 1003.7000122070312
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 984.7000122070312
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 972.2999877929688
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 962.2999877929688
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 958.7999877929688
-    },
     {
       "timestamp": 1476158400,
       "close": 945.7999877929688
@@ -25967,6 +25962,26 @@
     {
       "timestamp": 1790913600,
       "close": 1683.199951171875
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 1706.9000244140625
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 1692.699951171875
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 1633.199951171875
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 1625.699951171875
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 1679.300048828125
     }
   ]
 }

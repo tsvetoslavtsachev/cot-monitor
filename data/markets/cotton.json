@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 27457.0,
       "tertiary_net": 40697.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 528250.0,
+      "primary_long": 76721.0,
+      "primary_short": 12884.0,
+      "primary_net": 63837.0,
+      "secondary_long": 117452.0,
+      "secondary_short": 255462.0,
+      "secondary_net": -138010.0,
+      "tertiary_long": 69250.0,
+      "tertiary_short": 29216.0,
+      "tertiary_net": 40034.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 68.7300033569336
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 69.87999725341797
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 68.02999877929688
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 67.70999908447266
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 67.19000244140625
-    },
     {
       "timestamp": 1476158400,
       "close": 67.13999938964844
@@ -25975,6 +25970,26 @@
     {
       "timestamp": 1790913600,
       "close": 75.1500015258789
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 77.12999725341797
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 77.4800033569336
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 76.30000305175781
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 76.20999908447266
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 80.54000091552734
     }
   ]
 }

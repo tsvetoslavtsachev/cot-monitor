@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HE=F",
     "price_label": "Lean Hogs Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 2370.0,
       "tertiary_net": 76227.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "LEAN HOGS - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 426558.0,
+      "primary_long": 73149.0,
+      "primary_short": 108421.0,
+      "primary_net": -35272.0,
+      "secondary_long": 62390.0,
+      "secondary_short": 92275.0,
+      "secondary_net": -29885.0,
+      "tertiary_long": 79739.0,
+      "tertiary_short": 2815.0,
+      "tertiary_net": 76924.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 48.92499923706055
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 48.625
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 48.224998474121094
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 50.375
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 50.67499923706055
-    },
     {
       "timestamp": 1476158400,
       "close": 51.45000076293945
@@ -25967,6 +25962,26 @@
     {
       "timestamp": 1790913600,
       "close": 77.875
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 77.8499984741211
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 77.92500305175781
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 76.92500305175781
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 75.82499694824219
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 75.05000305175781
     }
   ]
 }

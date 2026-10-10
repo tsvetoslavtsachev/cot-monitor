@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "KC=F",
     "price_label": "Coffee Futures",
-    "record_count": 1060,
+    "record_count": 1061,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 1060,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 1061,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15913,29 +15913,24 @@
       "tertiary_short": 23120.0,
       "tertiary_net": 1476.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 208283.0,
+      "primary_long": 33896.0,
+      "primary_short": 19967.0,
+      "primary_net": 13929.0,
+      "secondary_long": 51092.0,
+      "secondary_short": 68781.0,
+      "secondary_net": -17689.0,
+      "tertiary_long": 25721.0,
+      "tertiary_short": 23267.0,
+      "tertiary_net": 2454.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 147.5500030517578
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 147.4499969482422
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 148.1999969482422
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 146.39999389648438
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 148.0
-    },
     {
       "timestamp": 1476158400,
       "close": 150.8000030517578
@@ -25975,6 +25970,26 @@
     {
       "timestamp": 1790913600,
       "close": 288.75
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 292.54998779296875
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 304.45001220703125
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 292.70001220703125
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 289.04998779296875
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 286.95001220703125
     }
   ]
 }

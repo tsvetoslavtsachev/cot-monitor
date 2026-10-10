@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 243,
+    "record_count": 244,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-09-29",
-    "lookback_weeks": 243,
+    "history_last_date": "2026-10-06",
+    "lookback_weeks": 244,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3658,29 +3658,24 @@
       "tertiary_short": 7199.0,
       "tertiary_net": 56651.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-06",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 298253.0,
+      "primary_long": 4277.0,
+      "primary_short": 1866.0,
+      "primary_net": 2411.0,
+      "secondary_long": 30096.0,
+      "secondary_short": 68000.0,
+      "secondary_net": -37904.0,
+      "tertiary_long": 62207.0,
+      "tertiary_short": 2125.0,
+      "tertiary_net": 60082.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1475467200,
-      "close": 49.099998474121094
-    },
-    {
-      "timestamp": 1475553600,
-      "close": 50.869998931884766
-    },
-    {
-      "timestamp": 1475640000,
-      "close": 51.86000061035156
-    },
-    {
-      "timestamp": 1475726400,
-      "close": 52.5099983215332
-    },
-    {
-      "timestamp": 1475812800,
-      "close": 51.93000030517578
-    },
     {
       "timestamp": 1476158400,
       "close": 52.40999984741211
@@ -13720,6 +13715,26 @@
     {
       "timestamp": 1790913600,
       "close": 102.25
+    },
+    {
+      "timestamp": 1791172800,
+      "close": 100.31999969482422
+    },
+    {
+      "timestamp": 1791259200,
+      "close": 100.58000183105469
+    },
+    {
+      "timestamp": 1791345600,
+      "close": 100.19999694824219
+    },
+    {
+      "timestamp": 1791432000,
+      "close": 104.27999877929688
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 104.72000122070312
     }
   ]
 }
