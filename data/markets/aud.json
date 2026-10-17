@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 1061,
+    "record_count": 1062,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-06",
-    "lookback_weeks": 1061,
+    "history_last_date": "2026-10-13",
+    "lookback_weeks": 1062,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15928,25 +15928,24 @@
       "tertiary_short": 82529.0,
       "tertiary_net": 28965.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-13",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 339464.0,
+      "primary_long": 87632.0,
+      "primary_short": 37041.0,
+      "primary_net": 50591.0,
+      "secondary_long": 84332.0,
+      "secondary_short": 200252.0,
+      "secondary_net": -115920.0,
+      "tertiary_long": 125312.0,
+      "tertiary_short": 76411.0,
+      "tertiary_net": 48901.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476158400,
-      "close": 0.7530999779701233
-    },
-    {
-      "timestamp": 1476244800,
-      "close": 0.7551000118255615
-    },
-    {
-      "timestamp": 1476331200,
-      "close": 0.7565000057220459
-    },
-    {
-      "timestamp": 1476417600,
-      "close": 0.7598999738693237
-    },
     {
       "timestamp": 1476676800,
       "close": 0.7615000009536743
@@ -25986,6 +25985,30 @@
     {
       "timestamp": 1791432000,
       "close": 0.6954500079154968
+    },
+    {
+      "timestamp": 1791518400,
+      "close": 0.6982499957084656
+    },
+    {
+      "timestamp": 1791777600,
+      "close": 0.6956499814987183
+    },
+    {
+      "timestamp": 1791864000,
+      "close": 0.6984000205993652
+    },
+    {
+      "timestamp": 1791950400,
+      "close": 0.6965500116348267
+    },
+    {
+      "timestamp": 1792036800,
+      "close": 0.6917499899864197
+    },
+    {
+      "timestamp": 1792123200,
+      "close": 0.6940000057220459
     }
   ]
 }

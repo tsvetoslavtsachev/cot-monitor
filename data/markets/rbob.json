@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1061,
+    "record_count": 1062,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-06",
-    "lookback_weeks": 1061,
+    "history_last_date": "2026-10-13",
+    "lookback_weeks": 1062,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15928,25 +15928,24 @@
       "tertiary_short": 40874.0,
       "tertiary_net": 11152.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-13",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 341577.0,
+      "primary_long": 106917.0,
+      "primary_short": 9271.0,
+      "primary_net": 97646.0,
+      "secondary_long": 81343.0,
+      "secondary_short": 174996.0,
+      "secondary_net": -93653.0,
+      "tertiary_long": 44802.0,
+      "tertiary_short": 41016.0,
+      "tertiary_net": 3786.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476158400,
-      "close": 1.4829000234603882
-    },
-    {
-      "timestamp": 1476244800,
-      "close": 1.461899995803833
-    },
-    {
-      "timestamp": 1476331200,
-      "close": 1.4817999601364136
-    },
-    {
-      "timestamp": 1476417600,
-      "close": 1.4936000108718872
-    },
     {
       "timestamp": 1476676800,
       "close": 1.492400050163269
@@ -25990,6 +25989,26 @@
     {
       "timestamp": 1791518400,
       "close": 3.2952001094818115
+    },
+    {
+      "timestamp": 1791777600,
+      "close": 3.2916998863220215
+    },
+    {
+      "timestamp": 1791864000,
+      "close": 3.2500998973846436
+    },
+    {
+      "timestamp": 1791950400,
+      "close": 3.259500026702881
+    },
+    {
+      "timestamp": 1792036800,
+      "close": 3.1802000999450684
+    },
+    {
+      "timestamp": 1792123200,
+      "close": 3.2353999614715576
     }
   ]
 }

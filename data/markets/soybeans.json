@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZS=F",
     "price_label": "Soybeans Futures",
-    "record_count": 1061,
+    "record_count": 1062,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-06",
-    "lookback_weeks": 1061,
+    "history_last_date": "2026-10-13",
+    "lookback_weeks": 1062,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15928,25 +15928,24 @@
       "tertiary_short": 82153.0,
       "tertiary_net": 51417.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-13",
+      "market_name": "SOYBEANS - CHICAGO BOARD OF TRADE",
+      "open_interest": 1329482.0,
+      "primary_long": 272905.0,
+      "primary_short": 35414.0,
+      "primary_net": 237491.0,
+      "secondary_long": 374339.0,
+      "secondary_short": 648523.0,
+      "secondary_net": -274184.0,
+      "tertiary_long": 129346.0,
+      "tertiary_short": 78434.0,
+      "tertiary_net": 50912.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476158400,
-      "close": 954.25
-    },
-    {
-      "timestamp": 1476244800,
-      "close": 945.5
-    },
-    {
-      "timestamp": 1476331200,
-      "close": 956.25
-    },
-    {
-      "timestamp": 1476417600,
-      "close": 962.5
-    },
     {
       "timestamp": 1476676800,
       "close": 978.25
@@ -25982,6 +25981,26 @@
     {
       "timestamp": 1791518400,
       "close": 1292.0
+    },
+    {
+      "timestamp": 1791777600,
+      "close": 1287.75
+    },
+    {
+      "timestamp": 1791864000,
+      "close": 1283.75
+    },
+    {
+      "timestamp": 1791950400,
+      "close": 1277.25
+    },
+    {
+      "timestamp": 1792036800,
+      "close": 1263.0
+    },
+    {
+      "timestamp": 1792123200,
+      "close": 1261.25
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1020,
+    "record_count": 1021,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-10-06",
-    "lookback_weeks": 1020,
+    "history_last_date": "2026-10-13",
+    "lookback_weeks": 1021,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15313,29 +15313,24 @@
       "tertiary_short": 32528.0,
       "tertiary_net": 71707.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-13",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 448469.0,
+      "primary_long": 88587.0,
+      "primary_short": 87482.0,
+      "primary_net": 1105.0,
+      "secondary_long": 47336.0,
+      "secondary_short": 124631.0,
+      "secondary_net": -77295.0,
+      "tertiary_long": 106006.0,
+      "tertiary_short": 35958.0,
+      "tertiary_net": 70048.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476082800,
-      "close": 13.380000114440918
-    },
-    {
-      "timestamp": 1476169200,
-      "close": 15.359999656677246
-    },
-    {
-      "timestamp": 1476255600,
-      "close": 15.90999984741211
-    },
-    {
-      "timestamp": 1476342000,
-      "close": 16.690000534057617
-    },
-    {
-      "timestamp": 1476428400,
-      "close": 16.1200008392334
-    },
     {
       "timestamp": 1476687600,
       "close": 16.209999084472656
@@ -25379,6 +25374,26 @@
     {
       "timestamp": 1791529200,
       "close": 14.84000015258789
+    },
+    {
+      "timestamp": 1791788400,
+      "close": 15.210000038146973
+    },
+    {
+      "timestamp": 1791874800,
+      "close": 15.270000457763672
+    },
+    {
+      "timestamp": 1791961200,
+      "close": 16.8700008392334
+    },
+    {
+      "timestamp": 1792047600,
+      "close": 16.459999084472656
+    },
+    {
+      "timestamp": 1792134000,
+      "close": 19.989999771118164
     }
   ]
 }

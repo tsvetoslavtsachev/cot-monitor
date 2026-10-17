@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PL=F",
     "price_label": "Platinum Futures",
-    "record_count": 1061,
+    "record_count": 1062,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-06",
-    "lookback_weeks": 1061,
+    "history_last_date": "2026-10-13",
+    "lookback_weeks": 1062,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15928,25 +15928,24 @@
       "tertiary_short": 23123.0,
       "tertiary_net": -8147.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-13",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 70934.0,
+      "primary_long": 17845.0,
+      "primary_short": 10823.0,
+      "primary_net": 7022.0,
+      "secondary_long": 4534.0,
+      "secondary_short": 12030.0,
+      "secondary_net": -7496.0,
+      "tertiary_long": 15347.0,
+      "tertiary_short": 23879.0,
+      "tertiary_net": -8532.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476158400,
-      "close": 945.7999877929688
-    },
-    {
-      "timestamp": 1476244800,
-      "close": 938.4000244140625
-    },
-    {
-      "timestamp": 1476331200,
-      "close": 928.9000244140625
-    },
-    {
-      "timestamp": 1476417600,
-      "close": 935.9000244140625
-    },
     {
       "timestamp": 1476676800,
       "close": 932.7000122070312
@@ -25982,6 +25981,26 @@
     {
       "timestamp": 1791518400,
       "close": 1679.300048828125
+    },
+    {
+      "timestamp": 1791777600,
+      "close": 1679.4000244140625
+    },
+    {
+      "timestamp": 1791864000,
+      "close": 1657.4000244140625
+    },
+    {
+      "timestamp": 1791950400,
+      "close": 1601.300048828125
+    },
+    {
+      "timestamp": 1792036800,
+      "close": 1610.699951171875
+    },
+    {
+      "timestamp": 1792123200,
+      "close": 1623.300048828125
     }
   ]
 }
