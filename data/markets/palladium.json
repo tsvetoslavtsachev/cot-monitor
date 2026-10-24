@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1062,
+    "record_count": 1063,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 1062,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 1063,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15943,29 +15943,24 @@
       "tertiary_short": 2085.0,
       "tertiary_net": 6425.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 25696.0,
+      "primary_long": 5385.0,
+      "primary_short": 17528.0,
+      "primary_net": -12143.0,
+      "secondary_long": 2830.0,
+      "secondary_short": 1166.0,
+      "secondary_net": 1664.0,
+      "tertiary_long": 8790.0,
+      "tertiary_short": 2017.0,
+      "tertiary_net": 6773.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 636.75
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 638.3499755859375
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 634.4500122070312
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 631.7999877929688
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 619.7000122070312
-    },
     {
       "timestamp": 1477281600,
       "close": 629.7000122070312
@@ -25997,6 +25992,26 @@
     {
       "timestamp": 1792123200,
       "close": 1113.300048828125
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 1116.0999755859375
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 1099.5999755859375
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 1084.699951171875
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 1051.5999755859375
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 1046.5999755859375
     }
   ]
 }

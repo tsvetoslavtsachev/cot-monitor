@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1062,
+    "record_count": 1063,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 1062,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 1063,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15943,29 +15943,24 @@
       "tertiary_short": 40760.0,
       "tertiary_net": 13757.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 341240.0,
+      "primary_long": 67861.0,
+      "primary_short": 19852.0,
+      "primary_net": 48009.0,
+      "secondary_long": 53803.0,
+      "secondary_short": 131401.0,
+      "secondary_net": -77598.0,
+      "tertiary_long": 53400.0,
+      "tertiary_short": 40259.0,
+      "tertiary_net": 13141.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 2.0994999408721924
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 2.0980000495910645
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 2.0969998836517334
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 2.0905001163482666
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 2.0834999084472656
-    },
     {
       "timestamp": 1477281600,
       "close": 2.0875000953674316
@@ -26005,6 +26000,26 @@
     {
       "timestamp": 1792123200,
       "close": 6.531000137329102
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 6.538000106811523
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 6.566500186920166
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 6.543000221252441
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 6.362500190734863
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 6.47599983215332
     }
   ]
 }

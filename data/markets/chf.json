@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1062,
+    "record_count": 1063,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 1062,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 1063,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15943,29 +15943,24 @@
       "tertiary_short": 23601.0,
       "tertiary_net": 59514.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 136451.0,
+      "primary_long": 10101.0,
+      "primary_short": 23708.0,
+      "primary_net": -13607.0,
+      "secondary_long": 26680.0,
+      "secondary_short": 52215.0,
+      "secondary_net": -25535.0,
+      "tertiary_long": 78398.0,
+      "tertiary_short": 23755.0,
+      "tertiary_net": 54643.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 1.01419997215271
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 1.0133999586105347
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 1.013700008392334
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 1.0097999572753906
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 1.0087000131607056
-    },
     {
       "timestamp": 1477281600,
       "close": 1.0089999437332153
@@ -26009,6 +26004,26 @@
     {
       "timestamp": 1792123200,
       "close": 1.2213499546051025
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 1.2178499698638916
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 1.2201999425888062
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 1.219249963760376
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 1.225950002670288
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 1.2188999652862549
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 245,
+    "record_count": 246,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 245,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 246,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3688,29 +3688,24 @@
       "tertiary_short": 5124.0,
       "tertiary_net": 58102.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 315417.0,
+      "primary_long": 3650.0,
+      "primary_short": 2491.0,
+      "primary_net": 1159.0,
+      "secondary_long": 33035.0,
+      "secondary_short": 68126.0,
+      "secondary_net": -35091.0,
+      "tertiary_long": 63254.0,
+      "tertiary_short": 6643.0,
+      "tertiary_net": 56611.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 51.52000045776367
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 51.68000030517578
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 52.66999816894531
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 51.380001068115234
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 51.779998779296875
-    },
     {
       "timestamp": 1477281600,
       "close": 51.459999084472656
@@ -13754,6 +13749,26 @@
     {
       "timestamp": 1792123200,
       "close": 109.86000061035156
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 109.55000305175781
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 108.79000091552734
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 108.81999969482422
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 113.16999816894531
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 116.72000122070312
     }
   ]
 }

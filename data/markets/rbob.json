@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1062,
+    "record_count": 1063,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 1062,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 1063,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15943,29 +15943,24 @@
       "tertiary_short": 41016.0,
       "tertiary_net": 3786.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 338597.0,
+      "primary_long": 103847.0,
+      "primary_short": 10256.0,
+      "primary_net": 93591.0,
+      "secondary_long": 85515.0,
+      "secondary_short": 169190.0,
+      "secondary_net": -83675.0,
+      "tertiary_long": 45434.0,
+      "tertiary_short": 42638.0,
+      "tertiary_net": 2796.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 1.492400050163269
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 1.5056999921798706
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 1.5135999917984009
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 1.4937000274658203
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 1.5313999652862549
-    },
     {
       "timestamp": 1477281600,
       "close": 1.5038000345230103
@@ -26009,6 +26004,26 @@
     {
       "timestamp": 1792123200,
       "close": 3.2353999614715576
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 3.1914000511169434
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 3.1171998977661133
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 3.120500087738037
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 3.176500082015991
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 3.2116000652313232
     }
   ]
 }

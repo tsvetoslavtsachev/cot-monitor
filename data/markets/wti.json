@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1062,
+    "record_count": 1063,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-13",
-    "lookback_weeks": 1062,
+    "history_last_date": "2026-10-20",
+    "lookback_weeks": 1063,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15943,29 +15943,24 @@
       "tertiary_short": 703419.0,
       "tertiary_net": -586911.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-20",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2502206.0,
+      "primary_long": 178884.0,
+      "primary_short": 76978.0,
+      "primary_net": 101906.0,
+      "secondary_long": 661904.0,
+      "secondary_short": 292949.0,
+      "secondary_net": 368955.0,
+      "tertiary_long": 122451.0,
+      "tertiary_short": 712692.0,
+      "tertiary_net": -590241.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1476676800,
-      "close": 49.939998626708984
-    },
-    {
-      "timestamp": 1476763200,
-      "close": 50.290000915527344
-    },
-    {
-      "timestamp": 1476849600,
-      "close": 51.599998474121094
-    },
-    {
-      "timestamp": 1476936000,
-      "close": 50.43000030517578
-    },
-    {
-      "timestamp": 1477022400,
-      "close": 50.849998474121094
-    },
     {
       "timestamp": 1477281600,
       "close": 50.52000045776367
@@ -26005,6 +26000,26 @@
     {
       "timestamp": 1792123200,
       "close": 101.41000366210938
+    },
+    {
+      "timestamp": 1792382400,
+      "close": 103.66000366210938
+    },
+    {
+      "timestamp": 1792468800,
+      "close": 101.79000091552734
+    },
+    {
+      "timestamp": 1792555200,
+      "close": 97.1500015258789
+    },
+    {
+      "timestamp": 1792641600,
+      "close": 99.47000122070312
+    },
+    {
+      "timestamp": 1792728000,
+      "close": 103.2699966430664
     }
   ]
 }
