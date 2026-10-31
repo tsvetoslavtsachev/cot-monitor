@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 86167.0,
       "tertiary_net": 100798.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 360941.0,
+      "primary_long": 22424.0,
+      "primary_short": 119171.0,
+      "primary_net": -96747.0,
+      "secondary_long": 108416.0,
+      "secondary_short": 109741.0,
+      "secondary_net": -1325.0,
+      "tertiary_long": 176073.0,
+      "tertiary_short": 80264.0,
+      "tertiary_net": 95809.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 0.7479000091552734
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 0.7494500279426575
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 0.748199999332428
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 0.746399998664856
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 0.7470499873161316
-    },
     {
       "timestamp": 1477886400,
       "close": 0.7452499866485596
@@ -26020,6 +26015,26 @@
     {
       "timestamp": 1792728000,
       "close": 0.714900016784668
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 0.7140499949455261
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 0.7123500108718872
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 0.7139000296592712
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 0.7156000137329102
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 0.7170500159263611
     }
   ]
 }

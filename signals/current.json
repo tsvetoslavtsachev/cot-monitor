@@ -1,10 +1,10 @@
 {
   "module": "cot-cta",
   "schema_version": "0.1",
-  "as_of": "2026-10-20",
-  "generated_at": "2026-10-24T11:19:02.078283Z",
+  "as_of": "2026-10-27",
+  "generated_at": "2026-10-31T12:51:06.132893Z",
   "state": "Divergence",
-  "score": 0.8022,
+  "score": 0.8469,
   "scale": [
     -1,
     1
@@ -12,18 +12,17 @@
   "confidence": null,
   "falsified": false,
   "persistence": null,
-  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,80 (net long), персентил на нетната позиция 29; COT към 2026-10-20.",
+  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,85 (net long), персентил на нетната позиция 22; COT към 2026-10-27.",
   "source_url": "https://tsvetoslavtsachev.github.io/cot-monitor/",
   "market": "sp500",
   "title": "E-mini S&P 500",
-  "cot_date": "2026-10-20",
+  "cot_date": "2026-10-27",
   "cta_ensemble_direction": "net long",
-  "percentile": 28.6,
-  "zscore": -0.611,
-  "cftc_primary_net_contracts": -371245.0,
-  "price_change_4w_pct": -0.98,
+  "percentile": 21.8,
+  "zscore": -0.8117,
+  "cftc_primary_net_contracts": -400604.0,
+  "price_change_4w_pct": 0.34,
   "crowded_longs": [
-    "Soybean Meal",
     "Sugar"
   ],
   "crowded_shorts": [
@@ -33,7 +32,8 @@
     "Silver",
     "UST 5Y Note",
     "Natural Gas",
-    "Lean Hogs"
+    "Lean Hogs",
+    "Swiss Franc"
   ],
-  "divergence_count": 19
+  "divergence_count": 20
 }

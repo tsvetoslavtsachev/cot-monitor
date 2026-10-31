@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CT=F",
     "price_label": "Cotton Futures",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 31087.0,
       "tertiary_net": 35177.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "COTTON NO. 2 - ICE FUTURES U.S.",
+      "open_interest": 525208.0,
+      "primary_long": 73609.0,
+      "primary_short": 17419.0,
+      "primary_net": 56190.0,
+      "secondary_long": 127498.0,
+      "secondary_short": 241357.0,
+      "secondary_net": -113859.0,
+      "tertiary_long": 62457.0,
+      "tertiary_short": 28571.0,
+      "tertiary_net": 33886.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 68.7699966430664
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 68.48999786376953
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 69.26000213623047
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 69.76000213623047
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 70.81999969482422
-    },
     {
       "timestamp": 1477886400,
       "close": 68.86000061035156
@@ -26024,6 +26019,26 @@
     {
       "timestamp": 1792728000,
       "close": 80.19999694824219
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 79.05999755859375
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 78.05999755859375
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 78.1500015258789
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 78.5
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 77.83000183105469
     }
   ]
 }

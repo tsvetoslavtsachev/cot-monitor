@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "EURUSD=X",
     "price_label": "EUR/USD",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 213163.0,
       "tertiary_net": -155718.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 868188.0,
+      "primary_long": 125046.0,
+      "primary_short": 196620.0,
+      "primary_net": -71574.0,
+      "secondary_long": 494892.0,
+      "secondary_short": 321643.0,
+      "secondary_net": 173249.0,
+      "tertiary_long": 44692.0,
+      "tertiary_short": 182708.0,
+      "tertiary_net": -138016.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477263600,
-      "close": 1.0882576704025269
-    },
-    {
-      "timestamp": 1477350000,
-      "close": 1.0875475406646729
-    },
-    {
-      "timestamp": 1477436400,
-      "close": 1.0887316465377808
-    },
-    {
-      "timestamp": 1477522800,
-      "close": 1.091202735900879
-    },
-    {
-      "timestamp": 1477609200,
-      "close": 1.0900371074676514
-    },
     {
       "timestamp": 1477872000,
       "close": 1.0984665155410767
@@ -26370,8 +26365,24 @@
       "close": 1.1221455335617065
     },
     {
-      "timestamp": 1792790967,
-      "close": 1.1204482316970825
+      "timestamp": 1792972800,
+      "close": 1.1217553615570068
+    },
+    {
+      "timestamp": 1793059200,
+      "close": 1.1173808574676514
+    },
+    {
+      "timestamp": 1793145600,
+      "close": 1.1129660606384277
+    },
+    {
+      "timestamp": 1793232000,
+      "close": 1.1155734062194824
+    },
+    {
+      "timestamp": 1793318400,
+      "close": 1.1182805299758911
     }
   ]
 }

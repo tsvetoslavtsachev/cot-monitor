@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PA=F",
     "price_label": "Palladium Futures",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 2017.0,
       "tertiary_net": 6773.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "PALLADIUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 27753.0,
+      "primary_long": 5555.0,
+      "primary_short": 19010.0,
+      "primary_net": -13455.0,
+      "secondary_long": 3319.0,
+      "secondary_short": 1271.0,
+      "secondary_net": 2048.0,
+      "tertiary_long": 9034.0,
+      "tertiary_short": 1914.0,
+      "tertiary_net": 7120.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 629.7000122070312
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 633.7999877929688
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 619.9000244140625
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 612.1500244140625
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 615.7999877929688
-    },
     {
       "timestamp": 1477886400,
       "close": 617.4500122070312
@@ -26012,6 +26007,26 @@
     {
       "timestamp": 1792728000,
       "close": 1046.5999755859375
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 1047.9000244140625
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 1023.7000122070312
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 1009.4000244140625
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 1000.5999755859375
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 984.5999755859375
     }
   ]
 }

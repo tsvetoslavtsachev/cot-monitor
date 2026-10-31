@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "GBPUSD=X",
     "price_label": "GBP/USD",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 10631.0,
       "tertiary_net": 125120.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 253937.0,
+      "primary_long": 59342.0,
+      "primary_short": 42147.0,
+      "primary_net": 17195.0,
+      "secondary_long": 21840.0,
+      "secondary_short": 150733.0,
+      "secondary_net": -128893.0,
+      "tertiary_long": 134779.0,
+      "tertiary_short": 13082.0,
+      "tertiary_net": 121697.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477263600,
-      "close": 1.2219113111495972
-    },
-    {
-      "timestamp": 1477350000,
-      "close": 1.2217471599578857
-    },
-    {
-      "timestamp": 1477436400,
-      "close": 1.217581868171692
-    },
-    {
-      "timestamp": 1477522800,
-      "close": 1.2235409021377563
-    },
-    {
-      "timestamp": 1477609200,
-      "close": 1.2171372175216675
-    },
     {
       "timestamp": 1477872000,
       "close": 1.2215979099273682
@@ -26370,8 +26365,24 @@
       "close": 1.3403927087783813
     },
     {
-      "timestamp": 1792790967,
-      "close": 1.3374885320663452
+      "timestamp": 1792972800,
+      "close": 1.3377747535705566
+    },
+    {
+      "timestamp": 1793059200,
+      "close": 1.334507703781128
+    },
+    {
+      "timestamp": 1793145600,
+      "close": 1.330629587173462
+    },
+    {
+      "timestamp": 1793232000,
+      "close": 1.332800269126892
+    },
+    {
+      "timestamp": 1793318400,
+      "close": 1.3378641605377197
     }
   ]
 }

@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 712692.0,
       "tertiary_net": -590241.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2606478.0,
+      "primary_long": 173297.0,
+      "primary_short": 73526.0,
+      "primary_net": 99771.0,
+      "secondary_long": 668595.0,
+      "secondary_short": 293186.0,
+      "secondary_net": 375409.0,
+      "tertiary_long": 126692.0,
+      "tertiary_short": 714423.0,
+      "tertiary_net": -587731.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 50.52000045776367
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 49.959999084472656
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 49.18000030517578
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 49.720001220703125
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 48.70000076293945
-    },
     {
       "timestamp": 1477886400,
       "close": 46.86000061035156
@@ -26020,6 +26015,26 @@
     {
       "timestamp": 1792728000,
       "close": 103.2699966430664
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 101.76000213623047
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 99.9000015258789
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 102.77999877929688
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 102.0
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 104.12000274658203
     }
   ]
 }

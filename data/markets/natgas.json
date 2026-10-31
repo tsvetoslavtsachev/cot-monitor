@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "NG=F",
     "price_label": "Natural Gas Futures",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 22102.0,
       "tertiary_net": 236731.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "NAT GAS NYME - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 1698133.0,
+      "primary_long": 199745.0,
+      "primary_short": 405209.0,
+      "primary_net": -205464.0,
+      "secondary_long": 240261.0,
+      "secondary_short": 243890.0,
+      "secondary_net": -3629.0,
+      "tertiary_long": 261910.0,
+      "tertiary_short": 21754.0,
+      "tertiary_net": 240156.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 2.8310000896453857
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 2.7739999294281006
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 2.7309999465942383
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 2.7639999389648438
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 3.1050000190734863
-    },
     {
       "timestamp": 1477886400,
       "close": 3.0260000228881836
@@ -26024,6 +26019,26 @@
     {
       "timestamp": 1792728000,
       "close": 2.640000104904175
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 2.6019999980926514
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 2.697000026702881
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 2.816999912261963
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 2.9519999027252197
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 2.8980000019073486
     }
   ]
 }

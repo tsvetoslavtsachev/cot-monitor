@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1063,
+    "record_count": 1064,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-20",
-    "lookback_weeks": 1063,
+    "history_last_date": "2026-10-27",
+    "lookback_weeks": 1064,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15958,29 +15958,24 @@
       "tertiary_short": 2575.0,
       "tertiary_net": 70782.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-10-27",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 396473.0,
+      "primary_long": 73878.0,
+      "primary_short": 17861.0,
+      "primary_net": 56017.0,
+      "secondary_long": 61983.0,
+      "secondary_short": 178176.0,
+      "secondary_net": -116193.0,
+      "tertiary_long": 73950.0,
+      "tertiary_short": 3015.0,
+      "tertiary_net": 70935.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477281600,
-      "close": 103.125
-    },
-    {
-      "timestamp": 1477368000,
-      "close": 102.7249984741211
-    },
-    {
-      "timestamp": 1477454400,
-      "close": 103.05000305175781
-    },
-    {
-      "timestamp": 1477540800,
-      "close": 104.125
-    },
-    {
-      "timestamp": 1477627200,
-      "close": 104.19999694824219
-    },
     {
       "timestamp": 1477886400,
       "close": 103.0999984741211
@@ -26016,6 +26011,26 @@
     {
       "timestamp": 1792728000,
       "close": 229.875
+    },
+    {
+      "timestamp": 1792987200,
+      "close": 229.97500610351562
+    },
+    {
+      "timestamp": 1793073600,
+      "close": 230.0
+    },
+    {
+      "timestamp": 1793160000,
+      "close": 227.375
+    },
+    {
+      "timestamp": 1793246400,
+      "close": 227.27499389648438
+    },
+    {
+      "timestamp": 1793332800,
+      "close": 224.0
     }
   ]
 }
