@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 80264.0,
       "tertiary_net": 95809.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 348660.0,
+      "primary_long": 25334.0,
+      "primary_short": 111636.0,
+      "primary_net": -86302.0,
+      "secondary_long": 117157.0,
+      "secondary_short": 100704.0,
+      "secondary_net": 16453.0,
+      "tertiary_long": 154570.0,
+      "tertiary_short": 86816.0,
+      "tertiary_net": 67754.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 0.7452499866485596
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 0.7473000288009644
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 0.7465500235557556
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 0.7473499774932861
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 0.7459999918937683
-    },
     {
       "timestamp": 1478494800,
       "close": 0.7483500242233276
@@ -26035,6 +26030,26 @@
     {
       "timestamp": 1793332800,
       "close": 0.7170500159263611
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 0.7153499722480774
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 0.7145000100135803
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 0.7160999774932861
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 0.7147499918937683
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 0.7078499794006348
     }
   ]
 }

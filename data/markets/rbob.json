@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 45827.0,
       "tertiary_net": -851.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 320577.0,
+      "primary_long": 94040.0,
+      "primary_short": 7077.0,
+      "primary_net": 86963.0,
+      "secondary_long": 72034.0,
+      "secondary_short": 150280.0,
+      "secondary_net": -78246.0,
+      "tertiary_long": 45316.0,
+      "tertiary_short": 43880.0,
+      "tertiary_net": 1436.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 1.4494999647140503
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 1.4840999841690063
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 1.4479000568389893
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 1.4244999885559082
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 1.378600001335144
-    },
     {
       "timestamp": 1478494800,
       "close": 1.371000051498413
@@ -26039,6 +26034,26 @@
     {
       "timestamp": 1793332800,
       "close": 3.312000036239624
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 2.900099992752075
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 2.935499906539917
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 2.728600025177002
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 2.763400077819824
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 2.776700019836426
     }
   ]
 }

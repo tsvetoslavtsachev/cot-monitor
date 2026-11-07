@@ -1,10 +1,10 @@
 {
   "module": "cot-cta",
   "schema_version": "0.1",
-  "as_of": "2026-10-27",
-  "generated_at": "2026-10-31T12:51:06.132893Z",
+  "as_of": "2026-11-03",
+  "generated_at": "2026-11-07T13:20:43.130379Z",
   "state": "Divergence",
-  "score": 0.8469,
+  "score": 0.671,
   "scale": [
     -1,
     1
@@ -12,28 +12,30 @@
   "confidence": null,
   "falsified": false,
   "persistence": null,
-  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,85 (net long), персентил на нетната позиция 22; COT към 2026-10-27.",
+  "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,67 (net long), персентил на нетната позиция 28; COT към 2026-11-03.",
   "source_url": "https://tsvetoslavtsachev.github.io/cot-monitor/",
   "market": "sp500",
   "title": "E-mini S&P 500",
-  "cot_date": "2026-10-27",
+  "cot_date": "2026-11-03",
   "cta_ensemble_direction": "net long",
-  "percentile": 21.8,
-  "zscore": -0.8117,
-  "cftc_primary_net_contracts": -400604.0,
-  "price_change_4w_pct": 0.34,
-  "crowded_longs": [
-    "Sugar"
-  ],
+  "percentile": 28.36,
+  "zscore": -0.6173,
+  "cftc_primary_net_contracts": -372318.0,
+  "price_change_4w_pct": -3.52,
+  "crowded_longs": [],
   "crowded_shorts": [
     "Palladium",
     "UST 10Y Note",
     "Canadian Dollar",
-    "Silver",
+    "Wheat (SRW)",
     "UST 5Y Note",
-    "Natural Gas",
     "Lean Hogs",
+    "Silver",
+    "Natural Gas",
+    "Platinum",
+    "UST 2Y Note",
+    "WTI Crude",
     "Swiss Franc"
   ],
-  "divergence_count": 20
+  "divergence_count": 18
 }

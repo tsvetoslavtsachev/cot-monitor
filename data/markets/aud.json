@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 55017.0,
       "tertiary_net": 55637.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 328599.0,
+      "primary_long": 89778.0,
+      "primary_short": 39672.0,
+      "primary_net": 50106.0,
+      "secondary_long": 83852.0,
+      "secondary_short": 214632.0,
+      "secondary_net": -130780.0,
+      "tertiary_long": 111775.0,
+      "tertiary_short": 50808.0,
+      "tertiary_net": 60967.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 0.7591999769210815
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 0.7638999819755554
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 0.7645999789237976
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 0.767799973487854
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 0.7667999863624573
-    },
     {
       "timestamp": 1478494800,
       "close": 0.7709000110626221
@@ -26039,6 +26034,26 @@
     {
       "timestamp": 1793332800,
       "close": 0.7028499841690063
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 0.6998500227928162
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 0.6962500214576721
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 0.7006499767303467
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 0.6944000124931335
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 0.6863499879837036
     }
   ]
 }

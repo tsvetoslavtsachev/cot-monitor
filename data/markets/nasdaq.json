@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "NQ=F",
     "price_label": "Nasdaq 100",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 126882.0,
       "tertiary_net": -85514.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 292587.0,
+      "primary_long": 62698.0,
+      "primary_short": 52625.0,
+      "primary_net": 10073.0,
+      "secondary_long": 109642.0,
+      "secondary_short": 36505.0,
+      "secondary_net": 73137.0,
+      "tertiary_long": 39546.0,
+      "tertiary_short": 152075.0,
+      "tertiary_net": -112529.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 4796.75
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 4757.25
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 4716.75
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 4674.5
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 4657.75
-    },
     {
       "timestamp": 1478494800,
       "close": 4775.75
@@ -26039,6 +26034,26 @@
     {
       "timestamp": 1793332800,
       "close": 28534.0
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 28127.5
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 28305.75
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 28566.75
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 26752.0
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 27085.25
     }
   ]
 }

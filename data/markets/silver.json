@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SI=F",
     "price_label": "Silver Futures",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 46152.0,
       "tertiary_net": -18521.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "SILVER - COMMODITY EXCHANGE INC.",
+      "open_interest": 135196.0,
+      "primary_long": 15867.0,
+      "primary_short": 13202.0,
+      "primary_net": 2665.0,
+      "secondary_long": 5442.0,
+      "secondary_short": 18579.0,
+      "secondary_net": -13137.0,
+      "tertiary_long": 24273.0,
+      "tertiary_short": 43368.0,
+      "tertiary_net": -19095.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 17.761999130249023
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 18.385000228881836
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 18.65999984741211
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 18.382999420166016
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 18.341999053955078
-    },
     {
       "timestamp": 1478494800,
       "close": 18.124000549316406
@@ -26031,6 +26026,26 @@
     {
       "timestamp": 1793332800,
       "close": 49.09700012207031
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 50.720001220703125
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 49.58700180053711
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 52.119998931884766
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 52.233001708984375
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 51.803001403808594
     }
   ]
 }

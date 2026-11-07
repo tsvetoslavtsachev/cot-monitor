@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "GBPUSD=X",
     "price_label": "GBP/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 13082.0,
       "tertiary_net": 121697.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 245590.0,
+      "primary_long": 63342.0,
+      "primary_short": 36679.0,
+      "primary_net": 26663.0,
+      "secondary_long": 22698.0,
+      "secondary_short": 143861.0,
+      "secondary_net": -121163.0,
+      "tertiary_long": 117237.0,
+      "tertiary_short": 14044.0,
+      "tertiary_net": 103193.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477872000,
-      "close": 1.2215979099273682
-    },
-    {
-      "timestamp": 1477958400,
-      "close": 1.2236906290054321
-    },
-    {
-      "timestamp": 1478044800,
-      "close": 1.2238553762435913
-    },
-    {
-      "timestamp": 1478131200,
-      "close": 1.230466365814209
-    },
-    {
-      "timestamp": 1478217600,
-      "close": 1.2468827962875366
-    },
     {
       "timestamp": 1478476800,
       "close": 1.248907208442688
@@ -26383,6 +26378,26 @@
     {
       "timestamp": 1793318400,
       "close": 1.3378641605377197
+    },
+    {
+      "timestamp": 1793577600,
+      "close": 1.3385626077651978
+    },
+    {
+      "timestamp": 1793664000,
+      "close": 1.340985894203186
+    },
+    {
+      "timestamp": 1793750400,
+      "close": 1.343418002128601
+    },
+    {
+      "timestamp": 1793836800,
+      "close": 1.3477089405059814
+    },
+    {
+      "timestamp": 1793923200,
+      "close": 1.3456052541732788
     }
   ]
 }

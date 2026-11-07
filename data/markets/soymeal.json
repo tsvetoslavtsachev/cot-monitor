@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZM=F",
     "price_label": "Soybean Meal Futures",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 12799.0,
       "tertiary_net": 120912.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "SOYBEAN MEAL - CHICAGO BOARD OF TRADE",
+      "open_interest": 689697.0,
+      "primary_long": 132564.0,
+      "primary_short": 20896.0,
+      "primary_net": 111668.0,
+      "secondary_long": 105882.0,
+      "secondary_short": 370443.0,
+      "secondary_net": -264561.0,
+      "tertiary_long": 127077.0,
+      "tertiary_short": 9038.0,
+      "tertiary_net": 118039.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 316.1000061035156
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 309.5
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 306.70001220703125
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 306.3999938964844
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 309.0
-    },
     {
       "timestamp": 1478494800,
       "close": 311.8999938964844
@@ -26031,6 +26026,26 @@
     {
       "timestamp": 1793332800,
       "close": 324.6000061035156
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 319.6000061035156
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 318.0
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 318.6000061035156
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 317.20001220703125
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 319.20001220703125
     }
   ]
 }

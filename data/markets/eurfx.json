@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "EURUSD=X",
     "price_label": "EUR/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 182708.0,
       "tertiary_net": -138016.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 876122.0,
+      "primary_long": 119238.0,
+      "primary_short": 197797.0,
+      "primary_net": -78559.0,
+      "secondary_long": 485147.0,
+      "secondary_short": 340222.0,
+      "secondary_net": 144925.0,
+      "tertiary_long": 58857.0,
+      "tertiary_short": 168142.0,
+      "tertiary_net": -109285.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477872000,
-      "close": 1.0984665155410767
-    },
-    {
-      "timestamp": 1477958400,
-      "close": 1.0973334312438965
-    },
-    {
-      "timestamp": 1478044800,
-      "close": 1.1057054996490479
-    },
-    {
-      "timestamp": 1478131200,
-      "close": 1.1097548007965088
-    },
-    {
-      "timestamp": 1478217600,
-      "close": 1.1102476119995117
-    },
     {
       "timestamp": 1478476800,
       "close": 1.1101243495941162
@@ -26383,6 +26378,26 @@
     {
       "timestamp": 1793318400,
       "close": 1.1182805299758911
+    },
+    {
+      "timestamp": 1793577600,
+      "close": 1.1156854629516602
+    },
+    {
+      "timestamp": 1793664000,
+      "close": 1.1192066669464111
+    },
+    {
+      "timestamp": 1793750400,
+      "close": 1.1207244396209717
+    },
+    {
+      "timestamp": 1793836800,
+      "close": 1.1234945058822632
+    },
+    {
+      "timestamp": 1793923200,
+      "close": 1.1228259801864624
     }
   ]
 }

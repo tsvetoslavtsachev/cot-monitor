@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 21738.0,
       "tertiary_net": 56207.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 133162.0,
+      "primary_long": 7441.0,
+      "primary_short": 24286.0,
+      "primary_net": -16845.0,
+      "secondary_long": 26973.0,
+      "secondary_short": 47826.0,
+      "secondary_net": -20853.0,
+      "tertiary_long": 75159.0,
+      "tertiary_short": 23641.0,
+      "tertiary_net": 51518.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 1.0121999979019165
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 1.0289000272750854
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 1.0298999547958374
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 1.0286999940872192
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 1.0329999923706055
-    },
     {
       "timestamp": 1478494800,
       "close": 1.0282000303268433
@@ -26039,6 +26034,26 @@
     {
       "timestamp": 1793332800,
       "close": 1.2202999591827393
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 1.2280000448226929
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 1.2239500284194946
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 1.2293000221252441
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 1.2299000024795532
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 1.2237999439239502
     }
   ]
 }

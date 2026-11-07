@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 1064,
+    "record_count": 1065,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-10-27",
-    "lookback_weeks": 1064,
+    "history_last_date": "2026-11-03",
+    "lookback_weeks": 1065,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15973,29 +15973,24 @@
       "tertiary_short": 154511.0,
       "tertiary_net": -130739.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-03",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 380641.0,
+      "primary_long": 82058.0,
+      "primary_short": 96875.0,
+      "primary_net": -14817.0,
+      "secondary_long": 151254.0,
+      "secondary_short": 71867.0,
+      "secondary_net": 79387.0,
+      "tertiary_long": 28130.0,
+      "tertiary_short": 151014.0,
+      "tertiary_net": -122884.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1477886400,
-      "close": 0.009545999579131603
-    },
-    {
-      "timestamp": 1477972800,
-      "close": 0.00963400024920702
-    },
-    {
-      "timestamp": 1478059200,
-      "close": 0.009692000225186348
-    },
-    {
-      "timestamp": 1478145600,
-      "close": 0.009723999537527561
-    },
-    {
-      "timestamp": 1478232000,
-      "close": 0.009709999896585941
-    },
     {
       "timestamp": 1478494800,
       "close": 0.009575000032782555
@@ -26039,6 +26034,26 @@
     {
       "timestamp": 1793332800,
       "close": 0.00636200001463294
+    },
+    {
+      "timestamp": 1793595600,
+      "close": 0.0063390000723302364
+    },
+    {
+      "timestamp": 1793682000,
+      "close": 0.006306000053882599
+    },
+    {
+      "timestamp": 1793768400,
+      "close": 0.006316000130027533
+    },
+    {
+      "timestamp": 1793854800,
+      "close": 0.0063390000723302364
+    },
+    {
+      "timestamp": 1793941200,
+      "close": 0.006312999874353409
     }
   ]
 }
