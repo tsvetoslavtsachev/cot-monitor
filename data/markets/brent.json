@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "BZ=F",
     "price_label": "Brent Futures",
-    "record_count": 248,
+    "record_count": 250,
     "history_first_date": "2022-02-08",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 248,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 250,
     "cot_source": "data-core"
   },
   "cot": [
@@ -3733,29 +3733,39 @@
       "tertiary_short": 489.0,
       "tertiary_net": 63292.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 253786.0,
+      "primary_long": 4582.0,
+      "primary_short": 822.0,
+      "primary_net": 3760.0,
+      "secondary_long": 23249.0,
+      "secondary_short": 63937.0,
+      "secondary_net": -40688.0,
+      "tertiary_long": 65879.0,
+      "tertiary_short": 0.0,
+      "tertiary_net": 65879.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "BRENT LAST DAY - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 264167.0,
+      "primary_long": 3627.0,
+      "primary_short": 536.0,
+      "primary_net": 3091.0,
+      "secondary_long": 23455.0,
+      "secondary_short": 63682.0,
+      "secondary_net": -40227.0,
+      "tertiary_long": 67690.0,
+      "tertiary_short": 0.0,
+      "tertiary_net": 67690.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 44.43000030517578
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 46.95000076293945
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 46.630001068115234
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 46.4900016784668
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 46.86000061035156
-    },
     {
       "timestamp": 1479704400,
       "close": 48.900001525878906
@@ -13803,6 +13813,26 @@
     {
       "timestamp": 1794546000,
       "close": 95.83999633789062
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 92.44000244140625
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 93.13999938964844
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 91.94999694824219
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 91.9800033569336
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 92.56999969482422
     }
   ]
 }

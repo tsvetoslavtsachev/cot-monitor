@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6J=F",
     "price_label": "JPY/USD",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 151014.0,
       "tertiary_net": -122884.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 388875.0,
+      "primary_long": 89089.0,
+      "primary_short": 105944.0,
+      "primary_net": -16855.0,
+      "secondary_long": 161322.0,
+      "secondary_short": 70978.0,
+      "secondary_net": 90344.0,
+      "tertiary_long": 19338.0,
+      "tertiary_short": 145649.0,
+      "tertiary_net": -126311.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 390361.0,
+      "primary_long": 93108.0,
+      "primary_short": 116898.0,
+      "primary_net": -23790.0,
+      "secondary_long": 171170.0,
+      "secondary_short": 86489.0,
+      "secondary_net": 84681.0,
+      "tertiary_long": 12833.0,
+      "tertiary_short": 126464.0,
+      "tertiary_net": -113631.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 0.009227000176906586
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 0.009157000109553337
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 0.009170999750494957
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 0.009108000434935093
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 0.009046999737620354
-    },
     {
       "timestamp": 1479704400,
       "close": 0.009006000123918056
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 0.006258999928832054
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 0.0062699997797608376
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 0.006289999932050705
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 0.006289000157266855
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 0.006271999794989824
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 0.006320999935269356
     }
   ]
 }

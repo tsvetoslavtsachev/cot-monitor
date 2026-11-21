@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "NQ=F",
     "price_label": "Nasdaq 100",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 152075.0,
       "tertiary_net": -112529.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 288717.0,
+      "primary_long": 58721.0,
+      "primary_short": 44754.0,
+      "primary_net": 13967.0,
+      "secondary_long": 107927.0,
+      "secondary_short": 35142.0,
+      "secondary_net": 72785.0,
+      "tertiary_long": 44896.0,
+      "tertiary_short": 144995.0,
+      "tertiary_net": -100099.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "NASDAQ MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 296423.0,
+      "primary_long": 53394.0,
+      "primary_short": 64322.0,
+      "primary_net": -10928.0,
+      "secondary_long": 112461.0,
+      "secondary_short": 29561.0,
+      "secondary_net": 82900.0,
+      "tertiary_long": 46518.0,
+      "tertiary_short": 136196.0,
+      "tertiary_net": -89678.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 4694.5
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 4766.0
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 4783.25
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 4828.5
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 4808.5
-    },
     {
       "timestamp": 1479704400,
       "close": 4854.0
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 28034.75
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 27284.25
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 27075.5
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 27186.75
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 26600.25
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 25126.5
     }
   ]
 }

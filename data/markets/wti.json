@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CL=F",
     "price_label": "WTI Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 719780.0,
       "tertiary_net": -595652.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2654656.0,
+      "primary_long": 152998.0,
+      "primary_short": 82414.0,
+      "primary_net": 70584.0,
+      "secondary_long": 692918.0,
+      "secondary_short": 317566.0,
+      "secondary_net": 375352.0,
+      "tertiary_long": 124704.0,
+      "tertiary_short": 706909.0,
+      "tertiary_net": -582205.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "WTI-PHYSICAL - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 2347698.0,
+      "primary_long": 154316.0,
+      "primary_short": 93497.0,
+      "primary_net": 60819.0,
+      "secondary_long": 671723.0,
+      "secondary_short": 286147.0,
+      "secondary_net": 385576.0,
+      "tertiary_long": 123943.0,
+      "tertiary_short": 687633.0,
+      "tertiary_net": -563690.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 43.31999969482422
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 45.810001373291016
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 45.56999969482422
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 45.41999816894531
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 45.689998626708984
-    },
     {
       "timestamp": 1479704400,
       "close": 47.4900016784668
@@ -26054,6 +26064,26 @@
     {
       "timestamp": 1794546000,
       "close": 88.55999755859375
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 85.72000122070312
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 86.01000213623047
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 83.26000213623047
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 83.20999908447266
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 83.9800033569336
     }
   ]
 }

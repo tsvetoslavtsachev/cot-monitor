@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6C=F",
     "price_label": "CAD/USD",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 86816.0,
       "tertiary_net": 67754.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 342677.0,
+      "primary_long": 31489.0,
+      "primary_short": 99694.0,
+      "primary_net": -68205.0,
+      "secondary_long": 119501.0,
+      "secondary_short": 105021.0,
+      "secondary_net": 14480.0,
+      "tertiary_long": 139526.0,
+      "tertiary_short": 86685.0,
+      "tertiary_net": 52841.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 358186.0,
+      "primary_long": 33563.0,
+      "primary_short": 105681.0,
+      "primary_net": -72118.0,
+      "secondary_long": 121071.0,
+      "secondary_short": 115706.0,
+      "secondary_net": 5365.0,
+      "tertiary_long": 148876.0,
+      "tertiary_short": 80173.0,
+      "tertiary_net": 68703.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 0.7376999855041504
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 0.7428500056266785
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 0.7443000078201294
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 0.7409999966621399
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 0.7405499815940857
-    },
     {
       "timestamp": 1479704400,
       "close": 0.744949996471405
@@ -26054,6 +26064,26 @@
     {
       "timestamp": 1794546000,
       "close": 0.7009999752044678
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 0.69964998960495
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 0.6991999745368958
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 0.6985499858856201
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 0.6983500123023987
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 0.6984999775886536
     }
   ]
 }

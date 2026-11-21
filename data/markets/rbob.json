@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "RB=F",
     "price_label": "RBOB Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 43880.0,
       "tertiary_net": 1436.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 321044.0,
+      "primary_long": 90381.0,
+      "primary_short": 4015.0,
+      "primary_net": 86366.0,
+      "secondary_long": 70852.0,
+      "secondary_short": 150493.0,
+      "secondary_net": -79641.0,
+      "tertiary_long": 44794.0,
+      "tertiary_short": 45481.0,
+      "tertiary_net": -687.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "GASOLINE RBOB - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 333840.0,
+      "primary_long": 87584.0,
+      "primary_short": 7948.0,
+      "primary_net": 79636.0,
+      "secondary_long": 74298.0,
+      "secondary_short": 152738.0,
+      "secondary_net": -78440.0,
+      "tertiary_long": 43333.0,
+      "tertiary_short": 43297.0,
+      "tertiary_net": 36.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 1.2777999639511108
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 1.3350000381469727
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 1.319100022315979
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 1.343000054359436
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 1.3391000032424927
-    },
     {
       "timestamp": 1479704400,
       "close": 1.3964999914169312
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 2.6214001178741455
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 2.537899971008301
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 2.534899950027466
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 2.4818999767303467
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 2.4951000213623047
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 2.502700090408325
     }
   ]
 }

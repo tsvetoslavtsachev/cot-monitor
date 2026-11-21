@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6A=F",
     "price_label": "AUD/USD",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 50808.0,
       "tertiary_net": 60967.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 352859.0,
+      "primary_long": 94769.0,
+      "primary_short": 43950.0,
+      "primary_net": 50819.0,
+      "secondary_long": 73985.0,
+      "secondary_short": 231192.0,
+      "secondary_net": -157207.0,
+      "tertiary_long": 134819.0,
+      "tertiary_short": 44339.0,
+      "tertiary_net": 90480.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 374281.0,
+      "primary_long": 80426.0,
+      "primary_short": 42446.0,
+      "primary_net": 37980.0,
+      "secondary_long": 64999.0,
+      "secondary_short": 247724.0,
+      "secondary_net": -182725.0,
+      "tertiary_long": 172185.0,
+      "tertiary_short": 37925.0,
+      "tertiary_net": 134260.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 0.753600001335144
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 0.7542999982833862
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 0.7473999857902527
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 0.7404999732971191
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 0.7336999773979187
-    },
     {
       "timestamp": 1479704400,
       "close": 0.7350000143051147
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 0.6775000095367432
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 0.6746000051498413
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 0.672950029373169
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 0.6707000136375427
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 0.6659500002861023
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 0.6615999937057495
     }
   ]
 }

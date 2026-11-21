@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "KC=F",
     "price_label": "Coffee Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 20888.0,
       "tertiary_net": 6102.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 213703.0,
+      "primary_long": 28071.0,
+      "primary_short": 23099.0,
+      "primary_net": 4972.0,
+      "secondary_long": 46753.0,
+      "secondary_short": 63141.0,
+      "secondary_net": -16388.0,
+      "tertiary_long": 26867.0,
+      "tertiary_short": 16625.0,
+      "tertiary_net": 10242.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "COFFEE C - ICE FUTURES U.S.",
+      "open_interest": 176194.0,
+      "primary_long": 29227.0,
+      "primary_short": 22460.0,
+      "primary_net": 6767.0,
+      "secondary_long": 37402.0,
+      "secondary_short": 55495.0,
+      "secondary_net": -18093.0,
+      "tertiary_long": 27374.0,
+      "tertiary_short": 16997.0,
+      "tertiary_net": 10377.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 161.8000030517578
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 161.8000030517578
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 161.25
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 159.3000030517578
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 157.85000610351562
-    },
     {
       "timestamp": 1479704400,
       "close": 158.64999389648438
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 278.6499938964844
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 280.70001220703125
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 286.6000061035156
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 280.95001220703125
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 282.04998779296875
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 274.8500061035156
     }
   ]
 }

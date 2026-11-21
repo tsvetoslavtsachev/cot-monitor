@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "BTC-USD",
     "price_label": "BTC/USD",
-    "record_count": 448,
+    "record_count": 450,
     "history_first_date": "2018-04-10",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 448,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 450,
     "cot_source": "data-core"
   },
   "cot": [
@@ -6733,37 +6733,39 @@
       "tertiary_short": 5548.0,
       "tertiary_net": 479.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 19265.0,
+      "primary_long": 6339.0,
+      "primary_short": 7582.0,
+      "primary_net": -1243.0,
+      "secondary_long": 3949.0,
+      "secondary_short": 1993.0,
+      "secondary_net": 1956.0,
+      "tertiary_long": 5562.0,
+      "tertiary_short": 5547.0,
+      "tertiary_net": 15.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 19257.0,
+      "primary_long": 6264.0,
+      "primary_short": 7475.0,
+      "primary_net": -1211.0,
+      "secondary_long": 3901.0,
+      "secondary_short": 1616.0,
+      "secondary_net": 2285.0,
+      "tertiary_long": 5008.0,
+      "tertiary_short": 5511.0,
+      "tertiary_net": -503.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479081600,
-      "close": 705.02099609375
-    },
-    {
-      "timestamp": 1479168000,
-      "close": 711.6190185546875
-    },
-    {
-      "timestamp": 1479254400,
-      "close": 744.197998046875
-    },
-    {
-      "timestamp": 1479340800,
-      "close": 740.9769897460938
-    },
-    {
-      "timestamp": 1479427200,
-      "close": 751.5850219726562
-    },
-    {
-      "timestamp": 1479513600,
-      "close": 751.6160278320312
-    },
-    {
-      "timestamp": 1479600000,
-      "close": 731.0260009765625
-    },
     {
       "timestamp": 1479686400,
       "close": 739.2479858398438
@@ -21346,7 +21348,35 @@
     },
     {
       "timestamp": 1794614400,
-      "close": 66673.7890625
+      "close": 64128.05078125
+    },
+    {
+      "timestamp": 1794700800,
+      "close": 65305.0625
+    },
+    {
+      "timestamp": 1794787200,
+      "close": 64855.84375
+    },
+    {
+      "timestamp": 1794873600,
+      "close": 64893.9453125
+    },
+    {
+      "timestamp": 1794960000,
+      "close": 62987.265625
+    },
+    {
+      "timestamp": 1795046400,
+      "close": 61901.8203125
+    },
+    {
+      "timestamp": 1795132800,
+      "close": 58798.98046875
+    },
+    {
+      "timestamp": 1795219200,
+      "close": 60191.75
     }
   ]
 }

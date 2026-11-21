@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "SB=F",
     "price_label": "Sugar Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 176600.0,
       "tertiary_net": 93531.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1423045.0,
+      "primary_long": 274824.0,
+      "primary_short": 81628.0,
+      "primary_net": 193196.0,
+      "secondary_long": 244317.0,
+      "secondary_short": 581590.0,
+      "secondary_net": -337273.0,
+      "tertiary_long": 262316.0,
+      "tertiary_short": 164335.0,
+      "tertiary_net": 97981.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "SUGAR NO. 11 - ICE FUTURES U.S.",
+      "open_interest": 1409333.0,
+      "primary_long": 268365.0,
+      "primary_short": 86902.0,
+      "primary_net": 181463.0,
+      "secondary_long": 252991.0,
+      "secondary_short": 577463.0,
+      "secondary_net": -324472.0,
+      "tertiary_long": 261092.0,
+      "tertiary_short": 166572.0,
+      "tertiary_net": 94520.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 21.6299991607666
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 21.149999618530273
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 20.360000610351562
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 20.219999313354492
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 20.149999618530273
-    },
     {
       "timestamp": 1479704400,
       "close": 20.350000381469727
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 18.40999984741211
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 18.100000381469727
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 18.170000076293945
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 18.040000915527344
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 17.15999984741211
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 17.030000686645508
     }
   ]
 }

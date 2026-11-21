@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HO=F",
     "price_label": "Heating Oil Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 6751.0,
       "tertiary_net": 55360.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 257034.0,
+      "primary_long": 22551.0,
+      "primary_short": 19781.0,
+      "primary_net": 2770.0,
+      "secondary_long": 57592.0,
+      "secondary_short": 127365.0,
+      "secondary_net": -69773.0,
+      "tertiary_long": 60277.0,
+      "tertiary_short": 8748.0,
+      "tertiary_net": 51529.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "NY HARBOR ULSD - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 262524.0,
+      "primary_long": 25463.0,
+      "primary_short": 21010.0,
+      "primary_net": 4453.0,
+      "secondary_long": 64290.0,
+      "secondary_short": 135076.0,
+      "secondary_net": -70786.0,
+      "tertiary_long": 61607.0,
+      "tertiary_short": 8032.0,
+      "tertiary_net": 53575.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 1.3854999542236328
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 1.4438999891281128
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 1.434999942779541
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 1.4470000267028809
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 1.4577000141143799
-    },
     {
       "timestamp": 1479704400,
       "close": 1.5245000123977661
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 4.258500099182129
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 4.0817999839782715
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 4.047500133514404
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 3.9723000526428223
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 3.9514000415802
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 3.921600103378296
     }
   ]
 }

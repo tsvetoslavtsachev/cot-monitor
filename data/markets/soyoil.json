@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZL=F",
     "price_label": "Soybean Oil Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 4640.0,
       "tertiary_net": 90263.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 711503.0,
+      "primary_long": 73616.0,
+      "primary_short": 65883.0,
+      "primary_net": 7733.0,
+      "secondary_long": 206626.0,
+      "secondary_short": 320437.0,
+      "secondary_net": -113811.0,
+      "tertiary_long": 93674.0,
+      "tertiary_short": 4443.0,
+      "tertiary_net": 89231.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "SOYBEAN OIL - CHICAGO BOARD OF TRADE",
+      "open_interest": 711141.0,
+      "primary_long": 71738.0,
+      "primary_short": 67714.0,
+      "primary_net": 4024.0,
+      "secondary_long": 212152.0,
+      "secondary_short": 321315.0,
+      "secondary_net": -109163.0,
+      "tertiary_long": 98370.0,
+      "tertiary_short": 4531.0,
+      "tertiary_net": 93839.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 33.95000076293945
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 34.209999084472656
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 34.099998474121094
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 33.70000076293945
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 34.04999923706055
-    },
     {
       "timestamp": 1479704400,
       "close": 34.63999938964844
@@ -26050,6 +26060,26 @@
     {
       "timestamp": 1794546000,
       "close": 63.77000045776367
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 62.189998626708984
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 62.130001068115234
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 59.880001068115234
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 60.09000015258789
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 59.810001373291016
     }
   ]
 }

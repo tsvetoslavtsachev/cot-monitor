@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "ZC=F",
     "price_label": "Corn Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 18674.0,
       "tertiary_net": 341128.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "CORN - CHICAGO BOARD OF TRADE",
+      "open_interest": 2648908.0,
+      "primary_long": 206799.0,
+      "primary_short": 269110.0,
+      "primary_net": -62311.0,
+      "secondary_long": 604811.0,
+      "secondary_short": 940989.0,
+      "secondary_net": -336178.0,
+      "tertiary_long": 363169.0,
+      "tertiary_short": 23446.0,
+      "tertiary_net": 339723.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "CORN - CHICAGO BOARD OF TRADE",
+      "open_interest": 2584870.0,
+      "primary_long": 208998.0,
+      "primary_short": 280078.0,
+      "primary_net": -71080.0,
+      "secondary_long": 600142.0,
+      "secondary_short": 910838.0,
+      "secondary_net": -310696.0,
+      "tertiary_long": 346012.0,
+      "tertiary_short": 18759.0,
+      "tertiary_net": 327253.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 337.25
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 341.5
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 338.5
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 342.0
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 345.5
-    },
     {
       "timestamp": 1479704400,
       "close": 349.75
@@ -26042,6 +26052,26 @@
     {
       "timestamp": 1794546000,
       "close": 445.5
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 448.75
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 446.75
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 435.5
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 439.0
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 434.5
     }
   ]
 }

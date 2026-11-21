@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "CC=F",
     "price_label": "Cocoa Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 8388.0,
       "tertiary_net": 38785.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "COCOA - ICE FUTURES U.S.",
+      "open_interest": 234154.0,
+      "primary_long": 13515.0,
+      "primary_short": 35345.0,
+      "primary_net": -21830.0,
+      "secondary_long": 53263.0,
+      "secondary_short": 63883.0,
+      "secondary_net": -10620.0,
+      "tertiary_long": 47066.0,
+      "tertiary_short": 8534.0,
+      "tertiary_net": 38532.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "COCOA - ICE FUTURES U.S.",
+      "open_interest": 205141.0,
+      "primary_long": 14731.0,
+      "primary_short": 34999.0,
+      "primary_net": -20268.0,
+      "secondary_long": 50028.0,
+      "secondary_short": 60964.0,
+      "secondary_net": -10936.0,
+      "tertiary_long": 45558.0,
+      "tertiary_short": 8877.0,
+      "tertiary_net": 36681.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 2392.0
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 2378.0
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 2412.0
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 2426.0
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 2432.0
-    },
     {
       "timestamp": 1479704400,
       "close": 2438.0
@@ -26054,6 +26064,26 @@
     {
       "timestamp": 1794546000,
       "close": 5119.0
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 5042.0
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 5030.0
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 4847.0
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 5063.0
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 5125.0
     }
   ]
 }

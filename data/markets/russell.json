@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "RTY=F",
     "price_label": "Russell 2000",
-    "record_count": 601,
+    "record_count": 603,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 601,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 603,
     "cot_source": "data-core"
   },
   "cot": [
@@ -9027,6 +9027,36 @@
       "tertiary_long": 112819.0,
       "tertiary_short": 83442.0,
       "tertiary_net": 29377.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "RUSSELL E-MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 440576.0,
+      "primary_long": 90791.0,
+      "primary_short": 135220.0,
+      "primary_net": -44429.0,
+      "secondary_long": 141671.0,
+      "secondary_short": 122008.0,
+      "secondary_net": 19663.0,
+      "tertiary_long": 113891.0,
+      "tertiary_short": 91628.0,
+      "tertiary_net": 22263.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "RUSSELL E-MINI - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 459730.0,
+      "primary_long": 101204.0,
+      "primary_short": 143557.0,
+      "primary_net": -42353.0,
+      "secondary_long": 145124.0,
+      "secondary_short": 114453.0,
+      "secondary_net": 30671.0,
+      "tertiary_long": 112594.0,
+      "tertiary_short": 100129.0,
+      "tertiary_net": 12465.0,
       "report_family": "tff"
     }
   ],
@@ -18450,6 +18480,26 @@
     {
       "timestamp": 1794546000,
       "close": 2797.5
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 2751.39990234375
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 2711.199951171875
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 2722.0
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 2663.300048828125
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 2587.39990234375
     }
   ]
 }

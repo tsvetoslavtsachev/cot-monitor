@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "LE=F",
     "price_label": "Live Cattle Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 2981.0,
       "tertiary_net": 68881.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 408771.0,
+      "primary_long": 60547.0,
+      "primary_short": 25667.0,
+      "primary_net": 34880.0,
+      "secondary_long": 79127.0,
+      "secondary_short": 164294.0,
+      "secondary_net": -85167.0,
+      "tertiary_long": 74122.0,
+      "tertiary_short": 3212.0,
+      "tertiary_net": 70910.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "LIVE CATTLE - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 413798.0,
+      "primary_long": 68809.0,
+      "primary_short": 25488.0,
+      "primary_net": 43321.0,
+      "secondary_long": 82352.0,
+      "secondary_short": 165792.0,
+      "secondary_net": -83440.0,
+      "tertiary_long": 65564.0,
+      "tertiary_short": 3602.0,
+      "tertiary_net": 61962.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 105.57499694824219
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 105.4749984741211
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 108.19999694824219
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 108.2249984741211
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 108.32499694824219
-    },
     {
       "timestamp": 1479704400,
       "close": 109.0250015258789
@@ -26050,6 +26060,26 @@
     {
       "timestamp": 1794546000,
       "close": 220.64999389648438
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 220.3249969482422
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 218.77499389648438
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 219.77499389648438
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 222.85000610351562
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 223.0
     }
   ]
 }

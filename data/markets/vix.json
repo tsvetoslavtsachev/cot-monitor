@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "^VIX",
     "price_label": "VIX",
-    "record_count": 1024,
+    "record_count": 1026,
     "history_first_date": "2006-08-29",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1024,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1026,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15373,29 +15373,39 @@
       "tertiary_short": 34329.0,
       "tertiary_net": 65392.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 355713.0,
+      "primary_long": 61548.0,
+      "primary_short": 96310.0,
+      "primary_net": -34762.0,
+      "secondary_long": 54664.0,
+      "secondary_short": 60159.0,
+      "secondary_net": -5495.0,
+      "tertiary_long": 73206.0,
+      "tertiary_short": 36178.0,
+      "tertiary_net": 37028.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "VIX FUTURES - CBOE FUTURES EXCHANGE",
+      "open_interest": 397522.0,
+      "primary_long": 54280.0,
+      "primary_short": 127196.0,
+      "primary_net": -72916.0,
+      "secondary_long": 64604.0,
+      "secondary_short": 53549.0,
+      "secondary_net": 11055.0,
+      "tertiary_long": 90777.0,
+      "tertiary_short": 29202.0,
+      "tertiary_net": 61575.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479110400,
-      "close": 14.479999542236328
-    },
-    {
-      "timestamp": 1479196800,
-      "close": 13.369999885559082
-    },
-    {
-      "timestamp": 1479283200,
-      "close": 13.720000267028809
-    },
-    {
-      "timestamp": 1479369600,
-      "close": 13.350000381469727
-    },
-    {
-      "timestamp": 1479456000,
-      "close": 12.850000381469727
-    },
     {
       "timestamp": 1479715200,
       "close": 12.420000076293945
@@ -25439,6 +25449,26 @@
     {
       "timestamp": 1794556800,
       "close": 19.299999237060547
+    },
+    {
+      "timestamp": 1794816000,
+      "close": 22.90999984741211
+    },
+    {
+      "timestamp": 1794902400,
+      "close": 25.459999084472656
+    },
+    {
+      "timestamp": 1794988800,
+      "close": 24.559999465942383
+    },
+    {
+      "timestamp": 1795075200,
+      "close": 28.440000534057617
+    },
+    {
+      "timestamp": 1795161600,
+      "close": 35.88999938964844
     }
   ]
 }

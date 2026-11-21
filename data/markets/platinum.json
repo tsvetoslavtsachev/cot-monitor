@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "PL=F",
     "price_label": "Platinum Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 22737.0,
       "tertiary_net": -6504.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 95159.0,
+      "primary_long": 18702.0,
+      "primary_short": 17941.0,
+      "primary_net": 761.0,
+      "secondary_long": 8317.0,
+      "secondary_short": 10950.0,
+      "secondary_net": -2633.0,
+      "tertiary_long": 16983.0,
+      "tertiary_short": 23694.0,
+      "tertiary_net": -6711.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "PLATINUM - NEW YORK MERCANTILE EXCHANGE",
+      "open_interest": 100849.0,
+      "primary_long": 21127.0,
+      "primary_short": 21802.0,
+      "primary_net": -675.0,
+      "secondary_long": 8470.0,
+      "secondary_short": 10746.0,
+      "secondary_net": -2276.0,
+      "tertiary_long": 16539.0,
+      "tertiary_short": 23336.0,
+      "tertiary_net": -6797.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 931.7000122070312
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 932.7999877929688
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 944.5
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 942.5999755859375
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 919.5
-    },
     {
       "timestamp": 1479704400,
       "close": 933.7000122070312
@@ -26050,6 +26060,26 @@
     {
       "timestamp": 1794546000,
       "close": 1488.5
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 1448.0
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 1426.199951171875
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 1360.0999755859375
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 1347.5999755859375
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 1289.4000244140625
     }
   ]
 }

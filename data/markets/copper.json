@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
     "price_symbol": "HG=F",
     "price_label": "Copper Futures",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 39959.0,
       "tertiary_net": 13519.0,
       "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 333297.0,
+      "primary_long": 57212.0,
+      "primary_short": 22710.0,
+      "primary_net": 34502.0,
+      "secondary_long": 67727.0,
+      "secondary_short": 116566.0,
+      "secondary_net": -48839.0,
+      "tertiary_long": 53119.0,
+      "tertiary_short": 37997.0,
+      "tertiary_net": 15122.0,
+      "report_family": "disaggregated"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "COPPER- #1 - COMMODITY EXCHANGE INC.",
+      "open_interest": 339628.0,
+      "primary_long": 51623.0,
+      "primary_short": 24276.0,
+      "primary_net": 27347.0,
+      "secondary_long": 79952.0,
+      "secondary_short": 113882.0,
+      "secondary_net": -33930.0,
+      "tertiary_long": 53728.0,
+      "tertiary_short": 38555.0,
+      "tertiary_net": 15173.0,
+      "report_family": "disaggregated"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 2.5185000896453857
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 2.502000093460083
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 2.4649999141693115
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 2.487499952316284
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 2.4639999866485596
-    },
     {
       "timestamp": 1479704400,
       "close": 2.512500047683716
@@ -26054,6 +26064,26 @@
     {
       "timestamp": 1794546000,
       "close": 6.079500198364258
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 5.997499942779541
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 5.97599983215332
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 5.6595001220703125
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 5.625
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 5.4770002365112305
     }
   ]
 }

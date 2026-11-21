@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "TN=F",
     "price_label": "Ultra 10Y Note",
-    "record_count": 555,
+    "record_count": 557,
     "history_first_date": "2016-03-08",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 555,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 557,
     "cot_source": "data-core"
   },
   "cot": [
@@ -8338,29 +8338,39 @@
       "tertiary_short": 395145.0,
       "tertiary_net": -315698.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "ULTRA UST 10Y - CHICAGO BOARD OF TRADE",
+      "open_interest": 2588749.0,
+      "primary_long": 182540.0,
+      "primary_short": 486139.0,
+      "primary_net": -303599.0,
+      "secondary_long": 1254920.0,
+      "secondary_short": 521088.0,
+      "secondary_net": 733832.0,
+      "tertiary_long": 78879.0,
+      "tertiary_short": 385562.0,
+      "tertiary_net": -306683.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "ULTRA UST 10Y - CHICAGO BOARD OF TRADE",
+      "open_interest": 2612312.0,
+      "primary_long": 132460.0,
+      "primary_short": 476330.0,
+      "primary_net": -343870.0,
+      "secondary_long": 1291255.0,
+      "secondary_short": 532128.0,
+      "secondary_net": 759127.0,
+      "tertiary_long": 81525.0,
+      "tertiary_short": 396266.0,
+      "tertiary_net": -314741.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 136.671875
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 136.40625
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 136.53125
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 135.890625
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 135.171875
-    },
     {
       "timestamp": 1479704400,
       "close": 135.1875
@@ -18404,6 +18414,26 @@
     {
       "timestamp": 1794546000,
       "close": 106.34375
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 106.609375
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 106.765625
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 107.078125
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 107.203125
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 108.34375
     }
   ]
 }

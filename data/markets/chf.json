@@ -7,10 +7,10 @@
     "source_url": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "price_symbol": "6S=F",
     "price_label": "CHF/USD",
-    "record_count": 1065,
+    "record_count": 1067,
     "history_first_date": "2006-06-13",
-    "history_last_date": "2026-11-03",
-    "lookback_weeks": 1065,
+    "history_last_date": "2026-11-17",
+    "lookback_weeks": 1067,
     "cot_source": "data-core"
   },
   "cot": [
@@ -15988,29 +15988,39 @@
       "tertiary_short": 23641.0,
       "tertiary_net": 51518.0,
       "report_family": "tff"
+    },
+    {
+      "date": "2026-11-10",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 126378.0,
+      "primary_long": 6771.0,
+      "primary_short": 22841.0,
+      "primary_net": -16070.0,
+      "secondary_long": 30557.0,
+      "secondary_short": 43726.0,
+      "secondary_net": -13169.0,
+      "tertiary_long": 66704.0,
+      "tertiary_short": 25165.0,
+      "tertiary_net": 41539.0,
+      "report_family": "tff"
+    },
+    {
+      "date": "2026-11-17",
+      "market_name": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "open_interest": 126410.0,
+      "primary_long": 6538.0,
+      "primary_short": 26301.0,
+      "primary_net": -19763.0,
+      "secondary_long": 31323.0,
+      "secondary_short": 42527.0,
+      "secondary_net": -11204.0,
+      "tertiary_long": 65015.0,
+      "tertiary_short": 22220.0,
+      "tertiary_net": 42795.0,
+      "report_family": "tff"
     }
   ],
   "prices": [
-    {
-      "timestamp": 1479099600,
-      "close": 1.0026999711990356
-    },
-    {
-      "timestamp": 1479186000,
-      "close": 0.9994999766349792
-    },
-    {
-      "timestamp": 1479272400,
-      "close": 0.9991000294685364
-    },
-    {
-      "timestamp": 1479358800,
-      "close": 0.9943000078201294
-    },
-    {
-      "timestamp": 1479445200,
-      "close": 0.9918000102043152
-    },
     {
       "timestamp": 1479704400,
       "close": 0.9911999702453613
@@ -26058,6 +26068,26 @@
     {
       "timestamp": 1794546000,
       "close": 1.1952500343322754
+    },
+    {
+      "timestamp": 1794805200,
+      "close": 1.1944500207901
+    },
+    {
+      "timestamp": 1794891600,
+      "close": 1.194700002670288
+    },
+    {
+      "timestamp": 1794978000,
+      "close": 1.1885499954223633
+    },
+    {
+      "timestamp": 1795064400,
+      "close": 1.1878999471664429
+    },
+    {
+      "timestamp": 1795150800,
+      "close": 1.1953500509262085
     }
   ]
 }
