@@ -7,3 +7,4 @@ out/
 .next/
 data/manifest.example.json
 .claude/
+.fetch_status.json

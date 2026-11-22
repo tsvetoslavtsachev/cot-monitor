@@ -34,38 +34,69 @@ class Resp:
         return json.loads(self.text)
 
 
+import assert_fetch_ok as afo  # noqa: E402
+
+
 @pytest.fixture
 def run_main(tmp_path, monkeypatch):
-    market = dict(next(m for m in fc.MARKETS if m["report_family"] == "tff"))
-    monkeypatch.setattr(fc, "MARKETS", [market])
+    tffs = [dict(m) for m in fc.MARKETS if m["report_family"] == "tff"][:2]
+    monkeypatch.setattr(fc, "MARKETS", tffs)
     monkeypatch.setattr(fc, "DATA_DIR", tmp_path)
     monkeypatch.setattr(fc, "MARKETS_DIR", tmp_path / "markets")
     monkeypatch.setattr(fc, "DERIVED_DIR", tmp_path / "derived")
+    monkeypatch.setattr(fc, "FETCH_MARKER", tmp_path / "marker.json")
     monkeypatch.setattr(fc, "_cot_consumer", None)
     monkeypatch.setattr(fc, "fetch_price_series", lambda s: [])
 
-    def _run(body):
-        monkeypatch.setattr(fc.requests, "get", lambda *a, **k: Resp(body))
-        return fc.main()
+    def _run(body_first, body_rest=None):
+        """body_first за първия пазар, body_rest за другия (по подразбиране здрав). Връща (изход на алармата, tmp)."""
+        good = json.dumps([tff_row("2026-11-03"), tff_row("2026-10-27")])
+        first = tffs[0]["query_name"].upper()
+
+        def get(url, params=None, **k):
+            return Resp(body_first if first in params["$where"] else (body_rest or good))
+        monkeypatch.setattr(fc.requests, "get", get)
+        assert fc.main() == 0            # fetch сам не пада: аларма е след комита
+        return afo.main(["x", str(tmp_path / "marker.json")]), tmp_path
     return _run
 
 
-def test_a_empty_response_is_red(run_main):
-    assert run_main("[]") == 1
-    assert run_main("") == 1
+def test_a_empty_response_is_red_at_the_end_healthy_still_written(run_main):
+    for body in ("[]", ""):
+        code, tmp = run_main(body)
+        assert code == 1
+        assert len(list((tmp / "markets").glob("*.json"))) == 1     # здравият е записан
 
 
-def test_b_html_instead_of_data_is_red(run_main):
-    assert run_main("<!DOCTYPE html><html><body>Service unavailable</body></html>") == 1
+def test_b_html_instead_of_data_is_red_at_the_end_others_written(run_main):
+    code, tmp = run_main("<!DOCTYPE html><html><body>Service unavailable</body></html>")
+    assert code == 1
+    assert len(list((tmp / "markets").glob("*.json"))) == 1
+    assert (tmp / "manifest.json").exists()
 
 
 def test_b2_missing_columns_is_red(run_main):
-    assert run_main(json.dumps([{"foo": 1}])) == 1
+    assert run_main(json.dumps([{"foo": 1}]))[0] == 1
 
 
-def test_c_healthy_response_is_green(run_main):
-    body = json.dumps([tff_row("2026-11-03"), tff_row("2026-10-27")])
-    assert run_main(body) == 0
+def test_b3_all_bad_writes_nothing(run_main):
+    bad = "<html></html>"
+    code, tmp = run_main(bad, bad)
+    assert code == 1 and not (tmp / "manifest.json").exists()
+    assert not list((tmp / "markets").glob("*.json"))
+
+
+def test_c_all_healthy_is_green(run_main):
+    code, tmp = run_main(json.dumps([tff_row("2026-11-03"), tff_row("2026-10-27")]))
+    assert code == 0 and len(list((tmp / "markets").glob("*.json"))) == 2
+
+
+def test_mutation_guard_off_empty_input_goes_silently_green(run_main, monkeypatch):
+    """Мутация на самия пазач: изключен, празният отговор дава зелена аларма (това е тихата повреда).
+    Същият вход с включен пазач е червен (test_a). Тестът пада, ако пазачът се изтрие и няма друга защита."""
+    monkeypatch.setattr(fc, "validate_rows", lambda rows, *a, **k: rows)
+    code, _ = run_main("[]")
+    assert code == 0
 
 
 def test_d_old_cot_is_pending_not_fresh():

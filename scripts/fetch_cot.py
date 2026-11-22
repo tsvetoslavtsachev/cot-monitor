@@ -755,6 +755,16 @@ def _newest_cot_date(markets_dir: Path) -> Optional[str]:
     return newest
 
 
+FETCH_MARKER = ROOT / ".fetch_status.json"   # извън data/, не се комитва
+
+
+def write_fetch_marker(manifest: Dict[str, Any]) -> None:
+    FETCH_MARKER.write_text(json.dumps({
+        "healthy": len(manifest["markets"]),
+        "failed": [f["key"] for f in manifest["failures"]],
+    }, ensure_ascii=False), encoding="utf-8")
+
+
 def main() -> int:
     ensure_dir(DATA_DIR)
     ensure_dir(MARKETS_DIR)
@@ -802,11 +812,13 @@ def main() -> int:
         "weekly_changes": "derived/weekly_changes.json",
         "narratives": "derived/narratives.json",
     }
+    # ИЛЮ3 Ч2 (алармата след комита): здравите се записват и комитват; повредените оставят маркер,
+    # а scripts/assert_fetch_ok.py пада червен СЛЕД комита. Нула здрави: нищо не се записва, старото остава.
+    write_fetch_marker(manifest)
+    if not manifest["markets"]:
+        print("FAIL: нула здрави пазара; manifest.json не се пипа, старите данни остават", file=sys.stderr)
+        return 0
     write_json(DATA_DIR / "manifest.json", manifest)
-    # ИЛЮ3 Ч2: шумно, не зелено: нула пазара или поне една COT повреда червени хода
-    if not manifest["markets"] or manifest["failures"]:
-        print(f"FAIL: {len(manifest['failures'])} пазара с повреда, {len(manifest['markets'])} здрави", file=sys.stderr)
-        return 1
     return 0
 
 

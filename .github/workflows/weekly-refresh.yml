@@ -120,10 +120,14 @@ jobs:
             echo "data_changed=true" >> $GITHUB_OUTPUT
           fi
 
+      # ИЛЮ3 Ч2: алармата СЛЕД комита: здравите пазари вече са записани; червено при повреден пазар или нула здрави
+      - name: Alarm if any market failed (after commit)
+        run: python scripts/assert_fetch_ok.py
+
   deploy-pages:
     needs: refresh-data
     runs-on: ubuntu-latest
-    if: ${{ needs.refresh-data.outputs.data_changed == 'true' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ !cancelled() && (needs.refresh-data.outputs.data_changed == 'true' || github.event_name == 'workflow_dispatch') }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
