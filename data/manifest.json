@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:48:49.551489Z",
+  "generated_at": "2026-11-22T20:36:02.912636Z",
   "sources": {
     "tff": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "disaggregated": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
@@ -350,6 +350,12 @@
     }
   ],
   "failures": [],
+  "release": {
+    "release_status": "current",
+    "expected_cot_date": "2026-11-17",
+    "latest_cot_date": "2026-11-17",
+    "pending_reason": null
+  },
   "derived_files": {
     "watchlist": "derived/watchlist.json",
     "weekly_changes": "derived/weekly_changes.json",

@@ -2,7 +2,7 @@
   "module": "cot-cta",
   "schema_version": "0.1",
   "as_of": "2026-11-17",
-  "generated_at": "2026-11-21T14:48:52.607057Z",
+  "generated_at": "2026-11-22T20:36:05.516744Z",
   "state": "Divergence",
   "score": 0.5823,
   "scale": [
@@ -13,6 +13,9 @@
   "falsified": false,
   "persistence": null,
   "notes": "E-mini S&P 500: позициониране „Divergence“, CTA ансамбъл +0,58 (net long), персентил на нетната позиция 67; COT към 2026-11-17.",
+  "release_status": "current",
+  "expected_cot_date": "2026-11-17",
+  "pending_reason": null,
   "source_url": "https://tsvetoslavtsachev.github.io/cot-monitor/",
   "market": "sp500",
   "title": "E-mini S&P 500",
