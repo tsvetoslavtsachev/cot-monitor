@@ -16,11 +16,15 @@ from __future__ import annotations
 import json
 import math
 import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
 import requests
+
+from input_guard import InputError, check_response_text, validate_rows  # noqa: F401
+from release_status import release_status
 
 # S13c cut-over (INIT-22): the per-market cohort rows now come FROM data-core (the
 # guarded base), not a local CFTC fetch. consumer.cot_rows(key) reproduces the cot
@@ -473,6 +477,7 @@ def parse_num(value: Any) -> Optional[float]:
 def fetch_json(url: str, params: Optional[Dict[str, Any]] = None) -> Any:
     response = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
     response.raise_for_status()
+    check_response_text(response.text, f"CFTC/HTTP {url}")
     return response.json()
 
 
@@ -661,6 +666,7 @@ def fetch_market(market: Dict[str, Any]) -> Dict[str, Any]:
     # base-absent series would hit the CFTC fallback below.
     base_cot = _cot_from_base(market["key"])
     if base_cot:
+        validate_rows(base_cot, ["date"], f"data-core {market['key']}")
         prices = fetch_price_series(market["price_symbol"])
         return _assemble(market, base_cot, prices, "data-core")
 
@@ -673,6 +679,8 @@ def fetch_market(market: Dict[str, Any]) -> Dict[str, Any]:
         "$where": f"upper(market_and_exchange_names) like '%{market['query_name'].upper()}%'",
     }
     rows = fetch_json(base_url, params=params)
+    # ИЛЮ3 Ч2: празен или подменен вход е грешка, не тих успех със старата кеш-история
+    validate_rows(rows, ["report_date_as_yyyy_mm_dd", "market_and_exchange_names"], f"CFTC {market['key']}")
 
     # Step 1 — log unique market names found (diagnostic: visible in Actions logs)
     unique_names = sorted({r.get("market_and_exchange_names", "") for r in rows})
@@ -733,7 +741,21 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def main() -> None:
+def _newest_cot_date(markets_dir: Path) -> Optional[str]:
+    newest = None
+    for f in sorted(markets_dir.glob("*.json")):
+        try:
+            cot = json.loads(f.read_text(encoding="utf-8")).get("cot") or []
+        except Exception:
+            continue
+        if cot:
+            d = str(cot[-1].get("date") or "")[:10]
+            if d and (newest is None or d > newest):
+                newest = d
+    return newest
+
+
+def main() -> int:
     ensure_dir(DATA_DIR)
     ensure_dir(MARKETS_DIR)
     ensure_dir(DERIVED_DIR)
@@ -773,13 +795,20 @@ def main() -> None:
             print(f"✗ {market['key']}: {exc}")
 
     manifest["generated_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    # ИЛЮ3 Ч2: „още го няма“: най-новият отчет спрямо очаквания за седмицата
+    manifest["release"] = release_status(_newest_cot_date(MARKETS_DIR))
     manifest["derived_files"] = {
         "watchlist": "derived/watchlist.json",
         "weekly_changes": "derived/weekly_changes.json",
         "narratives": "derived/narratives.json",
     }
     write_json(DATA_DIR / "manifest.json", manifest)
+    # ИЛЮ3 Ч2: шумно, не зелено: нула пазара или поне една COT повреда червени хода
+    if not manifest["markets"] or manifest["failures"]:
+        print(f"FAIL: {len(manifest['failures'])} пазара с повреда, {len(manifest['markets'])} здрави", file=sys.stderr)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

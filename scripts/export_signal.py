@@ -17,7 +17,11 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from release_status import release_status  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_VERSION = "0.1"
@@ -25,7 +29,7 @@ MARKET = "sp500"
 SOURCE_URL = "https://tsvetoslavtsachev.github.io/cot-monitor/"
 
 
-def build_signal(ai: dict) -> dict:
+def build_signal(ai: dict, today: date | None = None) -> dict:
     markets = ai.get("markets") or []
     hits = [m for m in markets if m.get("market") == MARKET]
     if len(hits) != 1:
@@ -47,6 +51,12 @@ def build_signal(ai: dict) -> dict:
     snap = ai.get("global_snapshot") or {}
     score_txt = f"{score:+.2f}".replace(".", ",") if score is not None else "n/a"
     pct_txt = f"{pct:.0f}" if isinstance(pct, (int, float)) else "n/a"
+    rel = release_status(as_of, today)
+    notes = (f"E-mini S&P 500: позициониране „{regime}“, CTA ансамбъл {score_txt} ({direction}), "
+             f"персентил на нетната позиция {pct_txt}; COT към {m.get('cot_date', as_of)}.")
+    if rel["release_status"] == "pending":
+        # още го няма: старото число не се показва като свежо
+        notes = f"Отчетът за {rel['expected_cot_date']} още го няма; показан е последният наличен ({as_of}). " + notes
     return {
         "module": "cot-cta",
         "schema_version": SCHEMA_VERSION,
@@ -58,8 +68,10 @@ def build_signal(ai: dict) -> dict:
         "confidence": None,
         "falsified": False,
         "persistence": None,
-        "notes": f"E-mini S&P 500: позициониране „{regime}“, CTA ансамбъл {score_txt} ({direction}), "
-                 f"персентил на нетната позиция {pct_txt}; COT към {m.get('cot_date', as_of)}.",
+        "notes": notes[:300],
+        "release_status": rel["release_status"],
+        "expected_cot_date": rel["expected_cot_date"],
+        "pending_reason": rel["pending_reason"],
         "source_url": SOURCE_URL,
         "market": MARKET,
         "title": m.get("title"),
