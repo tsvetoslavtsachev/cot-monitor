@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T21:16:23.992812Z",
+  "generated_at": "2026-11-28T14:38:24.786755Z",
   "sources": {
     "tff": "https://publicreporting.cftc.gov/resource/gpe5-46if.json",
     "disaggregated": "https://publicreporting.cftc.gov/resource/kh3c-gbw2.json",
@@ -351,10 +351,10 @@
   ],
   "failures": [],
   "release": {
-    "release_status": "current",
-    "expected_cot_date": "2026-11-17",
+    "release_status": "pending",
+    "expected_cot_date": "2026-11-24",
     "latest_cot_date": "2026-11-17",
-    "pending_reason": null
+    "pending_reason": "отчетът за 2026-11-24 още го няма (последен наличен: 2026-11-17)"
   },
   "derived_files": {
     "watchlist": "derived/watchlist.json",
